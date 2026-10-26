@@ -1,0 +1,75 @@
+{
+  "id": "cryptocurrency",
+  "kind": "term",
+  "topic": "money-on-your-phone",
+  "term": "cryptocurrency",
+  "meaning": "Online money with no government backing that can change value quickly.",
+  "clues": [
+    "It is a digital way to hold or send value.",
+    "It is online and can be sent over the internet.",
+    "Unlike the dollar, its value is not tied to a government or a central bank.",
+    "Its value can rise or fall quickly, and payments are often hard to reverse.",
+    "Its name starts with C and has one word."
+  ],
+  "assumes": [
+    "A gift card holds a set amount of dollars to spend with one seller",
+    "A wire transfer sends dollars through a transfer service",
+    "A prepaid card holds dollars loaded before you spend them"
+  ],
+  "decoys": [
+    {
+      "term": "gift card",
+      "meaning": "A card you load with a set amount of money to spend at a certain store or brand.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/gift-card-scams"
+      ]
+    },
+    {
+      "term": "wire transfer",
+      "meaning": "A way to send money fast through a transfer service. Once it is sent, you usually cannot get it back.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/what-know-you-wire-money"
+      ]
+    },
+    {
+      "term": "prepaid card",
+      "meaning": "A card loaded with money before you use it for purchases.",
+      "source_urls": [
+        "https://www.consumerfinance.gov/consumer-tools/prepaid-cards/"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "A person who demands this payment may be running a scam."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "Money has always needed a careful hand. We counted bills before handing them over."
+    },
+    {
+      "speaker": "bud",
+      "text": "Online holdings do not have the same protections as a bank account. Check the address before you send."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FTC, What To Know About Cryptocurrency and Scams",
+      "url": "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-scams"
+    },
+    {
+      "name": "SEC Investor.gov, crypto assets",
+      "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/crypto-asset-securities"
+    },
+    {
+      "name": "FTC, How To Spot, Avoid, and Report Fake Check Scams",
+      "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3
+}

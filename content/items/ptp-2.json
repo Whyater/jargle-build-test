@@ -1,0 +1,89 @@
+{
+  "id": "ptp-2",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "software update",
+  "meaning": "A new version of the system that runs your phone. It fixes problems, closes security holes, and can add features.",
+  "clues": [
+    "Your phone shows you a notice about it from time to time.",
+    "It brings the main system that runs the whole phone up to a newer version, not just one app.",
+    "It can fix bugs, close security holes, and add new features.",
+    "Your phone can be set to do it by itself, so you don't have to remember.",
+    "It has two words. The first has eight letters and starts with S."
+  ],
+  "assumes": [
+    "An app is only one program on the phone",
+    "A backup copies information and does not change the phone's system"
+  ],
+  "decoys": [
+    {
+      "term": "app update",
+      "meaning": "A new version of one app. It can add features and fix problems.",
+      "source_urls": [
+        "https://support.google.com/googleplay/answer/113412",
+        "https://support.apple.com/en-us/102629"
+      ]
+    },
+    {
+      "term": "backup",
+      "meaning": "A saved copy of what is on your phone, in case it gets lost or broken.",
+      "source_urls": [
+        "https://support.apple.com/en-us/118426",
+        "https://support.google.com/android/answer/2819582"
+      ]
+    },
+    {
+      "term": "factory reset",
+      "meaning": "Erasing all your data so the phone goes back to its original settings.",
+      "source_urls": [
+        "https://support.google.com/android/answer/6088915",
+        "https://support.apple.com/en-us/108931"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. On iPhone, open Settings, tap General, then Software Update. On Android, open Settings and look for System or Software update (the name varies by phone). See if you're up to date.",
+      "link_urls": [
+        "https://support.apple.com/guide/iphone/update-ios-iph3e504502/ios",
+        "https://support.google.com/android/answer/7680439"
+      ]
+    },
+    {
+      "speaker": "floyd",
+      "tone": "neutral",
+      "text": "Install it soon, say the government's online safety experts. A fix does nothing if it sits unused.",
+      "link_urls": [
+        "https://www.cisa.gov/secure-our-world/update-software"
+      ]
+    },
+    {
+      "speaker": "bud",
+      "text": "You can turn on automatic updates. Some phones can do them overnight while charging."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Fixed while I sleep? Even a floppy disk can manage that."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "CISA, Update Software",
+      "url": "https://www.cisa.gov/secure-our-world/update-software"
+    },
+    {
+      "name": "Apple Support, Update iOS on iPhone",
+      "url": "https://support.apple.com/guide/iphone/update-ios-iph3e504502/ios"
+    },
+    {
+      "name": "Android Help, Check and update your Android version",
+      "url": "https://support.google.com/android/answer/7680439"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2
+}

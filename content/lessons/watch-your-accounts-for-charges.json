@@ -1,0 +1,64 @@
+{
+  "id": "watch-your-accounts-for-charges",
+  "topic": "money-on-your-phone",
+  "number": 2,
+  "title": "Check your accounts for charges you did not make",
+  "cards": [
+    {
+      "text": "The CFPB says to check your accounts often. Open paper statements and review them, or check transactions online.",
+      "mascot": "floyd",
+      "line": "A short check can catch a problem early."
+    },
+    {
+      "text": "The CFPB says to contact your bank or card provider at once if you suspect an unknown charge. Use the number on your card or statement.",
+      "mascot": "bud",
+      "line": "Call as soon as something looks wrong."
+    },
+    {
+      "text": "The CFPB says to keep copies of your letters and write down the dates of your follow-up calls. Keep it all together in a file.",
+      "mascot": "floyd",
+      "line": "Keep the details close when you call."
+    }
+  ],
+  "checks": [
+    {
+      "prompt": "How often should you look at your account activity?",
+      "options": [
+        "Regularly",
+        "Every few months",
+        "Only when a bill is late"
+      ],
+      "answer": "Regularly",
+      "why": "The CFPB says to check often and read statements closely."
+    },
+    {
+      "prompt": "You see a charge you did not make. What should you do?",
+      "options": [
+        "Contact your bank at once",
+        "Wait for the next statement",
+        "Ask a friend to check it"
+      ],
+      "answer": "Contact your bank at once",
+      "why": "The CFPB says to contact your bank at once if you see an unknown charge."
+    },
+    {
+      "prompt": "You called your bank about an unknown charge. What next?",
+      "options": [
+        "Keep a record of your calls",
+        "Delete the notice",
+        "Ignore it for now"
+      ],
+      "answer": "Keep a record of your calls",
+      "why": "The CFPB says to keep copies of your letters and write down the dates you call."
+    }
+  ],
+  "takeaway": "Check often, save details, and contact your bank quickly about unknown charges.",
+  "sources": [
+    {
+      "name": "CFPB, Watch accounts closely when card data is hacked",
+      "url": "https://www.consumerfinance.gov/consumer-tools/bank-accounts/watch-accounts-closely-when-card-data-is-hacked/"
+    }
+  ],
+  "checked_on": null,
+  "release_day": 2
+}

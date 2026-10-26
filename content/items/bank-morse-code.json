@@ -1,0 +1,72 @@
+{
+  "id": "bank-morse-code",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "Morse code",
+  "meaning": "A way to send messages using short and long signals, called dots and dashes, for letters and numbers.",
+  "clues": [
+    "A way to send messages using only two kinds of signal, short and long.",
+    "Short and long taps, beeps, or flashes of light stand for letters and numbers.",
+    "It was made for the telegraph in the 1800s.",
+    "The distress call SOS is three short signals, three long ones, and three short.",
+    "It has two words. The first starts with M and is a person's last name."
+  ],
+  "assumes": [
+    "Braille uses raised dots read by touch",
+    "Semaphore uses flags held in set positions",
+    "Sign language uses hand shapes and movement"
+  ],
+  "decoys": [
+    {
+      "term": "Braille",
+      "meaning": "A system of raised dots that people read by touch.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Braille"
+      ]
+    },
+    {
+      "term": "semaphore",
+      "meaning": "A way to send messages from far away by holding flags in set positions for each letter.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Flag_semaphore"
+      ]
+    },
+    {
+      "term": "sign language",
+      "meaning": "A language of hand shapes and movements, used by many deaf people.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Sign_language"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "My cousin the telegraph was always chatting in dots and dashes. Dit dit dah!"
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: a text message, sent in a second. Some radio hobbyists still use Morse code for fun."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Britannica, Morse Code",
+      "url": "https://www.britannica.com/topic/Morse-Code"
+    },
+    {
+      "name": "Wikipedia, Morse code",
+      "url": "https://en.wikipedia.org/wiki/Morse_code"
+    },
+    {
+      "name": "Library of Congress, Invention of the Telegraph",
+      "url": "https://www.loc.gov/collections/samuel-morse-papers/articles-and-essays/invention-of-the-telegraph/"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

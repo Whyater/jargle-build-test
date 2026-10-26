@@ -1,0 +1,72 @@
+{
+  "id": "bank-lol",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "LOL",
+  "meaning": "A short way to type that something is funny. The three letters stand for three words.",
+  "clues": [
+    "You type it when something makes you laugh.",
+    "It is made of three letters, all capitals.",
+    "It began in the early days of online chat and was later used in texts.",
+    "The letters stand for the words \"laughing out loud.\"",
+    "Its first and last letters are the same, and the first one is L."
+  ],
+  "assumes": [
+    "BRB means be right back",
+    "OMG means oh my God",
+    "FYI means for your information"
+  ],
+  "decoys": [
+    {
+      "term": "BRB",
+      "meaning": "Short for \"be right back.\" People type it when they step away for a moment.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/brb"
+      ]
+    },
+    {
+      "term": "OMG",
+      "meaning": "Short for \"oh my God.\" People type it to show they are surprised.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/OMG"
+      ]
+    },
+    {
+      "term": "FYI",
+      "meaning": "Short for \"for your information.\" People type it before a useful fact.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/FYI"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, we wrote \"ha ha\" in the margin of a note. Now it is three letters, and people may not even be laughing!"
+    },
+    {
+      "speaker": "bud",
+      "text": "True. Often it just sounds friendly. If you are unsure, read the message in a kind voice."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, LOL",
+      "url": "https://en.wikipedia.org/wiki/LOL"
+    },
+    {
+      "name": "Wikipedia, List of Internet slang phrases",
+      "url": "https://en.wikipedia.org/wiki/List_of_internet_slang_phrases"
+    },
+    {
+      "name": "Merriam-Webster, FYI",
+      "url": "https://www.merriam-webster.com/dictionary/FYI"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

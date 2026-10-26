@@ -1,0 +1,53 @@
+name: E2E
+
+on:
+  push:
+    branches:
+      - '**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4]
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: node scripts/build-content.mjs
+        working-directory: .
+      - run: npx vite build
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test --shard=${{ matrix.shard }}/4
+        env:
+          CI: true
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-screens-${{ matrix.shard }}
+          path: web/e2e/.output/screens
+          include-hidden-files: true
+          if-no-files-found: warn
+      - name: Upload report and results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-report-${{ matrix.shard }}
+          path: web/e2e/.output
+          include-hidden-files: true
+          if-no-files-found: warn

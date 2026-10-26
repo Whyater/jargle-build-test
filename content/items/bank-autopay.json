@@ -1,0 +1,67 @@
+{
+  "id": "bank-autopay",
+  "kind": "term",
+  "topic": "money-on-your-phone",
+  "term": "autopay",
+  "meaning": "A setup that pays a bill for you from your bank account or card on a set date. You do not pay each time.",
+  "clues": [
+    "It moves money without you pressing a button each time.",
+    "The money goes out of your account, not in.",
+    "It pays a bill on a set date, like your phone or electric bill.",
+    "You must keep enough money in the account, and you can stop it if you change your mind.",
+    "It is one word with seven letters. It starts with A and sounds like \"automatic\" plus \"pay\"."
+  ],
+  "assumes": [
+    "Direct deposit puts money into your account",
+    "A paper check is signed and sent each time"
+  ],
+  "decoys": [
+    {
+      "term": "direct deposit",
+      "meaning": "Your pay or benefits go straight into your bank account by computer, with no paper check.",
+      "source_urls": [
+        "https://files.consumerfinance.gov/f/documents/cfpb_ways-to-receive-money_2022-08.pdf"
+      ]
+    },
+    {
+      "term": "wire transfer",
+      "meaning": "A way to send money from one bank account to another, often to a faraway place.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/what-know-you-wire-money"
+      ]
+    },
+    {
+      "term": "paper check",
+      "meaning": "A paper note that tells your bank to pay money from your account to someone.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Cheque"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, we mailed a paper check every month and licked the stamp."
+    },
+    {
+      "speaker": "bud",
+      "text": "It is handy, but look over your statement each month. You can also stop it if you change your mind."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "CFPB, How do automatic payments from a bank account work?",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-automatic-payments-from-a-bank-account-work-en-2021/"
+    },
+    {
+      "name": "CFPB, How do I stop automatic payments from my bank account?",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-stop-automatic-payments-from-my-bank-account-en-2023/"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

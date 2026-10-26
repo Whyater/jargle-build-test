@@ -1,0 +1,72 @@
+{
+  "id": "bank-camcorder",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "camcorder",
+  "meaning": "A handheld camera that records video with sound onto tape or a card. Families used it to film birthdays and trips.",
+  "clues": [
+    "It films people and moments.",
+    "It was handheld and made just for recording video, so you could film away from a computer.",
+    "Families used it at birthdays, school plays, and vacations.",
+    "Early ones used small video tapes, and you watched them on a TV.",
+    "It is one word made from \"camera\" and \"recorder\" joined together."
+  ],
+  "assumes": [
+    "A webcam is a small camera that sends live video from a computer",
+    "A baby monitor lets you watch or hear a baby in another room",
+    "A digital camera mostly takes still photos"
+  ],
+  "decoys": [
+    {
+      "term": "webcam",
+      "meaning": "A small camera on or near a computer that sends live video.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Webcam"
+      ]
+    },
+    {
+      "term": "baby monitor",
+      "meaning": "A device that lets parents watch or hear a baby from another room.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Baby_monitor"
+      ]
+    },
+    {
+      "term": "digital camera",
+      "meaning": "A camera that saves photos to a memory card instead of film.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Digital_camera"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Dad filmed every birthday on one. The tapes are in a closet, and nobody has a player."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: your phone's camera. Tip: hold the phone sideways and steady, and your videos will look great."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Merriam-Webster, camcorder",
+      "url": "https://www.merriam-webster.com/dictionary/camcorder"
+    },
+    {
+      "name": "Britannica, camcorder",
+      "url": "https://www.britannica.com/technology/camcorder"
+    },
+    {
+      "name": "Wikipedia, Camcorder",
+      "url": "https://en.wikipedia.org/wiki/Camcorder"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

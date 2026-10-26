@@ -1,0 +1,72 @@
+{
+  "id": "bank-cd-rom",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "CD-ROM",
+  "meaning": "A shiny disc that held computer files, like programs or whole encyclopedias. A computer could read it but not change it.",
+  "clues": [
+    "It is a shiny disc you slide into a computer.",
+    "It holds files and programs, up to about 700 megabytes, and a computer can only read it, not save new things on it.",
+    "Games and big books of facts came on one disc.",
+    "Your computer needed a special drive with a tray that slid out.",
+    "It has two parts joined by a hyphen. The second part stands for \"read-only memory\"."
+  ],
+  "assumes": [
+    "An audio CD holds music",
+    "A DVD holds movies and more data than a CD",
+    "A Zip disk is a thick removable disk"
+  ],
+  "decoys": [
+    {
+      "term": "audio CD",
+      "meaning": "A shiny disc that holds music for a CD player.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Compact_Disc"
+      ]
+    },
+    {
+      "term": "DVD",
+      "meaning": "A shiny disc that holds movies and more data than a CD.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/DVD"
+      ]
+    },
+    {
+      "term": "Zip disk",
+      "meaning": "A thick removable disk that held far more than a floppy disk.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Zip_drive"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "neutral",
+      "text": "One of those discs held more than a hundred of me. I was jealous and impressed."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: downloads and online libraries. A USB flash drive can still carry files from one computer to another."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Merriam-Webster, CD-ROM",
+      "url": "https://www.merriam-webster.com/dictionary/CD-ROM"
+    },
+    {
+      "name": "Britannica, CD-ROM",
+      "url": "https://www.britannica.com/technology/CD-ROM"
+    },
+    {
+      "name": "Wikipedia, CD-ROM",
+      "url": "https://en.wikipedia.org/wiki/CD-ROM"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

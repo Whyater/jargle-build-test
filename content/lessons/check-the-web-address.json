@@ -1,0 +1,71 @@
+{
+  "id": "check-the-web-address",
+  "topic": "how-the-internet-works",
+  "number": 1,
+  "title": "Check the web address",
+  "cards": [
+    {
+      "text": "Read the web address before you log in or pay. CISA says fake sites can use addresses with small spelling changes or a wrong ending, like .com instead of .gov.",
+      "mascot": "floyd",
+      "line": "Read the sign before you enter."
+    },
+    {
+      "text": "The FTC says https means the connection is encrypted, but it does not prove the site is honest. Check the address too.",
+      "mascot": "bud",
+      "line": "Https protects the trip, not the truth."
+    },
+    {
+      "text": "Type a company address yourself. The FTC says to type the website address directly into your browser if you know it. That helps you reach the right site.",
+      "mascot": "floyd",
+      "line": "Use a path you already know."
+    }
+  ],
+  "checks": [
+    {
+      "prompt": "What should you read before you enter a password or pay?",
+      "options": [
+        "The web address",
+        "Page color",
+        "The number of pictures and words on the page"
+      ],
+      "answer": "The web address",
+      "why": "CISA says to check a web address for small misspellings or a wrong ending, such as .com instead of .gov."
+    },
+    {
+      "prompt": "What does https tell you?",
+      "options": [
+        "An encrypted connection",
+        "A site that is always honest",
+        "A seller who must deliver"
+      ],
+      "answer": "An encrypted connection",
+      "why": "The FTC says https means the connection is encrypted, but it does not prove the site is honest."
+    },
+    {
+      "prompt": "How can you reach a company site more safely?",
+      "options": [
+        "Click a result",
+        "Type the address yourself",
+        "Use a texted address"
+      ],
+      "answer": "Type the address yourself",
+      "why": "The FTC says to type a company address in your browser if you know it."
+    }
+  ],
+  "takeaway": "Check the address, even when you see https.",
+  "sources": [
+    {
+      "name": "FTC, online shopping safety",
+      "url": "https://consumer.ftc.gov/articles/online-shopping"
+    },
+    {
+      "name": "FTC, search results",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2025/04/online-search-results-good-bad-scammy"
+    },
+    {
+      "name": "CISA, tips to stay safe while surfing the web, part 2",
+      "url": "https://www.cisa.gov/resources-tools/training/tips-stay-safe-while-surfing-web-part-2-accessing-websites-securely"
+    }
+  ],
+  "checked_on": null
+}

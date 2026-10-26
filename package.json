@@ -1,0 +1,24 @@
+{
+  "name": "jargle",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A daily tech-word game.",
+  "license": "MIT",
+  "scripts": {
+    "web:install": "npm --prefix web ci",
+    "content": "node scripts/build-content.mjs",
+    "content:check": "node scripts/content-check.mjs",
+    "content:strict": "node scripts/content-check.mjs --strict",
+    "build:web": "npm --prefix web run build",
+    "build": "npm run content && npm run build:web",
+    "test": "npm --prefix web test",
+    "desktop:install": "npm --prefix desktop ci",
+    "desktop:icons": "bash desktop/make-icons.sh",
+    "desktop:dev": "npm --prefix desktop run dev",
+    "desktop:build": "npm --prefix desktop run build",
+    "mobile:install": "npm --prefix mobile ci",
+    "mobile:sync": "cd mobile && npx cap sync android",
+    "mobile:open": "cd mobile && npx cap open android",
+    "mobile:apk": "cd mobile/android && ./gradlew assembleRelease"
+  }
+}

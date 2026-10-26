@@ -1,0 +1,71 @@
+{
+  "id": "bank-microfiche",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "microfiche",
+  "meaning": "A small flat sheet of film holding tiny pictures of many pages. You read it by magnifying it on a special viewer.",
+  "clues": [
+    "It was a way to store information in a small space.",
+    "It was a flat sheet of film.",
+    "Pages from newspapers, books, or records were shrunk to tiny pictures on it.",
+    "You needed a special reader with a lens and a lit screen to see it.",
+    "It has ten letters and starts with M. Its name starts with a word for very small."
+  ],
+  "assumes": [
+    "A floppy disk stored computer files",
+    "An encyclopedia set is a group of printed books"
+  ],
+  "decoys": [
+    {
+      "term": "floppy disk",
+      "meaning": "A thin plastic disk in a square case. It stored computer files and could be carried around.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Floppy_disk"
+      ]
+    },
+    {
+      "term": "encyclopedia set",
+      "meaning": "A set of books that explain many subjects, in ABC order.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Encyclopedia"
+      ]
+    },
+    {
+      "term": "card catalog",
+      "meaning": "A library cabinet of small drawers holding cards. Each card told you about one book and where to find it.",
+      "source_urls": [
+        "https://guides.loc.gov/card-catalog"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, the library kept old newspapers on little film sheets. You slid one under the lens and hunted for your page."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: digital archives. Many libraries let you search old newspapers on a screen and zoom in with two fingers."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Library of Congress, MARC 21 Concise Format: Microform",
+      "url": "https://www.loc.gov/marc/bibliographic/concise/bd007h.html"
+    },
+    {
+      "name": "Columbia University Libraries, What is microfiche?",
+      "url": "https://guides.library.columbia.edu/digitizedmicrofiche/introduction"
+    },
+    {
+      "name": "Wikipedia, Microform",
+      "url": "https://en.wikipedia.org/wiki/Microform"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

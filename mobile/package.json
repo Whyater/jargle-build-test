@@ -1,0 +1,18 @@
+{
+  "name": "jargle-mobile",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Android shell for Jargle (Capacitor). Bundles the built web app from ../web/dist.",
+  "scripts": {
+    "sync": "cap sync android",
+    "open": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/core": "^8.5.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.3",
+    "typescript": "~6.0.3"
+  }
+}

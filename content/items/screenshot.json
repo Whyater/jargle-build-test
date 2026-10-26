@@ -1,0 +1,80 @@
+{
+  "id": "screenshot",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "screenshot",
+  "meaning": "A picture of exactly what is showing on your phone's screen. You can save it or send it to someone.",
+  "clues": [
+    "It has to do with what you see on your phone's screen.",
+    "It's one still picture of the screen, not a video.",
+    "You make one by pressing two buttons on the phone at the same time.",
+    "Once it's taken, you can edit it, share it, or find it later in your Photos.",
+    "It has ten letters and starts with S."
+  ],
+  "assumes": [
+    "A video is not a still picture",
+    "A wallpaper is not a picture of the screen"
+  ],
+  "decoys": [
+    {
+      "term": "screen recording",
+      "meaning": "A video of what happens on your phone's screen. It is saved on the phone and can include sound.",
+      "source_urls": [
+        "https://support.apple.com/guide/iphone/take-a-screen-recording-iph52f6e1987/ios",
+        "https://support.google.com/android/answer/9075928"
+      ]
+    },
+    {
+      "term": "wallpaper",
+      "meaning": "The background picture on your phone's home screen or lock screen.",
+      "source_urls": [
+        "https://support.google.com/pixelphone/answer/7289143"
+      ]
+    },
+    {
+      "term": "screen lock",
+      "meaning": "A code, pattern, or fingerprint you use to open your phone and keep other people out.",
+      "source_urls": [
+        "https://support.google.com/android/answer/9079129",
+        "https://support.apple.com/en-us/119586"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "So the phone keeps a copy of whatever is on its screen? Handy for a confirmation you want to hold on to."
+    },
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. Open any screen, then press the buttons your phone uses to take one. Apple and Google both have a short help page.",
+      "link_urls": [
+        "https://support.apple.com/en-us/102616",
+        "https://support.google.com/android/answer/9075928"
+      ]
+    },
+    {
+      "speaker": "bud",
+      "text": "Then open your Photos app to find it. iPhone and Android both keep it there."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, screenshot",
+      "url": "https://www.merriam-webster.com/dictionary/screenshot"
+    },
+    {
+      "name": "Apple Support, Take a screenshot on your iPhone",
+      "url": "https://support.apple.com/en-us/102616"
+    },
+    {
+      "name": "Android Help, Take a screenshot or record your screen",
+      "url": "https://support.google.com/android/answer/9075928"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2
+}

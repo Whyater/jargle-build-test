@@ -1,0 +1,88 @@
+{
+  "id": "bluetooth",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "Bluetooth",
+  "meaning": "A short-range wireless link. It connects your phone to nearby things like earbuds, speakers, or a car, with no cable.",
+  "clues": [
+    "It lets your phone work with nearby earbuds, a speaker, or a car, with no cable.",
+    "It is a short-range link, so the two things need to be fairly close.",
+    "You pair two devices once, and after that they can connect on their own.",
+    "Its name is the nickname of a king who ruled Denmark long ago.",
+    "It has nine letters and starts with B."
+  ],
+  "assumes": [
+    "Earbuds, a speaker, and a car are not internet connections",
+    "A satellite signal does not play sound from your phone"
+  ],
+  "decoys": [
+    {
+      "term": "hotspot",
+      "meaning": "Lets a laptop or tablet get online by using your phone's data.",
+      "source_urls": [
+        "https://support.google.com/android/answer/9059108"
+      ]
+    },
+    {
+      "term": "mobile data",
+      "meaning": "The internet connection your phone gets through your phone company when it is not on Wi-Fi.",
+      "source_urls": [
+        "https://support.apple.com/en-us/109323",
+        "https://support.google.com/fi/answer/9458407"
+      ]
+    },
+    {
+      "term": "GPS",
+      "meaning": "Satellite signals that let a device, such as a phone, work out where it is.",
+      "source_urls": [
+        "https://www.gps.gov/gps"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. Open Settings and look for the Bluetooth page. You'll see what your phone is connected to.",
+      "link_urls": [
+        "https://support.google.com/android/answer/9075925",
+        "https://support.apple.com/en-us/102412"
+      ]
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Pair once and it just connects after that? That's better manners than most cords."
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: turn it off when you're not using it, to save battery."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Fun fact: it's named after a king of Denmark and Norway who was nicknamed Bluetooth."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Bluetooth Technology Website, Origin of the Bluetooth name",
+      "url": "https://www.bluetooth.com/bluetooth-origin/"
+    },
+    {
+      "name": "Bluetooth Technology Website, Technology overview",
+      "url": "https://www.bluetooth.com/learn-about-bluetooth/tech-overview/"
+    },
+    {
+      "name": "Android Help, Find and set up Bluetooth devices near your Android device",
+      "url": "https://support.google.com/android/answer/9075925"
+    },
+    {
+      "name": "Apple Support, Use Bluetooth and Wi-Fi in Control Center",
+      "url": "https://support.apple.com/en-us/102412"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1
+}

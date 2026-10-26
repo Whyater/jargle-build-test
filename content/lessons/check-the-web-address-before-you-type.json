@@ -1,0 +1,68 @@
+{
+  "id": "check-the-web-address-before-you-type",
+  "topic": "how-the-internet-works",
+  "number": 2,
+  "title": "Check the web address first",
+  "cards": [
+    {
+      "text": "CISA says odd or incorrect web addresses can be warning signs. A misspelling alone does not prove a site is fake.",
+      "mascot": "bud",
+      "line": "Read it slowly, letter by letter."
+    },
+    {
+      "text": "The FTC says to use a phone number or website you know is real when you contact a company. Do not trust a link just because it looks familiar.",
+      "mascot": "floyd",
+      "line": "Use a path you know when you can."
+    },
+    {
+      "text": "CISA says to type the address yourself if you are sure you know it. This gives you time to check each letter.",
+      "mascot": "floyd",
+      "line": "Your own typing gives you time to check."
+    }
+  ],
+  "checks": [
+    {
+      "prompt": "A web address has a strange spelling. What should you do?",
+      "options": [
+        "Check each letter",
+        "Click it quickly",
+        "Enter private details"
+      ],
+      "answer": "Check each letter",
+      "why": "CISA lists incorrect links, like amaz a n.com, as a common sign of a fake message."
+    },
+    {
+      "prompt": "A link in a message looks odd. What is safer?",
+      "options": [
+        "Leave it and type the known address",
+        "Open it in a new tab",
+        "Reply and ask if it is real"
+      ],
+      "answer": "Leave it and type the known address",
+      "why": "CISA says to type the address yourself if you are sure you know it."
+    },
+    {
+      "prompt": "A message links to your bank. What should you use?",
+      "options": [
+        "Use a known bank site",
+        "Open the link now",
+        "Call the number in the message"
+      ],
+      "answer": "Use a known bank site",
+      "why": "The FTC says to use a website you know is real when you contact a company."
+    }
+  ],
+  "takeaway": "Check the spelling, then type a web address you already know.",
+  "sources": [
+    {
+      "name": "FTC, checking links and web addresses",
+      "url": "https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams"
+    },
+    {
+      "name": "CISA, recognize and report bad links",
+      "url": "https://www.cisa.gov/secure-our-world/recognize-and-report-phishing"
+    }
+  ],
+  "checked_on": null,
+  "release_day": 2
+}

@@ -1,0 +1,72 @@
+{
+  "id": "bank-antivirus",
+  "kind": "term",
+  "topic": "locks-and-keys",
+  "term": "antivirus",
+  "meaning": "Software that scans a device for harmful programs and removes them. It can also warn you before you open a bad file.",
+  "clues": [
+    "It looks at the files on a device and checks whether each one is safe.",
+    "It is a program that runs quietly while you use your device.",
+    "It can find harmful programs and remove them.",
+    "Its job is to protect your device from computer viruses.",
+    "It has nine letters and starts with A. Its name says it is against viruses."
+  ],
+  "assumes": [
+    "Malware is software made to cause harm",
+    "A backup is a spare copy of your files"
+  ],
+  "decoys": [
+    {
+      "term": "malware",
+      "meaning": "Software made to harm a device, spy on its owner, or steal information.",
+      "source_urls": [
+        "https://www.cisa.gov/news-events/news/protecting-against-malicious-code",
+        "https://consumer.ftc.gov/articles/how-recognize-remove-avoid-malware"
+      ]
+    },
+    {
+      "term": "backup",
+      "meaning": "A spare copy of your files, kept in a second place in case the first copy is lost.",
+      "source_urls": [
+        "https://support.apple.com/en-us/118426"
+      ]
+    },
+    {
+      "term": "face unlock",
+      "meaning": "A way to open a phone by looking at it. The phone checks that your face matches the one it saved.",
+      "source_urls": [
+        "https://support.apple.com/en-us/102381"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, viruses traveled on floppy disks, and I got checked a lot. I felt very popular."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today, many computers already have one built in, like Windows Security on a Windows computer. Keep it turned on and let it update."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "CISA, Understanding Anti-Virus Software",
+      "url": "https://www.cisa.gov/news-events/news/understanding-anti-virus-software"
+    },
+    {
+      "name": "Wikipedia, Antivirus software",
+      "url": "https://en.wikipedia.org/wiki/Antivirus_software"
+    },
+    {
+      "name": "Microsoft Support, Stay protected with the Windows Security app",
+      "url": "https://support.microsoft.com/en-us/windows/security/windows-security/stay-protected-with-the-windows-security-app"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

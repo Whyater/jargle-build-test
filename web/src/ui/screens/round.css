@@ -1,0 +1,777 @@
+/* The daily round and its reveal, share and done steps. Colors and sizes come from tokens.css. */
+
+/* ---- Energy meter ---- */
+.energy-row {
+  display: flex;
+  align-items: flex-end;
+}
+/* The daily round and its reveal > * + *,
+share and done steps. Colors and sizes come from tokens.css. */
+
+/* ---- Energy meter ---- */
+.energy-row > * + * {
+  margin-left: var(--s2);
+}
+.energy {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: var(--s3) var(--s3) var(--s3);
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+.energy-top {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+.energy-top > * + * {
+  margin-left: var(--s2);
+}
+.energy-bolt {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-pill);
+  background: var(--sunny);
+  box-shadow: 0 3px 0 var(--sunny-deep);
+  color: var(--ink);
+}
+.energy-count {
+  flex: none;
+  min-width: 1.5rem;
+  margin-left: auto;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  line-height: 1;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.energy .battery-wrap p,
+.energy-line {
+  margin-top: var(--s2);
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  line-height: 1.35;
+}
+.energy-note {
+  margin-top: var(--s1);
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+.energy.is-low .energy-bolt {
+  background: var(--coral);
+  box-shadow: 0 3px 0 var(--coral-deep);
+}
+.energy-buddy {
+  flex: none;
+  width: 3.5rem;
+  margin-bottom: -0.25rem;
+}
+
+/* The six bars become chunky candy cells. The nub is dropped: the bolt says "energy". */
+.energy .battery,
+.win-stats .battery {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.energy .battery .body,
+.win-stats .battery .body {
+  flex: 1 1 auto;
+  padding: 0.25rem;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+}
+.energy .battery .cell,
+.win-stats .battery .cell {
+  flex: 1 1 0;
+  width: auto;
+  min-width: 0.5rem;
+  height: 1.75rem;
+  margin: 0 0.25rem 0 0;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--sunny);
+  box-shadow: inset 0 -4px 0 var(--sunny-deep);
+  transition:
+    background-color var(--t-med) var(--ease-out),
+    box-shadow var(--t-med) var(--ease-out);
+}
+.energy.is-low .battery .cell {
+  background: var(--coral);
+  box-shadow: inset 0 -4px 0 var(--coral-deep);
+}
+/* A used bar is an empty dashed slot, so "used" is never told by color alone. */
+.energy .battery .cell.used,
+.win-stats .battery .cell.used {
+  background: transparent;
+  box-shadow: inset 0 0 0 2px var(--line-color);
+  border: 0;
+  outline: 2px dashed var(--ink-soft);
+  outline-offset: -2px;
+  opacity: 0.45;
+}
+.energy .battery .cell:last-child,
+.win-stats .battery .cell:last-child {
+  margin-right: 0;
+}
+.energy .battery .nub,
+.win-stats .battery .nub {
+  display: none;
+}
+.win-stats .battery .cell {
+  height: 1.25rem;
+}
+
+.round-hint {
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+
+/* ---- Clue climb ---- */
+.climb-label {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  line-height: 1.2;
+}
+/* ---- Clue climb ---- */
+.climb-label > * + * {
+  margin-left: var(--s2);
+}
+.climb-pips {
+  display: inline-flex;
+}
+.climb-pips > * + * {
+  margin-left: 0.25rem;
+}
+.climb-pips .pip {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: var(--radius-pill);
+  background: var(--line-color);
+}
+.climb-pips .pip.on {
+  background: var(--grape);
+}
+.climb-count {
+  margin-left: auto;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+}
+.round .climb-label + .clues,
+.round .climb-label + .cards {
+  margin-top: var(--s2);
+}
+.round .pick-label {
+  margin-top: var(--s5);
+}
+
+.clue-stack {
+  border-top: 0;
+}
+.clue-stack .clue {
+  display: flex;
+  align-items: flex-start;
+  padding: var(--s3) var(--s3) var(--s3) var(--s3);
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius);
+  background: var(--surface);
+  line-height: 1.4;
+}
+.clue-stack .clue > * + * {
+  margin-left: var(--s3);
+}
+.clue-stack .clue + .clue {
+  margin-top: var(--s2);
+}
+.clue-stack .clue .n {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin: 0;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--surface-2);
+  color: var(--ink-soft);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  line-height: 1;
+}
+.clue-stack .clue-text {
+  min-width: 0;
+  padding-top: 0.125rem;
+}
+/* The newest clue is the one to read: grape number, grape edge, a soft lift. */
+.clue-stack .clue.newest {
+  border-color: var(--grape);
+  background: var(--surface);
+  box-shadow: 0 4px 0 var(--grape-soft);
+}
+.clue-stack .clue.newest .n {
+  background: var(--grape);
+  color: #ffffff;
+}
+/* Flipping in: the card turns on its top edge. scaleY instead of 3D so it never pokes wider than the screen. */
+.clue-stack .clue.flip-in {
+  transform-origin: top center;
+  animation: clue-flip-in var(--t-slow) var(--ease-bounce) both;
+}
+@keyframes clue-flip-in {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.2);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+/* ---- Answer cards as candy buttons ---- */
+.play-cards > li + li {
+  margin-top: var(--s3);
+}
+.play-cards .answer-card {
+  min-height: 3.75rem;
+  margin-bottom: var(--ledge);
+  padding: var(--s3) 3rem var(--s3) var(--s4);
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 var(--ledge) 0 var(--line-color);
+  color: var(--ink);
+  transition:
+    transform var(--t-fast) var(--ease-out),
+    box-shadow var(--t-fast) var(--ease-out),
+    border-color var(--t-fast) ease,
+    background-color var(--t-fast) ease;
+}
+.play-cards .answer-card::before {
+  display: none;
+}
+.play-cards .answer-card:active {
+  transform: translateY(var(--ledge));
+  box-shadow: 0 0 0 var(--line-color);
+}
+.play-cards .answer-card .term {
+  padding-right: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  line-height: 1.2;
+}
+.play-cards .answer-card .meaning {
+  margin-top: var(--s2);
+  font-size: var(--text-base);
+  line-height: 1.4;
+}
+.play-cards .answer-card .state-icon {
+  top: 50%;
+  right: var(--s3);
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-top: -0.875rem;
+}
+/* Picked: grape edge and a grape dot in a ring. */
+.play-cards .answer-card[aria-pressed='true'],
+.play-cards .answer-card.is-picked {
+  border-color: var(--grape);
+  background: var(--grape-soft);
+  box-shadow: 0 var(--ledge) 0 var(--grape-deep);
+  transform: none;
+}
+.play-cards .answer-card[aria-pressed='true']:active {
+  transform: translateY(var(--ledge));
+  box-shadow: 0 0 0 var(--grape-deep);
+}
+.play-cards .state-icon.picked {
+  border: 3px solid var(--grape);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+}
+.play-cards .state-icon.picked::after {
+  left: 50%;
+  top: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: -0.375rem 0 0 -0.375rem;
+  border-radius: var(--radius-pill);
+  background: var(--grape);
+}
+/* Wrong pick: a soft red card with its "Not this one" tag. It shakes once, kindly. */
+.play-cards .answer-card.is-missed {
+  padding-top: var(--s3);
+  border-color: var(--wrong-soft);
+  background: var(--wrong-soft);
+  box-shadow: 0 var(--ledge) 0 var(--wrong-soft);
+  cursor: default;
+}
+.play-cards .answer-card.is-missed:active,
+.play-cards .answer-card.is-answer:active {
+  transform: none;
+}
+.play-cards .answer-card.is-missed .term {
+  color: var(--bad-ink);
+}
+.play-cards .answer-card .tab {
+  display: inline-block;
+  margin: 0 0 var(--s2);
+  padding: 0.125rem 0.625rem;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--wrong);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+}
+/* Right answer: green card with a white check badge. */
+.play-cards .answer-card.is-answer {
+  border-color: var(--correct);
+  background: var(--correct-soft);
+  box-shadow: 0 var(--ledge) 0 var(--correct-deep);
+  cursor: default;
+}
+.play-cards .answer-card.is-answer .term {
+  color: var(--ok-ink);
+}
+.play-cards .answer-card.is-answer .state-icon {
+  top: var(--s3);
+  margin-top: 0;
+  padding: 0.25rem;
+  border-radius: var(--radius-pill);
+  background: var(--correct);
+  color: var(--ink);
+}
+.play-cards .answer-card.flip {
+  animation: card-pop var(--t-slow) var(--ease-bounce) both;
+}
+.play-cards .answer-card.is-missed.flip {
+  animation: card-oops 460ms var(--ease-out) both;
+}
+.play-cards .answer-card.lift {
+  animation: none;
+}
+@keyframes card-pop {
+  0% {
+    transform: scale(0.94);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes card-oops {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+}
+
+/* ---- Message strip and the bottom bar ---- */
+.round .strip,
+.round .strip-inline {
+  padding: var(--s2) var(--s3);
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--sunny-soft);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  line-height: 1.35;
+}
+.round .strip {
+  margin-bottom: var(--s3);
+}
+.round .bottom-bar {
+  background: var(--bg);
+}
+.round .bottom-bar.pinned {
+  border-top: 0;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background: var(--bg);
+  box-shadow: 0 -10px 24px -16px rgba(43, 35, 64, 0.35);
+}
+.bar-buttons .btn {
+  display: flex;
+  width: 100%;
+}
+.bar-buttons .btn + .btn {
+  margin-top: var(--s2);
+}
+.bar-buttons .btn-primary {
+  min-height: 3.5rem;
+  font-size: var(--text-lg);
+}
+/* Next clue and Check share one row, so the pinned bar leaves more room for the cards. */
+.bar-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s2);
+  align-items: stretch;
+}
+.bar-row .btn {
+  height: auto;
+  min-height: 3.5rem;
+  margin-top: 0;
+  padding-left: var(--s2);
+  padding-right: var(--s2);
+}
+.bar-buttons.bar-row .btn + .btn {
+  margin-top: 0;
+}
+.bar-row .btn-sunny {
+  font-size: var(--text-sm);
+  line-height: 1.2;
+}
+.bar-row .btn-sunny .gicon {
+  flex: none;
+}
+/* At the biggest text the two buttons are too narrow side by side, so they stack again. */
+html.ts-largest .bar-row {
+  grid-template-columns: 1fr;
+}
+.bottom-bar .first-label {
+  margin-bottom: var(--s2);
+  font-size: var(--text-base);
+}
+.bottom-bar.measuring .first-label {
+  display: none;
+}
+.first-label {
+  font-family: var(--font-display);
+  color: var(--grape-deep);
+}
+
+.round .confirm {
+  margin-top: var(--s4);
+  padding: var(--s4);
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+.round .choice-row .choice {
+  border-radius: var(--radius);
+}
+.round .note-box {
+  border-radius: var(--radius);
+}
+
+/* ---- Reveal ---- */
+.win-card {
+  position: relative;
+  padding: var(--s4) var(--s4) var(--s4);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-card);
+}
+.win-card.is-solved {
+  background: var(--correct-soft);
+  box-shadow: 0 var(--ledge) 0 var(--correct);
+}
+.win-card.is-learned {
+  background: var(--sunny-soft);
+  box-shadow: 0 var(--ledge) 0 var(--sunny);
+}
+.win-mascots {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.win-mascots > * + * {
+  margin-left: var(--s2);
+}
+.win-shout {
+  margin-top: var(--s2);
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  line-height: 1.05;
+  color: var(--ink);
+}
+.win-card.is-solved .win-shout {
+  color: var(--ok-ink);
+}
+.win-card .result-line {
+  margin-top: var(--s2);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--text-base);
+}
+.win-note {
+  margin-top: var(--s1);
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+.win-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--s3) auto 0;
+  max-width: 18rem;
+}
+.win-stats > * + * {
+  margin-left: var(--s3);
+}
+.win-xp {
+  position: relative;
+  flex: none;
+}
+.win-xp .pill {
+  font-size: var(--text-base);
+}
+.win-xp .xp-float {
+  left: 50%;
+  top: -0.5rem;
+}
+
+.word-card .answer-card {
+  min-height: 0;
+}
+.chat {
+  list-style: none;
+}
+.chat > li + li {
+  margin-top: var(--s3);
+}
+
+.sources {
+  padding-top: var(--s4);
+  border-top: 2px solid var(--line-color);
+}
+.sources h2 {
+  font-size: var(--text-base);
+  color: var(--ink-soft);
+}
+.sources .plain-list {
+  margin-top: var(--s2);
+  font-size: var(--text-sm);
+}
+.sources .feedback-line {
+  margin-top: var(--s3);
+  font-size: var(--text-sm);
+}
+
+/* ---- Share ---- */
+.share-card {
+  padding: var(--s4);
+  border: 2px dashed var(--grape);
+  border-radius: var(--radius-lg);
+  background: var(--grape-soft);
+  color: var(--grape-deep);
+}
+.share-card-brand {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  line-height: 1;
+}
+.share-card .share-preview {
+  margin-top: var(--s3);
+  padding: var(--s3) var(--s4);
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.45;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+.share-notice {
+  font-weight: 700;
+  color: var(--ok-ink);
+}
+
+/* ---- Done: what next ---- */
+.done-hero {
+  padding: var(--s4);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+.done-line {
+  margin-top: var(--s2);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  line-height: 1.15;
+}
+.done-hero .counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--s3);
+}
+.done-hero .counter .label {
+  margin-bottom: var(--s2);
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+.done-hero .counter .cells {
+}
+.done-hero .counter .digit {
+  width: 3.25rem;
+  height: 4.25rem;
+  margin: 0 0.125rem;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--sunny);
+  box-shadow: inset 0 -5px 0 var(--sunny-deep);
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 4rem;
+}
+.has-tabs .after-actions {
+  bottom: calc(var(--tabbar-h) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px)));
+}
+.after-actions {
+  position: sticky;
+  bottom: 0;
+  z-index: 4;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  padding: var(--s2) 0.5rem var(--s3);
+  padding-bottom: calc(var(--s3) + var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px)));
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background: var(--bg);
+}
+.next-up h2 {
+  font-size: var(--text-lg);
+}
+.next-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 4.5rem;
+  text-align: left;
+}
+.next-card > * + * {
+  margin-left: var(--s3);
+}
+.next-icon {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+}
+.card-grape .next-icon {
+  color: var(--grape);
+}
+.next-text {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 0;
+}
+.next-title {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  line-height: 1.2;
+}
+.next-note {
+  margin-top: 0.125rem;
+  font-size: var(--text-sm);
+  opacity: 0.9;
+}
+.next-go {
+  flex: none;
+  display: inline-flex;
+}
+
+/* ---- Badges earned on a done screen ---- */
+.new-badge {
+  display: flex;
+  align-items: center;
+  padding: var(--s3) var(--s4);
+  border-radius: var(--radius-lg);
+  background: var(--sunny-soft);
+  box-shadow: 0 var(--ledge) 0 var(--sunny);
+  text-align: left;
+}
+/* ---- Badges earned on a done screen ---- */
+.new-badge > * + * {
+  margin-left: var(--s3);
+}
+.new-badge-art {
+  flex: none;
+  line-height: 0;
+}
+.new-badge-line {
+  min-width: 0;
+  font-size: var(--text-sm);
+  line-height: 1.3;
+}
+.new-badge-line strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  line-height: 1.2;
+}
+
+/* ---- Pass the Phone reveal ---- */
+.turn-note {
+  display: flex;
+  align-items: center;
+  padding: var(--s3) var(--s4);
+  border-radius: var(--radius);
+  background: var(--mint-soft);
+}
+/* ---- Pass the Phone reveal ---- */
+.turn-note > * + * {
+  margin-left: var(--s2);
+}
+.turn-note .gicon {
+  flex: none;
+}
+.reader-prompt {
+  padding: var(--s4);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+@media (max-width: 359px) {
+  .win-shout {
+    font-size: var(--text-xl);
+  }
+  .energy-count {
+    font-size: var(--text-lg);
+  }
+}
+
+.miss-banner {
+  padding: var(--s3) var(--s4);
+  border-radius: var(--radius);
+  background: var(--sunny-soft);
+  font-weight: 700;
+}

@@ -1,0 +1,156 @@
+import type { ContentBundle, SaveState, TermItem } from '../../engine/types';
+
+const item: TermItem = {
+  id: 'claude',
+  kind: 'term' as const,
+  topic: 'talking-computers' as const,
+  term: 'Claude',
+  meaning:
+    "An AI made by Anthropic. It's a chatbot, a computer program built to talk with people. Ask it questions or hand it tasks.",
+  clues: [
+    'It is not a person, but it answers when you ask it something.',
+    'You can hand it a task, not just a question.',
+    'It is made by a company called Anthropic.',
+    "It shares its name with a man's first name.",
+    'Its name has six letters and starts with C.',
+  ],
+  assumes: [],
+  decoys: [
+    { term: 'Gemini', meaning: 'Google AI assistant.', source_urls: [] },
+    { term: 'Copilot', meaning: 'Microsoft AI assistant.', source_urls: [] },
+    { term: 'ChatGPT', meaning: 'A conversational AI app.', source_urls: [] },
+  ],
+  exchange: [
+    { speaker: 'floyd' as const, tone: 'friendly' as const, text: 'A useful word to know.' },
+    { speaker: 'bud' as const, text: 'Now I can explain it.' },
+  ],
+  old_tech: false,
+  sources: [{ name: 'Claude', url: 'https://claude.ai' }],
+  checked_on: null,
+  difficulty: 3 as const,
+  decisive_clue: 3 as const,
+  release_day: 5,
+};
+const old1: TermItem = {
+  ...item,
+  id: 'rotary-phone',
+  topic: 'old-tech',
+  term: 'Rotary phone',
+  meaning: 'A phone with a spinning dial.',
+  old_tech: true,
+  difficulty: 1,
+  decisive_clue: 1,
+};
+const old2: TermItem = {
+  ...item,
+  id: 'cassette-tape',
+  topic: 'old-tech',
+  term: 'Cassette tape',
+  meaning: 'A small tape used to record sound.',
+  old_tech: true,
+  difficulty: 1,
+  decisive_clue: 1,
+};
+export const devContent: ContentBundle = {
+  version: 1,
+  items: { claude: item, 'rotary-phone': old1, 'cassette-tape': old2 },
+  lessons: [
+    {
+      id: 'turn-on-two-factor-login',
+      topic: 'locks-and-keys',
+      number: 2,
+      title: 'Turn on two-factor login',
+      cards: [
+        {
+          text: 'Two-factor login adds a second step when you log in.',
+          mascot: 'floyd',
+          line: 'Your password is the first step.',
+        },
+        {
+          text: 'Never read a code to someone who contacts you first.',
+          mascot: 'bud',
+          line: 'Keep the code to yourself.',
+        },
+        {
+          text: 'Two-factor login is not usually on by default.',
+          mascot: 'floyd',
+          line: 'Start with your most sensitive accounts.',
+        },
+      ],
+      checks: [
+        {
+          prompt: 'What does two-factor login add?',
+          options: ['A second step', 'A new username', 'A louder phone'],
+          answer: 'A second step',
+          why: 'It adds a second step.',
+        },
+        {
+          prompt: 'Who should get your code?',
+          options: ['No one who contacts you first', 'Any caller', 'A stranger'],
+          answer: 'No one who contacts you first',
+          why: 'Keep codes private.',
+        },
+        {
+          prompt: 'Where can you turn it on?',
+          options: ['Account settings', 'The lock screen only', 'A text message'],
+          answer: 'Account settings',
+          why: 'Open your account settings.',
+        },
+      ],
+      takeaway: 'Start with your most sensitive accounts.',
+      sources: [{ name: 'CISA', url: 'https://www.cisa.gov/secure-our-world/turn-mfa' }],
+      checked_on: null,
+    },
+  ],
+  oldTech: ['rotary-phone', 'cassette-tape'],
+  ptpExtras: ['rotary-phone', 'cassette-tape'],
+  schedule: { version: 1, days: [{ date: '2026-11-06', term: 'claude', rerun: false }] },
+  missLines: {
+    either: [
+      { text: 'Good guess. Another clue can narrow it down.', needs_clue: true },
+      { text: "That one's tricky." },
+      { text: 'Take your time. No clock here.' },
+      { text: 'Every miss teaches you a word.' },
+      { text: "New words take a few tries. That's normal." },
+      { text: 'Cross that one off and keep going.' },
+    ],
+    floyd: [
+      { text: 'I always say: read the label first.', needs_clue: true },
+      { text: "I've seen plenty of words come and go. You'll get this one." },
+      { text: 'No rush. Patience is an old habit worth keeping.' },
+      { text: 'In my experience, a clue is worth reading.' },
+    ],
+  },
+  commonWords: [
+    'AI',
+    'account',
+    'app',
+    'bank',
+    'browser',
+    'chatbot',
+    'code',
+    'email',
+    'internet',
+    'link',
+    'online',
+    'password',
+    'phone',
+    'text',
+    'website',
+  ],
+};
+export const devSave: SaveState = {
+  v: 1,
+  rounds: {},
+  ptpSet: null,
+  ptpTotal: 0,
+  ptpBest: 0,
+  firstPlayDay: null,
+  review: {},
+  reviewSeen: {},
+  lessons: {},
+  badges: {},
+  missLineIndex: { floyd: 0, bud: 0 },
+  settings: { textSize: 'normal', sound: true, reducedMotion: false },
+  flags: { firstRoundDone: false, textSizeAsked: false, inAppNoteHidden: false, persistAsked: false },
+};

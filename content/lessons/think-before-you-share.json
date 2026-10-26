@@ -1,0 +1,67 @@
+{
+  "id": "think-before-you-share",
+  "topic": "internet-talk",
+  "number": 1,
+  "title": "Think before you post",
+  "cards": [
+    {
+      "text": "The FTC says you cannot fully control who sees a post, even with privacy settings. A post can be saved and shared.",
+      "mascot": "floyd",
+      "line": "Once it is out, it may travel far."
+    },
+    {
+      "text": "Use privacy settings to limit who can see your posts and where you are. The FTC says to stop and think before you post.",
+      "mascot": "bud",
+      "line": "Check who can see it first."
+    },
+    {
+      "text": "Keep personal details out of your profile and posts. The FDIC says birthdates, pets' names, and addresses can help crooks guess your passwords.",
+      "mascot": "floyd",
+      "line": "Some details belong only to you."
+    }
+  ],
+  "checks": [
+    {
+      "prompt": "What can happen after you post something online?",
+      "options": [
+        "Only you can see it",
+        "It can be saved and shared",
+        "It disappears once you delete it"
+      ],
+      "answer": "It can be saved and shared",
+      "why": "The FTC says a deleted post could be saved, shared, and live online."
+    },
+    {
+      "prompt": "What should you check before posting?",
+      "options": [
+        "How many people liked your last post",
+        "Privacy settings",
+        "The time of day"
+      ],
+      "answer": "Privacy settings",
+      "why": "The FTC says to find out how to turn on privacy settings for devices, apps, and social accounts."
+    },
+    {
+      "prompt": "Which detail is best kept off a public post?",
+      "options": [
+        "A book you enjoyed this year",
+        "A recipe you like",
+        "Your home address and birthday"
+      ],
+      "answer": "Your home address and birthday",
+      "why": "The FDIC says to keep details like your address and birthday out of online profiles and posts."
+    }
+  ],
+  "takeaway": "Pause before posting. Keep personal details private.",
+  "sources": [
+    {
+      "name": "FTC, sharing online",
+      "url": "https://consumer.ftc.gov/articles/heads-up"
+    },
+    {
+      "name": "FDIC, protect your finances and identity online",
+      "url": "https://www.fdic.gov/consumer-resource-center/2025-10/protect-your-finances-and-identity-online"
+    }
+  ],
+  "checked_on": null
+}

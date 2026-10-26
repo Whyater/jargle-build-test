@@ -1,0 +1,81 @@
+{
+  "id": "claude",
+  "kind": "term",
+  "topic": "talking-computers",
+  "term": "Claude",
+  "meaning": "An AI made by Anthropic. It's a chatbot, a computer program built to talk with people. Ask it questions or hand it tasks.",
+  "clues": [
+    "It isn't a person, but it answers when you ask it something.",
+    "You can hand it a task, not just a question.",
+    "It's made by a company called Anthropic.",
+    "It shares its name with a man's first name.",
+    "Its name has six letters and starts with C."
+  ],
+  "assumes": [
+    "Gemini is Google's",
+    "Copilot is Microsoft's",
+    "ChatGPT is OpenAI's"
+  ],
+  "decoys": [
+    {
+      "term": "Gemini",
+      "meaning": "Google's AI assistant. You can upload a long document and it sums it up for you.",
+      "source_urls": [
+        "https://gemini.google.com/",
+        "https://gemini.google/overview/"
+      ]
+    },
+    {
+      "term": "Copilot",
+      "meaning": "Microsoft's AI assistant. It can search the web and give short summaries with sources.",
+      "source_urls": [
+        "https://www.microsoft.com/en-us/microsoft-copilot/for-individuals"
+      ]
+    },
+    {
+      "term": "ChatGPT",
+      "meaning": "An AI from OpenAI. You chat with it to get answers and find ideas.",
+      "source_urls": [
+        "https://chatgpt.com/",
+        "https://openai.com/index/chatgpt/"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. In your phone's browser, open claude.ai or gemini.google.com. Ask it to explain a word you don't know, then check what it says.",
+      "link_urls": [
+        "https://claude.ai/login",
+        "https://gemini.google.com/"
+      ]
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "Good, check what it says. We looked things up in a book or asked a librarian. The smart ones still checked a second source."
+    },
+    {
+      "speaker": "bud",
+      "text": "If a site asks you to sign in, let that person show you. Don't type passwords or bank numbers into a chatbot."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Anthropic, Claude product overview",
+      "url": "https://claude.com/product/overview"
+    },
+    {
+      "name": "Merriam-Webster, chatbot",
+      "url": "https://www.merriam-webster.com/dictionary/chatbot"
+    },
+    {
+      "name": "Merriam-Webster, bot",
+      "url": "https://www.merriam-webster.com/dictionary/bot"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3
+}

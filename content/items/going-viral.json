@@ -1,0 +1,67 @@
+{
+  "id": "going-viral",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "going viral",
+  "meaning": "When a post, video, or photo gets shared by many people very fast.",
+  "clues": [
+    "It is about something online that gets a lot of attention.",
+    "People pass it from one person to another.",
+    "It uses a word linked to germs, but here the word means popularity.",
+    "It can describe a post, video, photo, or other online item.",
+    "It has two words, and the second starts with V."
+  ],
+  "assumes": [],
+  "decoys": [
+    {
+      "term": "Trending",
+      "meaning": "Being one of the topics talked about most on a site at a certain time.",
+      "source_urls": [
+        "https://dictionary.cambridge.org/dictionary/english/trending"
+      ]
+    },
+    {
+      "term": "Meme",
+      "meaning": "An idea, joke, picture, or video that people pass around online.",
+      "source_urls": [
+        "https://dictionary.cambridge.org/dictionary/english/meme"
+      ]
+    },
+    {
+      "term": "Clickbait",
+      "meaning": "An online headline or picture made to get your attention so you will click a link.",
+      "source_urls": [
+        "https://dictionary.cambridge.org/dictionary/english/clickbait"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Before you share a popular post, pause and check who made it and when. Fast sharing does not prove it is true."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "A story could spread by word of mouth in my day. People still need to check a story before passing it along."
+    },
+    {
+      "speaker": "bud",
+      "text": "If a post asks for private details or money, close it and check the claim elsewhere."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Cambridge Dictionary, viral",
+      "url": "https://dictionary.cambridge.org/dictionary/english/viral"
+    },
+    {
+      "name": "Cambridge Dictionary, go viral",
+      "url": "https://dictionary.cambridge.org/dictionary/english/go-viral"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3
+}

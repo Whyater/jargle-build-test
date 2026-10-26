@@ -1,0 +1,68 @@
+{
+  "id": "bank-mp3-player",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "MP3 player",
+  "meaning": "A small handheld gadget that stores music files and plays them through earbuds or headphones.",
+  "clues": [
+    "A pocket-sized gadget that holds hundreds or even thousands of songs.",
+    "Songs are saved as files inside it, so there is no disc or tape.",
+    "You loaded the songs from your computer, then listened with earbuds.",
+    "The iPod was a very famous one.",
+    "It has two words. The first has two letters and a number, and the second is \"player.\""
+  ],
+  "assumes": [
+    "A CD player plays one shiny disc at a time",
+    "A cassette player plays music from tape",
+    "A record player plays large grooved discs"
+  ],
+  "decoys": [
+    {
+      "term": "CD player",
+      "meaning": "A machine that plays music from a shiny disc, usually one album at a time.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/CD_player"
+      ]
+    },
+    {
+      "term": "cassette player",
+      "meaning": "A machine that plays music from magnetic tape in a small plastic case.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Cassette_deck"
+      ]
+    },
+    {
+      "term": "record player",
+      "meaning": "A machine that plays music from a large grooved disc as it spins.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Phonograph"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "I held a few pages of writing. Those little gadgets held a whole music shelf!"
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: a music app on your phone. Tip: keep the volume moderate to protect your hearing."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Britannica, MP3",
+      "url": "https://www.britannica.com/technology/MP3"
+    },
+    {
+      "name": "Wikipedia, Digital audio player",
+      "url": "https://en.wikipedia.org/wiki/Digital_audio_player"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

@@ -1,0 +1,75 @@
+{
+  "id": "app-permissions",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "app permissions",
+  "meaning": "Phone settings that let apps use your location, camera, mic, or contacts.",
+  "clues": [
+    "They are phone settings that control what an app may use.",
+    "They can let an app use, or block, your camera, microphone, or contacts.",
+    "You can review them for each app in your phone settings.",
+    "Giving less access can limit what an app can do.",
+    "The name has two words, and the second means approvals."
+  ],
+  "assumes": [
+    "Location services let a phone or app use location information",
+    "Screen time limits when or how long apps can be used",
+    "Do Not Disturb silences calls and alerts for a while"
+  ],
+  "decoys": [
+    {
+      "term": "location services",
+      "meaning": "A phone feature that uses signals to figure out where the phone is.",
+      "source_urls": [
+        "https://support.apple.com/en-us/HT207092"
+      ]
+    },
+    {
+      "term": "screen time",
+      "meaning": "A phone feature that shows or limits how long you use apps.",
+      "source_urls": [
+        "https://support.apple.com/en-us/HT208982"
+      ]
+    },
+    {
+      "term": "Do Not Disturb",
+      "meaning": "A phone setting that turns off calls and alerts for a while.",
+      "source_urls": [
+        "https://support.google.com/android/answer/9069335?hl=en"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try opening one app in your phone settings and look at what it can access. Turn off access it does not need."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "You should know what you hand over. We read the label before giving a shop our home address."
+    },
+    {
+      "speaker": "bud",
+      "text": "You can change a choice later if you decide the app needs that access."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Android Help, change app access",
+      "url": "https://support.google.com/android/answer/9431959"
+    },
+    {
+      "name": "Apple Support, Location Services",
+      "url": "https://support.apple.com/en-us/HT207092"
+    },
+    {
+      "name": "FTC, How Websites and Apps Collect and Use Your Information",
+      "url": "https://consumer.ftc.gov/articles/how-websites-and-apps-collect-and-use-your-information"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2
+}

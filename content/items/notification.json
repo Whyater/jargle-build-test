@@ -1,0 +1,75 @@
+{
+  "id": "notification",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "notification",
+  "meaning": "A message or alert from an app or phone that tells you something may need your attention.",
+  "clues": [
+    "It is an alert that appears on your phone when something may need your attention.",
+    "An app or the phone itself sends it, usually not at a time you chose, and not as a call or note from a person.",
+    "It may show a message, sound, or vibration from an app even when you are doing something else.",
+    "You can find missed ones by swiping down or checking its history.",
+    "Its name starts with N and has twelve letters."
+  ],
+  "assumes": [
+    "An alarm goes off at a time you choose",
+    "A phone call is a live talk with a person",
+    "A text message is written by a person and sent to you"
+  ],
+  "decoys": [
+    {
+      "term": "alarm",
+      "meaning": "A timed sound or alert that wakes you or reminds you about something.",
+      "source_urls": [
+        "https://support.google.com/clock/answer/2840926"
+      ]
+    },
+    {
+      "term": "phone call",
+      "meaning": "A live talk with another person by phone.",
+      "source_urls": [
+        "https://support.google.com/phoneapp/answer/2811745"
+      ]
+    },
+    {
+      "term": "text message",
+      "meaning": "A short written message sent from one phone to another.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. Open your phone's settings, choose Notifications, and review which apps can alert you."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Our desk bell did one job. This little alert can remind you about many things, so it helps to set some limits."
+    },
+    {
+      "speaker": "bud",
+      "text": "If an alert worries you, open the app yourself. Do not follow its link."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Android Help, Control notifications",
+      "url": "https://support.google.com/android/answer/9079661/android"
+    },
+    {
+      "name": "Android Developers, Notifications overview",
+      "url": "https://developer.android.com/develop/ui/views/notifications"
+    },
+    {
+      "name": "Apple Support, Change notification settings",
+      "url": "https://support.apple.com/guide/iphone/change-notification-settings-iph7c3d96bab/ios"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2
+}

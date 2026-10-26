@@ -1,0 +1,71 @@
+{
+  "id": "bank-romance-scam",
+  "kind": "term",
+  "topic": "scams-and-fakes",
+  "term": "romance scam",
+  "meaning": "A crook pretends to be a loving partner online. After gaining your trust, they ask you for money.",
+  "clues": [
+    "It starts with a stranger who says they love you.",
+    "The person sends lots of sweet messages and photos, and may say they live far away.",
+    "They always have a reason they cannot meet in person or talk on video.",
+    "Sooner or later they ask for money, often for an emergency.",
+    "It has two words. The first has seven letters and starts with R."
+  ],
+  "assumes": [
+    "A tech support scam starts with a fake computer problem",
+    "A prize scam says you won a contest"
+  ],
+  "decoys": [
+    {
+      "term": "tech support scam",
+      "meaning": "Someone says your computer has a problem. Then they ask for money or access to fix it.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams"
+      ]
+    },
+    {
+      "term": "prize scam",
+      "meaning": "You are told you won a contest, but you must pay a fee or share private details to collect.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/fake-prize-sweepstakes-and-lottery-scams"
+      ]
+    },
+    {
+      "term": "identity theft",
+      "meaning": "Someone uses your name or account numbers without your permission, such as to buy things in your name.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/what-know-about-identity-theft"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, a pen pal never asked me for money. I guess the stamp was enough!"
+    },
+    {
+      "speaker": "bud",
+      "text": "Say no to any request for money from someone you have never met. Talk to a person you trust first."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FTC, What To Know About Romance Scams",
+      "url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams"
+    },
+    {
+      "name": "Wikipedia, Romance scam",
+      "url": "https://en.wikipedia.org/wiki/Romance_scam"
+    },
+    {
+      "name": "USAGov, Scams and fraud",
+      "url": "https://www.usa.gov/scams-and-frauds"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

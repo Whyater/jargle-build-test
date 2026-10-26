@@ -1,0 +1,71 @@
+{
+  "id": "bank-identity-theft",
+  "kind": "term",
+  "topic": "scams-and-fakes",
+  "term": "identity theft",
+  "meaning": "Someone uses your name or account numbers without asking. They may open accounts or buy things as if they were you.",
+  "clues": [
+    "Someone is after your private details.",
+    "The crook uses that information as if they were you.",
+    "They might open a credit card, take out a loan, or buy things in your name.",
+    "You may first learn about it from a bill or letter for something you never bought.",
+    "It has two words. The first has eight letters and starts with I."
+  ],
+  "assumes": [
+    "Spyware secretly watches what you do",
+    "A romance scam asks a fake partner for money"
+  ],
+  "decoys": [
+    {
+      "term": "spyware",
+      "meaning": "Hidden software that secretly watches what you do on a device and sends it to someone else.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-recognize-remove-avoid-malware"
+      ]
+    },
+    {
+      "term": "romance scam",
+      "meaning": "A crook pretends to be a loving partner online. After gaining trust, they ask for money.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/what-know-about-romance-scams"
+      ]
+    },
+    {
+      "term": "robocall",
+      "meaning": "A phone call that plays a recorded message instead of a live person.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/robocalls"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "Back in my day, we tore up mail with our name on it. Shredding is still smart."
+    },
+    {
+      "speaker": "bud",
+      "text": "Check your bank and card statements often. If you see something odd, call your bank right away."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FTC, What To Know About Identity Theft",
+      "url": "https://consumer.ftc.gov/articles/what-know-about-identity-theft"
+    },
+    {
+      "name": "IdentityTheft.gov, Report identity theft and get a recovery plan",
+      "url": "https://www.identitytheft.gov/"
+    },
+    {
+      "name": "Wikipedia, Identity theft",
+      "url": "https://en.wikipedia.org/wiki/Identity_theft"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

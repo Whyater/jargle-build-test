@@ -1,0 +1,323 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      mac:
+        description: Build the macOS app
+        type: boolean
+        default: true
+      windows:
+        description: Build the Windows app
+        type: boolean
+        default: true
+      android:
+        description: Build the Android app
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      version_code: ${{ steps.version.outputs.version_code }}
+      desktop_matrix: ${{ steps.desktop_matrix.outputs.desktop_matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install web dependencies
+        working-directory: web
+        run: npm ci
+      - name: Typecheck web
+        working-directory: web
+        run: npm run typecheck
+      - name: Run web tests
+        working-directory: web
+        run: npm test -- --passWithNoTests
+      - name: Build content
+        shell: bash
+        run: |
+          if [ -f scripts/content-check.mjs ]; then node scripts/content-check.mjs; fi
+          if [ -f scripts/build-content.mjs ]; then node scripts/build-content.mjs; fi
+      - name: Build web
+        working-directory: web
+        run: npm run build
+      - name: Compute release version
+        id: version
+        shell: bash
+        run: |
+          if [[ "$GITHUB_REF" == refs/tags/* ]]; then
+            version="${GITHUB_REF_NAME#v}"
+            version="${version%%-*}"
+          else
+            version="$(node -p "require('./package.json').version")"
+          fi
+          if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Version must be numeric x.y.z, got $version" >&2
+            exit 1
+          fi
+          IFS=. read -r major minor patch <<< "$version"
+          version_code=$((major * 1000000 + minor * 1000 + patch))
+          if [ "$version_code" -lt 1 ]; then version_code=1; fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "version_code=$version_code" >> "$GITHUB_OUTPUT"
+      - name: Make desktop matrix
+        id: desktop_matrix
+        shell: bash
+        env:
+          IS_TAG_PUSH: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v') }}
+          MAC_ENABLED: ${{ inputs.mac }}
+          WINDOWS_ENABLED: ${{ inputs.windows }}
+        run: |
+          matrix='{"include":['
+          comma=''
+          if [ "$IS_TAG_PUSH" = true ] || [ "$MAC_ENABLED" = true ]; then
+            matrix="${matrix}${comma}{\"os\":\"macos-latest\",\"name\":\"mac\",\"target\":\"universal-apple-darwin\",\"rust_targets\":\"aarch64-apple-darwin,x86_64-apple-darwin\"}"
+            comma=','
+          fi
+          if [ "$IS_TAG_PUSH" = true ] || [ "$WINDOWS_ENABLED" = true ]; then
+            matrix="${matrix}${comma}{\"os\":\"windows-latest\",\"name\":\"windows\",\"target\":\"\",\"rust_targets\":\"\"}"
+          fi
+          matrix="${matrix}]}"
+          echo "$matrix"
+          echo "desktop_matrix=$matrix" >> "$GITHUB_OUTPUT"
+      - name: Make web tarball
+        run: tar -czf jargle-web.tar.gz -C web/dist .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web-dist
+          path: web/dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web-tarball
+          path: jargle-web.tar.gz
+
+  desktop:
+    needs: web
+    if: needs.web.outputs.desktop_matrix != '{"include":[]}'
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.web.outputs.desktop_matrix) }}
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: web-dist
+          path: web/dist
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: desktop/package-lock.json
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.rust_targets }}
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: desktop/src-tauri -> target
+      - name: Install desktop dependencies
+        working-directory: desktop
+        shell: bash
+        run: npm ci
+      - name: Regenerate icons
+        shell: bash
+        run: bash desktop/make-icons.sh
+      - name: Build desktop
+        working-directory: desktop
+        shell: bash
+        env:
+          RELEASE_VERSION: ${{ needs.web.outputs.version }}
+          MATRIX_NAME: ${{ matrix.name }}
+        run: |
+          if [ "$MATRIX_NAME" = mac ]; then
+            npx tauri build --ci --target universal-apple-darwin --config "{\"version\":\"$RELEASE_VERSION\"}"
+          else
+            npx tauri build --ci --config "{\"version\":\"$RELEASE_VERSION\"}"
+          fi
+      - name: Collect and test macOS installer
+        if: matrix.name == 'mac'
+        shell: bash
+        run: |
+          mkdir -p dist-out
+          cp desktop/src-tauri/target/universal-apple-darwin/release/bundle/dmg/*.dmg dist-out/Jargle-mac.dmg
+          COPYFILE_DISABLE=1 tar -czf dist-out/Jargle-mac.app.tar.gz -C desktop/src-tauri/target/universal-apple-darwin/release/bundle/macos Jargle.app
+          lipo -info desktop/src-tauri/target/universal-apple-darwin/release/bundle/macos/Jargle.app/Contents/MacOS/Jargle
+          codesign -dv desktop/src-tauri/target/universal-apple-darwin/release/bundle/macos/Jargle.app
+          JARGLE_RELEASES_BASE="file://$PWD/dist-out" JARGLE_INSTALL_DIR="$RUNNER_TEMP/Apps" JARGLE_NO_LAUNCH=1 bash install/install.sh
+          test -d "$RUNNER_TEMP/Apps/Jargle.app"
+      - name: Collect and test Windows installer
+        if: matrix.name == 'windows'
+        shell: bash
+        run: |
+          mkdir -p dist-out
+          cp desktop/src-tauri/target/release/bundle/nsis/*-setup.exe dist-out/Jargle-windows-setup.exe
+          cp desktop/src-tauri/target/release/bundle/msi/*.msi dist-out/Jargle-windows.msi
+      - name: Test Windows installer
+        if: matrix.name == 'windows'
+        shell: powershell
+        run: |
+          $env:JARGLE_RELEASES_BASE='http://127.0.0.1:8765'
+          $env:JARGLE_NO_LAUNCH='1'
+          $server = $null
+          try {
+            $server = Start-Process python -ArgumentList '-m','http.server','8765','--directory','dist-out' -PassThru -WindowStyle Hidden
+            $ready = $false
+            for ($i = 0; $i -lt 20; $i++) {
+              try {
+                Invoke-WebRequest -Uri 'http://127.0.0.1:8765/Jargle-windows-setup.exe' -Method Head -UseBasicParsing | Out-Null
+                $ready = $true
+                break
+              } catch {
+                Start-Sleep -Seconds 1
+              }
+            }
+            if (-not $ready) {
+              throw 'The installer test server did not start'
+            }
+            Get-Content install/install.ps1 -Raw | Invoke-Expression
+            if (-not (Test-Path "$env:LOCALAPPDATA\Jargle\Jargle.exe")) {
+              Get-ChildItem "$env:LOCALAPPDATA\Jargle" -Force -ErrorAction SilentlyContinue
+              throw 'Jargle.exe was not installed'
+            }
+            $version = (Get-Item "$env:LOCALAPPDATA\Jargle\Jargle.exe").VersionInfo.FileVersion
+            Write-Host "Installed Jargle.exe file version: $version"
+          } finally {
+            if ($null -ne $server) {
+              Stop-Process -Id $server.Id -Force -ErrorAction SilentlyContinue
+            }
+          }
+      - name: List desktop artifacts
+        shell: bash
+        run: ls -la dist-out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: desktop-${{ matrix.name }}
+          path: dist-out
+
+  android:
+    needs: web
+    if: ${{ github.event_name != 'workflow_dispatch' || inputs.android }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: web-dist
+          path: web/dist
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: |
+            desktop/package-lock.json
+            mobile/package-lock.json
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Install desktop and make icons
+        working-directory: desktop
+        run: npm ci
+      - name: Regenerate icons
+        run: bash desktop/make-icons.sh
+      - name: Install mobile dependencies and sync
+        working-directory: mobile
+        run: |
+          npm ci
+          npx cap sync android
+      - name: Decode Android keystore
+        shell: bash
+        run: |
+          keyfile="$RUNNER_TEMP/jargle-release.keystore"
+          printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 --decode > "$keyfile"
+          test -s "$keyfile" || { echo "ANDROID_KEYSTORE_BASE64 secret is missing or empty" >&2; exit 1; }
+          echo "ANDROID_KEYSTORE_FILE=$keyfile" >> "$GITHUB_ENV"
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+      - name: Build Android APK
+        working-directory: mobile/android
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          JARGLE_VERSION_NAME: ${{ needs.web.outputs.version }}
+          JARGLE_VERSION_CODE: ${{ needs.web.outputs.version_code }}
+        run: ./gradlew assembleRelease --no-daemon
+      - name: Verify and collect APK
+        shell: bash
+        run: |
+          apk=mobile/android/app/build/outputs/apk/release/app-release.apk
+          apksigner="$(find "$ANDROID_HOME/build-tools" -name apksigner -type f | sort -V | tail -n 1)"
+          test -x "$apksigner"
+          "$apksigner" verify --verbose --print-certs "$apk"
+          mkdir -p dist-out
+          cp "$apk" dist-out/Jargle-android.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: android
+          path: dist-out/Jargle-android.apk
+
+  publish:
+    needs: [web, desktop, android]
+    if: ${{ always() && github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v') && needs.web.result == 'success' && needs.desktop.result == 'success' && needs.android.result == 'success' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: '*'
+          path: release-artifacts
+          merge-multiple: true
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ github.ref_name }}
+        shell: bash
+        run: |
+          mkdir -p upload
+          find release-artifacts -type f -name '*.dmg' -exec cp {} upload/Jargle-mac.dmg \;
+          find release-artifacts -type f -name 'Jargle-mac.app.tar.gz' -exec cp {} upload/Jargle-mac.app.tar.gz \;
+          find release-artifacts -type f -name '*-setup.exe' -exec cp {} upload/Jargle-windows-setup.exe \;
+          find release-artifacts -type f -name '*.msi' -exec cp {} upload/Jargle-windows.msi \;
+          find release-artifacts -type f -name 'Jargle-android.apk' -exec cp {} upload/Jargle-android.apk \;
+          find release-artifacts -type f -name 'jargle-web.tar.gz' -exec cp {} upload/jargle-web.tar.gz \;
+          for asset in Jargle-mac.dmg Jargle-mac.app.tar.gz Jargle-windows-setup.exe Jargle-windows.msi Jargle-android.apk jargle-web.tar.gz; do
+            if [ ! -f "upload/$asset" ]; then
+              echo "Missing release asset: $asset" >&2
+              exit 1
+            fi
+          done
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            notes=$'Downloads:\n- Jargle-mac.dmg\n- Jargle-mac.app.tar.gz\n- Jargle-windows-setup.exe\n- Jargle-windows.msi\n- Jargle-android.apk\n- jargle-web.tar.gz\n\nInstall on Mac: curl -fsSL https://whyater.github.io/Jargle/install.sh | bash\nInstall on Windows: irm https://whyater.github.io/Jargle/install.ps1 | iex'
+            args=(--title "Jargle $TAG" --notes "$notes")
+            if [[ "$TAG" == *-* ]]; then args+=(--prerelease); fi
+            # Keep the release hidden until every asset has uploaded.
+            gh release create "$TAG" --draft "${args[@]}"
+          fi
+          for asset in Jargle-mac.dmg Jargle-mac.app.tar.gz Jargle-windows-setup.exe Jargle-windows.msi Jargle-android.apk jargle-web.tar.gz; do
+            gh release upload "$TAG" "upload/$asset" --clobber
+          done
+          if [ "$(gh release view "$TAG" --json isDraft --jq .isDraft)" = true ]; then
+            gh release edit "$TAG" --draft=false
+          fi

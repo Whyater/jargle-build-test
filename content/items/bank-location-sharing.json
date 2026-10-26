@@ -1,0 +1,72 @@
+{
+  "id": "bank-location-sharing",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "location sharing",
+  "meaning": "A feature that lets chosen people see where your phone is on a map. You decide who sees it and for how long.",
+  "clues": [
+    "It has something to do with where you are.",
+    "It uses a map and the position of your phone.",
+    "It sends your spot to friends or family you pick, so they can follow along on a trip.",
+    "You can stop it any time, or set it to end after an hour.",
+    "It has two words. The first starts with L, and the second means letting others have a turn."
+  ],
+  "assumes": [
+    "GPS is a system of satellites that helps a device find where it is",
+    "Street view shows photos of streets on a map",
+    "A compass has a needle that points north"
+  ],
+  "decoys": [
+    {
+      "term": "GPS",
+      "meaning": "A system of satellites that lets a device work out where it is.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Global_Positioning_System"
+      ]
+    },
+    {
+      "term": "street view",
+      "meaning": "Photos of streets, taken by cameras on vehicles, that you can look around in on a map.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Google_Street_View"
+      ]
+    },
+    {
+      "term": "compass",
+      "meaning": "A tool with a needle that points north.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Compass"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "In my day we said, \"Call me when you get there.\" Then we sat by the phone and watched the clock."
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: share with family for just one trip, like the drive home. Then turn it off when you arrive."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Apple Support, Share your location in Find My on iPhone",
+      "url": "https://support.apple.com/guide/iphone/share-your-location-iph01954dc44/ios"
+    },
+    {
+      "name": "Apple Support, Share your location with iPhone",
+      "url": "https://support.apple.com/en-us/105104"
+    },
+    {
+      "name": "Google Maps Help, Share your real-time location with others in Google Maps",
+      "url": "https://support.google.com/maps/answer/15437054"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true
+}

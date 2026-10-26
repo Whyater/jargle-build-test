@@ -1,0 +1,941 @@
+/* Shared pieces: top bar, buttons, answer cards, battery, bottom bar, lists, mascots, counters. */
+
+/* ---- Running head ---- */
+.runhead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px dashed var(--beige);
+  font-size: 1.0625rem;
+  font-variant-numeric: tabular-nums;
+}
+.screen-title {
+  margin-bottom: 1rem;
+}
+.screen-title:focus {
+  outline: none;
+}
+
+/* Demo strip shown on every screen of a demo. */
+.demo-strip {
+  margin: 0.5rem 0 1rem;
+  padding: 0.5rem 0.75rem;
+  border: 2px dashed #d8ccff;
+  border-radius: var(--radius);
+  background: var(--grape-soft);
+  color: var(--grape-deep);
+  font-size: var(--text-sm);
+}
+.demo-strip .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.25rem -0.25rem 0;
+}
+.demo-strip .row > * {
+  margin: 0.25rem;
+}
+.demo-strip .row {
+  align-items: center;
+}
+.demo-strip .label {
+  width: 100%;
+}
+/* Off Home the label shares the row with the buttons. */
+.demo-strip.compact {
+  padding: 0.25rem 0.5rem;
+}
+.demo-strip.compact .row {
+  margin-top: 0;
+}
+.demo-strip.compact .label {
+  width: auto;
+  font-weight: 700;
+  margin-right: auto;
+}
+@media (max-width: 359px) {
+  .demo-strip.compact .label {
+    display: none;
+  }
+}
+/* Slightly smaller buttons so both fit on one row on a 320 px phone. */
+/* 48 px at every text size, since the strip doesn't grow with the text. */
+.demo-strip .btn-small {
+  min-height: 44px;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.9375rem;
+}
+/* The strip is not part of the game, so it doesn't grow with Largest text. */
+html.ts-largest .demo-strip {
+  padding: 0.25rem 0.375rem;
+  font-size: 0.75rem;
+}
+html.ts-largest .demo-strip .btn-small {
+  min-height: 48px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* ---- Buttons ---- */
+/* The candy button: a rounded fill resting on a darker ledge. Pressed, it sinks onto the ledge.
+   --btn-fill, --btn-ledge and --btn-ink set the color; each variant only swaps those three. */
+.btn {
+  --btn-fill: var(--surface);
+  --btn-ledge: var(--line-color);
+  --btn-ink: var(--ink);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch);
+  min-width: var(--touch);
+  margin-bottom: var(--ledge);
+  padding: 0.5rem 1.25rem;
+  border: 2px solid var(--btn-ledge);
+  border-radius: var(--radius);
+  background: var(--btn-fill);
+  color: var(--btn-ink);
+  box-shadow: 0 var(--ledge) 0 var(--btn-ledge);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-md);
+  line-height: 1.2;
+  letter-spacing: 0.005em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  appearance: none;
+  transition:
+    transform var(--t-fast) var(--ease-out),
+    box-shadow var(--t-fast) var(--ease-out),
+    background-color var(--t-fast) ease;
+}
+.btn:active {
+  transform: translateY(var(--ledge));
+  box-shadow: 0 0 0 var(--btn-ledge);
+}
+.btn-primary,
+.btn-grape {
+  --btn-fill: var(--grape);
+  --btn-ledge: var(--grape-deep);
+  --btn-ink: #ffffff;
+}
+.btn-coral {
+  --btn-fill: var(--coral);
+  --btn-ledge: var(--coral-deep);
+}
+.btn-mint {
+  --btn-fill: var(--mint);
+  --btn-ledge: var(--mint-deep);
+}
+.btn-sunny {
+  --btn-fill: var(--sunny);
+  --btn-ledge: var(--sunny-deep);
+}
+.btn-correct {
+  --btn-fill: var(--correct);
+  --btn-ledge: var(--correct-deep);
+}
+/* Quiet: no fill, no ledge, for "Not now" style actions. */
+.btn-ghost {
+  --btn-fill: transparent;
+  --btn-ledge: transparent;
+  --btn-ink: var(--grape-deep);
+  box-shadow: none;
+}
+.btn-ghost:active {
+  transform: scale(0.97);
+}
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+.btn-big {
+  min-height: 3.75rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-lg);
+  font-size: var(--text-lg);
+}
+.btn-small {
+  min-height: var(--touch);
+  padding: 0.375rem 0.875rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-base);
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    filter: brightness(1.04);
+  }
+}
+/* Unavailable stays readable and focusable, but looks flat and spent. */
+.btn[aria-disabled='true'] {
+  --btn-fill: var(--surface-2);
+  --btn-ledge: var(--line-color);
+  --btn-ink: var(--ink-soft);
+  border-style: dashed;
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+  filter: none;
+}
+.btn .icon,
+.btn .gicon {
+  width: 1.25em;
+  height: 1.25em;
+  flex: none;
+  margin-right: 0.5rem;
+}
+
+/* Text link styled as a full-height tap target. */
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0.25rem 0;
+  background: none;
+  border: 0;
+  color: var(--grape-deep);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+  text-decoration-skip-ink: none;
+  cursor: pointer;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+/* A list of links in one rounded card, each row a big tap target. */
+.rows {
+  list-style: none;
+  background: var(--surface);
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+.rows > li + li {
+  border-top: 2px solid var(--line-color);
+}
+.row-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 0.625rem 1rem;
+  background: none;
+  border: 0;
+  color: var(--ink);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--t-fast) ease;
+}
+.row-link:active {
+  background: var(--grape-soft);
+}
+.row-link .main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.row-link .title {
+  display: block;
+  font-weight: 700;
+}
+.row-link .note {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+.row-link .mark {
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.75rem;
+  color: var(--grape);
+}
+.row-link.is-locked {
+  cursor: default;
+}
+.row-link.is-locked .title {
+  color: var(--ink-soft);
+}
+
+/* ---- Answer cards (index cards) ---- */
+.cards {
+  list-style: none;
+}
+.cards > li + li,
+.cards > .answer-card + .answer-card {
+  margin-top: 0.75rem;
+}
+.answer-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 1rem 1rem 0.875rem;
+  background: var(--beige);
+  border: var(--line);
+  border-radius: 2px;
+  color: var(--navy);
+  text-align: left;
+  cursor: pointer;
+  transition: transform var(--speed-fast) ease-out;
+  overflow-wrap: anywhere;
+}
+/* The head rule every index card has, drawn in navy. */
+.answer-card::before {
+  content: '';
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  top: 0.4375rem;
+  border-top: 2px solid var(--navy);
+  opacity: 0.35;
+}
+.answer-card .term {
+  display: block;
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 1.25;
+  padding-right: 2rem;
+}
+.answer-card .meaning {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+}
+.answer-card .state-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.state-icon.picked {
+  border: var(--line);
+  border-radius: 2px;
+  background: var(--cream);
+}
+/* A filled dot means "picked", so it is never mistaken for the check of a right answer. */
+.state-icon.picked::after {
+  content: '';
+  position: absolute;
+  left: 0.3125rem;
+  top: 0.3125rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  background: var(--navy);
+}
+.answer-card[aria-pressed='true'] {
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 0 2px var(--navy), 0 2px 0 var(--navy);
+}
+.answer-card.is-missed {
+  background: var(--cream);
+  cursor: default;
+  padding-top: 0;
+}
+.answer-card.is-missed::before,
+.answer-card.is-answer::before {
+  display: none;
+}
+.answer-card.is-answer {
+  background: var(--yellow);
+  cursor: default;
+}
+.answer-card.flip {
+  animation: card-flip var(--speed-flip) ease-out both;
+}
+.answer-card.is-missed.flip {
+  animation: card-flip-drop var(--speed-flip) ease-out both;
+}
+.answer-card.lift {
+  animation: card-lift var(--speed-fast) ease-out both;
+}
+
+/* Amber tab on a wrong card. Three shapes so the tabs never look stamped out. */
+.tab {
+  display: inline-block;
+  margin: 0 0 0.5rem -1rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--amber);
+  border: var(--line);
+  border-top: 0;
+  border-left: 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+.tab {
+  border-radius: 0 0 2px 0;
+}
+.tab-2 {
+  padding-right: 1.5rem;
+}
+.tab-3 {
+  margin-left: 0;
+  border-left: var(--line);
+  border-radius: 0 0 2px 2px;
+}
+
+/* ---- Battery ---- */
+.battery {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+/* Cells shrink on narrow screens at big text sizes, so the battery never scrolls sideways. */
+.battery .body {
+  display: flex;
+  flex: 0 1 auto;
+  min-width: 0;
+  padding: 0.25rem;
+  border: var(--line);
+  border-radius: 2px;
+}
+.battery .cell {
+  flex: 0 1 1.75rem;
+  width: 1.75rem;
+  min-width: 0.75rem;
+  height: 2.25rem;
+  margin-right: 0.25rem;
+  border: var(--line);
+  border-radius: 1px;
+  background: var(--yellow);
+}
+.battery .cell:last-child {
+  margin-right: 0;
+}
+.battery .cell.used {
+  background: var(--cream);
+  border-style: dashed;
+}
+.battery .nub {
+  flex: none;
+  width: 0.375rem;
+  height: 1.25rem;
+  border: var(--line);
+  border-left: 0;
+  border-radius: 0 2px 2px 0;
+}
+.battery.small .cell {
+  flex-basis: 1.125rem;
+  width: 1.125rem;
+  height: 1.5rem;
+}
+.battery.small .nub {
+  height: 0.875rem;
+}
+.battery .cell.glow {
+  animation: bar-light 200ms ease-out both;
+}
+.battery-line {
+  margin-top: 0.5rem;
+}
+
+/* ---- Bottom bar and message strip ---- */
+.bottom-bar {
+  background: var(--cream);
+  padding: 0.75rem 0 0.5rem;
+}
+.bottom-bar.pinned {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  max-width: 30rem;
+  z-index: 5;
+  border-top: var(--line);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0.75rem;
+  padding-bottom: calc(0.75rem + var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px)));
+}
+.bottom-bar .inner {
+  max-width: 28rem;
+  margin: 0 auto;
+}
+.bottom-bar .btn + .btn {
+  margin-top: 0.5rem;
+}
+.strip {
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 2px dashed var(--navy);
+  font-weight: 700;
+  font-size: 1.0625rem;
+}
+.strip-inline {
+  font-size: 1.0625rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--cream);
+  border: 2px dashed var(--navy);
+  font-weight: 700;
+  margin-top: 0.75rem;
+}
+.confirm {
+  border: var(--line);
+  padding: 0.75rem;
+  margin-top: 1rem;
+}
+.confirm .btn + .btn {
+  margin-top: 0.5rem;
+}
+
+/* ---- Clues ---- */
+.clues {
+  list-style: none;
+  border-top: var(--line);
+}
+.clue {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid var(--beige);
+}
+.clue .n {
+  flex: none;
+  width: 1.75rem;
+  margin-right: 0.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.clue.newest {
+  background: var(--beige);
+  border-bottom: var(--line);
+}
+/* The newest clue's number sits in a yellow box, a cue that is not color alone. */
+.clue.newest .n {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: 0.5rem;
+  border: var(--line);
+  background: var(--yellow);
+  text-align: center;
+  line-height: 1.5rem;
+}
+.clue.slide {
+  animation: clue-slide var(--speed) ease-out both;
+}
+
+/* ---- Mascots ---- */
+.mascots {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.mascot-btn {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-width: 3rem;
+  min-height: 3rem;
+  padding: 0.25rem;
+  margin: 0 0.25rem;
+  background: none;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+}
+/* The mascots' view boxes are cropped close to the drawing, so let a wiggle draw past the edge. */
+.art-floyd,
+.art-bud {
+  overflow: visible;
+}
+.art-wiggle {
+  animation: wiggle 300ms ease-out both;
+}
+.exchange {
+  list-style: none;
+  min-width: 0;
+}
+.exchange > li {
+  display: flex;
+  align-items: flex-start;
+  min-width: 0;
+}
+.exchange > li + li {
+  margin-top: 1rem;
+}
+.exchange .who {
+  flex: none;
+  margin-right: 0.75rem;
+}
+.exchange .said {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  padding: 0.5rem 0.75rem;
+  border: var(--line);
+  background: var(--cream);
+}
+.exchange .name {
+  display: block;
+  font-weight: 700;
+  font-size: 1.0625rem;
+}
+
+/* ---- Counters in fixed digit cells ---- */
+.counter {
+  display: block;
+}
+.counter .cells {
+  display: flex;
+}
+.counter .digit {
+  display: block;
+  width: 3.5rem;
+  height: 4.75rem;
+  margin-right: 0.25rem;
+  border: var(--line);
+  border-radius: 2px;
+  background: var(--beige);
+  font-family: var(--font-title);
+  font-size: 3.75rem;
+  line-height: 4.5rem;
+  text-align: center;
+  font-variant-numeric: lining-nums;
+  overflow: hidden;
+}
+.counter .digit span {
+  display: block;
+}
+.counter .digit.blank {
+  background: var(--cream);
+  border-style: dashed;
+}
+.counter .digit.roll span {
+  animation: digit-roll 300ms ease-out both;
+}
+.counter .label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* ---- Notes and panels ---- */
+.note-box {
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius);
+  padding: 0.875rem 1rem;
+  background: var(--surface);
+}
+.note-box.beige {
+  background: var(--sunny-soft);
+  border-color: #f6dc8f;
+}
+.result-line {
+  font-family: var(--font-title);
+  font-size: 1.375rem;
+  line-height: 1.25;
+}
+.code-text {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+  border: var(--line);
+  background: var(--beige);
+  padding: 0.75rem;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  -webkit-user-select: all;
+  user-select: all;
+}
+.field {
+  display: block;
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.5rem 0.875rem;
+  border: 2px solid #d9cbe9;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+.field:focus {
+  border-color: var(--grape);
+}
+.share-preview {
+  white-space: pre-wrap;
+  border: 2px dashed var(--navy);
+  padding: 0.75rem;
+  font-size: 1.125rem;
+}
+
+/* Choice buttons (aria-pressed) in Settings and Pass the Phone. */
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+legend {
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-title);
+  font-size: 1.375rem;
+}
+fieldset .small {
+  margin-top: 0.5rem;
+}
+.choice {
+  min-height: 3rem;
+  min-width: 4.5rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--t-fast) ease, border-color var(--t-fast) ease;
+}
+/* The picked choice also gets a check mark, so it never relies on color alone. */
+.choice[aria-pressed='true']::before {
+  content: '';
+  display: inline-block;
+  width: 0.5em;
+  height: 0.9em;
+  margin-right: 0.5em;
+  border: solid var(--navy);
+  border-width: 0 3px 3px 0;
+  transform: translateY(-0.15em) rotate(45deg);
+}
+.choice-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.25rem;
+}
+.choice-row > * {
+  margin: 0.25rem;
+}
+.choice[aria-pressed='true'],
+.choice[aria-checked='true'] {
+  background: var(--grape-soft);
+  border-color: var(--grape);
+}
+
+/* ---- Badges ---- */
+.badge-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.75rem;
+  list-style: none;
+}
+.badge-card {
+  display: flex;
+  align-items: flex-start;
+  border: var(--line);
+  padding: 0.75rem;
+  background: var(--cream);
+  text-align: left;
+}
+.badge-card.earned {
+  background: var(--beige);
+}
+.badge-card .art {
+  flex: none;
+  display: flex;
+  justify-content: center;
+  margin-right: 1rem;
+  margin-bottom: 0;
+}
+.badge-card > div {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.badge-date {
+  display: inline-block;
+  max-width: 100%;
+  white-space: normal;
+}
+.badge-card .name {
+  font-weight: 700;
+}
+.stamp {
+  animation: stamp 250ms ease-out both;
+}
+
+@media (min-width: 45em) {
+  .badge-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.desktop-tip {
+  display: none;
+}
+@media (min-width: 45em) {
+  .desktop-tip {
+    display: block;
+    font-size: 1.0625rem;
+  }
+}
+
+/* ---- Motion ---- */
+/* No perspective here: with it, the near edge of a flipping card grew wider than a small
+   screen for a moment and the page scrolled sideways. A flat flip only gets shorter. */
+@keyframes card-flip {
+  0% {
+    transform: rotateX(80deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}
+@keyframes card-flip-drop {
+  0% {
+    transform: rotateX(80deg) translateY(-0.5rem);
+  }
+  100% {
+    transform: rotateX(0) translateY(0);
+  }
+}
+@keyframes card-lift {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+@keyframes clue-slide {
+  0% {
+    transform: translateY(-0.5rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes bar-light {
+  0% {
+    background: var(--cream);
+  }
+  100% {
+    background: var(--yellow);
+  }
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-6deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes digit-roll {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes stamp {
+  0% {
+    transform: scale(1.08);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.plain-list {
+  list-style: none;
+}
+.plain-list > li + li {
+  margin-top: 0.5rem;
+}
+.new-badge {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+.new-badge svg {
+  flex: none;
+  margin-right: 0.75rem;
+}
+
+/* A lesson's learn card: an index card with its head rule. */
+.learn-card {
+  position: relative;
+  padding: 1.25rem 1rem 1rem;
+  border: var(--line);
+  border-radius: 2px;
+  background: var(--beige);
+}
+.learn-card::before {
+  content: '';
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  top: 0.4375rem;
+  border-top: 2px solid var(--navy);
+  opacity: 0.35;
+}
+.summary-row {
+  padding: 0.75rem;
+}
+.summary-row .title {
+  display: block;
+  font-weight: 700;
+}
+.summary-row .note {
+  display: block;
+  font-size: 1.0625rem;
+}
+.code-text.cmd {
+  font-size: 1.0625rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+  font-weight: 400;
+  letter-spacing: 0;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+.rows + .btn,
+.rows + .stack-sm {
+  margin-top: 1.5rem;
+}
+/* Every screen's top-level blocks get the same vertical rhythm. */
+main > * + * {
+  margin-top: 1.5rem;
+}
+
+html.ts-largest .screen-title {
+  font-size: 1.5rem;
+}
+.round .battery-wrap p {
+  font-size: 1.125rem;
+}
+@media (min-width: 45em) {
+  .bottom-bar.pinned {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Keeps "Something wrong? Tell us" from reading as one more source. */
+.stack > .feedback-line {
+  margin-top: 1.5rem;
+}

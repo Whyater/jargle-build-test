@@ -1,0 +1,67 @@
+{
+  "id": "bank-security-question",
+  "kind": "term",
+  "topic": "locks-and-keys",
+  "term": "security question",
+  "meaning": "A personal question you pick when you set up an account, like your first pet's name. You answer it later to prove who you are.",
+  "clues": [
+    "It is something you set up to prove who you are.",
+    "You answer it with something only you should know.",
+    "It asks a question about your life, like the name of your first pet.",
+    "Answers can be guessed or found online, so experts say it should not be your only protection.",
+    "It has two words. The first has eight letters and starts with S. The second starts with Q."
+  ],
+  "assumes": [
+    "A PIN is a secret number",
+    "A one-time code works only once"
+  ],
+  "decoys": [
+    {
+      "term": "one-time code",
+      "meaning": "A short code sent to you for one sign-in only. It stops working after a few minutes.",
+      "source_urls": [
+        "https://www.login.gov/help/create-account/authentication-methods/text-sms-or-phone-call/"
+      ]
+    },
+    {
+      "term": "PIN",
+      "meaning": "A secret number, often four digits, that you type to prove it is you, such as to unlock a phone.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Personal_identification_number"
+      ]
+    },
+    {
+      "term": "face unlock",
+      "meaning": "A way to open a phone by looking at it. The phone checks that your face matches the one it saved.",
+      "source_urls": [
+        "https://support.apple.com/en-us/102381"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, the bank teller knew your face. That was our security question."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today, the answers can be easy to look up. Pick a question whose answer is not on your profile page."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Security question",
+      "url": "https://en.wikipedia.org/wiki/Security_question"
+    },
+    {
+      "name": "Google Online Security Blog, New Research: Some Tough Questions for Security Questions",
+      "url": "https://security.googleblog.com/2015/05/new-research-some-tough-questions-for.html"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true
+}

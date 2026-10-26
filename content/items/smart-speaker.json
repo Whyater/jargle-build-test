@@ -1,0 +1,87 @@
+{
+  "id": "smart-speaker",
+  "kind": "term",
+  "topic": "talking-computers",
+  "term": "smart speaker",
+  "meaning": "A speaker that connects to the internet and answers when you talk to it.",
+  "clues": [
+    "It is a connected device that can respond when you speak to it.",
+    "It is a room speaker that connects to the internet and answers out loud without a screen.",
+    "You can ask it to play music, give facts, or work with another device.",
+    "It usually has microphones and a mute switch or button for times you want quiet.",
+    "Its name has two words and starts with S."
+  ],
+  "assumes": [
+    "A loudspeaker only plays sound that another device sends it",
+    "A smart display has a screen as well as speakers",
+    "A phone is a handheld device used for calls and apps"
+  ],
+  "decoys": [
+    {
+      "term": "loudspeaker",
+      "meaning": "A device that turns an electrical signal into sound so you can hear music or speech.",
+      "source_urls": [
+        "https://www.britannica.com/technology/loudspeaker"
+      ]
+    },
+    {
+      "term": "smart display",
+      "meaning": "An internet device with a screen that can show facts and play sound.",
+      "source_urls": [
+        "https://www.lenovo.com/be/nl/faqs/voice-search-faqs/what-is-smart-speaker-display/"
+      ]
+    },
+    {
+      "term": "phone",
+      "meaning": "A handheld device for calls, messages, web use, and apps.",
+      "source_urls": [
+        "https://www.britannica.com/technology/cell-phone"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. Ask it for a weather report, then check the same information another way."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "neutral",
+      "text": "A radio waited for you to turn a dial. This speaker waits for a spoken request."
+    },
+    {
+      "speaker": "bud",
+      "text": "Check its mute switch or button before private talks."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Cambridge Dictionary, smart speaker",
+      "url": "https://dictionary.cambridge.org/us/dictionary/english/smart-speaker?topic=audio-and-video-equipment"
+    },
+    {
+      "name": "Britannica, Loudspeaker",
+      "url": "https://www.britannica.com/technology/loudspeaker"
+    },
+    {
+      "name": "Britannica, Cell phone",
+      "url": "https://www.britannica.com/technology/cell-phone"
+    },
+    {
+      "name": "Lenovo, Smart speaker and display",
+      "url": "https://www.lenovo.com/be/nl/faqs/voice-search-faqs/what-is-smart-speaker-display/"
+    },
+    {
+      "name": "Consumer Reports, How to choose a smart speaker",
+      "url": "https://www.consumerreports.org/electronics-computers/smart-speakers/how-to-choose-the-right-smart-speaker-a8332054993/"
+    },
+    {
+      "name": "Google Home and Nest Help, Control Google smart devices by touch",
+      "url": "https://support.google.com/googlenest/answer/7072889"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2
+}

@@ -1,0 +1,67 @@
+{
+  "id": "bank-card-catalog",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "card catalog",
+  "meaning": "A library cabinet of small drawers holding cards. Each card told you about one book and where to find it.",
+  "clues": [
+    "You could find it in a library.",
+    "It was a piece of furniture made of many small drawers.",
+    "The drawers held cards in ABC order.",
+    "Each card gave a book's title, its author, and where it sat on the shelves.",
+    "It has two words. The first has four letters and starts with C."
+  ],
+  "assumes": [
+    "The Dewey Decimal System numbers books by subject",
+    "A phone book lists names and phone numbers"
+  ],
+  "decoys": [
+    {
+      "term": "Dewey Decimal System",
+      "meaning": "A way to number library books by subject so each book has a place on the shelves.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Dewey_Decimal_Classification"
+      ]
+    },
+    {
+      "term": "phone book",
+      "meaning": "A thick book listing the names, addresses, and phone numbers of people in an area.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Telephone_directory"
+      ]
+    },
+    {
+      "term": "typewriter",
+      "meaning": "A machine with a keyboard that presses letters onto paper, one key at a time.",
+      "source_urls": [
+        "https://smithsonianeducation.org/scitech/carbons/typewriters.html"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, we found books by flipping through little drawers. Good exercise, and sometimes a paper cut."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: the library's online catalog. Type a title or a topic, and it shows where the book is, even from home."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Library of Congress, The Library of Congress Card Catalog",
+      "url": "https://guides.loc.gov/card-catalog"
+    },
+    {
+      "name": "Wikipedia, Library catalog",
+      "url": "https://en.wikipedia.org/wiki/Library_catalog"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

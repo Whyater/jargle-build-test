@@ -1,0 +1,63 @@
+{
+  "id": "check-what-a-chatbot-says",
+  "topic": "talking-computers",
+  "number": 1,
+  "title": "Check what a chatbot says",
+  "cards": [
+    {
+      "text": "A chatbot can sound sure and still be wrong. AARP says chatbots can sound very confident even when an answer is wrong. Check important answers with a source you trust.",
+      "mascot": "floyd",
+      "line": "A confident voice can still miss the mark."
+    },
+    {
+      "text": "Do not type private details into a chatbot. AARP says to keep Social Security numbers, bank accounts, and passwords out of a chat.",
+      "mascot": "bud",
+      "line": "Keep private details out of the chat."
+    },
+    {
+      "text": "AARP says to double-check chatbot answers, especially about health, money, or legal matters. Treat an answer as a starting point.",
+      "mascot": "floyd",
+      "line": "Check the answer before you act."
+    }
+  ],
+  "checks": [
+    {
+      "prompt": "A chatbot gives advice about a health problem. What is the safer next step?",
+      "options": [
+        "Ask if it is sure",
+        "Check a trusted health source",
+        "Share all your medical details with the chatbot"
+      ],
+      "answer": "Check a trusted health source",
+      "why": "AARP says chatbots can sound confident even when they are wrong. It says to double-check answers about health, money, or legal matters."
+    },
+    {
+      "prompt": "Which detail should stay out of a chatbot?",
+      "options": [
+        "Your bank account number",
+        "A recipe idea for dinner today",
+        "A question about a book you are reading today"
+      ],
+      "answer": "Your bank account number",
+      "why": "AARP lists bank accounts and passwords as details to keep out of a chatbot."
+    },
+    {
+      "prompt": "A chatbot sounds certain about a money choice. What should you do?",
+      "options": [
+        "Ask the chatbot if it is sure",
+        "Ask the chatbot to explain every detail in a long reply",
+        "Check with a trusted source first"
+      ],
+      "answer": "Check with a trusted source first",
+      "why": "AARP says to double-check answers about money and treat them as a starting point."
+    }
+  ],
+  "takeaway": "Check important chatbot answers, and keep private details out.",
+  "sources": [
+    {
+      "name": "AARP, 6 ways to stay safe in a chatbot world",
+      "url": "https://www.aarp.org/personal-technology/stay-safe-in-chatbot-world/"
+    }
+  ],
+  "checked_on": null
+}

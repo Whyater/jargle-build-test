@@ -1,0 +1,79 @@
+{
+  "id": "voice-assistant",
+  "kind": "term",
+  "topic": "talking-computers",
+  "term": "voice assistant",
+  "meaning": "Software you talk to out loud that answers questions or does tasks on a phone or a home speaker.",
+  "clues": [
+    "You can ask it about almost anything out loud, like the weather, and it answers you.",
+    "It can also make a call, send a text, or set a reminder.",
+    "It can run on a phone or on a speaker you keep at home.",
+    "Apple, Amazon, and Google each make one.",
+    "Its name has two words."
+  ],
+  "assumes": [
+    "A screen reader reads what is on a screen for a person who cannot see it well",
+    "Dictation turns spoken words into typed text",
+    "An automated phone menu gives recorded choices when you call a business"
+  ],
+  "decoys": [
+    {
+      "term": "screen reader",
+      "meaning": "Software that reads words and controls on a screen aloud for someone who needs help seeing them.",
+      "source_urls": [
+        "https://support.apple.com/guide/iphone/use-voiceover-on-iphone-iph3e2e415f/ios"
+      ]
+    },
+    {
+      "term": "dictation",
+      "meaning": "A phone feature that turns the words you speak into typed text in a text box.",
+      "source_urls": [
+        "https://support.apple.com/guide/iphone/dictate-text-iph2c0651d2/ios"
+      ]
+    },
+    {
+      "term": "automated phone menu",
+      "meaning": "A recorded phone system that gives choices and sends your call to the right place.",
+      "source_urls": [
+        "https://www.usa.gov/blog/2020/03/press-or-say-1-usagov-expands-its-use-of-interactive-voice-response"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try asking Siri, Alexa, or Google Assistant to set a short timer. Check that it heard you correctly."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "A spoken request still needs a clear answer. We used to repeat a number back before writing it down."
+    },
+    {
+      "speaker": "bud",
+      "text": "You can change the device settings if you do not want it listening for its wake word."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Google Assistant Help",
+      "url": "https://support.google.com/assistant/answer/7172657"
+    },
+    {
+      "name": "Amazon, Alexa and Alexa Device FAQs",
+      "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201602230"
+    },
+    {
+      "name": "Amazon, Learn what Alexa can do",
+      "url": "https://www.amazon.com/b?ie=UTF8&node=21576558011"
+    },
+    {
+      "name": "Apple Support, Siri",
+      "url": "https://support.apple.com/en-us/105077"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1
+}

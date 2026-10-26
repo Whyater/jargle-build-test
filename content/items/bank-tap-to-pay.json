@@ -1,0 +1,71 @@
+{
+  "id": "bank-tap-to-pay",
+  "kind": "term",
+  "topic": "money-on-your-phone",
+  "term": "tap to pay",
+  "meaning": "Paying by holding your phone, watch, or card near a card reader at checkout. You do not swipe or insert anything.",
+  "clues": [
+    "It is a way to pay for things with your phone.",
+    "You use it in a store, at the checkout.",
+    "You hold your phone close to the card reader instead of swiping or inserting a card.",
+    "Your phone sends a short-range radio signal, and you may need to unlock it first.",
+    "It has three words. The first starts with T, and the second is just two letters long."
+  ],
+  "assumes": [
+    "An in-app purchase happens inside an app",
+    "Mobile check deposit is about checks, not shopping"
+  ],
+  "decoys": [
+    {
+      "term": "in-app purchase",
+      "meaning": "Buying something extra inside an app you already have, like a game bonus.",
+      "source_urls": [
+        "https://support.apple.com/en-us/102383"
+      ]
+    },
+    {
+      "term": "mobile check deposit",
+      "meaning": "Using your phone's camera to photograph a paper check. The money goes into your bank account without a trip to the bank.",
+      "source_urls": [
+        "https://www.fdic.gov/consumers/consumer/news/october2019.html"
+      ]
+    },
+    {
+      "term": "prepaid card",
+      "meaning": "A card you load with money ahead of time. You can spend only what you loaded.",
+      "source_urls": [
+        "https://www.consumerfinance.gov/consumer-tools/prepaid-cards/"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, paying meant counting coins into a hand. Now you wave at the register like a wizard."
+    },
+    {
+      "speaker": "bud",
+      "text": "And your phone asks for your face, fingerprint, or passcode first, so a lost phone is not a free shopping trip."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Apple Support, Make purchases with Apple Pay on iPhone",
+      "url": "https://support.apple.com/guide/iphone/make-purchases-with-apple-pay-iphbd4cf42b4/ios"
+    },
+    {
+      "name": "Google Wallet Help, Tap to pay with your phone",
+      "url": "https://support.google.com/wallet/answer/12060043"
+    },
+    {
+      "name": "Wikipedia, Contactless payment",
+      "url": "https://en.wikipedia.org/wiki/Contactless_payment"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

@@ -1,0 +1,71 @@
+{
+  "id": "streaming",
+  "kind": "term",
+  "topic": "how-the-internet-works",
+  "term": "streaming",
+  "meaning": "Watching or hearing a show online as it plays, without saving it all first.",
+  "clues": [
+    "It lets you watch a show or hear music through the internet.",
+    "The sound or picture plays as small pieces arrive. You do not wait for the whole file.",
+    "A faster connection can mean fewer pauses.",
+    "You can stop, pause, or start again from the service.",
+    "It has nine letters and starts with S."
+  ],
+  "assumes": [],
+  "decoys": [
+    {
+      "term": "Downloading",
+      "meaning": "Saving a whole file from the internet to your device before you use it.",
+      "source_urls": [
+        "https://dictionary.cambridge.org/dictionary/english/download"
+      ]
+    },
+    {
+      "term": "Cable TV",
+      "meaning": "TV service sent to a home through a cable.",
+      "source_urls": [
+        "https://dictionary.cambridge.org/dictionary/english/cable-television"
+      ]
+    },
+    {
+      "term": "Satellite radio",
+      "meaning": "Radio sent from satellites in space to receivers in cars and homes.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Satellite_radio"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try watching a short video. It starts playing before the whole video has arrived."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "When we used a record, the music was already stored on it. This method brings the sound to you as you listen."
+    },
+    {
+      "speaker": "bud",
+      "text": "If the picture keeps stopping, close other tabs or programs you are not using."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Cambridge Dictionary, streaming",
+      "url": "https://dictionary.cambridge.org/dictionary/english/streaming"
+    },
+    {
+      "name": "Cambridge Dictionary, download",
+      "url": "https://dictionary.cambridge.org/dictionary/english/download"
+    },
+    {
+      "name": "YouTube Help, system requirements and supported devices",
+      "url": "https://support.google.com/youtube/answer/78358"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2
+}

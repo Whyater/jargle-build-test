@@ -1,0 +1,68 @@
+{
+  "id": "keep-private-details-out-of-a-chatbot",
+  "topic": "talking-computers",
+  "number": 2,
+  "title": "Keep private details out of a chatbot",
+  "cards": [
+    {
+      "text": "CISA says not to share sensitive information with AI tools. Keep personal details, like your bank number, out of a chatbot.",
+      "mascot": "floyd",
+      "line": "Some details belong only with people you trust."
+    },
+    {
+      "text": "CISA says AI systems learn from what users enter. If you would not post a detail for everyone to see, do not put it into a chatbot.",
+      "mascot": "bud",
+      "line": "Pause before you send."
+    },
+    {
+      "text": "CISA says not to rely only on AI answers. Check important answers another way, such as with an official site or a trusted person.",
+      "mascot": "floyd",
+      "line": "A second check can catch a wrong answer."
+    }
+  ],
+  "checks": [
+    {
+      "prompt": "Which detail should stay out of a chatbot?",
+      "options": [
+        "Your bank number",
+        "A recipe for soup",
+        "A question about a book"
+      ],
+      "answer": "Your bank number",
+      "why": "CISA says not to share private details with AI tools."
+    },
+    {
+      "prompt": "You want to share a detail with an AI tool. What question can help?",
+      "options": [
+        "Would I post this for everyone to see?",
+        "Is this detail short enough to type?",
+        "Will the tool answer in one sentence?"
+      ],
+      "answer": "Would I post this for everyone to see?",
+      "why": "CISA says that if you would not post it on social media, you should not share it with an AI tool."
+    },
+    {
+      "prompt": "An AI answer affects an important choice. What should you do?",
+      "options": [
+        "Check it a second way",
+        "Trust it",
+        "Send it to a friend without checking"
+      ],
+      "answer": "Check it a second way",
+      "why": "CISA says AI is a tool, not a replacement for your own skills. Checking another way is a safe habit."
+    }
+  ],
+  "takeaway": "Keep private details out of chatbots and check important answers a second way.",
+  "sources": [
+    {
+      "name": "CISA Secure Our World, Stay safe online when using AI (tip sheet)",
+      "url": "https://programs.staysafeonline.org/hubfs/Secure-Our-World-Using-AI-Tip-Sheet.pdf"
+    },
+    {
+      "name": "CISA, Secure Our World and Cybersecurity Awareness Month resources (archive)",
+      "url": "https://www.cisa.gov/resources-tools/resources/secure-our-world-cybersecurity-awareness-month-resources-archive"
+    }
+  ],
+  "checked_on": null,
+  "release_day": 2
+}

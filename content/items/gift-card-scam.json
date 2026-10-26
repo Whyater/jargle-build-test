@@ -1,0 +1,75 @@
+{
+  "id": "gift-card-scam",
+  "kind": "term",
+  "topic": "scams-and-fakes",
+  "term": "gift card scam",
+  "meaning": "A trick that pressures you to buy a gift card and give away its number or PIN as payment.",
+  "clues": [
+    "It pressures you to pay or send money quickly because of a made-up problem.",
+    "You are told to buy a store card and read its number and PIN, not wire money or use a check.",
+    "The caller may name a utility or office.",
+    "A real business or government office will not demand payment this way.",
+    "Its name starts with G and has three words."
+  ],
+  "assumes": [
+    "A wire transfer sends money through a transfer service",
+    "A payment app scam asks you to send money through a payment app",
+    "A fake check scam uses a check that later turns out to be fake"
+  ],
+  "decoys": [
+    {
+      "term": "wire transfer scam",
+      "meaning": "A trick that gets you to send money by wire transfer, often to a stranger.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-avoid-scam"
+      ]
+    },
+    {
+      "term": "payment app scam",
+      "meaning": "A trick that gets you to send money through a payment app.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-avoid-scam"
+      ]
+    },
+    {
+      "term": "fake check scam",
+      "meaning": "A trick that uses a check that later turns out to be fake.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/avoiding-and-reporting-gift-card-scams"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. If a caller wants a gift card, hang up and tell a trusted person before you pay."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "neutral",
+      "text": "A gift card was a gift for a person you knew. It was never a bill payment."
+    },
+    {
+      "speaker": "bud",
+      "text": "If you shared the card number, keep the card and receipt. Call the card company right away and report it at ReportFraud.ftc.gov."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FTC, Avoiding and reporting gift card scams",
+      "url": "https://consumer.ftc.gov/articles/avoiding-and-reporting-gift-card-scams"
+    },
+    {
+      "name": "FTC, Check-out line gift card advice",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2024/02/check-out-line-buying-gift-cards-read-avoid-scam"
+    },
+    {
+      "name": "FTC, Fake prize scams",
+      "url": "https://consumer.ftc.gov/articles/fake-prize-sweepstakes-and-lottery-scams"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2
+}
