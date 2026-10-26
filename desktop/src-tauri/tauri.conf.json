@@ -1,0 +1,75 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Jargle",
+  "mainBinaryName": "Jargle",
+  "version": "0.1.0",
+  "identifier": "io.github.whyater.jargle",
+  "build": {
+    "frontendDist": "../../web/dist",
+    "devUrl": "http://localhost:5173",
+    "beforeDevCommand": "npm --prefix ../web run dev",
+    "beforeBuildCommand": ""
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Jargle",
+        "width": 1100,
+        "height": 760,
+        "minWidth": 360,
+        "minHeight": 560,
+        "resizable": true,
+        "center": true,
+        "create": false,
+        "backgroundColor": [255, 248, 238, 255]
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' ipc: http://ipc.localhost https://whyater.github.io https://*.sslip.io"
+    }
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEU1NTc0NUQ5RTAxOEJCMzIKUldReXV4amcyVVZYNWRoYkozSWpvODNLM216akVPUHU4WjdCVXFHRG5XV1o5dUhlT2MwN2pIRGkK",
+      "endpoints": [
+        "https://github.com/Whyater/Jargle/releases/latest/download/latest.json"
+      ],
+      "windows": {
+        "installMode": "passive"
+      }
+    }
+  },
+  "bundle": {
+    "active": true,
+    "createUpdaterArtifacts": true,
+    "targets": "all",
+    "publisher": "Whyater",
+    "category": "Education",
+    "shortDescription": "A daily tech word game.",
+    "longDescription": "Jargle teaches one new tech word a day with a short clue game.",
+    "copyright": "Copyright (c) 2026 Abyan",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "macOS": {
+      "minimumSystemVersion": "10.15",
+      "signingIdentity": "-"
+    },
+    "windows": {
+      "webviewInstallMode": {
+        "type": "embedBootstrapper"
+      },
+      "nsis": {
+        "installMode": "currentUser"
+      },
+      "wix": {
+        "language": "en-US"
+      }
+    }
+  }
+}

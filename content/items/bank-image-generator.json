@@ -1,0 +1,77 @@
+{
+  "id": "bank-image-generator",
+  "kind": "term",
+  "topic": "talking-computers",
+  "term": "image generator",
+  "meaning": "A computer tool that makes a brand-new picture from words you type, such as \"a red boat on a lake.\"",
+  "clues": [
+    "It produces a picture for you.",
+    "You do not need a camera to get the picture.",
+    "You describe what you want in words, and it makes a brand-new picture.",
+    "The more detail you give, the closer the result is to what you imagined.",
+    "It has two words. The first starts with I and the second starts with G."
+  ],
+  "assumes": [
+    "A photo editor changes a photo you already have",
+    "A scanner copies paper into a computer",
+    "A printer puts a file on paper"
+  ],
+  "decoys": [
+    {
+      "term": "photo editor",
+      "meaning": "An app that changes a photo you already have, such as cropping it or fixing the colors.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Raster_graphics_editor"
+      ]
+    },
+    {
+      "term": "scanner",
+      "meaning": "A machine that copies a paper page or photo into a computer file.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Image_scanner"
+      ]
+    },
+    {
+      "term": "printer",
+      "meaning": "A machine that puts words or pictures from a computer onto paper.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Printer_(computing)"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, a picture meant a camera, film, and a week of waiting at the shop."
+    },
+    {
+      "speaker": "bud",
+      "text": "Now a few typed words will do. Tip: tools like this can make fake scenes, so look closely before you trust a picture."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Text-to-image model",
+      "url": "https://en.wikipedia.org/wiki/Text-to-image_model"
+    },
+    {
+      "name": "Wikipedia, Generative artificial intelligence",
+      "url": "https://en.wikipedia.org/wiki/Generative_artificial_intelligence"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true,
+  "blank": {
+    "sentence": "I typed 'a red boat on a lake' and the ___ made a brand-new picture.",
+    "wrong": [
+      "translation app",
+      "text to speech"
+    ]
+  },
+  "why": "It turns words you type into a brand-new picture.",
+  "short": "Tool that makes pictures from words"
+}

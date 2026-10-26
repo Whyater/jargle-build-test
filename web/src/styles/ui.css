@@ -1,0 +1,550 @@
+/* Game pieces: cards, pills, progress bars, tab bar, hearts, XP, streak, confetti, toasts,
+   speech bubbles. Colors and sizes come from tokens.css. */
+
+/* ---- Card ---- */
+.card {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: var(--s5);
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-card);
+  text-align: left;
+  text-decoration: none;
+  font: inherit;
+}
+.card-grape {
+  background: var(--grape-soft);
+  border-color: #d8ccff;
+}
+.card-coral {
+  background: var(--coral-soft);
+  border-color: #ffc9c0;
+}
+.card-mint {
+  background: var(--mint-soft);
+  border-color: #b4ebdc;
+}
+.card-sunny {
+  background: var(--sunny-soft);
+  border-color: #f8de95;
+}
+/* A pressable card sits on a ledge like the buttons, and sinks onto it when tapped. */
+.card-press {
+  cursor: pointer;
+  margin-bottom: var(--ledge);
+  box-shadow: 0 var(--ledge) 0 var(--line-color), 0 12px 24px -16px rgba(43, 35, 64, 0.3);
+  transition: transform var(--t-fast) var(--ease-out), box-shadow var(--t-fast) var(--ease-out);
+  touch-action: manipulation;
+}
+.card-press.card-grape {
+  box-shadow: 0 var(--ledge) 0 #d0c2ff, 0 12px 24px -16px rgba(83, 54, 201, 0.4);
+}
+.card-press.card-coral {
+  box-shadow: 0 var(--ledge) 0 #ffc0b6, 0 12px 24px -16px rgba(217, 73, 58, 0.4);
+}
+.card-press.card-mint {
+  box-shadow: 0 var(--ledge) 0 #a6e5d4, 0 12px 24px -16px rgba(29, 154, 129, 0.4);
+}
+.card-press.card-sunny {
+  box-shadow: 0 var(--ledge) 0 #f3d27a, 0 12px 24px -16px rgba(224, 154, 0, 0.4);
+}
+.card-press:active {
+  transform: translateY(var(--ledge));
+  box-shadow: 0 0 0 transparent;
+}
+
+/* ---- Pill ---- */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.125rem 0.75rem;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  border: 2px solid var(--line-color);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  line-height: 1;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.pill .gicon {
+  flex: none;
+  margin-right: 0.3rem;
+}
+.pill-grape {
+  background: var(--grape-soft);
+  border-color: #d8ccff;
+  color: var(--grape-deep);
+}
+.pill-coral {
+  background: var(--coral-soft);
+  border-color: #ffc9c0;
+  color: #a8301f;
+}
+.pill-mint {
+  background: var(--mint-soft);
+  border-color: #b4ebdc;
+  color: #11695a;
+}
+.pill-sunny {
+  background: var(--sunny-soft);
+  border-color: #f8de95;
+  color: #7a5200;
+}
+.pill-flame {
+  background: #ffe8d6;
+  border-color: #ffcaa3;
+  color: #a54a0c;
+}
+.pill-flame .gicon {
+  color: var(--flame);
+}
+.pill-correct {
+  background: var(--correct-soft);
+  border-color: #b4e9c5;
+  color: var(--ok-ink);
+}
+.pill-wrong {
+  background: var(--wrong-soft);
+  border-color: #ffc1ca;
+  color: var(--bad-ink);
+}
+
+/* ---- Progress bar ---- */
+.progress {
+  position: relative;
+  height: 0.75rem;
+  border-radius: var(--radius-pill);
+  background: #f0e6f7;
+  box-shadow: inset 0 2px 0 rgba(43, 35, 64, 0.08);
+  overflow: hidden;
+}
+.progress-big {
+  height: 1rem;
+}
+.progress .fill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  background: var(--grape);
+  transform-origin: left center;
+  transition: transform var(--t-slow) var(--ease-out);
+}
+/* A soft shine on the top half of the fill, so it reads as candy and not as a flat stripe. */
+.progress .fill::after {
+  content: '';
+  position: absolute;
+  left: 0.375rem;
+  right: 0.375rem;
+  top: 0.1875rem;
+  height: 0.1875rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.45);
+}
+.progress-sunny .fill {
+  background: var(--sunny);
+}
+.progress-mint .fill {
+  background: var(--mint);
+}
+.progress-coral .fill {
+  background: var(--coral);
+}
+.progress-correct .fill {
+  background: var(--correct);
+}
+
+/* ---- Tab bar ---- */
+.tabbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  padding: 0.375rem calc(0.5rem + var(--safe-area-inset-right, env(safe-area-inset-right, 0px)))
+    calc(0.375rem + var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px)))
+    calc(0.5rem + var(--safe-area-inset-left, env(safe-area-inset-left, 0px)));
+  background: var(--surface);
+  border-top: 2px solid var(--line-color);
+  box-shadow: 0 -10px 24px -18px rgba(43, 35, 64, 0.35);
+}
+.tabbar ul {
+  display: flex;
+  max-width: 30rem;
+  margin: 0 auto;
+  list-style: none;
+}
+.tabbar li {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.tab-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.5rem;
+  border-radius: var(--radius);
+  color: var(--ink-soft);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: color var(--t-fast) ease;
+}
+.tab-icon {
+  margin-bottom: 0.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 2rem;
+  border-radius: var(--radius-pill);
+  transition: background-color var(--t-med) var(--ease-out), transform var(--t-med) var(--ease-bounce);
+}
+.tab-link.on {
+  color: var(--grape-deep);
+}
+.tab-link.on .tab-icon {
+  background: var(--grape-soft);
+  box-shadow: 0 3px 0 #d0c2ff;
+  transform: translateY(-2px);
+}
+.tab-link:active .tab-icon {
+  transform: scale(0.9);
+}
+/* The tab bar is chrome, so at the biggest text size it stays the size it is at Large. */
+html.ts-largest .tab-link {
+  font-size: 0.75rem;
+}
+
+/* ---- Hearts ---- */
+.hearts {
+  display: inline-flex;
+}
+.heart + .heart {
+  margin-left: 0.25rem;
+}
+.heart {
+  display: inline-flex;
+  color: var(--wrong);
+  transition: color var(--t-med) ease, transform var(--t-med) var(--ease-bounce);
+}
+.heart.lost {
+  color: #8f84a3;
+  animation: heart-pop var(--t-slow) var(--ease-out);
+}
+@keyframes heart-pop {
+  0% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ---- XP badge and streak flame ---- */
+.xp-badge,
+.streak-flame {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.xp-badge {
+  color: var(--sunny);
+  filter: drop-shadow(0 2px 0 var(--sunny-deep));
+}
+.xp-badge .num {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.15em;
+  color: #6b4600;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 1;
+}
+.xp-badge.big .num {
+  font-size: 1.625rem;
+}
+.streak-flame .gicon {
+  margin-right: 0.125rem;
+}
+.streak-flame {
+  color: #c9bfd3;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-md);
+  font-variant-numeric: tabular-nums;
+}
+.streak-flame .num {
+  color: var(--ink-soft);
+}
+/* No streak yet: an empty flame outline, so it never reads as a water drop. */
+.streak-flame:not(.on) .gicon {
+  fill: none;
+  stroke: #8f84a3;
+  stroke-width: 2.2;
+}
+.streak-flame.on {
+  color: var(--flame);
+}
+.streak-flame.on .num {
+  color: #a54a0c;
+}
+
+/* ---- Confetti ---- */
+.confetti {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 30;
+}
+.confetti .bit {
+  position: absolute;
+  left: -4px;
+  top: -6px;
+  width: 8px;
+  height: 12px;
+  border-radius: 2px;
+  opacity: 0;
+  animation: confetti-fly 900ms var(--ease-out) forwards;
+}
+.confetti .bit.round {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+@keyframes confetti-fly {
+  0% {
+    opacity: 1;
+    transform: rotate(var(--angle)) translateY(0) rotate(0deg);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(var(--angle)) translateY(calc(var(--distance) * -1)) rotate(var(--spin));
+  }
+}
+
+/* ---- Toasts and the XP float ---- */
+.toasts {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--tabbar-h) + 1rem + var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px)));
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  pointer-events: none;
+}
+.toast + .toast {
+  margin-top: 0.5rem;
+}
+.toast .gicon {
+  flex: none;
+  margin-right: 0.5rem;
+}
+.toast {
+  display: inline-flex;
+  align-items: center;
+  max-width: 26rem;
+  padding: 0.625rem 1.125rem;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: #ffffff;
+  box-shadow: var(--shadow-float);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-base);
+  animation: toast-in var(--t-med) var(--ease-bounce);
+}
+.toast-correct .gicon {
+  color: var(--correct);
+}
+.toast-sunny .gicon {
+  color: var(--sunny);
+}
+.toast-coral .gicon {
+  color: var(--coral);
+}
+.toast-grape .gicon {
+  color: #b9a6ff;
+}
+@keyframes toast-in {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.xp-float {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 25;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  background: var(--sunny);
+  color: #5c3c00;
+  box-shadow: 0 3px 0 var(--sunny-deep);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-md);
+  white-space: nowrap;
+  pointer-events: none;
+  animation: xp-float 1100ms var(--ease-out) forwards;
+}
+@keyframes xp-float {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 8px) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -6px) scale(1.05);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -40px) scale(1);
+  }
+}
+
+/* ---- Speech bubble ---- */
+.says {
+  display: flex;
+  align-items: center;
+}
+.says-mascot {
+  margin-right: 0.75rem;
+}
+.says.flip .says-mascot {
+  margin-right: 0;
+  margin-left: 0.75rem;
+}
+.says.flip {
+  flex-direction: row-reverse;
+}
+.says-mascot {
+  flex: none;
+}
+.bubble {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.3;
+  cursor: default;
+}
+.bubble-rest {
+  visibility: hidden;
+}
+/* The tail: a small rotated square with the same border, tucked under the bubble's edge. */
+.bubble::before {
+  content: '';
+  position: absolute;
+  width: 0.875rem;
+  height: 0.875rem;
+  background: var(--surface);
+  border: 2px solid var(--line-color);
+  border-width: 0 0 2px 2px;
+  transform: rotate(45deg);
+}
+.bubble.tail-left::before {
+  left: -0.5rem;
+  top: calc(50% - 0.4375rem);
+}
+.bubble.tail-right::before {
+  right: -0.5rem;
+  top: calc(50% - 0.4375rem);
+  transform: rotate(-135deg);
+}
+.bubble.tail-bottom::before {
+  left: 2rem;
+  bottom: -0.5rem;
+  transform: rotate(-45deg);
+}
+
+/* ---- Screen header (non-tab screens get a back button) ---- */
+.screen-head .icon-btn {
+  margin-right: 0.625rem;
+}
+.screen-head {
+  display: flex;
+  align-items: center;
+  min-height: 3.5rem;
+  margin: 0 -0.25rem 0.75rem;
+}
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: var(--touch);
+  height: var(--touch);
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 3px 0 var(--line-color);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform var(--t-fast) var(--ease-out), box-shadow var(--t-fast) var(--ease-out);
+}
+.icon-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 var(--line-color);
+}
+.screen-head .screen-title {
+  margin: 0;
+  font-size: var(--text-lg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .confetti,
+  .xp-float {
+    display: none;
+  }
+}
+html.reduce-motion .confetti,
+html.reduce-motion .xp-float {
+  display: none;
+}

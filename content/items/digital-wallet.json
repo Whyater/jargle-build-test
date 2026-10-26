@@ -1,0 +1,95 @@
+{
+  "id": "digital-wallet",
+  "kind": "term",
+  "topic": "money-on-your-phone",
+  "term": "digital wallet",
+  "meaning": "An app on your phone that stores payment cards so you can pay with the phone.",
+  "clues": [
+    "It is a way to pay for something.",
+    "It can keep a debit or credit card ready on a phone.",
+    "A shop may ask you to tap the phone on a card reader at the register.",
+    "The card details are set up before you try to pay.",
+    "It has two words and starts with D."
+  ],
+  "assumes": [],
+  "decoys": [
+    {
+      "term": "Mobile check deposit",
+      "meaning": "A bank app feature that lets you deposit a check using your phone.",
+      "source_urls": [
+        "https://www.consumerfinance.gov/archive/blog/online-mobile-banking-tips-beginners/"
+      ]
+    },
+    {
+      "term": "Prepaid card",
+      "meaning": "A payment card loaded with money before you use it.",
+      "source_urls": [
+        "https://www.consumerfinance.gov/consumer-tools/prepaid-cards/"
+      ]
+    },
+    {
+      "term": "Online bill pay",
+      "meaning": "A bank service that lets you pay bills from your account online or in the bank's app.",
+      "source_urls": [
+        "https://www.consumerfinance.gov/archive/blog/online-mobile-banking-tips-beginners/"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Open Apple Wallet or Google Wallet with someone you trust and look for the option to add a card. Follow the bank's steps."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "A wallet kept your cards together. This phone version keeps a card ready when a store accepts phone payments."
+    },
+    {
+      "speaker": "bud",
+      "text": "Keep your phone locked, and only add a card you got from your own bank or card company."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Consumer Financial Protection Bureau, Bank accounts",
+      "url": "https://www.consumerfinance.gov/consumer-tools/bank-accounts/"
+    },
+    {
+      "name": "Apple Support, Apple Pay",
+      "url": "https://support.apple.com/en-us/HT204506"
+    },
+    {
+      "name": "Google Wallet Help",
+      "url": "https://support.google.com/wallet/answer/12060037"
+    },
+    {
+      "name": "Consumer Financial Protection Bureau, Online and mobile banking tips",
+      "url": "https://www.consumerfinance.gov/archive/blog/online-mobile-banking-tips-beginners/"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "blank": {
+    "sentence": "I added my bank's card to the ___ app on my phone, so I can tap to pay at a store.",
+    "wrong": [
+      "mobile check deposit",
+      "online bill pay"
+    ]
+  },
+  "why": "It keeps your cards ready on your phone, so keep your phone locked.",
+  "short": "Phone app that holds payment cards",
+  "situations": [
+    {
+      "text": "You add a card from your own bank to your phone wallet, and you keep your phone locked.",
+      "options": [
+        "Safe",
+        "Risky"
+      ],
+      "answer": "Safe",
+      "why": "Only add a card you got from your own bank or card company."
+    }
+  ]
+}

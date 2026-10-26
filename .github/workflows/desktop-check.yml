@@ -1,0 +1,49 @@
+name: Desktop check
+
+on:
+  push:
+    branches: ['**']
+    paths:
+      - 'desktop/**'
+      - '.github/workflows/desktop-check.yml'
+  pull_request:
+    paths:
+      - 'desktop/**'
+      - '.github/workflows/desktop-check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rust-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Install Linux build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libappindicator3-dev \
+            librsvg2-dev \
+            patchelf \
+            build-essential \
+            libssl-dev \
+            libxdo-dev
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+      - name: Cache Rust build
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: desktop/src-tauri -> target
+      - name: Create frontend stub when needed
+        run: |
+          if [ ! -f web/dist/index.html ]; then
+            mkdir -p web/dist
+            printf '<!doctype html><html><body>Jargle</body></html>\n' > web/dist/index.html
+          fi
+      - name: Check Rust project
+        working-directory: desktop/src-tauri
+        run: cargo check --locked

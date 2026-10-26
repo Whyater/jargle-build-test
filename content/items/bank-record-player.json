@@ -1,0 +1,72 @@
+{
+  "id": "bank-record-player",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "record player",
+  "meaning": "A machine that plays music from a large, flat, black disc. A needle rides in the grooves and makes the sound.",
+  "clues": [
+    "It makes music with a needle that rides in a groove.",
+    "You set a big flat disc on a turntable that spins.",
+    "The disc is called a record, and each side holds only a few songs.",
+    "You lifted the arm and set the needle down gently on the edge.",
+    "It has two words. The first is a word for a disc of music, and the second means someone who plays."
+  ],
+  "assumes": [
+    "A CD player plays shiny silver discs with a laser",
+    "A music box plays a tune with a wound-up spring",
+    "A radio picks up sound sent through the air"
+  ],
+  "decoys": [
+    {
+      "term": "CD player",
+      "meaning": "A machine that plays music from shiny silver discs using a laser.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/CD_player"
+      ]
+    },
+    {
+      "term": "music box",
+      "meaning": "A small box with a wound-up spring that plays a tune.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Music_box"
+      ]
+    },
+    {
+      "term": "radio",
+      "meaning": "A device that picks up sound sent through the air.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Radio"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "We held records by the edges and kept them clean. That habit still protects them today."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: music apps that play songs over the internet. Record players are still sold if you like the crackle."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Merriam-Webster, record player",
+      "url": "https://www.merriam-webster.com/dictionary/record%20player"
+    },
+    {
+      "name": "Britannica, phonograph",
+      "url": "https://www.britannica.com/technology/phonograph"
+    },
+    {
+      "name": "Wikipedia, Phonograph",
+      "url": "https://en.wikipedia.org/wiki/Phonograph"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

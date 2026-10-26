@@ -1,0 +1,80 @@
+{
+  "id": "typewriter",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "typewriter",
+  "meaning": "A machine with keys that prints inked letters onto paper, one at a time, so you can write words.",
+  "clues": [
+    "Each key you press makes a tiny hammer hit an inked ribbon and print one letter on paper.",
+    "The paper wraps around a roller that turns to move the page up one line.",
+    "At the end of a line, you push a lever to slide the carriage back to the start.",
+    "A small bell rings when you are close to the end of a line.",
+    "It has one word, with ten letters, and starts with T."
+  ],
+  "assumes": [],
+  "decoys": [
+    {
+      "term": "mimeograph",
+      "meaning": "A copier that pushes ink through a typed stencil to make many paper copies.",
+      "source_urls": [
+        "https://blog.qm.qld.gov.au/2011/07/12/behind-the-scenes-2/"
+      ]
+    },
+    {
+      "term": "adding machine",
+      "meaning": "A machine with number keys that adds figures and prints them on a paper tape.",
+      "source_urls": [
+        "https://www.si.edu/object/burroughs-class-3-adding-machine%3Anmah_690654"
+      ]
+    },
+    {
+      "term": "dictation machine",
+      "meaning": "A machine that records a person's speech so it can be played back or typed up later.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Dictation_machine"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "Each key made a real mark on paper. A clear paper copy is still useful when you need to read every word."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: a computer keyboard puts letters on a screen, and you can print the page."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "The ribbon and paper showed your work right away. There was no waiting for a machine to catch up."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "National Museum of Australia, Typewriter",
+      "url": "https://www.nma.gov.au/learn/classroom-resources/what-is-this/typewriter"
+    },
+    {
+      "name": "Wikipedia, Typewriter",
+      "url": "https://en.wikipedia.org/wiki/Typewriter"
+    },
+    {
+      "name": "Queensland Museum, Mimeograph",
+      "url": "https://blog.qm.qld.gov.au/2011/07/12/behind-the-scenes-2/"
+    },
+    {
+      "name": "Smithsonian, Burroughs Class 3 Adding Machine",
+      "url": "https://www.si.edu/object/burroughs-class-3-adding-machine%3Anmah_690654"
+    },
+    {
+      "name": "Wikipedia, Dictation machine",
+      "url": "https://en.wikipedia.org/wiki/Dictation_machine"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1
+}

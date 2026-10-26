@@ -1,0 +1,91 @@
+{
+  "id": "subscription",
+  "kind": "term",
+  "topic": "money-on-your-phone",
+  "term": "subscription",
+  "meaning": "A plan where a company charges you again and again for a product or service.",
+  "clues": [
+    "It has to do with paying for something over a stretch of time.",
+    "You may give a company permission to charge your card again and again.",
+    "A free trial can turn into this if you do not cancel before the trial ends.",
+    "The FTC says a business has to tell you how to cancel before it gets your card details.",
+    "Its name starts with S and has twelve letters."
+  ],
+  "assumes": [
+    "A one-time purchase is paid for once.",
+    "An installment plan splits one purchase into scheduled payments.",
+    "Layaway holds an item while you pay before taking it home."
+  ],
+  "decoys": [
+    {
+      "term": "one-time purchase",
+      "meaning": "Buying an item or service with one payment instead of a repeating plan.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/purchase"
+      ]
+    },
+    {
+      "term": "installment plan",
+      "meaning": "A way to pay back money in equal payments on a set schedule.",
+      "source_urls": [
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-personal-installment-loan-en-2114/"
+      ]
+    },
+    {
+      "term": "layaway",
+      "meaning": "A store holds an item while you make payments, then gives it to you after it is paid for.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/layaway"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. Before a free trial, read how much it will cost and how to cancel. Put the cancel date on your calendar."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "A magazine used to arrive on a set schedule. The new version can charge your card, so the terms matter."
+    },
+    {
+      "speaker": "bud",
+      "text": "If charges continue after you cancel, save your notes and ask your card company for help."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FTC, free trials, auto-renewals, and negative option subscriptions",
+      "url": "https://consumer.ftc.gov/articles/getting-and-out-free-trials-auto-renewals-and-negative-option-subscriptions"
+    },
+    {
+      "name": "Merriam-Webster, subscription",
+      "url": "https://www.merriam-webster.com/dictionary/subscription"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "blank": {
+    "sentence": "The free trial turned into a ___ that charged my card again and again.",
+    "wrong": [
+      "one-time purchase",
+      "layaway"
+    ]
+  },
+  "why": "A free trial can turn into charges, so learn how to cancel.",
+  "short": "Plan with repeating charges",
+  "situations": [
+    {
+      "text": "Before a free trial, you read how much it will cost and mark the cancel date on your calendar.",
+      "options": [
+        "Safe",
+        "Risky"
+      ],
+      "answer": "Safe",
+      "why": "A free trial can turn into a paid plan if you do not cancel in time."
+    }
+  ]
+}

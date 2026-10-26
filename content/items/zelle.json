@@ -1,0 +1,106 @@
+{
+  "id": "zelle",
+  "kind": "term",
+  "topic": "money-on-your-phone",
+  "term": "Zelle",
+  "meaning": "A phone payment that moves money from your bank account straight into another person's account. Hard to get back, so pay only people you know.",
+  "clues": [
+    "You use your phone to send money to another person.",
+    "The money moves straight from your bank account into theirs, with no app balance in between.",
+    "Your own bank may offer it right inside its banking app.",
+    "Payments are hard to get back, so only pay people you know.",
+    "Its name has five letters and starts with Z."
+  ],
+  "assumes": [
+    "Venmo, Cash App, and PayPal keep money in an app balance"
+  ],
+  "decoys": [
+    {
+      "term": "Venmo",
+      "meaning": "A money app for sending money to friends and paying at checkout. You choose who can see your payments.",
+      "source_urls": [
+        "https://venmo.com/",
+        "https://help.venmo.com/hc/en-us/articles/210413717-Venmo-Basics"
+      ]
+    },
+    {
+      "term": "Cash App",
+      "meaning": "A money app for sending money to friends and family. It also has its own debit card.",
+      "source_urls": [
+        "https://cash.app/"
+      ]
+    },
+    {
+      "term": "PayPal",
+      "meaning": "An online account for sending money or paying for things. It can use a PayPal balance or a bank account.",
+      "source_urls": [
+        "https://www.paypal.com/us/digital-wallet/send-receive-money/send-money",
+        "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it: look in your bank's app, or go to zellepay.com, to see if your bank offers it.",
+      "link_urls": [
+        "https://www.zellepay.com/"
+      ]
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "Cash handed over was gone for good, so we only handed it to people we knew. That rule still holds here."
+    },
+    {
+      "speaker": "bud",
+      "text": "And if someone says they're from your bank and tells you to move money, hang up. Then call your bank on a number you know is real. Your bank never asks you to move money."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Zelle, Send and receive money directly to and from your bank account",
+      "url": "https://www.zellepay.com/"
+    },
+    {
+      "name": "Zelle, safe payments",
+      "url": "https://www.zellepay.com/safety-education"
+    },
+    {
+      "name": "FTC, Do you use payment apps like Venmo, CashApp, or Zelle?",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2023/08/do-you-use-payment-apps-venmo-cashapp-or-zelle-read"
+    },
+    {
+      "name": "FTC, Mobile Payment Apps: How To Avoid a Scam When You Use One",
+      "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one"
+    },
+    {
+      "name": "FTC, What To Do if You Were Scammed",
+      "url": "https://consumer.ftc.gov/articles/what-do-if-you-were-scammed"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "blank": {
+    "sentence": "My bank app has ___, which moves money from my account straight into my sister's account.",
+    "wrong": [
+      "a paper check",
+      "autopay"
+    ]
+  },
+  "why": "Money sent this way is hard to get back, so pay only people you know.",
+  "short": "Phone payment from bank to bank",
+  "situations": [
+    {
+      "text": "A stranger online asks you to pay with Zelle for something you cannot see yet.",
+      "options": [
+        "Safe",
+        "Risky"
+      ],
+      "answer": "Risky",
+      "why": "These payments are hard to get back. Pay only people you know."
+    }
+  ]
+}

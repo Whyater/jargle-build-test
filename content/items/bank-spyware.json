@@ -1,0 +1,80 @@
+{
+  "id": "bank-spyware",
+  "kind": "term",
+  "topic": "locks-and-keys",
+  "term": "spyware",
+  "meaning": "Hidden software that secretly watches what you do on a device. It sends what it learns to someone else.",
+  "clues": [
+    "It is harmful software.",
+    "It tries to stay hidden, so you never know it is there.",
+    "It secretly records what you do on your device.",
+    "It may collect what you type, the sites you visit, or your passwords.",
+    "It has seven letters and starts with S. Think of a secret agent."
+  ],
+  "assumes": [
+    "Ransomware locks your files and demands payment",
+    "Antivirus software scans for harmful programs"
+  ],
+  "decoys": [
+    {
+      "term": "ransomware",
+      "meaning": "Harmful software that locks your files. The crook then demands payment to unlock them.",
+      "source_urls": [
+        "https://www.cisa.gov/stopransomware/ransomware-101"
+      ]
+    },
+    {
+      "term": "antivirus",
+      "meaning": "Software that scans a device for harmful programs and removes them.",
+      "source_urls": [
+        "https://www.cisa.gov/news-events/news/understanding-anti-virus-software"
+      ]
+    },
+    {
+      "term": "face unlock",
+      "meaning": "A way to open a phone by looking at it. The phone checks that your face matches the one it saved.",
+      "source_urls": [
+        "https://support.apple.com/en-us/102381"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "neutral",
+      "text": "When I was new, the only thing watching my screen was a very curious cat."
+    },
+    {
+      "speaker": "bud",
+      "text": "Spyware often sneaks in with a free download. Get apps only from your phone's official app store, and skip files from strangers."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FTC, Malware: How To Protect Against, Detect, and Remove It",
+      "url": "https://consumer.ftc.gov/articles/how-recognize-remove-avoid-malware"
+    },
+    {
+      "name": "Wikipedia, Spyware",
+      "url": "https://en.wikipedia.org/wiki/Spyware"
+    },
+    {
+      "name": "CISA, Protecting Against Malicious Code",
+      "url": "https://www.cisa.gov/news-events/news/protecting-against-malicious-code"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true,
+  "blank": {
+    "sentence": "Hidden software on her laptop secretly watched what she did and sent it to someone else. It was ___.",
+    "wrong": [
+      "antivirus",
+      "backup"
+    ]
+  },
+  "why": "It secretly watches what you do and sends it to someone else.",
+  "short": "Hidden software that secretly watches you"
+}

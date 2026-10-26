@@ -1,0 +1,81 @@
+{
+  "id": "bank-factory-reset",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "factory reset",
+  "meaning": "Erasing everything on a device so it goes back to how it was when new. Your photos, apps, and settings are wiped.",
+  "clues": [
+    "It is a way to start fresh with a device.",
+    "It wipes all your stuff, not just one problem.",
+    "You do it before you sell, trade in, or give away a phone.",
+    "Save a backup first, because nothing you kept on the device will be left.",
+    "It has two words. The first starts with F and names a place where things are made."
+  ],
+  "assumes": [
+    "A restart turns a device off and on again",
+    "Safe mode starts a device with only basic features",
+    "Sleep mode is a low-power rest state"
+  ],
+  "decoys": [
+    {
+      "term": "restart",
+      "meaning": "Turning a device off and on again. Your files and apps stay.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Reboot_(computing)"
+      ]
+    },
+    {
+      "term": "safe mode",
+      "meaning": "A way to start a device with only basic features, often used to fix a problem.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Safe_mode"
+      ]
+    },
+    {
+      "term": "sleep mode",
+      "meaning": "A low-power state where a device rests but wakes up quickly with your work still open.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Sleep_mode"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Someone says \"format the disk\" and I am wiped clean. Fresh start, blank slate, no hard feelings."
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: back up your photos first. Then reset the old phone before you pass it on to someone else."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Apple Support, How to factory reset your iPhone, iPad, or iPod touch",
+      "url": "https://support.apple.com/en-us/108931"
+    },
+    {
+      "name": "Android Help, Reset your Android device to factory settings",
+      "url": "https://support.google.com/android/answer/6088915"
+    },
+    {
+      "name": "Wikipedia, Factory reset",
+      "url": "https://en.wikipedia.org/wiki/Factory_reset"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true,
+  "blank": {
+    "sentence": "To wipe my old phone before giving it away, I did a ___, which erased my photos, apps, and settings.",
+    "wrong": [
+      "battery saver",
+      "do not disturb"
+    ]
+  },
+  "why": "It erases your photos, apps, and settings and returns the device to how it was.",
+  "short": "Erase everything, back to new"
+}

@@ -1,0 +1,97 @@
+{
+  "id": "spam",
+  "kind": "term",
+  "topic": "scams-and-fakes",
+  "term": "spam",
+  "meaning": "Unwanted messages sent to lots of people at once, by email or text. Most are ads, and some try to trick you.",
+  "clues": [
+    "You didn't ask for it, and it can show up in large numbers.",
+    "It is a written message, usually sent by email or text to a lot of people at once.",
+    "Most of it is ads, offers, or sales pitches.",
+    "Your phone can often filter it and block it before you see it.",
+    "Its name has four letters and starts with S."
+  ],
+  "assumes": [
+    "A robocall is a spoken call, not a written message"
+  ],
+  "decoys": [
+    {
+      "term": "robocall",
+      "meaning": "A phone call made by a machine, often playing a recorded message.",
+      "source_urls": [
+        "https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts"
+      ]
+    },
+    {
+      "term": "malware",
+      "meaning": "Harmful software that gets onto your device without your knowledge. It can steal your information.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-recognize-remove-avoid-malware"
+      ]
+    },
+    {
+      "term": "caller ID spoofing",
+      "meaning": "Faking the number on your caller ID so a call seems to come from another number.",
+      "source_urls": [
+        "https://www.fcc.gov/consumers/guides/spoofing"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "A letter from a stranger asking for money went in the trash, and we never wrote back. The same rule works for a text you didn't expect: don't tap its links."
+    },
+    {
+      "speaker": "bud",
+      "text": "Try it: if a text you didn't expect shows up, forward it to 7726. This helps your phone company block similar messages."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, spam",
+      "url": "https://www.merriam-webster.com/dictionary/spam"
+    },
+    {
+      "name": "FTC, How to Recognize and Report Spam Text Messages",
+      "url": "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+    },
+    {
+      "name": "FCC, Stop Unwanted Robocalls and Texts",
+      "url": "https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts"
+    },
+    {
+      "name": "FCC, Caller ID Spoofing",
+      "url": "https://www.fcc.gov/consumers/guides/spoofing"
+    },
+    {
+      "name": "FTC, Malware: How To Protect Against, Detect, and Remove It",
+      "url": "https://consumer.ftc.gov/articles/how-recognize-remove-avoid-malware"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "blank": {
+    "sentence": "Most of the ads that fill my inbox are ___, sent to many people at once.",
+    "wrong": [
+      "robocall",
+      "malware"
+    ]
+  },
+  "why": "Some of it tries to trick you, so do not tap its links.",
+  "short": "Unwanted messages sent in bulk",
+  "situations": [
+    {
+      "text": "A text you did not expect has a link. You do not tap it, and you forward the text to 7726.",
+      "options": [
+        "Safe",
+        "Risky"
+      ],
+      "answer": "Safe",
+      "why": "This helps your phone company block similar texts."
+    }
+  ]
+}

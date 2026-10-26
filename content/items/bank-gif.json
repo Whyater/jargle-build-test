@@ -1,0 +1,69 @@
+{
+  "id": "bank-gif",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "GIF",
+  "meaning": "A small picture file that plays a short, silent clip over and over. People send it in chats to show a feeling.",
+  "clues": [
+    "It is a kind of picture file.",
+    "The picture moves, but it makes no sound.",
+    "It plays the same few seconds again and again, in a loop.",
+    "People send one in a chat to react, like a clapping hand or a shrugging cat.",
+    "It has three letters, all capitals, and starts with G."
+  ],
+  "assumes": [
+    "A JPEG is a photo file that does not move",
+    "A PDF is a document file",
+    "An MP3 is a music file"
+  ],
+  "decoys": [
+    {
+      "term": "JPEG",
+      "meaning": "A common file type for photos. It squeezes a picture so the file is smaller.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/JPEG"
+      ]
+    },
+    {
+      "term": "PDF",
+      "meaning": "A file type for documents. It looks the same on any screen or printer.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/PDF"
+      ]
+    },
+    {
+      "term": "MP3",
+      "meaning": "A file type for music. It squeezes sound so a song takes less space.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/MP3",
+        "https://www.britannica.com/technology/MP3"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "I am a file too, but I only held a few pages. A little cat dancing forever in a tiny file? Amazing."
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: many phone keyboards have a GIF button. Tap it, search for a mood, and send one."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Britannica, GIF",
+      "url": "https://www.britannica.com/technology/GIF"
+    },
+    {
+      "name": "Wikipedia, GIF",
+      "url": "https://en.wikipedia.org/wiki/GIF"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

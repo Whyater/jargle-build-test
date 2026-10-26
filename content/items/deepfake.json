@@ -1,0 +1,95 @@
+{
+  "id": "deepfake",
+  "kind": "term",
+  "topic": "scams-and-fakes",
+  "term": "deepfake",
+  "meaning": "A fake photo, video, or voice made by AI. It shows a real person doing or saying something they never did.",
+  "clues": [
+    "Someone uses it to make you believe something that isn't true.",
+    "You might run into it on a phone call, in a video, or in a photo.",
+    "It is the fake itself, not the plan behind it. It is a photo, video, or voice that a computer program made or changed.",
+    "The program is AI, and it can copy a real person's face or voice.",
+    "Its name has eight letters and starts with D."
+  ],
+  "assumes": [],
+  "decoys": [
+    {
+      "term": "family emergency scam",
+      "meaning": "Someone pretends to be a relative in trouble. They call and ask for money right away.",
+      "source_urls": [
+        "https://consumer.ftc.gov/consumer-alerts/2024/04/fighting-back-against-harmful-voice-cloning"
+      ]
+    },
+    {
+      "term": "romance scam",
+      "meaning": "Someone you meet online acts like they love you, then asks you for money.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/what-know-about-romance-scams"
+      ]
+    },
+    {
+      "term": "fake check scam",
+      "meaning": "A stranger gives you a check and asks you to send some of the money back. The check turns out to be fake.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Some voices and videos are made by AI to look and sound like someone you love. Try it: if a call asks you for money in a hurry, hang up and call that person back on a number you know."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "We looked up a number in the phone book and called back to check. That habit still works."
+    },
+    {
+      "speaker": "bud",
+      "text": "You can also ask something only the real person would know, like what kind of dog they have."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, deepfake",
+      "url": "https://www.merriam-webster.com/dictionary/deepfake"
+    },
+    {
+      "name": "FTC, Fighting back against harmful voice cloning",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2024/04/fighting-back-against-harmful-voice-cloning"
+    },
+    {
+      "name": "FTC, Fake emergencies and your money",
+      "url": "https://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money"
+    },
+    {
+      "name": "FCC, Caller ID Spoofing",
+      "url": "https://www.fcc.gov/consumers/guides/spoofing"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "blank": {
+    "sentence": "Someone used AI to make this ___ of the mayor saying things she never said.",
+    "wrong": [
+      "romance scam",
+      "family emergency scam"
+    ]
+  },
+  "why": "AI can copy a loved one's voice, so check before you send money.",
+  "short": "AI-made fake video or voice",
+  "situations": [
+    {
+      "text": "A call sounds just like your nephew and begs for money fast. You hang up and call his usual number.",
+      "options": [
+        "Safe",
+        "Risky"
+      ],
+      "answer": "Safe",
+      "why": "Calling back on a number you know is the right move."
+    }
+  ]
+}

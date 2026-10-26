@@ -1,0 +1,77 @@
+{
+  "id": "bank-username",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "username",
+  "meaning": "The name you pick to sign in to an account and be known by on a site.",
+  "clues": [
+    "It is a name that belongs to one person, not to a website.",
+    "You choose it when you set up an account. It is the name others see beside your posts, not an address for mail.",
+    "It can be made up, like GardenFan42, instead of your real name.",
+    "On many sites, you type it with your password to sign in.",
+    "It is one word with eight letters and starts with U."
+  ],
+  "assumes": [
+    "An email address has an @ sign in it",
+    "A domain name is the name of a website",
+    "A PIN is a short secret number"
+  ],
+  "decoys": [
+    {
+      "term": "email address",
+      "meaning": "An address for sending mail online. It has a name, an @ sign, and the mail company's name.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Email_address"
+      ]
+    },
+    {
+      "term": "domain name",
+      "meaning": "The words in a website's address, which people type instead of a long number.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Domain_name"
+      ]
+    },
+    {
+      "term": "PIN",
+      "meaning": "A short secret number, often four digits, used to unlock a phone or use a card.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Personal_identification_number"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, I was just \"Floyd, disk number four.\" You get to pick your own name now?"
+    },
+    {
+      "speaker": "bud",
+      "text": "Yes! Tip: skip your full name and birth year, and pick something made up."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, username",
+      "url": "https://www.merriam-webster.com/dictionary/username"
+    },
+    {
+      "name": "Wikipedia, User (computing)",
+      "url": "https://en.wikipedia.org/wiki/User_(computing)"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true,
+  "blank": {
+    "sentence": "To sign in, I typed my ___, the name I picked for the account.",
+    "wrong": [
+      "FAQ",
+      "selfie"
+    ]
+  },
+  "why": "It is the name you pick to sign in and be known by on a site.",
+  "short": "Name you sign in with"
+}

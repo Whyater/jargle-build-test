@@ -1,0 +1,102 @@
+{
+  "id": "fax-machine",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "fax machine",
+  "meaning": "A machine that scans a paper page and sends a copy over a phone line. Another machine prints the copy.",
+  "clues": [
+    "It sends a message over wires to someone far away.",
+    "It can send a whole page, with drawings and pictures, not just words.",
+    "A Scottish clockmaker came up with the idea in the 1840s, long before the telephone.",
+    "You dialed a number, fed the page into the machine, and pressed start. Each page took about a minute.",
+    "It has two words. The first has three letters and starts with F."
+  ],
+  "assumes": [
+    "A telegraph sends only Morse code",
+    "A teleprinter sends only typed letters"
+  ],
+  "decoys": [
+    {
+      "term": "telegraph",
+      "meaning": "A machine that sends messages over a wire as short and long taps of a key, called Morse code.",
+      "source_urls": [
+        "https://americanhistory.si.edu/collections/object/nmah_706715",
+        "https://www.loc.gov/collections/samuel-morse-papers/articles-and-essays/invention-of-the-telegraph/"
+      ]
+    },
+    {
+      "term": "teleprinter",
+      "meaning": "A machine with a typewriter keyboard. It sends typed words over a wire and prints them far away.",
+      "source_urls": [
+        "https://www.londonmuseum.org.uk/collections/v/object-730127/teleprinter/",
+        "https://www.sciencemuseum.org.uk/objects-and-stories/boom-and-bust-telegraphy-and-wall-street-crash"
+      ]
+    },
+    {
+      "term": "mimeograph",
+      "meaning": "An old copier. Ink is pushed through a typed stencil, so one page can be copied again and again.",
+      "source_urls": [
+        "https://blog.qm.qld.gov.au/2011/07/12/behind-the-scenes-2/",
+        "https://www.museumofprinting.org/blog/mimeograph-machines/"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "A fax sent a copy of the page as it looked, drawings and all. That still matters when a form has to look just right."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: a scan sent by email. Your phone can scan a paper page and attach it to a message."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "We needed about a minute for each page. Patience was part of the job."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Smithsonian, Carbons to Computers: Facsimile",
+      "url": "https://www.smithsonianeducation.org/scitech/carbons/fax.html"
+    },
+    {
+      "name": "International Telecommunication Union, Pioneers' Page",
+      "url": "https://www.itu.int/itunews/manager/display.asp?ext=html&ipage=pioneers&issue=04&lang=en&year=2007"
+    },
+    {
+      "name": "Smithsonian National Museum of American History, Telegraph Key",
+      "url": "https://americanhistory.si.edu/collections/object/nmah_706715"
+    },
+    {
+      "name": "Library of Congress, Invention of the Telegraph",
+      "url": "https://www.loc.gov/collections/samuel-morse-papers/articles-and-essays/invention-of-the-telegraph/"
+    },
+    {
+      "name": "London Museum, Teleprinter",
+      "url": "https://www.londonmuseum.org.uk/collections/v/object-730127/teleprinter/"
+    },
+    {
+      "name": "Science Museum, Telegraphy and the Wall Street Crash",
+      "url": "https://www.sciencemuseum.org.uk/objects-and-stories/boom-and-bust-telegraphy-and-wall-street-crash"
+    },
+    {
+      "name": "Queensland Museum, Behind the Scenes: The Mimeograph",
+      "url": "https://blog.qm.qld.gov.au/2011/07/12/behind-the-scenes-2/"
+    },
+    {
+      "name": "Museum of Printing, Mimeograph Machines",
+      "url": "https://www.museumofprinting.org/blog/mimeograph-machines/"
+    },
+    {
+      "name": "Apple Support, Add email attachments in Mail on iPhone",
+      "url": "https://support.apple.com/guide/iphone/add-email-attachments-iph8580f163b/ios"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2
+}

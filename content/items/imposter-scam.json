@@ -1,0 +1,99 @@
+{
+  "id": "imposter-scam",
+  "kind": "term",
+  "topic": "scams-and-fakes",
+  "term": "imposter scam",
+  "meaning": "A trick where someone acts like a trusted person or group to get your money or information.",
+  "clues": [
+    "Someone tricks you to get your money or personal details.",
+    "The person pretends to be your bank, the government, or a family member you trust.",
+    "The request may arrive by phone, text, or email.",
+    "Urgency and threats are common warning signs.",
+    "Its name has two words."
+  ],
+  "assumes": [
+    "An advance-fee loan scam promises a loan if you pay a fee first",
+    "An investment scam promises profits if you put money into an opportunity",
+    "A fake check or overpayment scam sends a bad check and asks you to send some money back"
+  ],
+  "decoys": [
+    {
+      "term": "advance-fee loan scam",
+      "meaning": "A false promise of a loan that asks you to pay a fee first. No loan ever comes.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/what-know-about-advance-fee-loans"
+      ]
+    },
+    {
+      "term": "investment scam",
+      "meaning": "A false chance to make money asks you to put money into it.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/real-estate-and-investment-scams"
+      ]
+    },
+    {
+      "term": "fake check scam",
+      "meaning": "Someone sends a bad check and asks you to send back part of the money.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "If a caller says they are from your bank, hang up and call the number on your card. Do not use the number they give you."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "We trusted a familiar voice, but we still checked the number in the phone book."
+    },
+    {
+      "speaker": "bud",
+      "text": "A real office will let you take time to verify. Pressure is a reason to stop."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FTC, Business Impersonators",
+      "url": "https://consumer.ftc.gov/government-business-impersonators"
+    },
+    {
+      "name": "FTC, Government Impersonator Scams",
+      "url": "https://consumer.ftc.gov/features/pass-it-on/impersonator-scams/government-impersonator-scams"
+    },
+    {
+      "name": "FTC, How To Avoid Imposter Scams",
+      "url": "https://consumer.ftc.gov/features/how-avoid-imposter-scams"
+    },
+    {
+      "name": "FTC, How to spot, avoid, and report imposter scams",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2020/10/how-spot-avoid-report-imposter-scams"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "blank": {
+    "sentence": "A caller pretended to be from my bank and pushed me to act fast. That kind of trick is called ___.",
+    "wrong": [
+      "investment scam",
+      "advance-fee loan scam"
+    ]
+  },
+  "why": "Pressure and threats are warning signs, so slow down and check.",
+  "short": "Crook pretends to be someone trusted",
+  "situations": [
+    {
+      "text": "A caller says they are from the government and threatens trouble unless you pay today.",
+      "options": [
+        "Scam",
+        "Safe"
+      ],
+      "answer": "Scam",
+      "why": "Urgency and threats are common warning signs."
+    }
+  ]
+}

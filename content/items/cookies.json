@@ -1,0 +1,95 @@
+{
+  "id": "cookies",
+  "kind": "term",
+  "topic": "how-the-internet-works",
+  "term": "cookies",
+  "meaning": "Small files a website saves in your browser to remember you, such as your login or cart. Some track you across sites.",
+  "clues": [
+    "Your browser saves small bits of data about the sites you visit.",
+    "Saved details help a page remember your visit or choices.",
+    "They can keep you signed in or remember what is in a shopping cart.",
+    "Some track what you do on more than one website.",
+    "The word is also a baked treat."
+  ],
+  "assumes": [
+    "Browsing history is a list of pages you visited",
+    "A browser cache keeps copies of files so pages can load faster",
+    "Autofill stores information you enter into forms"
+  ],
+  "decoys": [
+    {
+      "term": "browsing history",
+      "meaning": "A list of websites and pages you visited.",
+      "source_urls": [
+        "https://support.apple.com/guide/safari/clear-your-browsing-history-sfri47acf5d6/mac"
+      ]
+    },
+    {
+      "term": "cache",
+      "meaning": "Saved copies of website files that help pages load faster next time.",
+      "source_urls": [
+        "https://dictionary.cambridge.org/dictionary/english/cache"
+      ]
+    },
+    {
+      "term": "autofill",
+      "meaning": "A browser feature that fills common form details, such as your name or address.",
+      "source_urls": [
+        "https://support.google.com/chrome/answer/142893"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "You can clear site files in your browser settings. Read the choice first, because it may sign you out."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "A record can be useful, but you should know where it is kept. We kept receipts in a drawer."
+    },
+    {
+      "speaker": "bud",
+      "text": "Some sites need these files for a cart or sign-in. Others use them to track activity."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Google Chrome Help, cookies",
+      "url": "https://support.google.com/chrome/answer/95647"
+    },
+    {
+      "name": "Cambridge Dictionary, cookie",
+      "url": "https://dictionary.cambridge.org/dictionary/english/cookie"
+    },
+    {
+      "name": "FTC, How Websites and Apps Collect and Use Your Information",
+      "url": "https://consumer.ftc.gov/articles/how-websites-and-apps-collect-and-use-your-information"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "blank": {
+    "sentence": "The site kept me signed in because it saved some small ___ in my browser.",
+    "wrong": [
+      "browsing history",
+      "autofill"
+    ]
+  },
+  "why": "Some remember your cart, and some track you across sites.",
+  "short": "Small files a site saves",
+  "situations": [
+    {
+      "text": "Clearing your browser's cookies may sign you out of some sites.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "why": "Some sites need them for a cart or sign-in. Read the choice first."
+    }
+  ]
+}

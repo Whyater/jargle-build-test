@@ -1,0 +1,72 @@
+{
+  "id": "bank-dot-matrix-printer",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "dot matrix printer",
+  "meaning": "An old printer that makes letters from tiny dots. Little pins hit an inked ribbon against the paper.",
+  "clues": [
+    "It is noisy, because it hits the paper to print.",
+    "The paper had little holes along both edges.",
+    "Pins in the print head pushed an inked ribbon against the page.",
+    "Because it hit the paper, it could print on several layers at once.",
+    "It has three words. The last is a machine that prints, and the first starts with D."
+  ],
+  "assumes": [
+    "An inkjet printer sprays tiny drops of ink",
+    "A laser printer uses toner powder",
+    "A thermal printer uses heat on special paper"
+  ],
+  "decoys": [
+    {
+      "term": "inkjet printer",
+      "meaning": "A printer that sprays tiny drops of ink onto paper.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Inkjet_printing"
+      ]
+    },
+    {
+      "term": "laser printer",
+      "meaning": "A printer that uses a laser and a powder called toner.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Laser_printing"
+      ]
+    },
+    {
+      "term": "thermal printer",
+      "meaning": "A printer that uses heat on special paper, as many store receipts do.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Thermal_printing"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "That zzzzzt-zzzzzt sound meant a report was coming. You could hear it from three rooms away."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: a laser or inkjet printer, or just a PDF sent by email. Tip: print only what you really need."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Merriam-Webster, dot matrix",
+      "url": "https://www.merriam-webster.com/dictionary/dot%20matrix"
+    },
+    {
+      "name": "Britannica, dot-matrix printer",
+      "url": "https://www.britannica.com/technology/dot-matrix-printer"
+    },
+    {
+      "name": "Wikipedia, Dot matrix printing",
+      "url": "https://en.wikipedia.org/wiki/Dot_matrix_printing"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

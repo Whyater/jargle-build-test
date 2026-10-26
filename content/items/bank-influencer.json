@@ -1,0 +1,72 @@
+{
+  "id": "bank-influencer",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "influencer",
+  "meaning": "A person with many followers on social media. Companies may pay them, or give them free items, to show products.",
+  "clues": [
+    "A person who posts photos and short videos for lots of followers.",
+    "They usually show and talk about things they like.",
+    "They got famous by posting on social media apps, and companies may pay them to show a product.",
+    "People follow them for tips on things like makeup, games, food, or travel.",
+    "It has ten letters and starts with I."
+  ],
+  "assumes": [
+    "A blogger writes posts on a website",
+    "A celebrity is famous for acting, music, or sports",
+    "A moderator keeps an online group tidy"
+  ],
+  "decoys": [
+    {
+      "term": "blogger",
+      "meaning": "A person who writes posts on their own website, like an online journal.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/blogger"
+      ]
+    },
+    {
+      "term": "celebrity",
+      "meaning": "A very famous person, known for work like acting, music, or sports.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/celebrity"
+      ]
+    },
+    {
+      "term": "moderator",
+      "meaning": "A person who watches over an online group and removes posts that break the rules.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Internet_forum"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, ads were on cereal boxes and the radio. Now a friendly face sells things from the kitchen!"
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: if they are paid or get free items, they have to say so. Look for words like ad or sponsored."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, influencer",
+      "url": "https://www.merriam-webster.com/dictionary/influencer"
+    },
+    {
+      "name": "FTC, Disclosures 101 for Social Media Influencers",
+      "url": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers"
+    },
+    {
+      "name": "Wikipedia, Social media influencer",
+      "url": "https://en.wikipedia.org/wiki/Social_media_influencer"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true
+}

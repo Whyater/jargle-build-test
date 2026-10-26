@@ -1,0 +1,77 @@
+{
+  "id": "bank-lock-screen",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "lock screen",
+  "meaning": "The screen you see when you wake your phone. It keeps people out until you unlock it with a code, a fingerprint, or your face.",
+  "clues": [
+    "It is a gate that stops other people from using your phone.",
+    "You see it before you open any app, often with the time and date shown big.",
+    "You get past it with a code, a fingerprint, or your face.",
+    "Missed calls and new messages can show on it, even while the rest of the phone stays shut.",
+    "It has two words. The first starts with L, and the second is what you look at."
+  ],
+  "assumes": [
+    "A screen saver is a moving picture that shows when a screen sits idle",
+    "A wallpaper is the picture behind your app icons",
+    "The main screen of apps is where your app icons sit"
+  ],
+  "decoys": [
+    {
+      "term": "screen saver",
+      "meaning": "A moving picture or pattern that shows on a screen after it has been idle for a while.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Screensaver"
+      ]
+    },
+    {
+      "term": "wallpaper",
+      "meaning": "The picture that sits behind the icons on a phone or computer screen.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Wallpaper_(computing)"
+      ]
+    },
+    {
+      "term": "home screen",
+      "meaning": "The main screen of a phone, where your app icons sit.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Home_screen"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "I once got stuck behind a drawer lock and lost my own homework. A lock that keeps nosy people out? I approve."
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: set a code, or use your fingerprint or face. If you lose the phone, your photos and messages stay private."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Lock screen",
+      "url": "https://en.wikipedia.org/wiki/Lock_screen"
+    },
+    {
+      "name": "Android Help, Set screen lock on an Android device",
+      "url": "https://support.google.com/android/answer/9079129"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true,
+  "blank": {
+    "sentence": "When I woke my phone, the ___ kept others out until I used my code, fingerprint, or face.",
+    "wrong": [
+      "home screen",
+      "voicemail"
+    ]
+  },
+  "why": "It keeps other people out of your phone until you unlock it.",
+  "short": "Wake screen that blocks others"
+}

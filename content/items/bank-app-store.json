@@ -1,0 +1,81 @@
+{
+  "id": "bank-app-store",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "app store",
+  "meaning": "A place on your phone where you can find and download apps. Some apps are free and some cost money.",
+  "clues": [
+    "It is a store you carry in your pocket.",
+    "You search for what you want, read the reviews, and tap a button to get it.",
+    "iPhones use one run by Apple. Android phones use one called Google Play.",
+    "Its pages show pictures of each app, star ratings, and what other people say.",
+    "It has two words. The first is the short word for what it sells, and the second is where you shop."
+  ],
+  "assumes": [
+    "An operating system is the main software that runs a phone",
+    "A web browser is a program for visiting websites",
+    "A mobile game is a video game made for a phone"
+  ],
+  "decoys": [
+    {
+      "term": "operating system",
+      "meaning": "The main software that runs a phone or computer, such as Android or iOS.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Operating_system"
+      ]
+    },
+    {
+      "term": "web browser",
+      "meaning": "A program you use to visit websites, such as Chrome or Safari.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Web_browser"
+      ]
+    },
+    {
+      "term": "mobile game",
+      "meaning": "A video game made to be played on a phone.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Mobile_game"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "I came home in a box from a real shop. You carried me out like a loaf of bread!"
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: download only from your phone's own store, and read a few reviews first. Skip anything with very few ratings."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, App store",
+      "url": "https://en.wikipedia.org/wiki/App_store"
+    },
+    {
+      "name": "Apple Support, Download apps on your iPhone or iPad",
+      "url": "https://support.apple.com/en-us/102590"
+    },
+    {
+      "name": "Google Play Help, Get Android apps and digital content from the Google Play Store",
+      "url": "https://support.google.com/googleplay/answer/113409"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true,
+  "blank": {
+    "sentence": "I opened the ___ on my phone to find and download a new app.",
+    "wrong": [
+      "home screen",
+      "voicemail"
+    ]
+  },
+  "why": "It is where you find and download apps for your phone.",
+  "short": "Place to find and get apps"
+}

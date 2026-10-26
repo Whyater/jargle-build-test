@@ -1,0 +1,16 @@
+[Unit]
+Description=Mirror Jargle release downloads
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+TimeoutStartSec=2h
+User=jargle
+Group=jargle
+ExecStart=/usr/local/bin/jargle-mirror
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ReadWritePaths=/var/www/jargle/downloads /var/lib/jargle
+ProtectHome=yes

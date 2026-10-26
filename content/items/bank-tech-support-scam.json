@@ -1,0 +1,76 @@
+{
+  "id": "bank-tech-support-scam",
+  "kind": "term",
+  "topic": "scams-and-fakes",
+  "term": "tech support scam",
+  "meaning": "Someone says your computer has a problem and offers to fix it. Then they ask for money or control of your computer.",
+  "clues": [
+    "A stranger says they work for a well-known computer company.",
+    "A call or pop-up says your computer has a virus or another problem.",
+    "They ask you to pay for a fix, or to let them control your computer from far away.",
+    "Real tech companies do not call out of the blue to say your computer has a problem.",
+    "It has three words. They start with T, S, and S."
+  ],
+  "assumes": [
+    "A romance scam starts with a fake loving friend",
+    "A prize scam says you won a contest"
+  ],
+  "decoys": [
+    {
+      "term": "romance scam",
+      "meaning": "A crook pretends to be a loving partner online. After gaining trust, they ask for money.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/what-know-about-romance-scams"
+      ]
+    },
+    {
+      "term": "prize scam",
+      "meaning": "You are told you won a contest, but you must pay a fee or share private details to collect.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/fake-prize-sweepstakes-and-lottery-scams"
+      ]
+    },
+    {
+      "term": "identity theft",
+      "meaning": "Someone uses your name or account numbers without your permission, such as to buy things in your name.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/what-know-about-identity-theft"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "If a pop-up says your computer is infected and gives a phone number, do not call. Close it. Real companies do not work that way."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "Back in my day, we only let the repairman in after we called him first. That rule still holds."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FTC, How To Spot, Avoid, and Report Tech Support Scams",
+      "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams"
+    },
+    {
+      "name": "Wikipedia, Technical support scam",
+      "url": "https://en.wikipedia.org/wiki/Technical_support_scam"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true,
+  "blank": {
+    "sentence": "A stranger said my computer had a problem and offered to fix it, then asked for money. That was a ___.",
+    "wrong": [
+      "prize scam",
+      "romance scam"
+    ]
+  },
+  "why": "A stranger offers a fix, then asks for money or control of your computer.",
+  "short": "Fake computer help that wants money"
+}

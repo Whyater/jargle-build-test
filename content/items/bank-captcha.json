@@ -1,0 +1,68 @@
+{
+  "id": "bank-captcha",
+  "kind": "term",
+  "topic": "talking-computers",
+  "term": "CAPTCHA",
+  "meaning": "A small test on a website, like picking pictures with traffic lights. It checks that you are a person, not a computer program.",
+  "clues": [
+    "It is a small test you meet on some websites.",
+    "It is not about who you are. It is about whether you are a person.",
+    "You may be asked to pick every picture with a bus, or to read wobbly letters.",
+    "It helps stop automatic programs from making thousands of fake accounts.",
+    "It is all capital letters, has seven letters, and starts with C."
+  ],
+  "assumes": [
+    "A pop-up is a small window that appears suddenly",
+    "A security question asks something only you would know",
+    "A one-time code works only once"
+  ],
+  "decoys": [
+    {
+      "term": "pop-up",
+      "meaning": "A small window that suddenly appears over the web page you are reading.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Pop-up_ad"
+      ]
+    },
+    {
+      "term": "security question",
+      "meaning": "A question, such as your first pet's name, that you answer to prove who you are.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Security_question"
+      ]
+    },
+    {
+      "term": "one-time code",
+      "meaning": "A number sent to you that works only once, to prove it is you.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/One-time_password"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "I never had to prove I was not a robot. Though I am a floppy disk, so, fair question."
+    },
+    {
+      "speaker": "bud",
+      "text": "Ha! Tip: if the pictures are too hard, there is usually a refresh button or a listen option."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Britannica, CAPTCHA",
+      "url": "https://www.britannica.com/technology/CAPTCHA"
+    },
+    {
+      "name": "Wikipedia, CAPTCHA",
+      "url": "https://en.wikipedia.org/wiki/CAPTCHA"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

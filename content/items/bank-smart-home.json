@@ -1,0 +1,68 @@
+{
+  "id": "bank-smart-home",
+  "kind": "term",
+  "topic": "talking-computers",
+  "term": "smart home",
+  "meaning": "A home with things like lights, locks, and thermostats that connect to the internet, so you can control them from your phone.",
+  "clues": [
+    "It is about everyday things in a house, but with some computer help.",
+    "Lights, locks, thermostats, and cameras can all be run from your phone.",
+    "You can switch things on or off from another room, or from far away.",
+    "Some follow a timer, like lights that turn on at dusk.",
+    "It has two words. The first starts with S and means clever."
+  ],
+  "assumes": [
+    "A smartwatch is worn on your wrist",
+    "An alarm system warns of break-ins",
+    "A remote control works from across the room"
+  ],
+  "decoys": [
+    {
+      "term": "smartwatch",
+      "meaning": "A watch you wear that shows messages and tracks your steps.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Smartwatch"
+      ]
+    },
+    {
+      "term": "alarm system",
+      "meaning": "A set of sensors and a loud siren that warn of a break-in.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Security_alarm"
+      ]
+    },
+    {
+      "term": "remote control",
+      "meaning": "A handheld device that controls a TV or other gadget from across the room.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Remote_control"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, \"automatic\" meant a timer that switched on the porch light."
+    },
+    {
+      "speaker": "bud",
+      "text": "Now your phone does it from anywhere. Tip: give each device its own strong password and keep its updates on."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Home automation",
+      "url": "https://en.wikipedia.org/wiki/Home_automation"
+    },
+    {
+      "name": "FTC, Securing Your Internet-Connected Devices at Home",
+      "url": "https://consumer.ftc.gov/articles/securing-your-internet-connected-devices-home"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

@@ -1,0 +1,87 @@
+{
+  "id": "grandparent-scam",
+  "kind": "term",
+  "topic": "scams-and-fakes",
+  "term": "grandparent scam",
+  "meaning": "A fake emergency call or message in which a crook pretends to be a grandchild who needs help.",
+  "clues": [
+    "A stranger lies about who they are and pushes you to act fast.",
+    "The person contacting you claims to be someone else.",
+    "The caller says a grandchild is in trouble and needs quick help.",
+    "The safest move is to pause and check with your family using a number you know.",
+    "Its name starts with G and includes a word for a parent's parent."
+  ],
+  "assumes": [
+    "A government impersonation scam pretends to be a government worker",
+    "A utility scam uses a false power or water warning",
+    "A charity scam asks for money while pretending to help a cause"
+  ],
+  "decoys": [
+    {
+      "term": "government impersonation scam",
+      "meaning": "A trick where someone pretends to be a government worker.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-avoid-government-impersonation-scam"
+      ]
+    },
+    {
+      "term": "utility scam",
+      "meaning": "A trick that threatens to shut off power or water unless you pay.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/scammers-pretend-be-your-utility-company"
+      ]
+    },
+    {
+      "term": "charity scam",
+      "meaning": "A trick that asks for donations while pretending to help a cause.",
+      "source_urls": [
+        "https://consumer.ftc.gov/consumer-alerts/2024/11/give-charity-not-scam"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. If a caller says a relative needs help, hang up and call that relative using a number you know."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "When a family story sounded urgent, we checked with another relative. A second call can clear up a lot."
+    },
+    {
+      "speaker": "bud",
+      "text": "Do not send money or give private details while you feel rushed. Take a breath and check the story."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FTC, Fake emergencies",
+      "url": "https://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "blank": {
+    "sentence": "A caller said, 'Grandma, I am in trouble, send help now.' That was a ___.",
+    "wrong": [
+      "charity scam",
+      "utility scam"
+    ]
+  },
+  "why": "Crooks use a family emergency to rush you, so pause and call your family.",
+  "short": "Fake grandchild needing urgent help",
+  "situations": [
+    {
+      "text": "A caller says your grandchild is in trouble. You hang up and call your grandchild on a number you know.",
+      "options": [
+        "Safe",
+        "Risky"
+      ],
+      "answer": "Safe",
+      "why": "A second call can clear up a lot."
+    }
+  ]
+}
