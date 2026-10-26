@@ -1,0 +1,627 @@
+/* Endless: start screen, the run (header, reactions) and game over.
+   The question cards themselves live in ui/questions/questions.css. */
+
+/* ---- Start ---- */
+.en-start > * + * {
+  margin-top: 1rem;
+}
+.en-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem 1rem 1rem;
+  border-radius: var(--radius-lg);
+  background: var(--grape-soft);
+  overflow: hidden;
+}
+/* A soft sun behind the pair, so they stand on a little stage. */
+.en-stage::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5.5rem;
+  width: 18rem;
+  height: 10rem;
+  margin-left: -9rem;
+  border-radius: 50%;
+  background: #ddd2ff;
+}
+.en-stage .bubble {
+  position: relative;
+  z-index: 1;
+  max-width: 17rem;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+.en-stage-mascots {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.en-stage-mascots > * + * {
+  margin-left: 0.5rem;
+}
+
+.en-best {
+  display: flex;
+  align-items: center;
+  padding: 0.875rem 1rem;
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+.en-best-icon {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.875rem;
+  border-radius: var(--radius-pill);
+  background: var(--sunny);
+  color: #6b4500;
+  box-shadow: 0 3px 0 var(--sunny-deep);
+}
+.en-best-text {
+  display: flex;
+  flex-direction: column;
+}
+.en-best-label {
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+.en-best-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-xl);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.en-rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+.en-rules li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 0.25rem;
+  /* An outline, not a fill, so these read as facts and not as buttons. */
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+.en-rule-icon {
+  display: inline-flex;
+  margin-bottom: 0.375rem;
+}
+.en-rule-icon.heart {
+  color: var(--wrong);
+}
+.en-rule-icon.bolt {
+  color: var(--grape);
+}
+.en-rule-icon.infinity {
+  color: var(--mint-deep);
+}
+.en-start .btn-big {
+  margin-top: 1.25rem;
+}
+
+/* ---- The run ---- */
+.en-run {
+  padding-bottom: 1.5rem;
+}
+.en-hud {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  margin: 0 -1rem;
+  padding: 0.5rem 1rem 0.625rem;
+  background: var(--bg);
+}
+.en-hud-row {
+  display: flex;
+  align-items: center;
+}
+.en-hud-row.two {
+  margin-top: 0.5rem;
+}
+.en-quit {
+  margin-right: 0.75rem;
+}
+.en-hearts {
+  position: relative;
+  display: inline-flex;
+}
+.en-score {
+  margin-left: auto;
+  padding: 0.125rem 0.875rem;
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  box-shadow: 0 3px 0 var(--line-color);
+}
+.en-score-num {
+  display: inline-block;
+  min-width: 2ch;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  animation: en-bump var(--t-slow) var(--ease-bounce);
+}
+
+/* Combo chip: the multiplier, 3 pips toward the next one, and the count. */
+.en-combo {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  padding: 0.25rem 0.625rem 0.25rem 0.25rem;
+  border-radius: var(--radius-pill);
+  background: var(--surface-2);
+  transition: background-color var(--t-med) ease;
+}
+.en-mult {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.25rem;
+  height: 1.75rem;
+  padding: 0 0.375rem;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  animation: en-bump var(--t-slow) var(--ease-bounce);
+}
+.en-pips {
+  display: inline-flex;
+  margin: 0 0.5rem;
+}
+.pip {
+  width: 0.5rem;
+  height: 0.875rem;
+  border-radius: 0.25rem;
+  background: var(--line-color);
+  transition: background-color var(--t-med) ease, transform var(--t-med) var(--ease-bounce);
+}
+.pip + .pip {
+  margin-left: 0.1875rem;
+}
+.pip.on {
+  background: var(--grape);
+  transform: scaleY(1.15);
+}
+.en-combo-count {
+  display: inline-block;
+  color: var(--ink-soft);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  white-space: nowrap;
+  animation: en-bump var(--t-slow) var(--ease-bounce);
+}
+.en-combo.m2 {
+  background: var(--grape-soft);
+}
+.en-combo.m2 .en-mult {
+  background: var(--grape);
+  color: #ffffff;
+}
+.en-combo.m2 .en-combo-count {
+  color: var(--grape-deep);
+}
+.en-combo.m3 {
+  background: var(--sunny-soft);
+}
+.en-combo.m3 .en-mult {
+  background: var(--flame);
+  color: var(--ink);
+}
+.en-combo.m3 .pip.on {
+  background: var(--flame);
+}
+.en-combo.m3 .en-combo-count {
+  color: #8a3d06;
+}
+
+.en-level {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-left: 0.75rem;
+}
+.en-level .xp-badge {
+  flex: none;
+  margin-right: 0.375rem;
+}
+.en-level-bar {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 2.5rem;
+}
+.en-level-bar .xp-float {
+  top: -0.5rem;
+  font-size: var(--text-sm);
+}
+
+/* Lost heart: two halves crack apart over the heart that just went grey. */
+.en-heartbreak {
+  position: absolute;
+  left: calc(var(--i) * (26px + 0.25rem));
+  top: 0;
+  width: 26px;
+  height: 26px;
+  pointer-events: none;
+}
+.en-heartbreak .half {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  color: var(--wrong);
+}
+.en-heartbreak .half.left {
+  clip-path: polygon(0 0, 55% 0, 42% 40%, 58% 62%, 45% 100%, 0 100%);
+  animation: en-break-left 640ms var(--ease-out) forwards;
+}
+.en-heartbreak .half.right {
+  clip-path: polygon(55% 0, 100% 0, 100% 100%, 45% 100%, 58% 62%, 42% 40%);
+  animation: en-break-right 640ms var(--ease-out) forwards;
+}
+
+.en-main {
+  padding-top: 1.25rem;
+}
+
+/* Reactions sit under the answers, so nothing above them moves when feedback appears. */
+.en-react {
+  margin-top: 1.25rem;
+}
+.en-react .says {
+  min-height: 4.25rem;
+}
+.en-react .bubble {
+  font-size: var(--text-base);
+}
+.en-after {
+  margin-top: 0.75rem;
+}
+.en-why {
+  /* Leaves room for the sticky Next bar when the why line is scrolled into view. */
+  scroll-margin-bottom: 6rem;
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  background: var(--sunny-soft);
+  animation: en-rise var(--t-med) var(--ease-out);
+}
+.en-why-text {
+  margin: 0;
+  line-height: 1.4;
+}
+.en-nextbar {
+  position: sticky;
+  bottom: 0;
+  z-index: 15;
+  margin: 0 -1rem;
+  padding: 0.75rem 1rem calc(0.5rem + var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px)));
+  background: var(--bg);
+  /* A soft edge so it reads as a bar floating over the page, not a cut. */
+  box-shadow: 0 -10px 14px -14px rgba(43, 35, 64, 0.5);
+}
+.en-why-text strong {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+/* Right answer: a thin bar fills while the next question gets ready. */
+.en-advance {
+  height: 0.375rem;
+  border-radius: var(--radius-pill);
+  background: var(--surface-2);
+  overflow: hidden;
+}
+.en-advance-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--correct);
+  transform-origin: left center;
+  animation: en-advance linear forwards;
+}
+
+/* ---- Game over ---- */
+.en-over > * + * {
+  margin-top: 1rem;
+}
+.en-scorecard {
+  position: relative;
+  padding: 1.5rem 1rem 1.25rem;
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  animation: en-rise var(--t-slow) var(--ease-bounce);
+}
+.en-scorecard.best {
+  border-color: var(--sunny);
+  background: var(--sunny-soft);
+  box-shadow: 0 4px 0 var(--sunny-deep), 0 16px 32px -18px rgba(224, 154, 0, 0.6);
+}
+.en-ribbon {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0.25rem 0.875rem 0.25rem 0.625rem;
+  border-radius: var(--radius-pill);
+  background: var(--sunny);
+  color: #5c3c00;
+  box-shadow: 0 3px 0 var(--sunny-deep);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-base);
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  animation: en-ribbon 600ms var(--ease-bounce) 200ms backwards;
+}
+.en-ribbon .gicon {
+  margin-right: 0.375rem;
+}
+.en-final-label {
+  margin: 0;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+.en-final {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.en-final-best {
+  margin: 0.375rem 0 0;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.en-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+.en-stats li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 0.25rem;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  text-align: center;
+}
+.en-stats .num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.en-stats .label {
+  color: var(--ink-soft);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.en-stats li.xp {
+  background: var(--sunny-soft);
+}
+.en-stats li.xp .num {
+  color: #6b4500;
+}
+
+.en-levelcard {
+  display: flex;
+  align-items: center;
+  padding: 0.875rem 1rem;
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+.en-levelcard .xp-badge {
+  flex: none;
+  margin-right: 0.75rem;
+}
+.en-levelcard-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.en-levelcard-title {
+  margin: 0 0 0.375rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-md);
+  line-height: 1.2;
+}
+.en-levelcard-note {
+  margin: 0.375rem 0 0;
+  color: var(--ink-soft);
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+.en-levelcard.up {
+  border-color: var(--sunny);
+  background: var(--sunny-soft);
+  animation: en-rise var(--t-slow) var(--ease-bounce) 150ms backwards;
+}
+.en-levelcard.up .xp-badge {
+  animation: en-spin-in 700ms var(--ease-bounce) 300ms backwards;
+}
+
+.en-over-says > * + * {
+  margin-top: 0.75rem;
+}
+.en-over-actions {
+  position: sticky;
+  bottom: 0;
+  z-index: 15;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding: 0.75rem 1rem calc(0.25rem + var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px)));
+  background: var(--bg);
+  box-shadow: 0 -10px 14px -14px rgba(43, 35, 64, 0.5);
+}
+.en-over-actions > * + * {
+  margin-top: 0.25rem;
+}
+
+/* ---- Motion ---- */
+@keyframes en-bump {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes en-break-left {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(-1px) rotate(-6deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-8px, 14px) rotate(-28deg);
+  }
+}
+@keyframes en-break-right {
+  0% {
+    opacity: 1;
+    transform: none;
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(1px) rotate(6deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(8px, 14px) rotate(28deg);
+  }
+}
+@keyframes en-advance {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes en-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes en-ribbon {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4) rotate(-8deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes en-spin-in {
+  0% {
+    transform: scale(0.3) rotate(-160deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@media (max-width: 21rem) {
+  .en-combo-count {
+    display: none;
+  }
+  .en-final {
+    font-size: 3.25rem;
+  }
+}
+/* At the biggest text sizes the header gets one more row instead of squeezing. */
+html.ts-large .en-hud-row.two,
+html.ts-largest .en-hud-row.two {
+  flex-wrap: wrap;
+}
+html.ts-largest .en-level {
+  flex-basis: 100%;
+  margin: 0.5rem 0 0;
+}
+html.ts-largest .en-rules {
+  grid-template-columns: 1fr;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .en-run *,
+  .en-start *,
+  .en-over,
+  .en-over * {
+    animation: none !important;
+  }
+  .en-advance-fill {
+    transform: scaleX(1);
+  }
+}
+html.reduce-motion .en-run *,
+html.reduce-motion .en-start *,
+html.reduce-motion .en-over,
+html.reduce-motion .en-over * {
+  animation: none !important;
+}
+html.reduce-motion .en-advance-fill {
+  transform: scaleX(1);
+}

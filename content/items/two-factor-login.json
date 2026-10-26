@@ -1,0 +1,108 @@
+{
+  "id": "two-factor-login",
+  "kind": "term",
+  "topic": "locks-and-keys",
+  "term": "two-factor login",
+  "puzzle": "LOGIN",
+  "meaning": "A way to log in with your password plus a second proof, like a code texted to you. A stolen password alone won't work.",
+  "clues": [
+    "To get in, you must show two different kinds of proof, such as something you know and something you have.",
+    "One common second proof is a code sent to your phone.",
+    "Even if a crook steals your password, they still can't get in without the second proof.",
+    "It's not usually turned on for you. You switch it on in your account settings.",
+    "Its name starts with the letter T and ends with a word that means signing in."
+  ],
+  "assumes": [
+    "A security question is one extra question that you answer from memory",
+    "A screen lock is a PIN, passcode or fingerprint that opens your phone",
+    "Single sign-on is one login used for many apps"
+  ],
+  "decoys": [
+    {
+      "term": "security question",
+      "meaning": "A personal question you answer to prove who you are or to reset a password.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/creating-strong-passwords-and-other-ways-protect-your-accounts"
+      ]
+    },
+    {
+      "term": "screen lock",
+      "meaning": "Locks your phone's screen when you're not using it. You open it with a PIN, passcode or fingerprint.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-protect-your-phone-hackers"
+      ]
+    },
+    {
+      "term": "single sign-on",
+      "meaning": "One account that lets you get into many apps without signing in again for each one.",
+      "source_urls": [
+        "https://csrc.nist.gov/glossary/term/single_sign_on"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. Open your email's settings and look for two-factor or two-step. The FTC says to start with your most sensitive accounts, like email and your bank."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "Our bank cards worked this way. You needed the card and a PIN only you knew. Two things beat one."
+    },
+    {
+      "speaker": "bud",
+      "text": "Right. And if someone contacts you first and asks for the code, don't share it."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FTC, two-factor authentication",
+      "url": "https://consumer.ftc.gov/articles/use-two-factor-authentication-protect-your-accounts"
+    },
+    {
+      "name": "CISA, Protect Our World with MFA",
+      "url": "https://www.cisa.gov/secure-our-world/turn-mfa"
+    },
+    {
+      "name": "NIST, Back to basics: MFA",
+      "url": "https://www.nist.gov/itl/applied-cybersecurity/back-basics-multi-factor-authentication-mfa"
+    },
+    {
+      "name": "FTC, creating strong passwords",
+      "url": "https://consumer.ftc.gov/articles/creating-strong-passwords-and-other-ways-protect-your-accounts"
+    },
+    {
+      "name": "FTC, how to protect your phone from hackers",
+      "url": "https://consumer.ftc.gov/articles/how-protect-your-phone-hackers"
+    },
+    {
+      "name": "NIST glossary, single sign-on",
+      "url": "https://csrc.nist.gov/glossary/term/single_sign_on"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "blank": {
+    "sentence": "Even with her stolen password, the crook could not get in, because her ___ also needed a code texted to her phone.",
+    "wrong": [
+      "security question",
+      "single sign-on"
+    ]
+  },
+  "why": "It keeps your account safe even if someone steals your password.",
+  "short": "Password plus a second proof",
+  "situations": [
+    {
+      "text": "A caller says they work for your email company and asks you to read out the code that was just texted to you.",
+      "options": [
+        "Scam",
+        "Safe"
+      ],
+      "answer": "Scam",
+      "why": "Never share a code with someone who contacts you first."
+    }
+  ]
+}

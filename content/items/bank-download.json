@@ -1,0 +1,77 @@
+{
+  "id": "bank-download",
+  "kind": "term",
+  "topic": "how-the-internet-works",
+  "term": "download",
+  "meaning": "To copy a file from the internet onto your own device. It could be a photo, an app, or a paper.",
+  "clues": [
+    "It moves a file in one direction: toward you.",
+    "A copy travels from far away and lands on your device.",
+    "A progress bar often shows how much is left.",
+    "It is often the first step before you can open a new app or file.",
+    "It is one word with eight letters. It starts with D."
+  ],
+  "assumes": [
+    "To upload is to send a file out to the internet",
+    "To install is to set up a program so it is ready to use",
+    "An email attachment is a file sent along with a message"
+  ],
+  "decoys": [
+    {
+      "term": "upload",
+      "meaning": "To send a file from your device out to the internet.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Upload"
+      ]
+    },
+    {
+      "term": "install",
+      "meaning": "To set up a program so it is ready to use on a device.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Installation_(computer_programs)"
+      ]
+    },
+    {
+      "term": "email attachment",
+      "meaning": "A file that travels along with an email message.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Email_attachment"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "I was the original download! Carry me between computers, copy the files, off you go. People called it sneakernet."
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: only open files you get from sites you trust. Check the file name before you open it."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, download",
+      "url": "https://www.merriam-webster.com/dictionary/download"
+    },
+    {
+      "name": "Wikipedia, Download",
+      "url": "https://en.wikipedia.org/wiki/Download"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true,
+  "blank": {
+    "sentence": "The photo was saved onto my phone with one ___ from the website.",
+    "wrong": [
+      "router",
+      "pop-up"
+    ]
+  },
+  "why": "It puts a copy of a file on your own device.",
+  "short": "Copy a file onto your device"
+}

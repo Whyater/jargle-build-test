@@ -1,0 +1,6 @@
+#!/bin/sh
+# Blocks private files from ever being committed.
+bad=$(git diff --cached --name-only | grep -E '(^|/)(CLAUDE\.md|AGENTS\.md|GEMINI\.md|\.claude/|\.cursor/|\.codex/|\.obsidian/|notes/|\.env)' )
+if [ -n "$bad" ]; then
+  echo "pre-commit: refusing to commit private files:"; echo "$bad"; exit 1
+fi

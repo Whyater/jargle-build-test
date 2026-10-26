@@ -1,0 +1,81 @@
+{
+  "id": "bank-speech-to-text",
+  "kind": "term",
+  "topic": "talking-computers",
+  "term": "speech to text",
+  "meaning": "Technology that listens to spoken words and turns them into typed words on the screen.",
+  "clues": [
+    "Spoken words go in, and written words come out.",
+    "You use it when you tap the little microphone on your phone's keyboard and talk instead of typing.",
+    "It helps people who find typing hard, and it is handy when your hands are busy.",
+    "It is also how some apps make captions of what people are saying.",
+    "It has three words, with \"to\" in the middle. The first word starts with S."
+  ],
+  "assumes": [
+    "Text to speech reads typed words out loud",
+    "Voicemail is a recorded phone message",
+    "An audio recording is a saved sound file"
+  ],
+  "decoys": [
+    {
+      "term": "text to speech",
+      "meaning": "Technology that reads typed words out loud in a computer voice.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Speech_synthesis"
+      ]
+    },
+    {
+      "term": "voicemail",
+      "meaning": "A recorded phone message left for you to listen to later.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Voicemail"
+      ]
+    },
+    {
+      "term": "audio recording",
+      "meaning": "A saved sound file of voices, music, or other noises.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Sound_recording_and_reproduction"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, a secretary typed every word the boss said, and used shorthand too!"
+    },
+    {
+      "speaker": "bud",
+      "text": "Your phone does that now. Tip: tap the microphone on the keyboard, speak slowly, and say \"period\" to end a sentence."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Speech recognition",
+      "url": "https://en.wikipedia.org/wiki/Speech_recognition"
+    },
+    {
+      "name": "Gboard Help, Type with your voice",
+      "url": "https://support.google.com/gboard/answer/2781851"
+    },
+    {
+      "name": "Apple Support, Dictate text on iPhone",
+      "url": "https://support.apple.com/guide/iphone/dictate-text-iph2c0651d2/ios"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true,
+  "blank": {
+    "sentence": "I spoke my message out loud and ___ typed it on the screen for me.",
+    "wrong": [
+      "text to speech",
+      "translation app"
+    ]
+  },
+  "why": "It listens to you talk and types the words for you.",
+  "short": "Spoken words turned into typed words"
+}

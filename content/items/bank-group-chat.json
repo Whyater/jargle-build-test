@@ -1,0 +1,81 @@
+{
+  "id": "bank-group-chat",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "group chat",
+  "meaning": "One shared text chat for three or more people. Everyone sees every message.",
+  "clues": [
+    "It is one shared text thread on your phone where family or friends trade messages.",
+    "Whatever one person sends, everyone in it sees.",
+    "Plans for a birthday party or a family trip are often made here.",
+    "If it gets too busy, you can mute it so your phone stops buzzing for each message.",
+    "It has two words. The first starts with G and the second starts with C."
+  ],
+  "assumes": [
+    "A conference call is a phone call with many people",
+    "A mailing list sends one email to many people",
+    "A forum is a public website for posts"
+  ],
+  "decoys": [
+    {
+      "term": "conference call",
+      "meaning": "A phone call where three or more people talk at the same time.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Conference_call"
+      ]
+    },
+    {
+      "term": "mailing list",
+      "meaning": "A list of email addresses. One email sent to the list reaches everyone on it.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Mailing_list"
+      ]
+    },
+    {
+      "term": "forum",
+      "meaning": "A website where people post messages about a topic, and strangers can read and reply.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Internet_forum"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, a group meant a phone tree. You called one person, and they called the next."
+    },
+    {
+      "speaker": "bud",
+      "text": "Now one message reaches everyone. Tip: if it gets too busy, open the chat's settings and mute it."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Apple Support, Have a group conversation in Messages on iPhone",
+      "url": "https://support.apple.com/guide/iphone/group-conversations-iphb10c80fc5/ios"
+    },
+    {
+      "name": "Apple Support, Send a group text message on your iPhone or iPad",
+      "url": "https://support.apple.com/en-us/118236"
+    },
+    {
+      "name": "Wikipedia, Online chat",
+      "url": "https://en.wikipedia.org/wiki/Online_chat"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true,
+  "blank": {
+    "sentence": "I sent one message to my whole family in our ___, and everyone saw it.",
+    "wrong": [
+      "selfie",
+      "username"
+    ]
+  },
+  "why": "Everyone in it sees every message, so think about who is in it.",
+  "short": "Shared chat for three or more"
+}

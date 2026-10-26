@@ -1,0 +1,77 @@
+{
+  "id": "bank-backup",
+  "kind": "term",
+  "topic": "locks-and-keys",
+  "term": "backup",
+  "meaning": "A spare copy of your files, kept in a second place. If the first copy is lost or broken, you still have the second.",
+  "clues": [
+    "It is a way to protect your files.",
+    "It still works if a device is lost, broken, or stolen.",
+    "It is a spare copy of your photos, documents, and other files.",
+    "You keep it in a second place, like an external drive or online storage.",
+    "It has six letters and starts with B."
+  ],
+  "assumes": [
+    "Antivirus software scans for harmful programs",
+    "Ransomware locks your files",
+    "Spyware secretly watches you"
+  ],
+  "decoys": [
+    {
+      "term": "ransomware",
+      "meaning": "Harmful software that locks your files. The crook then demands payment to unlock them.",
+      "source_urls": [
+        "https://www.cisa.gov/stopransomware/ransomware-101"
+      ]
+    },
+    {
+      "term": "antivirus",
+      "meaning": "Software that scans a device for harmful programs and removes them.",
+      "source_urls": [
+        "https://www.cisa.gov/news-events/news/understanding-anti-virus-software"
+      ]
+    },
+    {
+      "term": "spyware",
+      "meaning": "Hidden software that secretly watches what you do on a device and sends it to someone else.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-recognize-remove-avoid-malware"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "We always kept a second disk with a copy of every important file. Good habit, if I say so myself."
+    },
+    {
+      "speaker": "bud",
+      "text": "Still a great one. Turn on automatic backup in your phone's settings, and you never have to remember to do it."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Apple Support, How to back up your iPhone, iPad, and iPod touch",
+      "url": "https://support.apple.com/en-us/118426"
+    },
+    {
+      "name": "Wikipedia, Backup",
+      "url": "https://en.wikipedia.org/wiki/Backup"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true,
+  "blank": {
+    "sentence": "My computer broke, but I had a ___ of my photos in a second place, so nothing was lost.",
+    "wrong": [
+      "firewall",
+      "malware"
+    ]
+  },
+  "why": "If the first copy is lost or broken, you still have the second.",
+  "short": "Spare copy of your files"
+}

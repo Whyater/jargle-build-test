@@ -1,0 +1,76 @@
+{
+  "id": "bank-scareware",
+  "kind": "term",
+  "topic": "scams-and-fakes",
+  "term": "scareware",
+  "meaning": "A fake pop-up warning that says your device is infected. It scares you into paying for a useless fix or downloading something harmful.",
+  "clues": [
+    "It involves a program or a message on your device.",
+    "It is designed to frighten you.",
+    "A loud pop-up says your device is full of viruses, though no scan was ever run, and tells you to click or pay.",
+    "The warning is fake. The \"fix\" it sells may do nothing, or may bring in real harm.",
+    "It has nine letters and starts with S. The first part is the feeling it tries to give you."
+  ],
+  "assumes": [
+    "Ransomware locks your files and demands payment",
+    "Spyware secretly watches what you do"
+  ],
+  "decoys": [
+    {
+      "term": "ransomware",
+      "meaning": "Harmful software that locks your files. The crook then demands payment to unlock them.",
+      "source_urls": [
+        "https://www.cisa.gov/stopransomware/ransomware-101"
+      ]
+    },
+    {
+      "term": "spyware",
+      "meaning": "Hidden software that secretly watches what you do on a device and sends it to someone else.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-recognize-remove-avoid-malware"
+      ]
+    },
+    {
+      "term": "antivirus",
+      "meaning": "Software that scans a device for harmful programs and removes them.",
+      "source_urls": [
+        "https://www.cisa.gov/news-events/news/understanding-anti-virus-software"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "A pop-up that screams about viruses is probably scareware. Do not tap anything inside it. Just close the tab or app."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, the only thing that beeped at me was the microwave."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Scareware",
+      "url": "https://en.wikipedia.org/wiki/Scareware"
+    },
+    {
+      "name": "FTC, How To Spot, Avoid, and Report Tech Support Scams",
+      "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true,
+  "blank": {
+    "sentence": "A pop-up warned me my device was infected and scared me into paying for a useless fix. That was ___.",
+    "wrong": [
+      "robocall",
+      "spoofing"
+    ]
+  },
+  "why": "It scares you into paying for a useless fix or a harmful download.",
+  "short": "Fake infection warning pop-up"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "bank-one-time-code",
+  "kind": "term",
+  "topic": "locks-and-keys",
+  "term": "one-time code",
+  "meaning": "A short code sent to you for one sign-in only. It stops working after a few minutes, so an old one is useless.",
+  "clues": [
+    "It helps prove that you are the person signing in.",
+    "You do not have to remember it ahead of time.",
+    "It arrives by text message or from an app, just when you need it.",
+    "It stops working after a short time, and it can be used only once.",
+    "It has three words. They start with O, T, and C."
+  ],
+  "assumes": [
+    "A PIN is a number you pick and remember",
+    "A security question has an answer you set up ahead of time"
+  ],
+  "decoys": [
+    {
+      "term": "security question",
+      "meaning": "A personal question you pick when you set up an account, like your first pet's name. You answer it later to prove who you are.",
+      "source_urls": [
+        "https://security.googleblog.com/2015/05/new-research-some-tough-questions-for.html"
+      ]
+    },
+    {
+      "term": "face unlock",
+      "meaning": "A way to open a phone by looking at it. The phone checks that your face matches the one it saved.",
+      "source_urls": [
+        "https://support.apple.com/en-us/102381"
+      ]
+    },
+    {
+      "term": "PIN",
+      "meaning": "A secret number, often four digits, that you type to prove it is you, such as to unlock a phone.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Personal_identification_number"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, a secret handshake got you into the clubhouse. A code that works once is a handshake that changes every time!"
+    },
+    {
+      "speaker": "bud",
+      "text": "Never read your code to anyone who calls or texts you. A real company will not ask for it."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Login.gov, Text/SMS or phone call",
+      "url": "https://www.login.gov/help/create-account/authentication-methods/text-sms-or-phone-call/"
+    },
+    {
+      "name": "Wikipedia, One-time password",
+      "url": "https://en.wikipedia.org/wiki/One-time_password"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true,
+  "blank": {
+    "sentence": "The bank sent me a short ___ that worked for one sign-in only and stopped working after a few minutes.",
+    "wrong": [
+      "PIN",
+      "security question"
+    ]
+  },
+  "why": "It works once and stops working after a few minutes, so an old one is useless.",
+  "short": "Code that works for one sign-in"
+}

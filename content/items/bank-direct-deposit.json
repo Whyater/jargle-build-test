@@ -1,0 +1,80 @@
+{
+  "id": "bank-direct-deposit",
+  "kind": "term",
+  "topic": "money-on-your-phone",
+  "term": "direct deposit",
+  "meaning": "Your pay or benefits go straight into your bank account by computer. No paper check is needed.",
+  "clues": [
+    "It puts money into your bank account.",
+    "Nobody hands you anything, and there is no paper to carry.",
+    "Employers use it for paychecks, and some government benefits arrive this way too.",
+    "The money often shows up on payday, with no trip to the bank.",
+    "It has two words. The first has six letters and starts with D."
+  ],
+  "assumes": [
+    "Mobile check deposit uses a photo of a paper check",
+    "A prepaid card holds money loaded ahead of time"
+  ],
+  "decoys": [
+    {
+      "term": "mobile check deposit",
+      "meaning": "Using your phone's camera to photograph a paper check. The money goes into your bank account without a trip to the bank.",
+      "source_urls": [
+        "https://www.fdic.gov/consumers/consumer/news/october2019.html"
+      ]
+    },
+    {
+      "term": "prepaid card",
+      "meaning": "A card you load with money ahead of time. You can spend only what you loaded.",
+      "source_urls": [
+        "https://www.consumerfinance.gov/consumer-tools/prepaid-cards/"
+      ]
+    },
+    {
+      "term": "debit card",
+      "meaning": "A plastic card linked to your bank account. When you pay with it, the money comes straight out of your account.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Debit_card"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, payday meant a paper envelope and a trip to the bank. Great exercise."
+    },
+    {
+      "speaker": "bud",
+      "text": "Now the money arrives on its own. Ask your employer or benefit office to set it up, and give bank details only to people you trust."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "CFPB, Ways to receive your money",
+      "url": "https://files.consumerfinance.gov/f/documents/cfpb_ways-to-receive-money_2022-08.pdf"
+    },
+    {
+      "name": "CFPB, If I get paid through direct deposit, when can I withdraw the funds?",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/if-i-get-paid-through-direct-deposit-when-can-i-withdraw-the-funds-en-1025/"
+    },
+    {
+      "name": "Wikipedia, Direct deposit",
+      "url": "https://en.wikipedia.org/wiki/Direct_deposit"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true,
+  "blank": {
+    "sentence": "My pay goes straight into my bank account by computer, so I need no paper check. That is ___.",
+    "wrong": [
+      "autopay",
+      "tap to pay"
+    ]
+  },
+  "why": "Your pay or benefits arrive in your account with no paper check.",
+  "short": "Paycheck lands in your bank account"
+}

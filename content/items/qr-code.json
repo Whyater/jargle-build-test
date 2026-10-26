@@ -1,0 +1,111 @@
+{
+  "id": "qr-code",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "QR code",
+  "puzzle": "QRCODE",
+  "meaning": "A square pattern of tiny black and white boxes. Point your phone camera at it to open a web page, see a menu, or pay.",
+  "clues": [
+    "You hold your phone up near it to use it.",
+    "It can carry a web address or other data for your phone to read.",
+    "You can see it: a square of small black and white boxes, printed or on a screen.",
+    "A company in Japan invented it. Car makers were early users.",
+    "It is a two-word name that starts with Q."
+  ],
+  "assumes": [
+    "A grocery barcode is made of black stripes"
+  ],
+  "decoys": [
+    {
+      "term": "barcode",
+      "meaning": "The pattern of black stripes on a product that a store scanner reads to find the item and its price.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/barcode",
+        "https://www.qrcode.com/en/history/"
+      ]
+    },
+    {
+      "term": "tap to pay",
+      "meaning": "Hold your phone near a store's card reader to pay with a card saved on your phone.",
+      "source_urls": [
+        "https://support.apple.com/en-us/102626"
+      ]
+    },
+    {
+      "term": "NFC tag",
+      "meaning": "A tiny chip in a small tag. Hold your phone very close, and it reads what's stored there, like a web link.",
+      "source_urls": [
+        "https://nfc-forum.org/learn/nfc-technology/"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it: point your phone's camera at one on a menu or a sign. Read the web address that pops up before you tap it."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "The stripes on a grocery item were a code too. A scanner read them and the price showed up at the register. This square does that job and holds much more."
+    },
+    {
+      "speaker": "bud",
+      "text": "Skip ones that come in a text or email you didn't expect. And if one looks stuck on top of another, stop and ask someone."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, QR code",
+      "url": "https://www.merriam-webster.com/dictionary/QR%20code"
+    },
+    {
+      "name": "DENSO WAVE, QRcode.com",
+      "url": "https://www.qrcode.com/en/"
+    },
+    {
+      "name": "DENSO WAVE, History of QR Code",
+      "url": "https://www.qrcode.com/en/history/"
+    },
+    {
+      "name": "FTC, Harmful links hidden in QR codes",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2023/12/scammers-hide-harmful-links-qr-codes-steal-your-information"
+    },
+    {
+      "name": "FTC, QR codes on parking meters",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2026/09/see-qr-code-parked-somewhere-dont-scan-ityet"
+    },
+    {
+      "name": "Apple Support, scan a QR code with your iPhone or iPad",
+      "url": "https://support.apple.com/en-us/102680"
+    },
+    {
+      "name": "Google Pixel Help, scan QR codes with your Pixel phone",
+      "url": "https://support.google.com/pixelphone/answer/16561572?hl=en"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "blank": {
+    "sentence": "I pointed my phone camera at the ___ on the menu, a square of tiny black and white boxes.",
+    "wrong": [
+      "barcode",
+      "NFC tag"
+    ]
+  },
+  "why": "Be careful with ones that come in surprise texts or look stuck on top of another.",
+  "short": "Square pattern your camera can read",
+  "situations": [
+    {
+      "text": "A QR code arrives in an email you did not expect and tells you to scan it.",
+      "options": [
+        "Safe",
+        "Risky"
+      ],
+      "answer": "Risky",
+      "why": "Skip ones that come in a text or email you did not expect."
+    }
+  ]
+}

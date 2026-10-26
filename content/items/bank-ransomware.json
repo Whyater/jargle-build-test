@@ -1,0 +1,71 @@
+{
+  "id": "bank-ransomware",
+  "kind": "term",
+  "topic": "locks-and-keys",
+  "term": "ransomware",
+  "meaning": "Harmful software that locks your files or your device. The crook then demands payment to unlock them.",
+  "clues": [
+    "It holds something of yours hostage.",
+    "The thing held hostage is your files, or your whole device.",
+    "A message on the screen says you must pay to get your stuff back.",
+    "Even if you pay, there is no promise you will get your files back.",
+    "It has ten letters and starts with R. The first part is a word for money paid to free a hostage."
+  ],
+  "assumes": [
+    "Spyware secretly watches what you do",
+    "Antivirus software scans for harmful programs"
+  ],
+  "decoys": [
+    {
+      "term": "spyware",
+      "meaning": "Hidden software that secretly watches what you do on a device and sends it to someone else.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-recognize-remove-avoid-malware"
+      ]
+    },
+    {
+      "term": "antivirus",
+      "meaning": "Software that scans a device for harmful programs and removes them.",
+      "source_urls": [
+        "https://www.cisa.gov/news-events/news/understanding-anti-virus-software"
+      ]
+    },
+    {
+      "term": "backup",
+      "meaning": "A spare copy of your files, kept in a second place in case the first copy is lost.",
+      "source_urls": [
+        "https://support.apple.com/en-us/118426"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "We always kept a spare copy of important files on a second disk. That old habit still works."
+    },
+    {
+      "speaker": "bud",
+      "text": "It really does. A backup means a crook holding your files hostage has much less power over you."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "CISA, Ransomware 101",
+      "url": "https://www.cisa.gov/stopransomware/ransomware-101"
+    },
+    {
+      "name": "Wikipedia, Ransomware",
+      "url": "https://en.wikipedia.org/wiki/Ransomware"
+    },
+    {
+      "name": "FTC, Malware: How To Protect Against, Detect, and Remove It",
+      "url": "https://consumer.ftc.gov/articles/how-recognize-remove-avoid-malware"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

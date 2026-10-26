@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Served from a folder like /jargle without the trailing slash, relative files would load
+      // from the wrong place. Add the slash before anything else loads.
+      (function () {
+        var path = location.pathname;
+        var last = path.split('/').pop();
+        if (path.charAt(path.length - 1) !== '/' && last.indexOf('.') === -1) {
+          location.replace(path + '/' + location.search + location.hash);
+        }
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Jargle</title>
+    <meta name="description" content="A daily tech word game. One new word a day, explained." />
+    <meta name="theme-color" content="#FFF8EE" />
+    <meta property="og:title" content="Jargle" />
+    <meta property="og:description" content="A daily tech word game. One new word a day, explained." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://whyater.github.io/Jargle/icons/og-image.png" />
+    <meta property="og:url" content="https://whyater.github.io/Jargle/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://whyater.github.io/Jargle/icons/og-image.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./icons/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Jargle" />
+    <style>
+      html { background: #fff8ee; color: #2b2340; }
+      .boot { max-width: 30rem; margin: 0 auto; padding: 2rem 1rem; font: 1.125rem/1.45 system-ui, -apple-system, sans-serif; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript><p class="boot">Jargle needs JavaScript. Turn it on in your browser settings, then open this page again.</p></noscript>
+    <script>
+      // Plain old JavaScript on purpose: this must run on browsers too old for the app itself.
+      (function () {
+        var address = location.protocol + '//' + location.host + location.pathname;
+        function show(text) {
+          var root = document.getElementById('root');
+          if (!root) return;
+          var p = document.createElement('p');
+          p.className = 'boot';
+          p.appendChild(document.createTextNode(text));
+          root.innerHTML = '';
+          root.appendChild(p);
+        }
+        var storageOk = false;
+        try {
+          storageOk = !!window.localStorage;
+        } catch (e) {
+          storageOk = false;
+        }
+        if (typeof Promise === 'undefined' || typeof fetch === 'undefined' || !storageOk) {
+          show("This window can't run Jargle. Update your browser, or open " + address + ' on another phone or computer.');
+          return;
+        }
+        setTimeout(function () {
+          if (!document.documentElement.getAttribute('data-started')) {
+            show("Jargle is still starting. If nothing appears, open " + address + " in your phone's browser.");
+          }
+        }, 5000);
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

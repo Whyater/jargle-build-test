@@ -1,0 +1,92 @@
+{
+  "id": "widget",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "widget",
+  "puzzle": "WIDGET",
+  "meaning": "A small item on a phone screen that shows app information without opening the app.",
+  "clues": [
+    "It shows changing information on a phone screen without opening an app.",
+    "It might show the weather, news, reminders, or battery level at a glance.",
+    "You can add, move, resize, or remove it on a home screen.",
+    "Phone makers say you can pick its size when you add it.",
+    "Its name starts with W and has six letters."
+  ],
+  "assumes": [
+    "An app icon is a picture you select to open an app.",
+    "A folder groups apps or files in one place.",
+    "A shortcut is a quick way to open an app or action."
+  ],
+  "decoys": [
+    {
+      "term": "app icon",
+      "meaning": "A small picture on a phone screen that you select to open an app.",
+      "source_urls": [
+        "https://support.google.com/android/answer/9450271"
+      ]
+    },
+    {
+      "term": "folder",
+      "meaning": "A place on a phone screen that groups apps or files together.",
+      "source_urls": [
+        "https://support.google.com/android/answer/9450271"
+      ]
+    },
+    {
+      "term": "shortcut",
+      "meaning": "A quick link to content or an action inside an app.",
+      "source_urls": [
+        "https://support.google.com/android/answer/9450271"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. Ask them to show you the screen area where you can add one, then choose a useful kind."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "A clock on the wall gave information at a glance. This puts a little view on your phone."
+    },
+    {
+      "speaker": "bud",
+      "text": "You can move it or remove it later. Try a size that is easy for you to read."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Apple Support, add and edit widgets on iPhone",
+      "url": "https://support.apple.com/en-mt/guide/iphone/iphb8f1bf206/ios"
+    },
+    {
+      "name": "Android Help, add apps, shortcuts and widgets",
+      "url": "https://support.google.com/android/answer/9450271"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "blank": {
+    "sentence": "I added a ___ to my home screen that shows the weather without opening the app.",
+    "wrong": [
+      "app icon",
+      "folder"
+    ]
+  },
+  "why": "It shows useful facts on your screen without opening the app.",
+  "short": "Small phone screen item showing info",
+  "situations": [
+    {
+      "text": "You added a widget you do not like. Do you have to keep it on your home screen forever?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "No",
+      "why": "You can move, resize, or remove it on your home screen."
+    }
+  ]
+}

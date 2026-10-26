@@ -1,0 +1,573 @@
+/* Question cards and answer buttons. Shared by every quick question kind.
+   Colors, sizes and timings come from tokens.css. */
+
+.q {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- The card that holds the word or statement ---- */
+.q-card {
+  position: relative;
+  padding: 1.5rem 1.25rem 1rem;
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+/* Focus lands here on each new question for screen readers. The card is not a control, so no ring. */
+.q-card:focus {
+  outline: none;
+}
+
+/* The kind name sits on the card's top edge like a sticker. */
+.q-tag {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  padding: 0.125rem 0.75rem;
+  border-radius: var(--radius-pill);
+  background: var(--grape);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-xs);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.q-name .q-tag {
+  background: var(--mint);
+  color: var(--ink);
+}
+.q-truefalse .q-tag {
+  background: var(--sunny);
+  color: var(--ink);
+}
+.q-oldnew .q-tag {
+  background: var(--coral);
+  color: var(--ink);
+}
+.q-clue-climb .q-tag {
+  background: var(--ink);
+}
+
+.q-term {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-2xl);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+.q-meaning-text,
+.q-statement {
+  margin: 0;
+  font-size: var(--text-md);
+  font-weight: 600;
+  line-height: 1.35;
+  text-wrap: pretty;
+}
+.q-term-inline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--grape-deep);
+}
+.q-ask {
+  margin: 0.5rem 0 0;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+/* ---- Clue Climb ---- */
+.q-clue-climb .q-card {
+  text-align: left;
+}
+.q-ask-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+.q-ask-row .q-ask {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-md);
+}
+.q-worth {
+  flex: none;
+  padding: 0.125rem 0.625rem;
+  border-radius: var(--radius-pill);
+  background: var(--sunny-soft);
+  color: #6b4500;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+}
+.q-clues {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.q-clue {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.5rem 0;
+  color: var(--ink-soft);
+  line-height: 1.35;
+}
+.q-clue + .q-clue {
+  border-top: 2px dashed var(--line-color);
+}
+.q-clue-n {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.625rem;
+  height: 1.625rem;
+  margin-right: 0.625rem;
+  border-radius: var(--radius-pill);
+  background: var(--surface-2);
+  color: var(--ink-soft);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+.q-clue.open {
+  color: var(--ink);
+  font-weight: 600;
+}
+.q-clue.open .q-clue-n {
+  background: var(--grape);
+  color: #ffffff;
+}
+.q-clue.open .q-clue-text {
+  animation: q-clue-in var(--t-slow) var(--ease-out);
+}
+.q-clue:not(.open) .q-clue-text {
+  font-style: italic;
+}
+.q-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: var(--touch);
+  margin-top: 0.5rem;
+  border: 2px dashed var(--grape);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--grape-deep);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-base);
+  cursor: pointer;
+  transition: transform var(--t-fast) var(--ease-out), background-color var(--t-fast) ease;
+}
+.q-more:active {
+  transform: scale(0.98);
+  background: var(--grape-soft);
+}
+.q-more[aria-disabled='true'] {
+  border-color: var(--line-color);
+  color: var(--ink-soft);
+  cursor: default;
+  transform: none;
+  background: transparent;
+}
+.q-more-cost {
+  margin-left: 0.375rem;
+  padding: 0 0.375rem;
+  border-radius: var(--radius-pill);
+  background: var(--grape-soft);
+  font-size: var(--text-sm);
+}
+
+/* ---- Answer buttons ---- */
+.q-choices {
+  margin-top: 1rem;
+}
+.q-choices.rows {
+  display: flex;
+  flex-direction: column;
+}
+.q-choices.rows > * + * {
+  margin-top: 0.625rem;
+}
+.q-choices.tiles,
+.q-choices.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.625rem;
+}
+
+.choice-btn {
+  --c-fill: var(--surface);
+  --c-ledge: var(--line-color);
+  --c-ink: var(--ink);
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 3.5rem;
+  margin: 0 0 var(--ledge);
+  padding: 0.625rem 0.75rem;
+  border: 2px solid var(--c-ledge);
+  border-radius: var(--radius);
+  background: var(--c-fill);
+  color: var(--c-ink);
+  box-shadow: 0 var(--ledge) 0 var(--c-ledge);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    transform var(--t-fast) var(--ease-out),
+    box-shadow var(--t-fast) var(--ease-out),
+    background-color var(--t-med) ease,
+    border-color var(--t-med) ease,
+    opacity var(--t-med) ease;
+}
+.choice-btn:active:not([aria-disabled='true']) {
+  transform: translateY(var(--ledge));
+  box-shadow: 0 0 0 var(--c-ledge);
+}
+@media (hover: hover) and (pointer: fine) {
+  .choice-btn:hover:not([aria-disabled='true']) {
+    border-color: var(--grape);
+  }
+}
+.choice-btn[aria-disabled='true'] {
+  cursor: default;
+}
+
+.choice-key::before {
+  content: attr(data-key);
+}
+.choice-key {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: 0.75rem;
+  border-radius: 0.5rem;
+  background: var(--surface-2);
+  box-shadow: inset 0 -2px 0 var(--line-color);
+  color: var(--ink-soft);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+.choice-body {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-weight: 600;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+}
+/* Always the same width, so the check or cross never pushes the text. */
+.choice-mark {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-left: 0.5rem;
+  border-radius: var(--radius-pill);
+}
+
+/* Short words: centered, display type. */
+.choice-btn.look-tile {
+  justify-content: center;
+  min-height: 4.5rem;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+}
+.look-tile .choice-body {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-md);
+  line-height: 1.15;
+}
+.look-tile .choice-key,
+.look-big .choice-key {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  width: 1.375rem;
+  height: 1.375rem;
+  margin: 0;
+  font-size: var(--text-xs);
+}
+/* On tiles the check or cross sits on the corner like a sticker, so it never covers the word. */
+.look-tile .choice-mark,
+.look-big .choice-mark {
+  position: absolute;
+  right: -0.375rem;
+  top: -0.5rem;
+  margin: 0;
+  box-shadow: 0 0 0 3px var(--bg);
+}
+.look-tile .choice-mark:empty,
+.look-big .choice-mark:empty {
+  display: none;
+}
+/* Room for the key hint on computers. */
+@media (hover: hover) and (pointer: fine) {
+  .choice-btn.look-tile {
+    padding-top: 1.375rem;
+  }
+}
+
+/* True or False and Old or New: two huge candy buttons. */
+.choice-btn.look-big {
+  flex-direction: column;
+  justify-content: center;
+  min-height: 9rem;
+  padding: 1rem 0.5rem 0.875rem;
+  text-align: center;
+}
+.look-big .choice-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  line-height: 1.1;
+}
+.choice-btn.tone-mint {
+  --c-fill: var(--mint);
+  --c-ledge: var(--mint-deep);
+}
+.choice-btn.tone-coral {
+  --c-fill: var(--coral);
+  --c-ledge: var(--coral-deep);
+}
+.look-big.tone-mint .choice-key,
+.look-big.tone-coral .choice-key {
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: none;
+  color: var(--ink);
+}
+.big-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: 0.5rem;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 3px 0 rgba(43, 35, 64, 0.16);
+}
+.big-icon svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+.big-art {
+  display: block;
+  margin-bottom: 0.25rem;
+  line-height: 0;
+}
+
+/* ---- After the answer ---- */
+.choice-btn.is-right {
+  --c-fill: var(--correct-soft);
+  --c-ledge: var(--correct-deep);
+  --c-ink: var(--ink);
+}
+.choice-btn.is-right .choice-mark {
+  background: var(--correct);
+  color: var(--ink);
+}
+.choice-btn.is-right.picked {
+  --c-fill: var(--correct);
+  animation: q-pop var(--t-slow) var(--ease-bounce);
+}
+.choice-btn.is-right.picked .choice-mark {
+  background: var(--surface);
+  color: var(--correct-deep);
+}
+/* The green burst: a ring that grows out of the right pick and fades. */
+.choice-btn.is-right.picked::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  border: 3px solid var(--correct);
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+  animation: q-ring 520ms var(--ease-out);
+}
+.choice-btn.is-wrong {
+  --c-fill: var(--wrong-soft);
+  --c-ledge: var(--wrong-deep);
+  --c-ink: var(--ink);
+  animation: q-shake 420ms var(--ease-out);
+}
+.choice-btn.is-wrong .choice-mark {
+  background: var(--wrong);
+  color: var(--ink);
+}
+.choice-btn.is-dim {
+  --c-fill: var(--surface-2);
+  --c-ledge: var(--line-color);
+  opacity: 0.75;
+  box-shadow: 0 0 0 var(--c-ledge);
+  transform: translateY(var(--ledge));
+}
+.look-big.is-right .big-icon,
+.look-big.is-wrong .big-icon {
+  box-shadow: none;
+}
+/* The option nobody picked keeps its spot but drops its glyph. */
+.look-big.is-dim .big-icon {
+  visibility: hidden;
+}
+
+/* "+20" rises out of the right pick. */
+.choice-reward {
+  position: absolute;
+  right: 0.75rem;
+  top: -0.25rem;
+  z-index: 5;
+  padding: 0.125rem 0.625rem;
+  border-radius: var(--radius-pill);
+  background: var(--sunny);
+  color: #5c3c00;
+  box-shadow: 0 3px 0 var(--sunny-deep);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-md);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  animation: q-reward 900ms var(--ease-out) forwards;
+}
+
+@keyframes q-pop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes q-ring {
+  0% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.12, 1.35);
+  }
+}
+@keyframes q-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-7px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+}
+@keyframes q-reward {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.7);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.1);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-34px);
+  }
+}
+/* Only movement, never a fade from 0, so the clue can always be read even if the animation stalls. */
+@keyframes q-clue-in {
+  0% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+/* Key hints only help with a keyboard, so phones skip them. */
+@media (hover: none) and (pointer: coarse) {
+  .choice-key {
+    display: none;
+  }
+}
+
+/* Very narrow phones and the biggest text size: words get a full row each. */
+@media (max-width: 21rem) {
+  .q-term {
+    font-size: var(--text-xl);
+  }
+  .choice-btn.look-big {
+    min-height: 8rem;
+  }
+}
+html.ts-largest .q-choices.tiles {
+  grid-template-columns: 1fr;
+}
+html.ts-largest .choice-btn.look-tile {
+  min-height: 3.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .choice-btn,
+  .choice-btn::after,
+  .choice-reward,
+  .q-clue-text {
+    animation: none !important;
+  }
+  .choice-reward {
+    opacity: 1;
+  }
+}
+html.reduce-motion .choice-btn,
+html.reduce-motion .choice-btn::after,
+html.reduce-motion .q-clue-text {
+  animation: none !important;
+}
+html.reduce-motion .choice-reward {
+  animation: none;
+  opacity: 1;
+}

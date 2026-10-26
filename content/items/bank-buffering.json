@@ -1,0 +1,68 @@
+{
+  "id": "bank-buffering",
+  "kind": "term",
+  "topic": "how-the-internet-works",
+  "term": "buffering",
+  "meaning": "A short pause while a video or song loads more data ahead of time. You may see a spinning circle.",
+  "clues": [
+    "A spinning circle shows up on your video.",
+    "The picture stops while your device waits for more of the show to arrive.",
+    "A slow internet connection is the usual cause.",
+    "Your device saves a little extra ahead of time, so the video can keep going if the signal dips.",
+    "It is one word with nine letters. It starts with B."
+  ],
+  "assumes": [
+    "Autoplay starts the next video on its own",
+    "Latency is the delay before you get a reply",
+    "A video call lets people see and hear each other live"
+  ],
+  "decoys": [
+    {
+      "term": "autoplay",
+      "meaning": "A setting where the next video starts playing on its own.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Autoplay"
+      ]
+    },
+    {
+      "term": "latency",
+      "meaning": "The delay between asking for something and getting a reply.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Latency_(engineering)"
+      ]
+    },
+    {
+      "term": "video call",
+      "meaning": "A call where people see and hear each other live.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Videotelephony"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "In my day, we waited for a movie to rewind. Now you wait for a little circle to spin."
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: if a video keeps pausing, move closer to your router or pick a lower video quality."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Data buffer",
+      "url": "https://en.wikipedia.org/wiki/Data_buffer"
+    },
+    {
+      "name": "Merriam-Webster, buffer",
+      "url": "https://www.merriam-webster.com/dictionary/buffering"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

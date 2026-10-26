@@ -1,0 +1,68 @@
+{
+  "id": "bank-self-driving-car",
+  "kind": "term",
+  "topic": "talking-computers",
+  "term": "self-driving car",
+  "meaning": "A car that uses cameras and computers to steer and brake with little help from a driver.",
+  "clues": [
+    "A vehicle that does much of the driving itself.",
+    "Cameras and sensors watch the road all around it.",
+    "A computer decides when to steer, speed up, and brake.",
+    "Some cities have taxis like this, with no driver in the front seat.",
+    "It has three words, and the first is joined by a hyphen. The first starts with S."
+  ],
+  "assumes": [
+    "Cruise control only holds your speed",
+    "GPS shows where you are",
+    "An electric car runs on a battery"
+  ],
+  "decoys": [
+    {
+      "term": "cruise control",
+      "meaning": "A car feature that holds your speed so you can lift your foot. You still steer.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Cruise_control"
+      ]
+    },
+    {
+      "term": "GPS",
+      "meaning": "A system that uses signals from satellites to show where you are and give directions.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Global_Positioning_System"
+      ]
+    },
+    {
+      "term": "electric car",
+      "meaning": "A car that runs on a battery and a motor instead of a gas engine.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Electric_car"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, driving took both hands, both eyes, and a paper map. Now the car reads the map?"
+    },
+    {
+      "speaker": "bud",
+      "text": "Most cars today only help. Tip: with driver help features, you must still watch the road and be ready to take over."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Self-driving car",
+      "url": "https://en.wikipedia.org/wiki/Self-driving_car"
+    },
+    {
+      "name": "NHTSA, Automated Vehicle Safety",
+      "url": "https://www.nhtsa.gov/vehicle-safety/automated-vehicles-safety"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

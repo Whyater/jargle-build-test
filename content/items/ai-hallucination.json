@@ -1,0 +1,96 @@
+{
+  "id": "ai-hallucination",
+  "kind": "term",
+  "topic": "talking-computers",
+  "term": "AI hallucination",
+  "puzzle": "FALSE",
+  "meaning": "When an AI chatbot states something false or made up as if it were true.",
+  "clues": [
+    "It is linked to how an AI system makes an answer.",
+    "It can affect what the system says.",
+    "The answer sounds sure of itself but includes facts that were made up.",
+    "You should check important answers against a trusted source.",
+    "It has two words, and the second starts with H."
+  ],
+  "assumes": [
+    "AI bias can shape system outputs.",
+    "A prompt guides what an AI system produces.",
+    "Training data influences system outputs."
+  ],
+  "decoys": [
+    {
+      "term": "AI bias",
+      "meaning": "Unfair results from an AI system, often due to its training examples.",
+      "source_urls": [
+        "https://www.ibm.com/think/topics/ai-bias"
+      ]
+    },
+    {
+      "term": "AI prompt",
+      "meaning": "The question or instruction a person gives to an AI system.",
+      "source_urls": [
+        "https://www.ibm.com/think/topics/prompt-engineering"
+      ]
+    },
+    {
+      "term": "Training data",
+      "meaning": "Examples used to teach an AI system how to do a task.",
+      "source_urls": [
+        "https://www.ibm.com/think/topics/ai-hallucinations"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Check an important fact on a trusted website."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "A confident voice was never proof in the old days. We checked a book, a bill, or a second person then, too."
+    },
+    {
+      "speaker": "bud",
+      "text": "Ask the chatbot where an answer came from, then open that source yourself."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Cambridge Dictionary, hallucination",
+      "url": "https://dictionary.cambridge.org/dictionary/english/hallucination"
+    },
+    {
+      "name": "IBM, AI hallucinations",
+      "url": "https://www.ibm.com/think/topics/ai-hallucinations"
+    },
+    {
+      "name": "IBM, AI bias",
+      "url": "https://www.ibm.com/think/topics/ai-bias"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "blank": {
+    "sentence": "The chatbot sounded sure but made up a book title. That kind of mistake is known as ___.",
+    "wrong": [
+      "AI bias",
+      "AI prompt"
+    ]
+  },
+  "why": "A chatbot can sound sure and still be wrong, so check what matters.",
+  "short": "Chatbot states made up facts",
+  "situations": [
+    {
+      "text": "A chatbot can sound very sure of itself and still make things up.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "why": "It can sound sure and still be wrong. Check important facts."
+    }
+  ]
+}

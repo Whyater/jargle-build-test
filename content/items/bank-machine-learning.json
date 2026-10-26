@@ -1,0 +1,77 @@
+{
+  "id": "bank-machine-learning",
+  "kind": "term",
+  "topic": "talking-computers",
+  "term": "machine learning",
+  "meaning": "A way for computers to learn from many examples. They do not only follow rules a person wrote.",
+  "clues": [
+    "It is a way of getting computers to do useful things.",
+    "It is about teaching a computer a skill.",
+    "People show the computer many examples, and it finds the patterns by itself.",
+    "Photo apps that group pictures by face, and movie suggestions, use it.",
+    "It has two words. The first starts with M and the second starts with L."
+  ],
+  "assumes": [
+    "Programming means writing step-by-step instructions",
+    "Robotics means building machines that move",
+    "Virtual reality uses a headset to show a made-up world"
+  ],
+  "decoys": [
+    {
+      "term": "programming",
+      "meaning": "Writing step-by-step instructions that tell a computer exactly what to do.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Computer_programming"
+      ]
+    },
+    {
+      "term": "robotics",
+      "meaning": "Designing and building machines that can move and do jobs.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Robotics"
+      ]
+    },
+    {
+      "term": "virtual reality",
+      "meaning": "Using a headset to feel as if you are inside a world made by a computer.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Virtual_reality"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, a computer did exactly what you typed and nothing more. Now it learns from examples?"
+    },
+    {
+      "speaker": "bud",
+      "text": "Yes. Tip: if a photo app labels a face wrong, you can usually fix the name yourself."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Britannica, Machine learning",
+      "url": "https://www.britannica.com/technology/machine-learning"
+    },
+    {
+      "name": "Wikipedia, Machine learning",
+      "url": "https://en.wikipedia.org/wiki/Machine_learning"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true,
+  "blank": {
+    "sentence": "The computer did not just follow rules. It used ___ to learn from many examples.",
+    "wrong": [
+      "text to speech",
+      "smart home"
+    ]
+  },
+  "why": "Computers learn from examples, not only from written rules.",
+  "short": "Computers learn from many examples"
+}

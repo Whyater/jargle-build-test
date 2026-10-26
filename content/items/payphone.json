@@ -1,0 +1,80 @@
+{
+  "id": "payphone",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "payphone",
+  "meaning": "A public phone that lets you make a call after you pay with coins or a card.",
+  "clues": [
+    "It is a telephone device used by many people.",
+    "You pay for each call, usually with coins or a card.",
+    "It can help when your own phone is not with you.",
+    "It stood in public places such as airports and hotels.",
+    "It has one word, with eight letters, and starts with P."
+  ],
+  "assumes": [
+    "A switchboard connects callers through an operator",
+    "A party line is one phone line shared by several homes",
+    "A telegraph sends messages as taps on a key, not by voice"
+  ],
+  "decoys": [
+    {
+      "term": "switchboard",
+      "meaning": "A panel where an operator joined callers with cords.",
+      "source_urls": [
+        "https://www.sciencemuseum.org.uk/objects-and-stories/goodbye-hello-girls-automating-telephone-exchange"
+      ]
+    },
+    {
+      "term": "party line",
+      "meaning": "One phone line shared by several homes, so neighbors could pick up and hear each other's calls.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Party_line_(telephony)"
+      ]
+    },
+    {
+      "term": "telegraph",
+      "meaning": "A machine that sends messages over a wire as short and long taps of a key, called Morse code.",
+      "source_urls": [
+        "https://www.si.edu/object/telegraph-key%3Anmah_713742"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "A public phone gave you a way to reach someone when you were out. Having a backup way to call still matters."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: your own cell phone. If the battery dies, ask a clerk at a shop or front desk for help placing a call."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Coins in your hand kept each call simple. You paid for the call, and that was the end of it."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "FCC, Tips for Using Public Phones and Payphones",
+      "url": "https://www.fcc.gov/consumers/guides/public-phones-and-payphones"
+    },
+    {
+      "name": "Science Museum, Telephone Exchange",
+      "url": "https://www.sciencemuseum.org.uk/objects-and-stories/goodbye-hello-girls-automating-telephone-exchange"
+    },
+    {
+      "name": "Smithsonian, Telegraph Key",
+      "url": "https://www.si.edu/object/telegraph-key%3Anmah_713742"
+    },
+    {
+      "name": "Wikipedia, Party line",
+      "url": "https://en.wikipedia.org/wiki/Party_line_(telephony)"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2
+}

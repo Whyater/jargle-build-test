@@ -1,0 +1,97 @@
+{
+  "id": "phone-book",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "phone book",
+  "meaning": "A printed list of names, addresses and phone numbers, in A to Z order. The phone company brought it to your door.",
+  "clues": [
+    "A printed book that the telephone company delivered to homes. It lists people's names and numbers in A to Z order.",
+    "A second part, on yellow paper, listed shops and firms by kind.",
+    "The very first one, in 1878, was a single cardboard sheet listing 50 names.",
+    "When people began to look up numbers online, some places stopped sending it to each home.",
+    "It has two words. The first starts with P, and the second has four letters."
+  ],
+  "assumes": [],
+  "decoys": [
+    {
+      "term": "Rolodex",
+      "meaning": "A rotating file of index cards on a desk. You flip to a letter to find someone's address or number.",
+      "source_urls": [
+        "https://www.si.edu/collections/snapshot/still-rolling-around"
+      ]
+    },
+    {
+      "term": "directory assistance",
+      "meaning": "A phone service where an operator looks up a number for you and reads it aloud.",
+      "source_urls": [
+        "https://www.wnycstudios.org/podcasts/takeaway/segments/whats-the-411-on-411"
+      ]
+    },
+    {
+      "term": "city directory",
+      "meaning": "A book listing a town's people with their addresses and jobs. The first ones in America came out in 1785.",
+      "source_urls": [
+        "https://libguides.nypl.org/genealogy/gettingstarted/citydirectories",
+        "https://guides.loc.gov/united-states-city-telephone-directories"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "Every name sat in plain A to Z order, so anyone could look someone up. Any good list works that way."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: your phone's contacts. Type a few letters of a name, tap it, and tap Call."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back then, being 'in the book' meant people could find you. A contact list is the same idea."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Smithsonian Magazine, The First Telephone Book Had Fifty Listings and No Numbers",
+      "url": "https://www.smithsonianmag.com/smart-news/first-telephone-book-had-fifty-listings-and-no-numbers-180962173/"
+    },
+    {
+      "name": "University of Connecticut Library, The World's First Telephone Directory",
+      "url": "https://library.uconn.edu/location/asc/about/25-for-25-celebrating-twenty-five-years-of-collecting/the-worlds-first-telephone-directory/"
+    },
+    {
+      "name": "New York State Public Service Commission, white pages news release",
+      "url": "https://documents.dps.ny.gov/public/Common/ViewDoc.aspx?DocRefId=%7BF5C6DC64-EDB8-4D1B-A727-8542E76683C9%7D"
+    },
+    {
+      "name": "Illinois Commerce Commission, testimony on white and yellow pages",
+      "url": "https://iccqa.illinois.gov/docket/P2011-0668/documents/181128/files/319046.pdf"
+    },
+    {
+      "name": "WNYC, What's the 411 on 411",
+      "url": "https://www.wnycstudios.org/podcasts/takeaway/segments/whats-the-411-on-411"
+    },
+    {
+      "name": "New York Public Library, City directories",
+      "url": "https://libguides.nypl.org/genealogy/gettingstarted/citydirectories"
+    },
+    {
+      "name": "Library of Congress, United States City and Telephone Directories",
+      "url": "https://guides.loc.gov/united-states-city-telephone-directories"
+    },
+    {
+      "name": "Smithsonian, Still Rolling Around",
+      "url": "https://www.si.edu/collections/snapshot/still-rolling-around"
+    },
+    {
+      "name": "Apple Support, Add and use contact information on iPhone",
+      "url": "https://support.apple.com/guide/iphone/add-and-use-contact-information-iph3e0ca2db/26/ios/26"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1
+}

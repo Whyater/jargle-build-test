@@ -1,0 +1,550 @@
+/* Lesson session steps. Colors, sizes and motion come from tokens.css.
+   Every tappable thing is a candy button: a darker ledge underneath that it sinks onto. */
+
+.ls-stage {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+.ls-step {
+  animation: card-in var(--t-slow) var(--ease-out) both;
+}
+
+/* The small ask above each step, like "Fill in the blank." */
+.ls-ask {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  line-height: var(--leading-tight);
+  text-wrap: balance;
+}
+
+/* ---- Learn and recap cards ---- */
+.ls-card {
+  padding: var(--s5) var(--s5) var(--s6);
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: 0 var(--ledge) 0 var(--mint-soft), var(--shadow-card);
+  animation: card-in var(--t-slow) var(--ease-out) both;
+}
+.ls-count {
+  display: inline-block;
+  margin-bottom: var(--s2);
+  padding: 0.125rem var(--s3);
+  border-radius: var(--radius-pill);
+  background: var(--mint-soft);
+  color: #14705e;
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+}
+.ls-card-title {
+  margin-bottom: var(--s2);
+  color: var(--grape-deep);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  line-height: var(--leading-tight);
+  overflow-wrap: anywhere;
+}
+.ls-card-text {
+  font-size: var(--text-md);
+  line-height: var(--leading);
+}
+.ls-example {
+  margin-top: var(--s4);
+  padding: var(--s3) var(--s4);
+  border-radius: var(--radius);
+  background: var(--sunny-soft);
+  font-size: var(--text-base);
+  line-height: var(--leading);
+}
+.ls-example-label {
+  display: block;
+  margin-bottom: var(--s1);
+  color: #7a5200;
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+}
+.ls-mark {
+  padding: 0 0.15em;
+  border-radius: 0.3em;
+  background: var(--sunny);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* ---- Match pairs ---- */
+.ls-pair-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: var(--s3);
+}
+.ls-col {
+  list-style: none;
+}
+.ls-col > li + li {
+  margin-top: var(--s3);
+}
+.ls-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 4rem;
+  margin-bottom: var(--ledge);
+  padding: var(--s2) var(--s3);
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 var(--ledge) 0 var(--line-color);
+  color: var(--ink);
+  font: inherit;
+  font-size: var(--text-sm);
+  line-height: 1.25;
+  text-align: center;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition:
+    transform var(--t-fast) var(--ease-out),
+    box-shadow var(--t-fast) var(--ease-out),
+    border-color var(--t-fast) ease,
+    background-color var(--t-fast) ease,
+    opacity var(--t-med) ease;
+}
+.ls-tile.is-term {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+}
+.ls-tile:active {
+  transform: translateY(var(--ledge));
+  box-shadow: 0 0 0 var(--line-color);
+}
+.ls-tile.is-picked {
+  border-color: var(--grape);
+  background: var(--grape-soft);
+  box-shadow: 0 var(--ledge) 0 var(--grape-deep);
+}
+.ls-tile.is-matched {
+  border-color: var(--correct-soft);
+  background: var(--correct-soft);
+  box-shadow: 0 var(--ledge) 0 var(--correct-soft);
+  color: var(--ok-ink);
+  opacity: 0.75;
+  cursor: default;
+  animation: card-pop var(--t-slow) var(--ease-bounce) both;
+}
+.ls-tile.is-shaking {
+  border-color: var(--wrong);
+  background: var(--wrong-soft);
+  box-shadow: 0 var(--ledge) 0 var(--wrong-deep);
+  animation: ls-shake 420ms var(--ease-out) both;
+}
+@keyframes ls-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-6px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+}
+.ls-pair-line {
+  min-height: 2.9em;
+  color: var(--ok-ink);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+}
+.ls-pair-line.is-wrong {
+  color: var(--bad-ink);
+}
+
+/* ---- Fill the blank ---- */
+.ls-sentence {
+  padding: var(--s5);
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  font-size: var(--text-md);
+  line-height: 1.9;
+}
+.ls-slot {
+  display: inline-block;
+  min-width: 5.5em;
+  margin: 0 0.2em;
+  padding: 0 0.4em;
+  border-bottom: 3px solid var(--grape);
+  border-radius: 0.4em 0.4em 0 0;
+  background: var(--grape-soft);
+  font-family: var(--font-display);
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: baseline;
+}
+.ls-slot.is-right {
+  border-bottom-color: var(--correct-deep);
+  background: var(--correct-soft);
+  color: var(--ok-ink);
+  animation: card-pop var(--t-slow) var(--ease-bounce) both;
+}
+.ls-slot.is-wrong {
+  border-bottom-color: var(--wrong-deep);
+  background: var(--wrong-soft);
+  color: var(--bad-ink);
+}
+.ls-slot-fix {
+  margin-left: 0;
+}
+.ls-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* Margins instead of flex gap, which older Safari does not support. */
+.ls-chip {
+  min-height: var(--touch);
+  margin: 0 var(--s1) calc(var(--s3) + var(--ledge));
+  padding: var(--s2) var(--s5);
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  box-shadow: 0 var(--ledge) 0 var(--line-color);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  cursor: pointer;
+  touch-action: manipulation;
+  transition:
+    transform var(--t-fast) var(--ease-out),
+    box-shadow var(--t-fast) var(--ease-out);
+}
+.ls-chip:active {
+  transform: translateY(var(--ledge));
+  box-shadow: 0 0 0 var(--line-color);
+}
+.ls-chip.is-right {
+  border-color: var(--correct);
+  background: var(--correct-soft);
+  box-shadow: 0 var(--ledge) 0 var(--correct-deep);
+  color: var(--ok-ink);
+}
+.ls-chip.is-wrong {
+  border-color: var(--wrong-soft);
+  background: var(--wrong-soft);
+  box-shadow: 0 var(--ledge) 0 var(--wrong-soft);
+  color: var(--bad-ink);
+  animation: ls-shake 420ms var(--ease-out) both;
+}
+.ls-chip[aria-disabled='true'],
+.ls-big-choice[aria-disabled='true'],
+.ls-tile[aria-disabled='true'] {
+  cursor: default;
+}
+.ls-chip[aria-disabled='true']:active,
+.ls-big-choice[aria-disabled='true']:active,
+.ls-tile[aria-disabled='true']:active {
+  transform: none;
+}
+
+/* ---- Situations: Scam or safe? ---- */
+.ls-scene {
+  display: flex;
+  align-items: flex-start;
+  padding: var(--s4);
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+.ls-scene-mascot {
+  flex: none;
+  margin-right: var(--s3);
+}
+.ls-scene-text {
+  font-size: var(--text-md);
+  line-height: var(--leading);
+}
+.ls-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s3);
+}
+.ls-stack > * + * {
+  margin-top: var(--s3);
+}
+.ls-big-choice {
+  width: 100%;
+  min-height: 4.5rem;
+  margin-bottom: var(--ledge);
+  padding: var(--s3);
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: 0 var(--ledge) 0 var(--line-color);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  line-height: 1.2;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition:
+    transform var(--t-fast) var(--ease-out),
+    box-shadow var(--t-fast) var(--ease-out);
+}
+.ls-big-choice:active {
+  transform: translateY(var(--ledge));
+  box-shadow: 0 0 0 var(--line-color);
+}
+.ls-big-choice.is-answer {
+  border-color: var(--correct);
+  background: var(--correct-soft);
+  box-shadow: 0 var(--ledge) 0 var(--correct-deep);
+  color: var(--ok-ink);
+  animation: card-pop var(--t-slow) var(--ease-bounce) both;
+}
+.ls-big-choice.is-missed {
+  border-color: var(--wrong-soft);
+  background: var(--wrong-soft);
+  box-shadow: 0 var(--ledge) 0 var(--wrong-soft);
+  color: var(--bad-ink);
+  animation: ls-shake 420ms var(--ease-out) both;
+}
+
+/* ---- Pick the meaning ---- */
+.ls-word {
+  color: var(--grape-deep);
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  line-height: var(--leading-tight);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.ls-meaning .play-cards .answer-card .ls-meaning-text {
+  margin-top: 0;
+}
+
+/* ---- Spell it: the letter tiles bring their own styles ---- */
+.ls-build .ls-card-text {
+  margin: 0;
+}
+
+/* ---- Recap ---- */
+.ls-recap-card {
+  background: var(--mint-soft);
+  border-color: var(--mint-soft);
+  box-shadow: 0 var(--ledge) 0 var(--mint);
+}
+.ls-recap-card .ls-count {
+  background: var(--surface);
+}
+.ls-word-list {
+  list-style: none;
+}
+.ls-word-list > li {
+  display: flex;
+  align-items: flex-start;
+  padding: var(--s3) 0;
+  border-bottom: 2px dashed var(--line-color);
+  font-size: var(--text-base);
+  line-height: 1.4;
+}
+.ls-word-list b {
+  /* The word sits on its own line, so it does not run into its meaning. */
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+.ls-word-star {
+  flex: none;
+  margin: 0.1rem var(--s2) 0 0;
+  color: var(--sunny-deep);
+}
+/* Wide screens: the word on the left, its meaning beside it, so the list stays short. */
+@media (min-width: 56.25em) {
+  .ls-word-list > li > span:last-child {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+  }
+  .ls-word-list b {
+    flex: none;
+    width: 10rem;
+    padding-right: 1rem;
+  }
+}
+
+/* ---- Feedback sheet ---- */
+.ls-feedback {
+  animation: ls-sheet-up var(--t-med) var(--ease-out) both;
+}
+.ls-feedback > * + * {
+  margin-top: var(--s3);
+}
+.ls-feedback .quiz-why {
+  animation: none;
+}
+@keyframes ls-sheet-up {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.ls-why {
+  font-size: var(--text-base);
+  line-height: 1.45;
+}
+.ls-again {
+  margin-top: var(--s1);
+  color: var(--bad-ink);
+  font-size: var(--text-sm);
+}
+
+/* ---- Lesson complete ---- */
+.ls-done-card {
+  text-align: center;
+}
+.ls-done-title {
+  margin-top: var(--s1);
+  color: var(--ink-soft);
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+}
+.ls-stars {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--s4);
+}
+.ls-star {
+  display: inline-flex;
+  margin: 0 var(--s1);
+  color: var(--line-color);
+  animation: ls-star-pop var(--t-slow) var(--ease-bounce) both;
+}
+.ls-star:nth-child(2) {
+  transform: translateY(-0.5rem);
+}
+.ls-star.is-on {
+  color: var(--sunny);
+  filter: drop-shadow(0 3px 0 var(--sunny-deep));
+}
+@keyframes ls-star-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.ls-done-line {
+  margin-top: var(--s3);
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+}
+.ls-done-review {
+  margin-top: var(--s3);
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+.ls-again-link {
+  display: block;
+  width: 100%;
+  min-height: var(--touch);
+  border: 0;
+  background: none;
+  color: var(--grape-deep);
+  font: inherit;
+  font-family: var(--font-display);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
+/* Reduced motion: no shakes, pops or slides. Colors and words still say right or wrong. */
+html.reduce-motion .ls-step,
+html.reduce-motion .ls-card,
+html.reduce-motion .ls-tile,
+html.reduce-motion .ls-slot,
+html.reduce-motion .ls-chip,
+html.reduce-motion .ls-big-choice,
+html.reduce-motion .ls-feedback,
+html.reduce-motion .ls-star {
+  animation: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ls-step,
+  .ls-card,
+  .ls-tile,
+  .ls-slot,
+  .ls-chip,
+  .ls-big-choice,
+  .ls-feedback,
+  .ls-star {
+    animation: none;
+  }
+}
+
+/* Narrow phones: tighter tiles so both pair columns fit at 320 px,
+   and the situation text gets the full card width. */
+@media (max-width: 359px) {
+  .ls-scene-mascot {
+    display: none;
+  }
+  .ls-pair-grid {
+    gap: var(--s2);
+  }
+  .ls-tile {
+    padding: var(--s2);
+  }
+  .ls-card {
+    padding: var(--s4);
+  }
+  .ls-card-title {
+    font-size: var(--text-lg);
+  }
+  .ls-big-choice {
+    font-size: var(--text-md);
+  }
+}
+
+/* Desktop: the same steps, just roomier. */
+@media (min-width: 900px) {
+  .ls-stage {
+    max-width: 44rem;
+  }
+  .ls-ask {
+    font-size: var(--text-xl);
+  }
+  .ls-card {
+    padding: var(--s8);
+  }
+  .ls-card-title {
+    font-size: var(--text-2xl);
+  }
+  .ls-tile {
+    min-height: 4.75rem;
+    font-size: var(--text-base);
+  }
+  .ls-tile.is-term {
+    font-size: var(--text-md);
+  }
+  .ls-sentence {
+    padding: var(--s8);
+    font-size: var(--text-lg);
+  }
+  .ls-big-choice {
+    min-height: 6rem;
+    font-size: var(--text-xl);
+  }
+}

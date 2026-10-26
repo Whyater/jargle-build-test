@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "days": [
+    {
+      "date": "2026-10-25",
+      "term": "two-factor-login",
+      "rerun": false
+    },
+    {
+      "date": "2026-10-26",
+      "term": "wi-fi",
+      "rerun": false
+    },
+    {
+      "date": "2026-10-27",
+      "term": "screenshot",
+      "rerun": false
+    },
+    {
+      "date": "2026-10-28",
+      "term": "emoji",
+      "rerun": false
+    },
+    {
+      "date": "2026-10-29",
+      "term": "podcast",
+      "rerun": false
+    },
+    {
+      "date": "2026-10-30",
+      "term": "deepfake",
+      "rerun": false
+    },
+    {
+      "date": "2026-10-31",
+      "term": "the-cloud",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-01",
+      "term": "bluetooth",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-02",
+      "term": "zelle",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-03",
+      "term": "hashtag",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-04",
+      "term": "spam",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-05",
+      "term": "phishing",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-06",
+      "term": "qr-code",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-07",
+      "term": "password-manager",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-08",
+      "term": "autocorrect",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-09",
+      "term": "smishing",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-10",
+      "term": "streaming",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-11",
+      "term": "digital-wallet",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-12",
+      "term": "ai-hallucination",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-13",
+      "term": "going-viral",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-14",
+      "term": "passkey",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-15",
+      "term": "voice-assistant",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-16",
+      "term": "dm",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-17",
+      "term": "app-permissions",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-18",
+      "term": "imposter-scam",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-19",
+      "term": "cookies",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-20",
+      "term": "vpn",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-21",
+      "term": "cryptocurrency",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-22",
+      "term": "search-engine",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-23",
+      "term": "notification",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-24",
+      "term": "gift-card-scam",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-25",
+      "term": "smart-speaker",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-26",
+      "term": "data-breach",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-27",
+      "term": "subscription",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-28",
+      "term": "claude",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-29",
+      "term": "widget",
+      "rerun": false
+    },
+    {
+      "date": "2026-11-30",
+      "term": "online-banking",
+      "rerun": false
+    },
+    {
+      "date": "2026-12-01",
+      "term": "url",
+      "rerun": false
+    },
+    {
+      "date": "2026-12-02",
+      "term": "unsubscribe",
+      "rerun": false
+    },
+    {
+      "date": "2026-12-03",
+      "term": "algorithm",
+      "rerun": false
+    },
+    {
+      "date": "2026-12-04",
+      "term": "grandparent-scam",
+      "rerun": false
+    },
+    {
+      "date": "2026-12-05",
+      "term": "encryption",
+      "rerun": false
+    }
+  ]
+}

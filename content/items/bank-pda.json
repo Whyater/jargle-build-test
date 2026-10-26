@@ -1,0 +1,72 @@
+{
+  "id": "bank-pda",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "PDA",
+  "meaning": "A small handheld device from before smartphones. It kept your calendar, contacts, and notes, and you often tapped it with a pen.",
+  "clues": [
+    "It helps you keep track of things.",
+    "It was electronic and ran small programs, not only math or reading.",
+    "You tapped and wrote on its screen with a thin pen called a stylus.",
+    "It could often link to a computer to copy your contacts and calendar.",
+    "It has three capital letters. The first stands for \"personal\"."
+  ],
+  "assumes": [
+    "A pocket calculator does math",
+    "A paper day planner is a book for dates and notes",
+    "An e-reader shows books on a screen"
+  ],
+  "decoys": [
+    {
+      "term": "pocket calculator",
+      "meaning": "A small handheld device that does math.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Calculator"
+      ]
+    },
+    {
+      "term": "paper day planner",
+      "meaning": "A book where you write dates, plans, and notes by hand.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Personal_organizer"
+      ]
+    },
+    {
+      "term": "e-reader",
+      "meaning": "A device made for reading books on a screen.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/E-reader"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "We tapped a thin plastic pen on that tiny screen. My handwriting was a bit of a guess."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: a smartphone with calendar and contacts apps. They copy to your other devices on their own."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Merriam-Webster, PDA",
+      "url": "https://www.merriam-webster.com/dictionary/PDA"
+    },
+    {
+      "name": "Britannica, PDA",
+      "url": "https://www.britannica.com/technology/PDA"
+    },
+    {
+      "name": "Wikipedia, Personal digital assistant",
+      "url": "https://en.wikipedia.org/wiki/Personal_digital_assistant"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

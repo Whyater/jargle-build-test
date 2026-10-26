@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install web dependencies
+        run: npm ci
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Check content
+        working-directory: .
+        run: |
+          if [ -f scripts/content-check.mjs ]; then
+            node scripts/content-check.mjs
+          fi
+      - name: Build content
+        working-directory: .
+        run: |
+          if [ -f scripts/build-content.mjs ]; then
+            node scripts/build-content.mjs
+          fi
+      - name: Run tests
+        run: npm test -- --passWithNoTests
+      - name: Build web app
+        run: npm run build
+      - name: Check installer shell scripts
+        working-directory: .
+        run: bash -n install/*.sh

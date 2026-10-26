@@ -1,0 +1,102 @@
+{
+  "id": "wi-fi",
+  "kind": "term",
+  "topic": "how-the-internet-works",
+  "term": "Wi-Fi",
+  "puzzle": "WIFI",
+  "meaning": "A way for phones, tablets and laptops to get online with no cable. It sends signals through the air over a short distance.",
+  "clues": [
+    "It's a way for your devices to get on the internet.",
+    "It reaches your devices through the air, but only over a short distance.",
+    "Many public places offer it too, in spots called hotspots.",
+    "Your phone shows nearby networks by name, and some ask for a password to join.",
+    "Its name starts with W and has four letters and a hyphen."
+  ],
+  "assumes": [
+    "Cable modem and fiber internet reach a home through wires",
+    "Satellite internet comes from a dish aimed at space, not from a short-range signal"
+  ],
+  "decoys": [
+    {
+      "term": "cable modem",
+      "meaning": "Internet service that comes into your home over the same cables that bring you TV.",
+      "source_urls": [
+        "https://www.fcc.gov/consumers/guides/getting-broadband-qa"
+      ]
+    },
+    {
+      "term": "fiber",
+      "meaning": "Internet service sent as light through thin glass strands, each about as wide as a human hair.",
+      "source_urls": [
+        "https://www.fcc.gov/consumers/guides/getting-broadband-qa"
+      ]
+    },
+    {
+      "term": "satellite internet",
+      "meaning": "Internet service beamed from a satellite in space to a dish at your home. It helps in remote areas.",
+      "source_urls": [
+        "https://www.fcc.gov/consumers/guides/getting-broadband-qa"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Your home's router sends a signal through the air, and your phone picks it up. That's how you get online without a cable."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "I never talked bank business in a crowded room. CISA says the same about public hotspots: skip banking and email there."
+    },
+    {
+      "speaker": "bud",
+      "text": "Try it: look at the top of your phone's screen. A small Wi-Fi symbol, a few curved lines, means you're connected to a network.",
+      "link_urls": [
+        "https://support.apple.com/en-us/111107"
+      ]
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FCC, Getting Broadband Q&A",
+      "url": "https://www.fcc.gov/consumers/guides/getting-broadband-qa"
+    },
+    {
+      "name": "FTC, how to secure your home network",
+      "url": "https://consumer.ftc.gov/articles/how-secure-your-home-wi-fi-network"
+    },
+    {
+      "name": "Apple Support, connect to a wireless network",
+      "url": "https://support.apple.com/en-us/111107"
+    },
+    {
+      "name": "CISA, choosing and protecting passwords",
+      "url": "https://www.cisa.gov/news-events/news/choosing-and-protecting-passwords"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "blank": {
+    "sentence": "My phone joined the cafe's ___, so I got online through the air with no cable.",
+    "wrong": [
+      "cable modem",
+      "fiber"
+    ]
+  },
+  "why": "Public networks are handy, but you should skip banking and email on them.",
+  "short": "Internet through the air, no cable",
+  "situations": [
+    {
+      "text": "You sit in a coffee shop and check your bank account on the free public Wi-Fi.",
+      "options": [
+        "Safe",
+        "Risky"
+      ],
+      "answer": "Risky",
+      "why": "CISA says to skip banking and email on public hotspots."
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "data-breach",
+  "kind": "term",
+  "topic": "locks-and-keys",
+  "term": "data breach",
+  "puzzle": "BREACH",
+  "meaning": "Private company records reach the wrong people.",
+  "clues": [
+    "It concerns private data.",
+    "It affects a company, not one person or a safety step.",
+    "The records end up where people who should not see them can get at them.",
+    "A company may tell affected people what happened and what steps to take next.",
+    "Its name has two words and starts with D."
+  ],
+  "assumes": [
+    "Identity theft is when someone uses your details to act as you",
+    "A data backup is a copy of records made on purpose",
+    "A credit freeze is a step you take to block new accounts"
+  ],
+  "decoys": [
+    {
+      "term": "identity theft",
+      "meaning": "When someone uses your details to pretend to be you.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/what-know-about-identity-theft"
+      ]
+    },
+    {
+      "term": "data backup",
+      "meaning": "A copy of records made on purpose so they can be restored later.",
+      "source_urls": [
+        "https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf"
+      ]
+    },
+    {
+      "term": "credit freeze",
+      "meaning": "A step you take to block new accounts from being opened in your name.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/what-know-about-identity-theft"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. If a company says your information was exposed, change that password and turn on two-factor login. Use the FTC's breach advice to see what to do next."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "neutral",
+      "text": "A broken filing cabinet could expose paper records. A computer can have the same problem."
+    },
+    {
+      "speaker": "bud",
+      "text": "Be careful of follow-up messages that ask for more private details. Contact the company through a number you already trust."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FTC, Data breach response guide",
+      "url": "https://www.ftc.gov/business-guidance/resources/data-breach-response-guide-business"
+    },
+    {
+      "name": "FTC, Have you been affected by a data breach?",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2022/10/have-you-been-affected-data-breach-read"
+    },
+    {
+      "name": "FTC, Identity theft",
+      "url": "https://consumer.ftc.gov/articles/what-know-about-identity-theft"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "blank": {
+    "sentence": "A store told its customers that their private records had reached the wrong people. That was a ___.",
+    "wrong": [
+      "credit freeze",
+      "data backup"
+    ]
+  },
+  "why": "If a company warns you, change that password and add two-factor login.",
+  "short": "Private records reach wrong people",
+  "situations": [
+    {
+      "text": "A company says your information was exposed. You change that password and turn on two-factor login.",
+      "options": [
+        "Safe",
+        "Risky"
+      ],
+      "answer": "Safe",
+      "why": "Changing that password and adding two-factor login protects the account."
+    }
+  ]
+}

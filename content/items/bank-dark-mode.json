@@ -1,0 +1,72 @@
+{
+  "id": "bank-dark-mode",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "dark mode",
+  "meaning": "A screen setting that swaps bright white backgrounds for dark ones. It can be easier on your eyes in a dim room.",
+  "clues": [
+    "It changes the colors of your screen.",
+    "Menus and apps turn dark with light words, but photos and videos keep their normal colors.",
+    "It can be easier on your eyes in a dim room.",
+    "You can set it to turn on by itself at sunset.",
+    "It has two words. The first is the opposite of light."
+  ],
+  "assumes": [
+    "Night Shift makes screen colors warmer at night",
+    "Screen brightness is how bright the screen looks",
+    "Color inversion flips every color on the screen"
+  ],
+  "decoys": [
+    {
+      "term": "Night Shift",
+      "meaning": "An iPhone setting that makes screen colors warmer so they are easier on your eyes at night.",
+      "source_urls": [
+        "https://support.apple.com/en-us/109351"
+      ]
+    },
+    {
+      "term": "screen brightness",
+      "meaning": "How bright the screen looks, from dim to bright.",
+      "source_urls": [
+        "https://support.apple.com/en-us/109351"
+      ]
+    },
+    {
+      "term": "color inversion",
+      "meaning": "A setting that flips every color on the screen, so photos look like film negatives.",
+      "source_urls": [
+        "https://support.google.com/accessibility/android/answer/6151800"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "I am already a little gray, so dark mode suits me just fine."
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: try the automatic setting so it switches on at sunset. Your eyes will thank you."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Apple Support, Use Dark Mode on your iPhone and iPad",
+      "url": "https://support.apple.com/en-us/108350"
+    },
+    {
+      "name": "Android Help, Change to dark theme or adjust the color scheme on your Android device",
+      "url": "https://support.google.com/android/answer/9730472"
+    },
+    {
+      "name": "Wikipedia, Dark mode",
+      "url": "https://en.wikipedia.org/wiki/Dark_mode"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

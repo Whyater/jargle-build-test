@@ -1,0 +1,137 @@
+name: Test public installers
+
+on:
+  workflow_dispatch:
+    inputs:
+      site_base:
+        description: Base URL serving the installer scripts
+        required: false
+        default: https://whyater.github.io/Jargle
+        type: string
+      releases_base:
+        description: Optional release download base URL
+        required: false
+        default: ''
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  mac:
+    runs-on: macos-latest
+    env:
+      SITE_BASE: ${{ inputs.site_base }}
+      RELEASES_BASE: ${{ inputs.releases_base }}
+    steps:
+      - name: Install, launch, update, and uninstall
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ -n "$RELEASES_BASE" ]]; then
+            export JARGLE_RELEASES_BASE="$RELEASES_BASE"
+          fi
+          unset JARGLE_NO_LAUNCH
+
+          curl -fsSL "$SITE_BASE/install.sh" | bash
+
+          APP_PATH=""
+          for candidate in /Applications/Jargle.app "$HOME/Applications/Jargle.app"; do
+            if [[ -d "$candidate" ]]; then
+              APP_PATH="$candidate"
+              break
+            fi
+          done
+          [[ -n "$APP_PATH" ]] || { echo "Jargle.app was not installed"; exit 1; }
+
+          codesign -dv "$APP_PATH" 2>&1
+          echo "Version: $(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$APP_PATH/Contents/Info.plist")"
+
+          started=false
+          for _ in {1..15}; do
+            if pgrep -x Jargle >/dev/null; then
+              started=true
+              break
+            fi
+            sleep 1
+          done
+          [[ "$started" == true ]] || { echo "Jargle did not start"; exit 1; }
+          ps -p "$(pgrep -x Jargle | head -n 1)" -o pid=,comm=
+
+          curl -fsSL "$SITE_BASE/install.sh" | bash
+          if pgrep -x Jargle >/dev/null; then
+            ps -p "$(pgrep -x Jargle | head -n 1)" -o pid=,comm=
+          else
+            [[ -d "$APP_PATH" ]] || { echo "Jargle is neither running nor installed"; exit 1; }
+          fi
+
+          curl -fsSL "$SITE_BASE/uninstall.sh" | bash -s -- --purge
+          [[ ! -e /Applications/Jargle.app ]]
+          [[ ! -e "$HOME/Applications/Jargle.app" ]]
+
+  windows:
+    runs-on: windows-latest
+    env:
+      SITE_BASE: ${{ inputs.site_base }}
+      RELEASES_BASE: ${{ inputs.releases_base }}
+    steps:
+      - name: Install with Windows PowerShell 5.1
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ($env:RELEASES_BASE) {
+            $env:JARGLE_RELEASES_BASE = $env:RELEASES_BASE
+          }
+          irm "$env:SITE_BASE/install.ps1" | iex
+
+          $exe = "$env:LOCALAPPDATA\Jargle\Jargle.exe"
+          if (-not (Test-Path $exe)) { throw 'Jargle.exe was not installed' }
+          $started = $false
+          for ($i = 0; $i -lt 15; $i++) {
+            if (Get-Process Jargle -ErrorAction SilentlyContinue) {
+              $started = $true
+              break
+            }
+            Start-Sleep -Seconds 1
+          }
+          if (-not $started) { throw 'Jargle did not start' }
+          (Get-Item $exe).VersionInfo.FileVersion
+          Get-Process Jargle | Stop-Process -Force
+          (Invoke-WebRequest -Method Head -UseBasicParsing "$env:SITE_BASE/install.ps1").Headers['Content-Type']
+
+      - name: Uninstall before PowerShell 7 test
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $uninstaller = "$env:LOCALAPPDATA\Jargle\uninstall.exe"
+          if (-not (Test-Path $uninstaller)) { throw 'Jargle uninstaller was not found' }
+          Start-Process -FilePath $uninstaller -ArgumentList '/S' -Wait
+          $exe = "$env:LOCALAPPDATA\Jargle\Jargle.exe"
+          for ($i = 0; $i -lt 10 -and (Test-Path $exe); $i++) {
+            Start-Sleep -Seconds 1
+          }
+          if (Test-Path $exe) { throw 'Jargle.exe was not removed' }
+
+      - name: Install with PowerShell 7
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ($env:RELEASES_BASE) {
+            $env:JARGLE_RELEASES_BASE = $env:RELEASES_BASE
+          }
+          irm "$env:SITE_BASE/install.ps1" | iex
+
+          $exe = "$env:LOCALAPPDATA\Jargle\Jargle.exe"
+          if (-not (Test-Path $exe)) { throw 'Jargle.exe was not installed' }
+          $started = $false
+          for ($i = 0; $i -lt 15; $i++) {
+            if (Get-Process Jargle -ErrorAction SilentlyContinue) {
+              $started = $true
+              break
+            }
+            Start-Sleep -Seconds 1
+          }
+          if (-not $started) { throw 'Jargle did not start' }
+          (Get-Item $exe).VersionInfo.FileVersion
+          Get-Process Jargle | Stop-Process -Force

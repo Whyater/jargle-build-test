@@ -1,0 +1,51 @@
+/* Game map touches for the Learn path: stars under done lessons, a bobbing
+   next lesson, and dimmed locked ones. The path layout itself is in screens.css. */
+
+.path-stars {
+  display: inline-flex;
+  margin-top: var(--s1);
+}
+.path-star {
+  display: inline-flex;
+  margin: 0 0.0625rem;
+  color: var(--line-color);
+}
+.path-star.is-on {
+  color: var(--sunny-deep);
+}
+/* The middle star sits a little higher, like a crown. */
+.path-star:nth-child(2) {
+  transform: translateY(-0.1875rem);
+}
+
+/* The next lesson bobs gently, on top of its breathing ring. */
+.path-node.is-current {
+  animation: path-bob 2.4s var(--ease-out) infinite;
+}
+.path-node.is-current:active {
+  animation: none;
+}
+@keyframes path-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.3125rem);
+  }
+}
+
+/* Locked lessons step back so the open ones stand out. */
+.path-node.is-locked {
+  opacity: 0.55;
+  filter: grayscale(1);
+}
+
+html.reduce-motion .path-node.is-current {
+  animation: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .path-node.is-current {
+    animation: none;
+  }
+}
