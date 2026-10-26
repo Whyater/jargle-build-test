@@ -1,0 +1,107 @@
+{
+  "id": "spot-a-fake-text-from-your-bank",
+  "topic": "scams-and-fakes",
+  "number": 2,
+  "title": "Spot a fake text from your bank",
+  "cards": [
+    {
+      "text": "The FTC says people may pretend to be your bank and text about a suspicious charge. An unexpected message can be a trick.",
+      "mascot": "floyd",
+      "line": "A familiar name does not prove the message is real."
+    },
+    {
+      "text": "The FTC says not to click a link in an unexpected message. Open your bank's official app or website yourself instead.",
+      "mascot": "bud",
+      "line": "Go to the bank yourself."
+    },
+    {
+      "text": "If you are worried, the FTC says to call the number on your statement. Do not use a number in the text.",
+      "mascot": "floyd",
+      "line": "Use a number you already trust."
+    }
+  ],
+  "checks": [
+    {
+      "prompt": "A text says your bank saw a problem and gives a link. What is safer?",
+      "options": [
+        "Open your bank's official app",
+        "Click the link to check",
+        "Reply with your account number"
+      ],
+      "answer": "Open your bank's official app",
+      "why": "The FTC says not to click links in unexpected messages. Contact the company through an official app or website."
+    },
+    {
+      "prompt": "You want to call your bank about a worrying text. Which number should you use?",
+      "options": [
+        "The number on your statement",
+        "The number in the text",
+        "A number the sender gives you"
+      ],
+      "answer": "The number on your statement",
+      "why": "The FTC says to use a number you find on your statement, not the number in the message."
+    },
+    {
+      "prompt": "A text asks for your account details. What should you do?",
+      "options": [
+        "Do not share them",
+        "Send only your name",
+        "Share them if the logo looks right"
+      ],
+      "answer": "Do not share them",
+      "why": "The FTC says real companies will not ask for account information by text."
+    }
+  ],
+  "takeaway": "Ignore the link and contact your bank through a number or app you trust.",
+  "sources": [
+    {
+      "name": "FTC, Three ways people try to steal your money",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2024/10/three-ways-scammers-try-steal-your-money"
+    },
+    {
+      "name": "FTC, Fraud activity on your bank account",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2024/06/got-call-about-fraud-activity-your-bank-account-it-could-be-scammer"
+    },
+    {
+      "name": "FTC, How to handle unwanted text messages",
+      "url": "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+    }
+  ],
+  "checked_on": null,
+  "release_day": 2,
+  "words": [
+    "bank-spoofing",
+    "bank-robocall",
+    "bank-identity-theft",
+    "bank-scareware"
+  ],
+  "situations": [
+    {
+      "text": "A text says your bank saw a problem and has a link. You open your bank's official app instead.",
+      "options": [
+        "Safe",
+        "Risky"
+      ],
+      "answer": "Safe",
+      "why": "The FTC says not to click links in unexpected messages."
+    },
+    {
+      "text": "A real company will ask for your account details by text.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "why": "The FTC says real companies will not ask for account information by text."
+    },
+    {
+      "text": "You are worried about a text from your bank. Should you call the number in the text?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "No",
+      "why": "Use the number on your statement, not a number in the message."
+    }
+  ]
+}

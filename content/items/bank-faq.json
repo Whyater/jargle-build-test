@@ -1,0 +1,68 @@
+{
+  "id": "bank-faq",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "FAQ",
+  "meaning": "A page that lists the questions people ask most often, with a short answer to each one.",
+  "clues": [
+    "A page of questions that many people have asked, each followed by a short answer.",
+    "Websites and apps often have one under Help or Support.",
+    "It can save you a phone call, because your question may already be answered.",
+    "Its letters stand for three words. One of them is \"questions.\"",
+    "It has three letters. The first is F and the last is Q."
+  ],
+  "assumes": [
+    "A glossary lists hard words and their meanings",
+    "A manual explains how to use a product",
+    "An index lists where topics are in a book"
+  ],
+  "decoys": [
+    {
+      "term": "glossary",
+      "meaning": "An alphabetical list of hard words with their meanings.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Glossary"
+      ]
+    },
+    {
+      "term": "user manual",
+      "meaning": "A book or booklet that explains how to set up and use a product.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Manual"
+      ]
+    },
+    {
+      "term": "index",
+      "meaning": "A list at the back of a book that shows which page each topic is on.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Index_(publishing)"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, it was a thick manual. The answer was on page 112, if you could find it."
+    },
+    {
+      "speaker": "bud",
+      "text": "Now it is one page. Tip: read the FAQ first, before you call support. Your question may be there."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, FAQ",
+      "url": "https://www.merriam-webster.com/dictionary/FAQ"
+    },
+    {
+      "name": "Wikipedia, FAQ",
+      "url": "https://en.wikipedia.org/wiki/FAQ"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

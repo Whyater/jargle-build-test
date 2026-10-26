@@ -1,0 +1,81 @@
+{
+  "id": "bank-text-to-speech",
+  "kind": "term",
+  "topic": "talking-computers",
+  "term": "text to speech",
+  "meaning": "Technology that reads written words out loud in a computer-made voice.",
+  "clues": [
+    "A computer voice reads out words that were written down.",
+    "It is a feature many phones and computers have built in.",
+    "It can read your messages, web pages, or book pages out loud.",
+    "It helps people who cannot see well, or who want to listen while their eyes are busy.",
+    "It has three words, with \"to\" in the middle. The first word starts with T."
+  ],
+  "assumes": [
+    "Speech to text types out what you say",
+    "An audiobook is read aloud by a person",
+    "Braille is read by touch"
+  ],
+  "decoys": [
+    {
+      "term": "speech to text",
+      "meaning": "Technology that listens to spoken words and turns them into typed words.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Speech_recognition"
+      ]
+    },
+    {
+      "term": "audiobook",
+      "meaning": "A recording of a book read out loud by a person.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Audiobook"
+      ]
+    },
+    {
+      "term": "Braille",
+      "meaning": "A system of raised dots that people read by touch.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Braille"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "The first computer voices I heard sounded like a robot with a cold. Bless them, they tried!"
+    },
+    {
+      "speaker": "bud",
+      "text": "Today they sound much more natural. Tip: look in Accessibility settings for Spoken Content on iPhone or Select to Speak on Android."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Speech synthesis",
+      "url": "https://en.wikipedia.org/wiki/Speech_synthesis"
+    },
+    {
+      "name": "Apple Support, Hear iPhone speak the screen, selected text, and typing feedback",
+      "url": "https://support.apple.com/guide/iphone/iph96b214f0"
+    },
+    {
+      "name": "Android Accessibility Help, Use Select to Speak",
+      "url": "https://support.google.com/accessibility/android/answer/7349565"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true,
+  "blank": {
+    "sentence": "My phone read the article out loud in a computer-made voice using ___.",
+    "wrong": [
+      "speech to text",
+      "image generator"
+    ]
+  },
+  "why": "It reads written words out loud for you.",
+  "short": "Computer voice reads text aloud"
+}

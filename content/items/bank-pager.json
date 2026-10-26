@@ -1,0 +1,72 @@
+{
+  "id": "bank-pager",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "pager",
+  "meaning": "A small device you carried that beeped when someone wanted to reach you. Its screen showed a number to call back.",
+  "clues": [
+    "It helped people get a message when they were away from home.",
+    "You wore it on your belt or kept it in a pocket.",
+    "It beeped, and a small screen showed the number to call back.",
+    "Before cell phones were common, many people carried one to stay in touch with work or home.",
+    "It has five letters and starts with P. Another name for it is a beeper."
+  ],
+  "assumes": [
+    "An answering machine stays at home and records messages",
+    "A payphone is a public phone you put coins in"
+  ],
+  "decoys": [
+    {
+      "term": "answering machine",
+      "meaning": "A machine that answers the phone when you are away and records a message from the caller.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Answering_machine"
+      ]
+    },
+    {
+      "term": "payphone",
+      "meaning": "A public phone that you used by putting in coins or using a card.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Payphone"
+      ]
+    },
+    {
+      "term": "fax machine",
+      "meaning": "A machine that scans a paper page and sends a copy over a phone line. Another machine prints the copy.",
+      "source_urls": [
+        "https://www.smithsonianeducation.org/scitech/carbons/fax.html"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, a beep on your belt meant someone wanted you. Then you ran for the nearest payphone."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: a text message on your phone. You can reply right where you are, with no payphone hunt."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Hunting for a payphone with a pocket full of coins was practically a sport."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Smithsonian National Museum of American History, Motorola BPR2000 Pager",
+      "url": "https://americanhistory.si.edu/collections/object/nmah_1344387"
+    },
+    {
+      "name": "Wikipedia, Pager",
+      "url": "https://en.wikipedia.org/wiki/Pager"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

@@ -1,0 +1,77 @@
+{
+  "id": "bank-livestream",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "livestream",
+  "meaning": "A video shown over the internet as it happens. Viewers watch it live, not later.",
+  "clues": [
+    "You watch it while it is happening, not later.",
+    "It goes out over the internet from one place to many viewers, who can often type comments as it plays.",
+    "Gamers, musicians, and shops use it to reach many viewers at once.",
+    "If you miss it, you can sometimes watch a saved copy afterward.",
+    "It is one word with ten letters and starts with L."
+  ],
+  "assumes": [
+    "A video call is a chat where people see each other",
+    "A webcam is a small camera for a computer",
+    "A TV broadcast is sent by airwaves or cable"
+  ],
+  "decoys": [
+    {
+      "term": "video call",
+      "meaning": "A call where two or more people see and talk to each other on screens.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Videotelephony"
+      ]
+    },
+    {
+      "term": "webcam",
+      "meaning": "A small camera that connects to a computer and sends its video.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Webcam"
+      ]
+    },
+    {
+      "term": "TV broadcast",
+      "meaning": "A program sent out by radio signals or cable to many TVs at once.",
+      "source_urls": [
+        "https://www.britannica.com/technology/broadcasting"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, live meant you had to be in the room. Or standing by the radio, holding your breath."
+    },
+    {
+      "speaker": "bud",
+      "text": "Now live can mean anywhere. Tip: if you miss one, look for a saved copy posted later."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Videotelephony",
+      "url": "https://en.wikipedia.org/wiki/Videotelephony"
+    },
+    {
+      "name": "Britannica, Broadcasting",
+      "url": "https://www.britannica.com/technology/broadcasting"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true,
+  "blank": {
+    "sentence": "My nephew's concert was shown over the internet as it happened, so I watched the ___ at home.",
+    "wrong": [
+      "selfie",
+      "meme"
+    ]
+  },
+  "why": "Viewers watch it as it happens, not later.",
+  "short": "Video shown live over the internet"
+}

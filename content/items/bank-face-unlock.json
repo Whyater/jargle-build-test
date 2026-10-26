@@ -1,0 +1,80 @@
+{
+  "id": "bank-face-unlock",
+  "kind": "term",
+  "topic": "locks-and-keys",
+  "term": "face unlock",
+  "meaning": "A way to open your phone by looking at it. The phone checks that your face matches the one it saved.",
+  "clues": [
+    "It uses the front camera of your phone to see you.",
+    "You do not have to remember or type anything.",
+    "When you set it up, the phone saved a model of your face.",
+    "A mask or sunglasses can sometimes make it fail.",
+    "It has two words. The first has four letters and starts with F."
+  ],
+  "assumes": [
+    "A fingerprint unlock uses a sensor you touch",
+    "A security question asks you to answer in words"
+  ],
+  "decoys": [
+    {
+      "term": "fingerprint unlock",
+      "meaning": "A way to open a phone by touching a sensor. The phone checks that your fingerprint matches the one it saved.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Fingerprint_scanner"
+      ]
+    },
+    {
+      "term": "security question",
+      "meaning": "A personal question you pick when you set up an account, like your first pet's name. You answer it later to prove who you are.",
+      "source_urls": [
+        "https://security.googleblog.com/2015/05/new-research-some-tough-questions-for.html"
+      ]
+    },
+    {
+      "term": "one-time code",
+      "meaning": "A short code sent to you for one sign-in only. It stops working after a few minutes.",
+      "source_urls": [
+        "https://www.login.gov/help/create-account/authentication-methods/text-sms-or-phone-call/"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, the guard at the door knew your face. Now your phone is the guard. I am impressed."
+    },
+    {
+      "speaker": "bud",
+      "text": "It is handy, but it can fail. Keep a strong passcode as a backup so you are never locked out."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Apple Support, About Face ID advanced technology",
+      "url": "https://support.apple.com/en-us/102381"
+    },
+    {
+      "name": "Pixel Phone Help, Unlock your Pixel device with your face",
+      "url": "https://support.google.com/pixelphone/answer/9517039"
+    },
+    {
+      "name": "Wikipedia, Facial recognition system",
+      "url": "https://en.wikipedia.org/wiki/Facial_recognition_system"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true,
+  "blank": {
+    "sentence": "My phone opened as soon as I looked at it, because I use ___.",
+    "wrong": [
+      "PIN",
+      "security question"
+    ]
+  },
+  "why": "The phone checks that your face matches the one it saved.",
+  "short": "Phone opens when it sees you"
+}

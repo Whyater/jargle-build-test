@@ -1,0 +1,81 @@
+{
+  "id": "bank-translation-app",
+  "kind": "term",
+  "topic": "talking-computers",
+  "term": "translation app",
+  "meaning": "An app that changes words from one language into another. You can type, speak, or point your camera at a sign.",
+  "clues": [
+    "It helps people who do not speak the same language.",
+    "You can type into it, talk to it, or point your phone's camera at a menu.",
+    "It turns your words into another language, such as French or Spanish.",
+    "It is handy on trips, for reading signs and talking with shop workers.",
+    "It has two words. The first starts with T and the second is \"app.\""
+  ],
+  "assumes": [
+    "Subtitles are words shown at the bottom of a screen",
+    "A dictionary lists words and their meanings",
+    "A thesaurus lists words with similar meanings"
+  ],
+  "decoys": [
+    {
+      "term": "subtitles",
+      "meaning": "Words shown at the bottom of a screen that match what people are saying.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Subtitles"
+      ]
+    },
+    {
+      "term": "dictionary",
+      "meaning": "A book or app that lists words with their meanings.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Dictionary"
+      ]
+    },
+    {
+      "term": "thesaurus",
+      "meaning": "A book that lists words with similar meanings, to help you find another word.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Thesaurus"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, we carried a thick phrasebook and pointed at the page. People were very kind about it."
+    },
+    {
+      "speaker": "bud",
+      "text": "Now your phone does the work. Tip: download a language first, and it can work without a signal."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Apple Support, Translate words and phrases on iPhone",
+      "url": "https://support.apple.com/guide/iphone/translate-words-and-phrases-iphd74cb450f/ios"
+    },
+    {
+      "name": "Google Translate Help, Translate images",
+      "url": "https://support.google.com/translate/answer/6142483"
+    },
+    {
+      "name": "Wikipedia, Machine translation",
+      "url": "https://en.wikipedia.org/wiki/Machine_translation"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true,
+  "blank": {
+    "sentence": "I pointed my camera at the sign, and my ___ changed its words into my language.",
+    "wrong": [
+      "image generator",
+      "speech to text"
+    ]
+  },
+  "why": "It changes words from one language to another, by typing, speaking, or camera.",
+  "short": "Turns words into another language"
+}

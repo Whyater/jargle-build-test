@@ -1,0 +1,76 @@
+{
+  "id": "bank-catfishing",
+  "kind": "term",
+  "topic": "scams-and-fakes",
+  "term": "catfishing",
+  "meaning": "Making up a fake person online, with a fake name and photos, to fool someone into a friendship or love.",
+  "clues": [
+    "Someone is pretending to be a person who does not exist, or is not who they say.",
+    "It happens through chats and online profiles.",
+    "The person uses fake photos and a made-up name.",
+    "The aim might be love, friendship, or tricking someone into giving them something.",
+    "It has ten letters and starts with C. Its name sounds like a pet plus a hobby."
+  ],
+  "assumes": [
+    "Spoofing is faking a phone number",
+    "Doxxing is posting someone's private details online"
+  ],
+  "decoys": [
+    {
+      "term": "doxxing",
+      "meaning": "Putting a person's home address or other private facts online without asking them.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Doxing"
+      ]
+    },
+    {
+      "term": "spoofing",
+      "meaning": "Making a call or text look like it came from a different phone number than the real one.",
+      "source_urls": [
+        "https://www.fcc.gov/consumers/guides/spoofing"
+      ]
+    },
+    {
+      "term": "identity theft",
+      "meaning": "Someone steals your real details, like your name or account numbers, and uses them as their own, such as to buy things.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/what-know-about-identity-theft"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, a pen pal mailed a real photo. Now anyone can borrow one."
+    },
+    {
+      "speaker": "bud",
+      "text": "Try a video call. If they always have an excuse not to be on camera, be careful."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Catfishing",
+      "url": "https://en.wikipedia.org/wiki/Catfishing"
+    },
+    {
+      "name": "FTC, What To Know About Romance Scams",
+      "url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true,
+  "blank": {
+    "sentence": "My friend's new online pal used a fake name and fake photos to win her trust. That is ___.",
+    "wrong": [
+      "robocall",
+      "scareware"
+    ]
+  },
+  "why": "A made-up person with fake photos can fool someone into a friendship or love.",
+  "short": "Pretending to be someone else online"
+}

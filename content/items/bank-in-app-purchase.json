@@ -1,0 +1,77 @@
+{
+  "id": "bank-in-app-purchase",
+  "kind": "term",
+  "topic": "money-on-your-phone",
+  "term": "in-app purchase",
+  "meaning": "Buying something extra inside an app you already have, like game coins or a bonus level. You pay without leaving the app.",
+  "clues": [
+    "You pay using a phone.",
+    "You never leave the app you are using.",
+    "It buys extras, like bonus game levels, game coins, or a way to remove ads.",
+    "Many phones can be set to ask for a password first, so a child cannot buy by accident.",
+    "Its name has a hyphen and three short parts. It starts with the little word I-N."
+  ],
+  "assumes": [
+    "Tap to pay happens at a store checkout",
+    "A prepaid card holds money loaded ahead of time"
+  ],
+  "decoys": [
+    {
+      "term": "tap to pay",
+      "meaning": "Paying by holding your phone, watch, or card near a card reader at checkout.",
+      "source_urls": [
+        "https://support.apple.com/guide/iphone/make-purchases-with-apple-pay-iphbd4cf42b4/ios",
+        "https://support.google.com/wallet/answer/12060043"
+      ]
+    },
+    {
+      "term": "mobile check deposit",
+      "meaning": "Using your phone's camera to photograph a paper check. The money goes into your bank account without a trip to the bank.",
+      "source_urls": [
+        "https://www.fdic.gov/consumers/consumer/news/october2019.html"
+      ]
+    },
+    {
+      "term": "prepaid card",
+      "meaning": "A card you load with money ahead of time. You can spend only what you loaded.",
+      "source_urls": [
+        "https://www.consumerfinance.gov/consumer-tools/prepaid-cards/"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, a game came in a box, and you got the whole thing. No tiny shops hiding inside."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today many games are free, then sell extras inside. Turn on the setting that asks for a password before any purchase."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Apple Support, In-app purchases",
+      "url": "https://support.apple.com/en-us/102383"
+    },
+    {
+      "name": "Google Play Help, Problems with in-app purchases",
+      "url": "https://support.google.com/googleplay/answer/1050566"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true,
+  "blank": {
+    "sentence": "I bought extra coins for my game without ever leaving the app. That is ___.",
+    "wrong": [
+      "mobile check deposit",
+      "direct deposit"
+    ]
+  },
+  "why": "You pay without leaving the app, so watch your account for charges.",
+  "short": "Paying for extras inside an app"
+}

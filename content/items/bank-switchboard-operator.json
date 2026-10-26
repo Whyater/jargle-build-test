@@ -1,0 +1,76 @@
+{
+  "id": "bank-switchboard-operator",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "switchboard operator",
+  "meaning": "A person who sat at a big board of sockets and cords. They connected phone calls by hand, plugging one line into another.",
+  "clues": [
+    "It helped people make phone calls.",
+    "It was a job done by a person, not a machine.",
+    "The person would answer with \"Number, please?\" when you lifted the phone.",
+    "They plugged cords into holes on a big board to link each call by hand.",
+    "It has two words. The first has eleven letters and starts with S."
+  ],
+  "assumes": [
+    "A payphone is a public phone",
+    "A phone book lists names and numbers"
+  ],
+  "decoys": [
+    {
+      "term": "payphone",
+      "meaning": "A public phone that you used by putting in coins or using a card.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Payphone"
+      ]
+    },
+    {
+      "term": "phone book",
+      "meaning": "A thick book listing the names, addresses, and phone numbers of people in an area.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Telephone_directory"
+      ]
+    },
+    {
+      "term": "answering machine",
+      "meaning": "A machine that answers the phone when you are away and records a message from the caller.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Answering_machine"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, you lifted the phone and a friendly voice said \"Number, please?\" Then they plugged you through."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: your phone connects calls by itself in a blink. Just tap a name in your contacts."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "No cords, no waiting. I do miss those friendly voices, though."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Science Museum, Goodbye to the hello girls: automating the telephone exchange",
+      "url": "https://www.sciencemuseum.org.uk/objects-and-stories/goodbye-hello-girls-automating-telephone-exchange"
+    },
+    {
+      "name": "HISTORY, The Rise and Fall of Telephone Operators",
+      "url": "https://www.history.com/articles/rise-fall-telephone-switchboard-operators"
+    },
+    {
+      "name": "Wikipedia, Switchboard operator",
+      "url": "https://en.wikipedia.org/wiki/Switchboard_operator"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

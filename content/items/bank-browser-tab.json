@@ -1,0 +1,77 @@
+{
+  "id": "bank-browser-tab",
+  "kind": "term",
+  "topic": "how-the-internet-works",
+  "term": "browser tab",
+  "meaning": "A small label at the top of a web browser. Each one holds a different page, so you can switch between them.",
+  "clues": [
+    "They line up along the top edge, like the tabs on file folders.",
+    "Click one to see a different web page without losing the others.",
+    "Each one shows a tiny picture and the name of its page.",
+    "Click the little x on one to close just that page.",
+    "It has two words. The first is the program you use to visit websites."
+  ],
+  "assumes": [
+    "A browser window is a frame that holds web pages",
+    "A bookmark is a saved shortcut to a page",
+    "Browsing history is a list of pages you visited"
+  ],
+  "decoys": [
+    {
+      "term": "browser window",
+      "meaning": "A separate frame on the screen that holds one or more web pages.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Window_(computing)"
+      ]
+    },
+    {
+      "term": "bookmark",
+      "meaning": "A saved shortcut to a web page you want to find again.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Bookmark_(digital)"
+      ]
+    },
+    {
+      "term": "browsing history",
+      "meaning": "A list of the web pages you have visited before.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Web_browsing_history"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "File folders had tabs sticking out of the side. Same idea, except yours can play video!"
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: too many open tabs can slow things down. Close the ones you are finished with."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Tab (interface)",
+      "url": "https://en.wikipedia.org/wiki/Tab_(interface)"
+    },
+    {
+      "name": "Google Chrome Help, Manage tabs in Chrome",
+      "url": "https://support.google.com/chrome/answer/2391819"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true,
+  "blank": {
+    "sentence": "I opened a new ___ at the top of my browser so I could switch between two pages.",
+    "wrong": [
+      "download",
+      "modem"
+    ]
+  },
+  "why": "Each one holds a different page, so you can switch between them.",
+  "short": "Label holding one open web page"
+}

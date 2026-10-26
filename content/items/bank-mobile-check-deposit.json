@@ -1,0 +1,80 @@
+{
+  "id": "bank-mobile-check-deposit",
+  "kind": "term",
+  "topic": "money-on-your-phone",
+  "term": "mobile check deposit",
+  "meaning": "Using your phone's camera to take a photo of a paper check. The money goes into your bank account without a trip to the bank.",
+  "clues": [
+    "It uses the camera on your phone.",
+    "It involves a piece of paper from someone who owes you money.",
+    "You take a picture of the front and the back, using your bank's app.",
+    "You do not have to visit the bank or an ATM.",
+    "It has three words. They start with M, C, and D."
+  ],
+  "assumes": [
+    "Direct deposit sends pay straight into an account with no paper",
+    "A wire transfer sends money between banks"
+  ],
+  "decoys": [
+    {
+      "term": "direct deposit",
+      "meaning": "Your pay or benefits go straight into your bank account by computer, with no paper check.",
+      "source_urls": [
+        "https://files.consumerfinance.gov/f/documents/cfpb_ways-to-receive-money_2022-08.pdf"
+      ]
+    },
+    {
+      "term": "wire transfer",
+      "meaning": "A way to send money from one bank account to another, often to a faraway place.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/what-know-you-wire-money"
+      ]
+    },
+    {
+      "term": "prepaid card",
+      "meaning": "A card you load with money ahead of time. You can spend only what you loaded.",
+      "source_urls": [
+        "https://www.consumerfinance.gov/consumer-tools/prepaid-cards/"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, you stood in line at the bank with a paper check. I made good friends in that line."
+    },
+    {
+      "speaker": "bud",
+      "text": "Now you can snap the front and back in your bank's app. Keep the paper check until the money clears, just in case."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FDIC, Banking at the Speed of Technology",
+      "url": "https://www.fdic.gov/consumers/consumer/news/october2019.html"
+    },
+    {
+      "name": "Wikipedia, Remote deposit",
+      "url": "https://en.wikipedia.org/wiki/Remote_deposit"
+    },
+    {
+      "name": "CFPB, How long can a bank or credit union hold funds I deposited?",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-long-can-a-bank-or-credit-union-hold-funds-i-deposited-en-1023/"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true,
+  "blank": {
+    "sentence": "I took a photo of a paper check with my phone camera and used ___ to put it in my account.",
+    "wrong": [
+      "tap to pay",
+      "autopay"
+    ]
+  },
+  "why": "It lets you deposit a check without a trip to the bank.",
+  "short": "Deposit a check with phone photo"
+}

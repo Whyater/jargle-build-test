@@ -1,0 +1,68 @@
+{
+  "id": "bank-boom-box",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "boom box",
+  "meaning": "A big, loud portable radio and tape player with built-in speakers, carried by a handle or on a shoulder.",
+  "clues": [
+    "A big portable music player made so everyone nearby could hear.",
+    "It had a radio, a place for tapes, and two big speakers.",
+    "It ran on lots of batteries and was heavy to carry.",
+    "It was very popular in the 1980s, and people carried it on their shoulders.",
+    "It has two words. The first sounds like a loud bang and the second is a container."
+  ],
+  "assumes": [
+    "A jukebox sits in one place and plays songs for coins",
+    "A transistor radio is small and plays radio only",
+    "A personal cassette player is for one listener with headphones"
+  ],
+  "decoys": [
+    {
+      "term": "jukebox",
+      "meaning": "A machine that stays in one place and plays the song you pick after you put in coins.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Jukebox"
+      ]
+    },
+    {
+      "term": "transistor radio",
+      "meaning": "A small battery radio that plays radio stations only.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Transistor_radio"
+      ]
+    },
+    {
+      "term": "personal cassette player",
+      "meaning": "A small tape player with headphones, so only the listener hears the music.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Walkman"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Now that was a way to make an entrance. A bunch of batteries, and the whole block heard your song."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: a small portable speaker that plays music from your phone. Tip: keep the volume polite in public."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Merriam-Webster, boom box",
+      "url": "https://www.merriam-webster.com/dictionary/boom%20box"
+    },
+    {
+      "name": "Wikipedia, Boombox",
+      "url": "https://en.wikipedia.org/wiki/Boombox"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

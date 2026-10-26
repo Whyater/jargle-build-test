@@ -1,0 +1,87 @@
+/* Floyd and Bud sprites: the pictures stack in one square box. */
+.mascot {
+  position: relative;
+  display: inline-block;
+  flex: none;
+  line-height: 0;
+  vertical-align: bottom;
+}
+.mascot-bob {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 100%;
+  animation: mascot-bob 2.6s ease-in-out infinite;
+}
+/* Bud bobs a beat behind Floyd so a pair does not move in lockstep. */
+.mascot-bud .mascot-bob {
+  animation-delay: -1.3s;
+}
+.mascot-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+.mascot-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mascot-off {
+  visibility: hidden;
+}
+/* The closed-eye picture shows for a moment every few seconds. */
+.mascot-blink {
+  visibility: hidden;
+  animation: mascot-blink 4.4s steps(1, end) infinite;
+}
+.mascot-bud .mascot-blink {
+  animation-delay: -2.1s;
+}
+
+@keyframes mascot-bob {
+  0%,
+  100% {
+    transform: translateY(0) scale(1, 1);
+  }
+  50% {
+    transform: translateY(-2.5%) scale(0.99, 1.01);
+  }
+}
+@keyframes mascot-blink {
+  0% {
+    visibility: hidden;
+  }
+  94% {
+    visibility: visible;
+  }
+  97% {
+    visibility: hidden;
+  }
+}
+
+/* The app-wide reduced motion rule only shortens animations, which would make
+   these loops flicker, so switch them off completely here. */
+@media (prefers-reduced-motion: reduce) {
+  .mascot-bob,
+  .mascot-blink {
+    animation: none !important;
+  }
+}
+html.reduce-motion .mascot-bob,
+html.reduce-motion .mascot-blink {
+  animation: none !important;
+}
+
+.says-mascot {
+  display: flex;
+  align-items: flex-end;
+}
+.says-mascot .mascot-btn {
+  margin: 0;
+  padding: 0;
+}

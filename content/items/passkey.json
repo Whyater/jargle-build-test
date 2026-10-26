@@ -1,0 +1,87 @@
+{
+  "id": "passkey",
+  "kind": "term",
+  "topic": "locks-and-keys",
+  "term": "passkey",
+  "meaning": "A way to sign in with your phone's fingerprint, face, or screen lock PIN instead of a password.",
+  "clues": [
+    "It is a way to prove who you are when you sign in to an account.",
+    "It uses a phone or computer unlock method, such as a fingerprint, face scan, or screen lock PIN.",
+    "It uses a pair of digital keys, with one key kept private by your device.",
+    "It is made for sites and services that support this sign-in method.",
+    "It has seven letters and starts with P."
+  ],
+  "assumes": [],
+  "decoys": [
+    {
+      "term": "Security key",
+      "meaning": "A small physical device you tap or plug in to prove your identity when signing in.",
+      "source_urls": [
+        "https://support.google.com/accounts/answer/13548313"
+      ]
+    },
+    {
+      "term": "Biometric login",
+      "meaning": "Signing in by showing a body feature, such as a fingerprint or face.",
+      "source_urls": [
+        "https://support.apple.com/en-us/102195"
+      ]
+    },
+    {
+      "term": "Backup code",
+      "meaning": "A spare code saved for use when you cannot use your usual sign-in proof.",
+      "source_urls": [
+        "https://support.google.com/accounts/answer/1187538"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "On a site that supports it, choose the passkey option and follow the phone's screen lock steps. Someone you trust can help."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "A key worked only when it matched the lock. A passkey works the same way: your device and the site must match before the account opens."
+    },
+    {
+      "speaker": "bud",
+      "text": "Keep your screen lock private. If a site offers a passkey, read its help page before you set one up."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Apple Support, About the security of passkeys",
+      "url": "https://support.apple.com/en-us/102195"
+    },
+    {
+      "name": "Google Help, Sign in with a passkey",
+      "url": "https://support.google.com/accounts/answer/13548313"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "blank": {
+    "sentence": "I signed in without a password. My phone's fingerprint scan unlocked my ___.",
+    "wrong": [
+      "backup code",
+      "security key"
+    ]
+  },
+  "why": "It lets you skip typing a password by using your phone's own unlock.",
+  "short": "Sign in with fingerprint, not password",
+  "situations": [
+    {
+      "text": "A site offers a passkey. Should you read its help page before you set one up?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "Yes",
+      "why": "Its help page shows the steps. Keep your screen lock private too."
+    }
+  ]
+}

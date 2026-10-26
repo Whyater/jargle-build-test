@@ -1,0 +1,97 @@
+{
+  "id": "cassette-tape",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "cassette tape",
+  "meaning": "A small plastic case holding magnetic tape on spools. It plays recorded sound, and you can record your own.",
+  "clues": [
+    "It plays recorded sound from a thin ribbon of magnetic tape.",
+    "Its tape runs from one small spool to another inside a plastic case small enough for a pocket.",
+    "It was shown to the public in 1963 at a radio show in Berlin.",
+    "Many people made their own mixes of favorite songs on it for the car or a trip.",
+    "It has two words. The first has eight letters and starts with C."
+  ],
+  "assumes": [
+    "An 8-track holds one endless loop of tape, not two spools",
+    "Reel-to-reel tape sits on open reels, not in a case"
+  ],
+  "decoys": [
+    {
+      "term": "8-track tape",
+      "meaning": "A plastic cartridge holding one endless loop of tape. It was popular for music, especially in cars, from 1965 to the late 1970s.",
+      "source_urls": [
+        "https://recordinghistory.org/technology/the-history-of-the-8-track-tape/",
+        "https://americanhistory.si.edu/collections/object/nmah_995221"
+      ]
+    },
+    {
+      "term": "reel-to-reel tape",
+      "meaning": "Magnetic tape wound on an open reel and played on a machine. Radio stations and archives used it for many years.",
+      "source_urls": [
+        "https://www.archives.gov/files/preservation/formats/pdf/format-guide-to-sound-recordings.pdf",
+        "https://history.house.gov/Blog/2022/July/7-11-oldtech/"
+      ]
+    },
+    {
+      "term": "wax cylinder",
+      "meaning": "A hollow roll, often made of wax, with sound etched into its surface. Early phonographs played it.",
+      "source_urls": [
+        "https://loc.gov/preservation/care/cyn.html"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "The cassette let you record and play your own mixes. Making a mix for someone is still a kind thing to do."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: a music app. You pick a song and it plays right away, with no tape to rewind."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Making a mix took a while, and finding a song meant rewinding. Worth it for a friend."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Philips Museum, Providing the soundtrack to people's lives",
+      "url": "https://www.philips.nl/en/a-w/philips-museum/stories/soundtrack-to-peoples-lives.html"
+    },
+    {
+      "name": "Philips, First Philips cassette recorder, 1963",
+      "url": "https://www.philips.com/a-w/about/news/media-library/20190101-First-Philips-cassette-recorder-1963.html"
+    },
+    {
+      "name": "Library of Congress, Care and handling of audio visual materials",
+      "url": "https://www.loc.gov/preservation/care/record.html"
+    },
+    {
+      "name": "History of Sound Recording Technology, The History of the 8-Track Tape",
+      "url": "https://recordinghistory.org/technology/the-history-of-the-8-track-tape/"
+    },
+    {
+      "name": "National Archives, Format Guide to Sound Recordings",
+      "url": "https://www.archives.gov/files/preservation/formats/pdf/format-guide-to-sound-recordings.pdf"
+    },
+    {
+      "name": "Library of Congress, Cylinder Recordings",
+      "url": "https://loc.gov/preservation/care/cyn.html"
+    },
+    {
+      "name": "US House of Representatives History, Out with the Old",
+      "url": "https://history.house.gov/Blog/2022/July/7-11-oldtech/"
+    },
+    {
+      "name": "Smithsonian National Museum of American History, Cartridge Tape Recorder",
+      "url": "https://americanhistory.si.edu/collections/object/nmah_995221"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2
+}

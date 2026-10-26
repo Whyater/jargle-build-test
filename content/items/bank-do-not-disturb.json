@@ -1,0 +1,72 @@
+{
+  "id": "bank-do-not-disturb",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "do not disturb",
+  "meaning": "A phone setting that silences calls and alerts for a while. You choose who can still get through.",
+  "clues": [
+    "It helps you get some peace and quiet.",
+    "It silences calls and alerts, and you can set it to turn on every night.",
+    "You can let certain people through, such as family, or someone who calls twice in a row.",
+    "Many people use it at bedtime so late calls do not wake them up.",
+    "It has three words. The first starts with D."
+  ],
+  "assumes": [
+    "Call blocking stops calls from numbers you pick",
+    "A ringtone is the sound your phone plays when it rings",
+    "A speakerphone plays a call out loud"
+  ],
+  "decoys": [
+    {
+      "term": "call blocking",
+      "meaning": "A feature that stops calls from numbers you pick.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Call_blocking"
+      ]
+    },
+    {
+      "term": "ringtone",
+      "meaning": "The sound a phone plays when someone calls.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Ringtone"
+      ]
+    },
+    {
+      "term": "speakerphone",
+      "meaning": "A setting that plays a call out loud so you can talk without holding the phone.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Speakerphone"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "We hung a paper sign on the door: \"Do Not Disturb.\" It worked on everyone except my cat."
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: set a bedtime schedule, then add your family as exceptions. Urgent calls still ring, and the rest wait until morning."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Apple Support, How to turn Do Not Disturb off or on for iPhone or iPad",
+      "url": "https://support.apple.com/en-us/105112"
+    },
+    {
+      "name": "Android Help, Limit interruptions with Modes and Do Not Disturb on Android",
+      "url": "https://support.google.com/android/answer/9069335"
+    },
+    {
+      "name": "Wikipedia, Do not disturb",
+      "url": "https://en.wikipedia.org/wiki/Do_not_disturb"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

@@ -1,0 +1,72 @@
+{
+  "id": "bank-mobile-hotspot",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "mobile hotspot",
+  "meaning": "A phone feature that shares its internet connection with a laptop or tablet nearby. It uses your phone's mobile data.",
+  "clues": [
+    "It shares something from your phone with a device nearby.",
+    "What it shares is your internet, so a laptop can get online.",
+    "Your phone acts like a small home network. Other devices join it and enter a password.",
+    "It uses your data and your battery, so it is best to turn it off when you are done.",
+    "It has two words. The first means it moves around with you, and the second starts with H."
+  ],
+  "assumes": [
+    "Data roaming is using another company's network away from home",
+    "Call forwarding sends calls to another number",
+    "Screen mirroring shows your screen on a bigger display"
+  ],
+  "decoys": [
+    {
+      "term": "data roaming",
+      "meaning": "Using another company's network for your phone data when you are away from home.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Roaming"
+      ]
+    },
+    {
+      "term": "call forwarding",
+      "meaning": "A feature that sends your calls to a different phone number.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Call_forwarding"
+      ]
+    },
+    {
+      "term": "screen mirroring",
+      "meaning": "Showing what is on your phone screen on a TV or computer.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Screen_mirroring"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, getting online meant plugging a cord into the wall. Now you carry the wall in your pocket?"
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: give your hotspot a password and turn it off when you finish. It saves your data and your battery."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Apple Support, Share your internet connection from your iPhone",
+      "url": "https://support.apple.com/guide/iphone/share-your-internet-connection-iph45447ca6/ios"
+    },
+    {
+      "name": "Android Help, Share a mobile connection by hotspot or tethering on Android",
+      "url": "https://support.google.com/android/answer/9059108"
+    },
+    {
+      "name": "Wikipedia, Tethering",
+      "url": "https://en.wikipedia.org/wiki/Tethering"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

@@ -1,0 +1,95 @@
+{
+  "id": "unsubscribe",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "unsubscribe",
+  "meaning": "To ask a mailing list to stop sending you messages.",
+  "clues": [
+    "It is an action you can take on a message or sender.",
+    "It is a request you send to a mailing list, asking it to take you off.",
+    "Your email app may show it as a banner or a button when you open a message.",
+    "It removes your address from that list, but other messages may still arrive.",
+    "Its name starts with U and means to stop being signed up."
+  ],
+  "assumes": [
+    "Blocking stops messages from a sender from reaching you",
+    "Reporting tells a service about a message or sender",
+    "Deleting removes a message from your mailbox"
+  ],
+  "decoys": [
+    {
+      "term": "block",
+      "meaning": "To stop a person or sender from contacting you through a service.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/block"
+      ]
+    },
+    {
+      "term": "report",
+      "meaning": "To tell an authority or service about something that may be wrong.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/report"
+      ]
+    },
+    {
+      "term": "delete",
+      "meaning": "To remove something, such as a message or file.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/delete"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. Open a message from a list you joined and look for its unsubscribe link."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Mail-order catalogs had a way to stop deliveries too. A clear request saved paper and time."
+    },
+    {
+      "speaker": "bud",
+      "text": "If the message looks odd, do not click its link. Open the service yourself and change your choices there."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FTC, How to get less spam in your email",
+      "url": "https://consumer.ftc.gov/articles/how-get-less-spam-your-email"
+    },
+    {
+      "name": "CISA, recognize and report fake messages",
+      "url": "https://www.cisa.gov/secure-our-world/recognize-and-report-phishing"
+    },
+    {
+      "name": "Merriam-Webster, unsubscribe",
+      "url": "https://www.merriam-webster.com/dictionary/unsubscribe"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "blank": {
+    "sentence": "To ask a mailing list to take my address off, I used the ___ link in its email.",
+    "wrong": [
+      "delete",
+      "report"
+    ]
+  },
+  "why": "It asks a list to take you off, but other messages may still arrive.",
+  "short": "Ask a list to stop sending",
+  "situations": [
+    {
+      "text": "An odd email you never signed up for has an unsubscribe link, and you click it right away.",
+      "options": [
+        "Safe",
+        "Risky"
+      ],
+      "answer": "Risky",
+      "why": "If a message looks odd, do not click its link. Open the service yourself."
+    }
+  ]
+}

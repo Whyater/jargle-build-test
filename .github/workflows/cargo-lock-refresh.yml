@@ -1,0 +1,32 @@
+# One-off helper for the orchestrator (NOT for the public repo's main history).
+# Copy to .github/workflows/ on a scratch branch of Whyater/jargle-build-test, push, run it,
+# download the "cargo-lock" artifact, and commit desktop/src-tauri/Cargo.lock on jargle/v21-update.
+name: Cargo lock refresh
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/cargo-lock-refresh.yml'
+permissions:
+  contents: read
+jobs:
+  lock:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf build-essential libssl-dev libxdo-dev
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Frontend stub
+        run: mkdir -p web/dist && printf '<!doctype html><html><body>Jargle</body></html>\n' > web/dist/index.html
+      - name: Add the new crates to Cargo.lock (keeps every other version as it was)
+        working-directory: desktop/src-tauri
+        run: |
+          cargo check
+          cargo check --locked
+          git diff --stat Cargo.lock
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cargo-lock
+          path: desktop/src-tauri/Cargo.lock

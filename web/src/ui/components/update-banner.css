@@ -1,0 +1,136 @@
+/* The "new version" card. It floats at the top so it never covers the tab bar or the toasts. */
+.update-banner {
+  position: fixed;
+  top: calc(0.75rem + env(safe-area-inset-top, 0px));
+  left: 50%;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 1.5rem);
+  max-width: 26rem;
+  padding: var(--s3) var(--s4) var(--s3) var(--s3);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 3px 0 var(--mint-soft), var(--shadow-float);
+  transform: translateX(-50%);
+  animation: update-in var(--t-slow) var(--ease-out);
+}
+
+@keyframes update-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.update-bud {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--radius);
+  margin-right: var(--s3);
+  background: var(--mint-soft);
+}
+
+.update-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.update-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-md);
+  line-height: var(--leading-tight);
+  text-wrap: balance;
+}
+
+.update-note {
+  margin: var(--s1) 0 0;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  line-height: var(--leading);
+}
+
+.update-actions {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--s2);
+}
+/* Margins instead of flex gap, which old Android Chrome doesn't support. */
+.update-actions .btn {
+  margin: var(--s1) var(--s2) 0 0;
+}
+
+.update-banner .progress {
+  margin-top: var(--s3);
+}
+
+/* Before the download size is known: a short mint stripe slides across the track. */
+.update-wait {
+  position: relative;
+  height: 0.75rem;
+  margin-top: var(--s3);
+  border-radius: var(--radius-pill);
+  background: #f0e6f7;
+  box-shadow: inset 0 2px 0 rgba(43, 35, 64, 0.08);
+  overflow: hidden;
+}
+.update-wait span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 35%;
+  border-radius: inherit;
+  background: var(--mint);
+  animation: update-slide 1.2s var(--ease-out) infinite;
+}
+
+@keyframes update-slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(300%);
+  }
+}
+
+/* With less motion the stripe just sits still in the middle. */
+@media (prefers-reduced-motion: reduce) {
+  .update-banner {
+    animation: none;
+  }
+  .update-wait span {
+    left: 32%;
+    animation: none;
+  }
+}
+html.reduce-motion .update-banner {
+  animation: none;
+}
+html.reduce-motion .update-wait span {
+  left: 32%;
+  animation: none;
+}
+
+/* Very narrow phones: Bud gets smaller so the words keep their room. */
+@media (max-width: 22rem) {
+  .update-bud {
+    width: 3rem;
+    height: 3rem;
+  }
+  .update-bud img,
+  .update-bud svg {
+    max-width: 2.5rem;
+    height: auto;
+  }
+}

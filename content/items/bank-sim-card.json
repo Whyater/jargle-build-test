@@ -1,0 +1,81 @@
+{
+  "id": "bank-sim-card",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "SIM card",
+  "meaning": "A tiny card inside a phone that links it to your phone company. It helps hold your phone number and account details.",
+  "clues": [
+    "It tells your phone company which phone line and account are yours.",
+    "It is a tiny chip card, and you push out a small tray on the side of the phone to reach it.",
+    "Move it to a new phone and your number and plan can often come along.",
+    "Newer phones may use a digital version of it instead, called an eSIM.",
+    "It has two words. The first starts with S, and the second is a flat piece of plastic."
+  ],
+  "assumes": [
+    "An SD card is a memory card for photos and files",
+    "A headphone jack is a round hole for headphones",
+    "USB-C is a small oval plug for charging"
+  ],
+  "decoys": [
+    {
+      "term": "SD card",
+      "meaning": "A small memory card that stores photos and files.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/SD_card"
+      ]
+    },
+    {
+      "term": "headphone jack",
+      "meaning": "A small round hole on a device where headphones plug in.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Phone_connector_(audio)"
+      ]
+    },
+    {
+      "term": "USB-C",
+      "meaning": "A small oval plug used to charge a phone and move files.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/USB-C"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Smaller than me by a mile, and it still carries your whole phone number. Show-off."
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: before you switch phones, ask your phone company how to move your number. Many can do it for you."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, SIM card",
+      "url": "https://www.merriam-webster.com/dictionary/SIM%20card"
+    },
+    {
+      "name": "Wikipedia, SIM card",
+      "url": "https://en.wikipedia.org/wiki/SIM_card"
+    },
+    {
+      "name": "Apple Support, Learn which type SIM your iPhone or iPad uses",
+      "url": "https://support.apple.com/en-us/118569"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true,
+  "blank": {
+    "sentence": "A tiny ___ inside my phone links it to my phone company and helps hold my number.",
+    "wrong": [
+      "app store",
+      "battery saver"
+    ]
+  },
+  "why": "It links your phone to your phone company and helps hold your number.",
+  "short": "Tiny card linking phone to company"
+}

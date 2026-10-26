@@ -1,0 +1,82 @@
+{
+  "id": "bank-meme",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "meme",
+  "meaning": "A funny picture, video, or phrase that people copy, change, and pass along to each other online.",
+  "clues": [
+    "It is a joke or idea that people keep copying and changing.",
+    "It spreads from person to person, usually on phones and computers.",
+    "A scientist named Richard Dawkins invented the word in a book from 1976.",
+    "It is often a photo with a funny caption written across it.",
+    "It has four letters and starts with M."
+  ],
+  "assumes": [
+    "A GIF is a short looping animation",
+    "A selfie is a photo of yourself",
+    "Clickbait is a teasing headline"
+  ],
+  "decoys": [
+    {
+      "term": "GIF",
+      "meaning": "A small picture file that can play a short animation again and again, with no sound.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/GIF",
+        "https://www.britannica.com/technology/GIF"
+      ]
+    },
+    {
+      "term": "selfie",
+      "meaning": "A photo that you take of yourself, usually with a phone held out at arm's length.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/selfie"
+      ]
+    },
+    {
+      "term": "clickbait",
+      "meaning": "A teasing headline or picture made to make you click, often for a story that disappoints.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/clickbait"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, a funny drawing got photocopied and pinned to the office board. It took all week to spread."
+    },
+    {
+      "speaker": "bud",
+      "text": "Now it takes minutes. Tip: if one makes you angry or scared, check where it came from before you share it."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, meme",
+      "url": "https://www.merriam-webster.com/dictionary/meme"
+    },
+    {
+      "name": "Britannica, Meme",
+      "url": "https://www.britannica.com/topic/meme"
+    },
+    {
+      "name": "Wikipedia, Meme",
+      "url": "https://en.wikipedia.org/wiki/Meme"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true,
+  "blank": {
+    "sentence": "A funny picture that people copy, change, and pass along online is a ___.",
+    "wrong": [
+      "selfie",
+      "FAQ"
+    ]
+  },
+  "why": "People copy and pass them along, so a post can travel far.",
+  "short": "Funny picture people copy and share"
+}

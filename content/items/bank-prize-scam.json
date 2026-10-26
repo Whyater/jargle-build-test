@@ -1,0 +1,80 @@
+{
+  "id": "bank-prize-scam",
+  "kind": "term",
+  "topic": "scams-and-fakes",
+  "term": "prize scam",
+  "meaning": "You are told you won a contest or lottery. To collect, you must pay a fee or share private details.",
+  "clues": [
+    "It begins with surprising news about money or something you can get.",
+    "You are told you won a contest you never entered.",
+    "To get your winnings, you must first pay a fee or share private details.",
+    "Real contests do not make you pay to collect a prize.",
+    "It has two words. The first has five letters and starts with P."
+  ],
+  "assumes": [
+    "A fake check scam sends you a check that later turns out to be fake",
+    "A tech support scam starts with a fake computer problem"
+  ],
+  "decoys": [
+    {
+      "term": "fake check scam",
+      "meaning": "Someone sends you a check and asks you to send part of the money back. The check turns out to be fake.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
+      ]
+    },
+    {
+      "term": "tech support scam",
+      "meaning": "Someone says your computer has a problem. Then they ask for money or access to fix it.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams"
+      ]
+    },
+    {
+      "term": "romance scam",
+      "meaning": "A crook pretends to be a loving partner online. After gaining trust, they ask for money.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/what-know-about-romance-scams"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "You cannot win a contest you never entered. If someone says you must pay to collect a prize, hang up."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, the only prize I got was a gold star. Nobody charged me a fee for it."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FTC, Fake Prize, Sweepstakes, and Lottery Scams",
+      "url": "https://consumer.ftc.gov/articles/fake-prize-sweepstakes-and-lottery-scams"
+    },
+    {
+      "name": "Wikipedia, Lottery scam",
+      "url": "https://en.wikipedia.org/wiki/Lottery_scam"
+    },
+    {
+      "name": "FTC, How To Spot, Avoid, and Report Fake Check Scams",
+      "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true,
+  "blank": {
+    "sentence": "A message said I won a contest but had to pay a fee to collect. That was a ___.",
+    "wrong": [
+      "romance scam",
+      "tech support scam"
+    ]
+  },
+  "why": "You are told to pay a fee or share private details to collect.",
+  "short": "Fake win that needs a fee"
+}

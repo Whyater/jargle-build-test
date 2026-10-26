@@ -1,0 +1,88 @@
+{
+  "id": "film-camera",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "film camera",
+  "meaning": "A camera that records light on a strip or sheet of light-sensitive film to make photographs.",
+  "clues": [
+    "It uses light to capture a picture through a lens.",
+    "When the roll is done, the film goes to a lab or darkroom, where chemicals bring out the pictures.",
+    "You advance the film after taking a picture so the next frame is ready.",
+    "George Eastman sold a Kodak camera using film in 1889.",
+    "It has two words. The second word names a picture-making device."
+  ],
+  "assumes": [
+    "A digital camera stores pictures electronically",
+    "An instant camera makes a print soon after the picture is taken",
+    "A pinhole camera has no lens"
+  ],
+  "decoys": [
+    {
+      "term": "digital camera",
+      "meaning": "A camera that saves photos as files instead of on film.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Digital_camera"
+      ]
+    },
+    {
+      "term": "instant camera",
+      "meaning": "A camera that makes a print soon after you take the picture.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Instant_camera"
+      ]
+    },
+    {
+      "term": "pinhole camera",
+      "meaning": "A simple camera with a tiny hole instead of a lens.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Pinhole_camera"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "Film held the scene as a real strip of pictures. A printed photo you can hold still feels special."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: use a phone camera and save the file."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "You chose the frame, pressed the shutter, and waited to see the result. That pause made each picture count."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Library of Congress, Early Cinema",
+      "url": "https://guides.loc.gov/chronicling-america-early-cinema"
+    },
+    {
+      "name": "American Chemical Society, The Chemistry of Developing Photographs",
+      "url": "https://www.acs.org/education/celebrating-chemistry-editions/2024-ncw/developing-photographs.html"
+    },
+    {
+      "name": "Wikipedia, Negative (photography)",
+      "url": "https://en.wikipedia.org/wiki/Negative_(photography)"
+    },
+    {
+      "name": "Wikipedia, Digital camera",
+      "url": "https://en.wikipedia.org/wiki/Digital_camera"
+    },
+    {
+      "name": "Wikipedia, Instant camera",
+      "url": "https://en.wikipedia.org/wiki/Instant_camera"
+    },
+    {
+      "name": "Wikipedia, Pinhole camera",
+      "url": "https://en.wikipedia.org/wiki/Pinhole_camera"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2
+}

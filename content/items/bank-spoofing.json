@@ -1,0 +1,80 @@
+{
+  "id": "bank-spoofing",
+  "kind": "term",
+  "topic": "scams-and-fakes",
+  "term": "spoofing",
+  "meaning": "Making a call or text look like it came from a different number or name. Crooks use it to trick you into answering.",
+  "clues": [
+    "Someone is pretending to be something they are not.",
+    "It happens with phone calls or text messages.",
+    "The number or name on your screen is not the real one.",
+    "Crooks use it so you will answer, thinking it is a local number, a bank, or someone you know.",
+    "It has eight letters and starts with S."
+  ],
+  "assumes": [
+    "A robocall plays a recorded message",
+    "Catfishing is pretending to be someone else online"
+  ],
+  "decoys": [
+    {
+      "term": "robocall",
+      "meaning": "A phone call that plays a recorded message instead of a live person.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/robocalls"
+      ]
+    },
+    {
+      "term": "catfishing",
+      "meaning": "Pretending to be someone else online, with a fake name and fake photos, to fool a person.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Catfishing"
+      ]
+    },
+    {
+      "term": "identity theft",
+      "meaning": "Someone uses your name or account numbers without your permission, such as to buy things in your name.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/what-know-about-identity-theft"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "neutral",
+      "text": "Back in my day, if the phone said Mom, it was Mom. Now the screen can fib."
+    },
+    {
+      "speaker": "bud",
+      "text": "Caller ID can be faked. If a call claims to be your bank, hang up and call the number on your card."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FCC, Caller ID Spoofing",
+      "url": "https://www.fcc.gov/consumers/guides/spoofing"
+    },
+    {
+      "name": "Wikipedia, Caller ID spoofing",
+      "url": "https://en.wikipedia.org/wiki/Caller_ID_spoofing"
+    },
+    {
+      "name": "FTC, Phone Scams",
+      "url": "https://consumer.ftc.gov/articles/phone-scams"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true,
+  "blank": {
+    "sentence": "The text seemed to come from my bank, but the name was faked. That trick is called ___.",
+    "wrong": [
+      "catfishing",
+      "robocall"
+    ]
+  },
+  "why": "A familiar name or number does not prove who really sent it.",
+  "short": "Faking who is calling or texting"
+}

@@ -1,0 +1,102 @@
+{
+  "id": "send-money-only-to-people-you-know",
+  "topic": "money-on-your-phone",
+  "number": 1,
+  "title": "Send money only to people you know",
+  "cards": [
+    {
+      "text": "The FTC says that once you send money through a payment app, it is hard to get back. The FCC says to never send money to someone you do not know.",
+      "mascot": "floyd",
+      "line": "Fast money needs a careful check."
+    },
+    {
+      "text": "Before you send, double-check the recipient name. The FTC says this helps make sure the payment goes to the right person.",
+      "mascot": "bud",
+      "line": "Check the name before you tap send."
+    },
+    {
+      "text": "An unexpected request may be a scam. Talk with the person you know first, using a way you trust.",
+      "mascot": "floyd",
+      "line": "A pause can protect your money."
+    }
+  ],
+  "checks": [
+    {
+      "prompt": "Why should you check before sending money?",
+      "options": [
+        "Hard to get money back",
+        "The app stops",
+        "It goes to the app maker"
+      ],
+      "answer": "Hard to get money back",
+      "why": "The FTC says people may use payment apps to steal money because once you send it, it is hard to get back."
+    },
+    {
+      "prompt": "What should you check before you send a payment?",
+      "options": [
+        "Recipient name",
+        "Friend count",
+        "Screen color"
+      ],
+      "answer": "Recipient name",
+      "why": "The FTC says to double-check the recipient information."
+    },
+    {
+      "prompt": "A person you know appears to ask for money and wants it now. What is safest?",
+      "options": [
+        "Send it now",
+        "Talk with them first",
+        "Ask a stranger to send it for you"
+      ],
+      "answer": "Talk with them first",
+      "why": "The FTC says to speak with the person to confirm an unexpected request."
+    }
+  ],
+  "takeaway": "Check the name and pause before sending money.",
+  "sources": [
+    {
+      "name": "FTC, payment app safety",
+      "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one"
+    },
+    {
+      "name": "FCC, payment apps and scams",
+      "url": "https://www.fcc.gov/more-consumers-adopt-payment-apps-scammers-follow"
+    }
+  ],
+  "checked_on": null,
+  "words": [
+    "bank-tap-to-pay",
+    "bank-pin",
+    "bank-mobile-check-deposit",
+    "bank-direct-deposit"
+  ],
+  "situations": [
+    {
+      "text": "A stranger asks you to send money through a payment app.",
+      "options": [
+        "Safe",
+        "Risky"
+      ],
+      "answer": "Risky",
+      "why": "The FCC says to never send money to someone you do not know."
+    },
+    {
+      "text": "Before you tap send, should you double-check the recipient name?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "Yes",
+      "why": "The FTC says this helps make sure the payment goes to the right person."
+    },
+    {
+      "text": "Money sent through a payment app is easy to get back.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "why": "The FTC says once you send it, it is hard to get back."
+    }
+  ]
+}

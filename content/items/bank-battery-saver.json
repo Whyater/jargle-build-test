@@ -1,0 +1,77 @@
+{
+  "id": "bank-battery-saver",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "battery saver",
+  "meaning": "A setting that helps your battery last longer. It cuts back on things your phone does quietly in the background.",
+  "clues": [
+    "It helps your phone last longer between charges.",
+    "It does this by cutting back what runs quietly in the background, not by adding power.",
+    "Many phones turn it on by themselves when the battery runs low.",
+    "On an iPhone, the same idea is called Low Power Mode.",
+    "It has two words. The first is what holds your phone's power, and the second starts with S."
+  ],
+  "assumes": [
+    "Wireless charging charges a phone on a pad, with no cable",
+    "A power bank is a portable charger",
+    "Screen brightness is how bright the screen looks"
+  ],
+  "decoys": [
+    {
+      "term": "wireless charging",
+      "meaning": "Charging a phone by setting it on a pad, with no cable plugged in.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Inductive_charging"
+      ]
+    },
+    {
+      "term": "screen brightness",
+      "meaning": "How bright the screen looks, from dim to bright.",
+      "source_urls": [
+        "https://support.apple.com/en-us/109351"
+      ]
+    },
+    {
+      "term": "power bank",
+      "meaning": "A small portable battery you carry to charge your phone when no outlet is near.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Battery_pack"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "I ran on a wall plug and nothing else. Not one battery worry in my whole life!"
+    },
+    {
+      "speaker": "bud",
+      "text": "Try it: switch on battery saver when you are out for the day. Your phone sips power instead of gulping it."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Apple Support, Use Low Power Mode to save battery life on your iPhone or iPad",
+      "url": "https://support.apple.com/en-us/101604"
+    },
+    {
+      "name": "Android Help, Change to dark theme or adjust the color scheme on your Android device",
+      "url": "https://support.google.com/android/answer/9730472"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true,
+  "blank": {
+    "sentence": "I turned on ___ so my phone would cut back on quiet background work and last longer.",
+    "wrong": [
+      "dark mode",
+      "do not disturb"
+    ]
+  },
+  "why": "It helps your battery last longer by cutting back background work.",
+  "short": "Setting that makes battery last longer"
+}
