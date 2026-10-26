@@ -1,0 +1,72 @@
+{
+  "id": "bank-cache",
+  "kind": "term",
+  "topic": "how-the-internet-works",
+  "term": "cache",
+  "meaning": "Saved copies of pieces of a website kept on your device. They help pages open faster the next time.",
+  "clues": [
+    "It saves something to make things quicker later.",
+    "What it saves are parts of websites, like pictures and logos.",
+    "Your browser looks here first, instead of downloading the same picture again.",
+    "It can fill up over time, and you can clear it in your browser settings.",
+    "It has five letters and starts with C. It sounds like the word for money you can hold."
+  ],
+  "assumes": [
+    "Browsing history is a list of pages you visited",
+    "RAM is a computer's short-term working memory",
+    "A trash folder holds deleted files for a while"
+  ],
+  "decoys": [
+    {
+      "term": "browsing history",
+      "meaning": "A list of the web pages you have visited before.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Web_browsing_history"
+      ]
+    },
+    {
+      "term": "RAM",
+      "meaning": "The short-term working memory a computer uses for what it is doing right now.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Random-access_memory"
+      ]
+    },
+    {
+      "term": "trash folder",
+      "meaning": "A folder where deleted files wait before they are erased for good.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Trash_(computing)"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "I kept my favorite files in the top desk drawer so I never had to dig. Same trick!"
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: if a site looks stuck on old info, refresh the page or clear its saved copies in your browser settings."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Cloudflare, What is caching?",
+      "url": "https://www.cloudflare.com/learning/cdn/what-is-caching/"
+    },
+    {
+      "name": "MDN Web Docs, Cache",
+      "url": "https://developer.mozilla.org/en-US/docs/Glossary/Cache"
+    },
+    {
+      "name": "Merriam-Webster, cache",
+      "url": "https://www.merriam-webster.com/dictionary/cache"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true
+}

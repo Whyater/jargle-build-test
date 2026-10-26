@@ -1,0 +1,71 @@
+{
+  "id": "bank-buy-now-pay-later",
+  "kind": "term",
+  "topic": "money-on-your-phone",
+  "term": "buy now pay later",
+  "meaning": "A way to get something now and pay in smaller parts later, such as four payments over a few weeks.",
+  "clues": [
+    "You get the item right away, but you pay for it later, in parts.",
+    "Shops offer it at checkout, online or in the store.",
+    "A common plan splits what you owe into four payments, a couple of weeks apart.",
+    "Many plans charge no interest, but late payments can bring fees.",
+    "It has four words. Its nickname is four letters: B, N, P, L."
+  ],
+  "assumes": [
+    "Layaway keeps the item at the store until you finish paying",
+    "A debit card takes money from your account right away"
+  ],
+  "decoys": [
+    {
+      "term": "layaway",
+      "meaning": "A store plan where you pay a little at a time. You take the item home only after the last payment.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Layaway"
+      ]
+    },
+    {
+      "term": "prepaid card",
+      "meaning": "A card you load with money ahead of time. You can spend only what you loaded.",
+      "source_urls": [
+        "https://www.consumerfinance.gov/consumer-tools/prepaid-cards/"
+      ]
+    },
+    {
+      "term": "debit card",
+      "meaning": "A plastic card linked to your bank account. When you pay with it, the money comes straight out of your account.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Debit_card"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, layaway meant the store held your coat until it was paid for. We called it patience."
+    },
+    {
+      "speaker": "bud",
+      "text": "This one is different: you take it home right away. Check the late fees first, and be sure you can cover each payment."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "CFPB, What is a Buy Now, Pay Later loan?",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-buy-now-pay-later-bnpl-loan-en-2119/"
+    },
+    {
+      "name": "FTC, Want to buy now but pay later? Read this first",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2022/12/want-buy-now-pay-later-read-first"
+    },
+    {
+      "name": "Wikipedia, Buy now, pay later",
+      "url": "https://en.wikipedia.org/wiki/Buy_now,_pay_later"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

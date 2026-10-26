@@ -1,0 +1,72 @@
+{
+  "id": "bank-instant-camera",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "instant camera",
+  "meaning": "A camera that prints a photo right after you take it. You watch the picture slowly appear on the paper.",
+  "clues": [
+    "It makes a picture you can hold.",
+    "The photo slides out of the camera itself and develops while you wait.",
+    "You did not need to take the film to a store.",
+    "A company called Polaroid made the most famous ones.",
+    "It has two words. The first means \"right away\"."
+  ],
+  "assumes": [
+    "A disposable camera has film that is developed after it is full",
+    "A photo booth is a booth that gives you a strip of pictures",
+    "A slide projector shines pictures on a wall"
+  ],
+  "decoys": [
+    {
+      "term": "disposable camera",
+      "meaning": "A camera with film inside that you drop off to be developed after the film is full.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Single-use_camera"
+      ]
+    },
+    {
+      "term": "photo booth",
+      "meaning": "A small booth where you sit for a strip of pictures.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Photo_booth"
+      ]
+    },
+    {
+      "term": "slide projector",
+      "meaning": "A machine that shines photo slides onto a wall.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Slide_projector"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Take a picture, wave it around, watch a face appear. Honestly, it felt like magic."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: your phone shows the photo at once. A small photo printer can still print one on paper if you like."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Wikipedia, Instant camera",
+      "url": "https://en.wikipedia.org/wiki/Instant_camera"
+    },
+    {
+      "name": "Britannica, Polaroid Corporation",
+      "url": "https://www.britannica.com/technology/Polaroid-Corporation"
+    },
+    {
+      "name": "Britannica, Polaroid Land Camera",
+      "url": "https://www.britannica.com/technology/Polaroid-Land-camera"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

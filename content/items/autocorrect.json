@@ -1,0 +1,71 @@
+{
+  "id": "autocorrect",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "autocorrect",
+  "meaning": "A phone keyboard feature that fixes misspelled words as you type.",
+  "clues": [
+    "It fixes a misspelled word as you type. It does not take speech, guess the next word, or swap a saved phrase.",
+    "It may underline or replace a word that the keyboard thinks is wrong.",
+    "You can often undo its change or add a word to your personal dictionary.",
+    "It works while you type a text or note on a phone.",
+    "It has eleven letters and starts with A."
+  ],
+  "assumes": [],
+  "decoys": [
+    {
+      "term": "Dictation",
+      "meaning": "A phone feature that turns spoken words into written words.",
+      "source_urls": [
+        "https://support.google.com/gboard/answer/2781851"
+      ]
+    },
+    {
+      "term": "Predictive text",
+      "meaning": "A keyboard feature that suggests the next word while you type.",
+      "source_urls": [
+        "https://support.google.com/gboard/answer/7068415"
+      ]
+    },
+    {
+      "term": "Text replacement",
+      "meaning": "A shortcut that expands a short set of letters into a saved word or phrase.",
+      "source_urls": [
+        "https://support.apple.com/guide/iphone/use-shorthand-for-frequently-used-text-iph6d01d862/ios"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try typing a short note. If a word changes by itself, tap the delete key right away to undo the change."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "We proofread a letter before we mailed it, because a mailed letter could not be taken back. Reading a text before you send it works the same way."
+    },
+    {
+      "speaker": "bud",
+      "text": "If a word has a red underline, tap it to see the keyboard's suggestions."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Google Help, Get word suggestions and fix mistakes",
+      "url": "https://support.google.com/gboard/answer/7068415"
+    },
+    {
+      "name": "Google Help, Type with your voice",
+      "url": "https://support.google.com/gboard/answer/2781851"
+    },
+    {
+      "name": "Apple Support, Set up shorthand for frequently used text",
+      "url": "https://support.apple.com/guide/iphone/use-shorthand-for-frequently-used-text-iph6d01d862/ios"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1
+}

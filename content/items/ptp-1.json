@@ -1,0 +1,79 @@
+{
+  "id": "ptp-1",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "airplane mode",
+  "meaning": "A phone setting that turns off calls, texts, and most wireless signals. It can help on trips and save battery.",
+  "clues": [
+    "It switches off your phone's calls, texts, and most wireless signals, but the phone stays on.",
+    "It can save battery power.",
+    "Turning it on and then off again can refresh a weak signal.",
+    "Its name has a flying machine in it, and it can help lower extra charges when you travel.",
+    "It has two words. The first has eight letters and starts with A."
+  ],
+  "assumes": [
+    "Calls still reach a phone that is only silenced",
+    "A phone using another network is still connected"
+  ],
+  "decoys": [
+    {
+      "term": "do not disturb",
+      "meaning": "A setting that silences calls and alerts until you turn it off or its schedule ends.",
+      "source_urls": [
+        "https://support.apple.com/en-us/105112",
+        "https://support.google.com/android/answer/9069335"
+      ]
+    },
+    {
+      "term": "silent mode",
+      "meaning": "A setting where the phone does not ring or play alert sounds.",
+      "source_urls": [
+        "https://support.apple.com/guide/iphone/silence-iphone-iph81c7fd7d1/26/ios/26"
+      ]
+    },
+    {
+      "term": "roaming",
+      "meaning": "Using another phone network when you are outside your own network's area.",
+      "source_urls": [
+        "https://support.apple.com/guide/iphone/view-or-change-cellular-data-settings-iph3dd5f213/ios"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. Open quick settings (swipe down on Android, or open Control Center on iPhone), tap the airplane, then tap it again to turn it off.",
+      "link_urls": [
+        "https://support.apple.com/en-us/108785",
+        "https://support.google.com/pixelphone/answer/2819583"
+      ]
+    },
+    {
+      "speaker": "floyd",
+      "tone": "neutral",
+      "text": "One tap and the phone stops reaching out. Calm. I like it."
+    },
+    {
+      "speaker": "bud",
+      "text": "Turn it back off when you want calls and texts again."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Apple Support, Use Airplane Mode on your iPhone, iPad, Apple Watch, and Apple Vision Pro",
+      "url": "https://support.apple.com/en-us/108785"
+    },
+    {
+      "name": "Pixel Phone Help, Control airplane mode, private DNS and other network settings",
+      "url": "https://support.google.com/pixelphone/answer/2819583"
+    },
+    {
+      "name": "AT&T, Turning Airplane mode on and off",
+      "url": "https://www.att.com/device-support/article/14590/"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1
+}

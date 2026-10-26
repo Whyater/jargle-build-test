@@ -1,0 +1,68 @@
+{
+  "id": "bank-training-data",
+  "kind": "term",
+  "topic": "talking-computers",
+  "term": "training data",
+  "meaning": "The examples a computer program learns from. Better, more varied examples usually help it make better guesses.",
+  "clues": [
+    "It is a big pile of information stored on computers.",
+    "It is made of many examples, such as photos, sentences, or sounds.",
+    "A computer studies it to learn patterns before it does a real job.",
+    "If the examples are poor or unfair, the computer can learn bad habits.",
+    "It has two words. The first starts with T and the second starts with D."
+  ],
+  "assumes": [
+    "A database stores organized information",
+    "A backup is a spare copy of files",
+    "A spreadsheet is a grid of numbers"
+  ],
+  "decoys": [
+    {
+      "term": "database",
+      "meaning": "A big collection of facts kept on a computer in an organized way.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Database"
+      ]
+    },
+    {
+      "term": "backup",
+      "meaning": "A spare copy of your files, kept somewhere else in case the originals are lost.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Backup"
+      ]
+    },
+    {
+      "term": "spreadsheet",
+      "meaning": "A program with a grid of rows and columns for numbers and math.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Spreadsheet"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "It is like school. The books you study decide what you know."
+    },
+    {
+      "speaker": "bud",
+      "text": "Right. So a tool can be great at some topics and poor at others. Tip: check its answers on topics that matter."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Training, validation, and test data sets",
+      "url": "https://en.wikipedia.org/wiki/Training,_validation,_and_test_data_sets"
+    },
+    {
+      "name": "Britannica, Machine learning",
+      "url": "https://www.britannica.com/technology/machine-learning"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true
+}

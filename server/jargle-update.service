@@ -1,0 +1,16 @@
+[Unit]
+Description=Update the Jargle static website
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+TimeoutStartSec=15min
+User=jargle
+Group=jargle
+ExecStart=/usr/local/bin/jargle-update
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ReadWritePaths=/var/www/jargle /var/lib/jargle
+ProtectHome=yes

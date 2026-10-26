@@ -1,0 +1,74 @@
+{
+  "id": "vcr",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "VCR",
+  "meaning": "A home video machine that records TV shows on a cassette and plays them later.",
+  "clues": [
+    "It records pictures and sound for you to watch later.",
+    "You plug it into a TV, and it stores shows from the TV on a plastic cassette with magnetic tape.",
+    "You can press play, stop, rewind, and fast forward.",
+    "VHS became a common home recording choice in the late twentieth century.",
+    "Its three letters stand for a video cassette recorder."
+  ],
+  "assumes": [
+    "A camcorder is a portable video recorder made to hold in your hand"
+  ],
+  "decoys": [
+    {
+      "term": "movie projector",
+      "meaning": "A machine that shines light through a motion picture strip to show moving images on a screen.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Movie_projector"
+      ]
+    },
+    {
+      "term": "camcorder",
+      "meaning": "A small camera that records video and sound.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Camcorder"
+      ]
+    },
+    {
+      "term": "reel-to-reel tape recorder",
+      "meaning": "A machine that records sound on a long magnetic tape wound between two open reels.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Reel-to-reel_audio_tape_recording"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "You could record a program and watch it later. Saving a show for a busy evening is still a handy idea."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: watch shows over the internet when you want."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "The buttons told you what the machine was doing. Play, stop, and rewind were easy to see."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Smithsonian, Video Cassette Recorder",
+      "url": "https://www.si.edu/object/video-cassette-recorder:nmah_1329884"
+    },
+    {
+      "name": "Smithsonian, Betamax recorder",
+      "url": "https://www.si.edu/object/sony-model-sl-7200a-betamax-video-tape-recorder:nmah_1344556"
+    },
+    {
+      "name": "Wikipedia, Camcorder",
+      "url": "https://en.wikipedia.org/wiki/Camcorder"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2
+}

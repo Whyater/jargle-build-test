@@ -1,0 +1,73 @@
+{
+  "id": "bank-reply-all",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "reply all",
+  "meaning": "An email button that sends your answer to everyone who got the first message, not just the sender.",
+  "clues": [
+    "It is a choice you find when you open an email.",
+    "It is about who will receive what you write.",
+    "It answers the sender and everyone else who got the message.",
+    "Pressing it by mistake can send your private joke to the whole office.",
+    "It has two words. The first starts with R and the second is a small word meaning every one."
+  ],
+  "assumes": [
+    "Cc sends a copy that everyone can see",
+    "Bcc sends a copy that others cannot see",
+    "An attachment is a file sent with an email"
+  ],
+  "decoys": [
+    {
+      "term": "Cc",
+      "meaning": "A line where you add people who should get a copy of an email. Everyone can see their names.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Carbon_copy"
+      ]
+    },
+    {
+      "term": "Bcc",
+      "meaning": "A line for people who get a copy of an email without the others seeing their names.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Carbon_copy"
+      ]
+    },
+    {
+      "term": "attachment",
+      "meaning": "A file, such as a photo or document, that is sent along with an email.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Email_attachment",
+        "https://support.apple.com/guide/iphone/add-email-attachments-iph8580f163b/ios"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, a memo went to the whole list, and we called that \"oops.\""
+    },
+    {
+      "speaker": "bud",
+      "text": "Same today. Tip: before you press send, look at the To line. Does everyone on it need your answer?"
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Email",
+      "url": "https://en.wikipedia.org/wiki/Email"
+    },
+    {
+      "name": "Wikipedia, Carbon copy",
+      "url": "https://en.wikipedia.org/wiki/Carbon_copy"
+    },
+    {
+      "name": "Wikipedia, Email attachment",
+      "url": "https://en.wikipedia.org/wiki/Email_attachment"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true
+}

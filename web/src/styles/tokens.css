@@ -1,0 +1,99 @@
+/* Design tokens. Every color, size, shadow and duration in the app comes from here.
+   Sizes are in rem so the three text sizes scale the whole app. */
+
+@font-face {
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/fredoka-700.woff2') format('woff2');
+}
+
+:root {
+  /* Ground and ink */
+  --bg: #fff8ee; /* cream page */
+  --surface: #ffffff; /* cards and sheets */
+  --surface-2: #fdf0e1; /* sunk panels, tracks */
+  --ink: #2b2340; /* text, 15:1 on cream */
+  --ink-soft: #5e5577; /* secondary text, 7:1 on cream */
+  --line-color: #efe2d0; /* card edges and dividers, never text */
+
+  /* Brand colors. Text on grape is white; on every other fill it is ink. */
+  --grape: #7350f5; /* primary, white text 5:1 */
+  --grape-deep: #5236c9; /* its press ledge */
+  --grape-soft: #ece6ff; /* tints, active tab pill */
+  --on-grape: #ffffff; /* every text on a grape fill, 5:1 */
+  --grape-chip: rgba(43, 35, 64, 0.28); /* dark chip on grape, white text 6.9:1 */
+  --coral: #ff6b5b; /* Floyd */
+  --coral-deep: #d9493a;
+  --coral-soft: #ffe4df;
+  --mint: #2ec4a6; /* Bud */
+  --mint-deep: #1d9a81;
+  --mint-soft: #d8f6ee;
+  --sunny: #ffc83d; /* XP, coins, streak */
+  --sunny-deep: #e09a00;
+  --sunny-soft: #fff1c7;
+  --flame: #ff8a3d; /* streak flame */
+
+  /* Answer states (always paired with a word or icon) */
+  --correct: #3bc46b;
+  --correct-deep: #23964d;
+  --correct-soft: #dcf6e4;
+  --wrong: #ff5a6e;
+  --wrong-deep: #d63a50;
+  --wrong-soft: #ffe1e5;
+  --ok-ink: #17703a; /* green text, 5.6:1 on white */
+  --bad-ink: #b4233a; /* red text, 5.9:1 on white */
+
+  /* Type */
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Fredoka', 'Fredoka Fallback', ui-rounded, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --text-xs: 0.8125rem; /* 13 */
+  --text-sm: 0.9375rem; /* 15 */
+  --text-base: 1.0625rem; /* 17 */
+  --text-md: 1.25rem; /* 20 */
+  --text-lg: 1.5rem; /* 24 */
+  --text-xl: 1.875rem; /* 30 */
+  --text-2xl: 2.375rem; /* 38 */
+  --leading: 1.45;
+  --leading-tight: 1.15;
+
+  /* Spacing, 4 px steps */
+  --s1: 0.25rem;
+  --s2: 0.5rem;
+  --s3: 0.75rem;
+  --s4: 1rem;
+  --s5: 1.25rem;
+  --s6: 1.5rem;
+  --s8: 2rem;
+  --s10: 2.5rem;
+
+  /* Shape */
+  --radius-sm: 0.75rem; /* 12 */
+  --radius: 1.125rem; /* 18 */
+  --radius-lg: 1.5rem; /* 24 */
+  --radius-pill: 999px;
+  --touch: 3rem; /* 48 px minimum tap target */
+  --tabbar-h: 4.25rem;
+
+  /* Shadows. The candy ledge is the one hard shadow: a darker bottom edge that a button sinks onto. */
+  --ledge: 0.25rem;
+  --shadow-card: 0 2px 0 var(--line-color), 0 10px 24px -14px rgba(43, 35, 64, 0.28);
+  --shadow-float: 0 4px 0 rgba(43, 35, 64, 0.06), 0 16px 32px -16px rgba(43, 35, 64, 0.4);
+  --focus-ring: 0 0 0 3px var(--bg), 0 0 0 6px var(--grape);
+
+  /* Motion */
+  --t-fast: 110ms;
+  --t-med: 220ms;
+  --t-slow: 420ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* A system font sized close to Fredoka so the swap barely moves the layout. */
+@font-face {
+  font-family: 'Fredoka Fallback';
+  src: local('Arial Rounded MT Bold'), local('Arial Bold'), local('Arial');
+  font-weight: 700;
+  size-adjust: 98%;
+}

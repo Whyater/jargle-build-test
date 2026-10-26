@@ -1,0 +1,68 @@
+{
+  "id": "set-who-can-see-your-posts",
+  "topic": "internet-talk",
+  "number": 2,
+  "title": "Choose who can see your posts",
+  "cards": [
+    {
+      "text": "The FTC says privacy settings can limit who sees what you post and who can connect with you. The CISA says managing these settings can improve privacy and safety.",
+      "mascot": "floyd",
+      "line": "Choose your audience with care."
+    },
+    {
+      "text": "Check those settings from time to time. The FTC says to learn how to turn them on for your accounts, apps, and devices.",
+      "mascot": "bud",
+      "line": "A quick check can help."
+    },
+    {
+      "text": "The FTC says you cannot fully control who sees your profile, even with privacy settings. Think before you share because someone may save or share a photo later.",
+      "mascot": "floyd",
+      "line": "Pause, then post."
+    }
+  ],
+  "checks": [
+    {
+      "prompt": "What do privacy settings help you choose?",
+      "options": [
+        "Who can see your posts",
+        "Phone speed",
+        "Which words are in a book"
+      ],
+      "answer": "Who can see your posts",
+      "why": "The FTC says privacy settings help limit who can see what you post."
+    },
+    {
+      "prompt": "What does the FTC say to do about privacy settings?",
+      "options": [
+        "Learn how to turn them on, then do it",
+        "Leave them as they are",
+        "Turn them off to save time"
+      ],
+      "answer": "Learn how to turn them on, then do it",
+      "why": "The FTC says to learn how to turn privacy settings on, then use them."
+    },
+    {
+      "prompt": "What is a good step before you post a photo?",
+      "options": [
+        "Think before you post",
+        "Post it fast",
+        "Send it to everyone you know"
+      ],
+      "answer": "Think before you post",
+      "why": "The FTC says to think before posting because people may save or share what you put online."
+    }
+  ],
+  "takeaway": "Check your privacy settings and think before you share.",
+  "sources": [
+    {
+      "name": "FTC, Heads Up: Stop. Think. Connect.",
+      "url": "https://consumer.ftc.gov/articles/heads-up"
+    },
+    {
+      "name": "CISA, manage your online presence",
+      "url": "https://www.cisa.gov/resources-tools/training/manage-your-online-presence"
+    }
+  ],
+  "checked_on": null,
+  "release_day": 2
+}

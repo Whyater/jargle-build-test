@@ -1,0 +1,72 @@
+{
+  "id": "bank-pop-up",
+  "kind": "term",
+  "topic": "how-the-internet-works",
+  "term": "pop-up",
+  "meaning": "A small window that suddenly appears on top of a web page. It is often an ad or a message.",
+  "clues": [
+    "It is a small box that shows up on your screen.",
+    "It appears suddenly by itself, even when you did not click or hover on anything. It covers part of the page you were reading.",
+    "Many are ads. Some say something is wrong with your computer and tell you to call a number.",
+    "Browsers can block most of them, and you can allow the ones you trust.",
+    "It is one word with a hyphen in the middle. The first part starts with P."
+  ],
+  "assumes": [
+    "A drop-down menu is a list of choices that opens when you click",
+    "A tooltip is a small note that shows when you hover",
+    "A scroll bar moves a page up and down"
+  ],
+  "decoys": [
+    {
+      "term": "drop-down menu",
+      "meaning": "A list of choices that opens when you click a button.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Drop-down_list"
+      ]
+    },
+    {
+      "term": "tooltip",
+      "meaning": "A small note that shows when you rest your pointer on something.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Tooltip"
+      ]
+    },
+    {
+      "term": "scroll bar",
+      "meaning": "The strip along the side of a window that you drag to move up and down.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Scrollbar"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "A pop-up! Like a jack-in-the-box on your screen. Funny the first time."
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: if a pop-up says your phone is in trouble, do not tap anything in it. Close the tab instead."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, pop-up",
+      "url": "https://www.merriam-webster.com/dictionary/pop-up"
+    },
+    {
+      "name": "Wikipedia, Pop-up ad",
+      "url": "https://en.wikipedia.org/wiki/Pop-up_ad"
+    },
+    {
+      "name": "Google Chrome Help, Block or allow pop-ups in Chrome",
+      "url": "https://support.google.com/chrome/answer/95472"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

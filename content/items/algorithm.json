@@ -1,0 +1,69 @@
+{
+  "id": "algorithm",
+  "kind": "term",
+  "topic": "talking-computers",
+  "term": "algorithm",
+  "meaning": "A set of steps for solving a problem or doing a task.",
+  "clues": [
+    "It is an idea used in computing.",
+    "It is something a computer uses behind the scenes to get a job done.",
+    "It gives step-by-step instructions for solving a problem.",
+    "The steps can be followed in a set order to reach an answer.",
+    "Its name starts with A and has nine letters."
+  ],
+  "assumes": [
+    "A database stores organized information",
+    "A browser displays pages from the internet",
+    "A firewall helps control network traffic"
+  ],
+  "decoys": [
+    {
+      "term": "database",
+      "meaning": "Facts kept together on a computer.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/database",
+        "https://csrc.nist.gov/glossary/term/database"
+      ]
+    },
+    {
+      "term": "browser",
+      "meaning": "A program used to view pages on the internet.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/browser"
+      ]
+    },
+    {
+      "term": "firewall",
+      "meaning": "A system that helps block unwanted access to a computer or network.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/firewall",
+        "https://csrc.nist.gov/glossary/term/firewall"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. Ask them to name a task, then write the steps in order, one per line."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Recipes and checklists worked the same way. A clear order keeps a task from going off track."
+    },
+    {
+      "speaker": "bud",
+      "text": "If a step is missing, the result may be wrong. Read your list from the start and test each step."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "NIST, algorithm",
+      "url": "https://csrc.nist.gov/glossary/term/algorithm"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3
+}

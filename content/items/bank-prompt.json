@@ -1,0 +1,72 @@
+{
+  "id": "bank-prompt",
+  "kind": "term",
+  "topic": "talking-computers",
+  "term": "prompt",
+  "meaning": "The words you type or say to an AI tool to tell it what you want.",
+  "clues": [
+    "It is words you type or say to start something.",
+    "You give it to an AI tool, like a chatbot or a picture maker.",
+    "The clearer and more detailed it is, the better the answer tends to be.",
+    "You might write \"Explain this in simple words\" or \"Draw a cat in a hat.\"",
+    "It has six letters and starts with P. It also means to nudge someone to speak."
+  ],
+  "assumes": [
+    "A search query is words typed into a search box",
+    "A caption is words printed with a picture",
+    "A keyboard shortcut is keys pressed together"
+  ],
+  "decoys": [
+    {
+      "term": "search query",
+      "meaning": "The words you type into a search box to look something up.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Web_query"
+      ]
+    },
+    {
+      "term": "caption",
+      "meaning": "Words printed with a picture to describe it.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/caption"
+      ]
+    },
+    {
+      "term": "keyboard shortcut",
+      "meaning": "A set of keys pressed together to do a task fast, like Ctrl and C.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Keyboard_shortcut"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, a prompt was a blinking line waiting for your command. Rude, but very patient."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today you can use plain English. Tip: add details, like who it is for and how long it should be."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Prompt engineering",
+      "url": "https://en.wikipedia.org/wiki/Prompt_engineering"
+    },
+    {
+      "name": "Wikipedia, Command-line interface",
+      "url": "https://en.wikipedia.org/wiki/Command-line_interface"
+    },
+    {
+      "name": "Britannica, Large language model",
+      "url": "https://www.britannica.com/topic/large-language-model"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

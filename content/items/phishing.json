@@ -1,0 +1,75 @@
+{
+  "id": "phishing",
+  "kind": "term",
+  "topic": "scams-and-fakes",
+  "term": "phishing",
+  "meaning": "A message that pretends to be from a company you trust. It tries to get you to click a link and share private details.",
+  "clues": [
+    "Someone is trying to get your private details or your money.",
+    "The sender pretends to be a company you know and trust, like your bank.",
+    "It comes as an email or text. It usually urges you to open a link or attachment, not to call a number.",
+    "The message often says there's a problem with your account and you must act fast.",
+    "Its name has eight letters and starts with P."
+  ],
+  "assumes": [],
+  "decoys": [
+    {
+      "term": "tech support scam",
+      "meaning": "Someone says your computer has a problem. Then they ask for money or access to fix it.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams"
+      ]
+    },
+    {
+      "term": "ransomware",
+      "meaning": "Harmful software that scrambles your files. It demands payment to unscramble them.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/how-recognize-remove-avoid-malware"
+      ]
+    },
+    {
+      "term": "identity theft",
+      "meaning": "Someone uses your name or account numbers without your permission, such as to buy things in your name.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/what-know-about-identity-theft"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Say a text claims there's a problem with your bank account and gives you a link. Try it: don't tap the link. Call the bank using a number you already know is real."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "When a caller said they were from the bank, we looked up the number in the phone book and called back. That habit still works."
+    },
+    {
+      "speaker": "bud",
+      "text": "Hurry-up words like 'act now' are a warning sign too."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, phishing",
+      "url": "https://www.merriam-webster.com/dictionary/phishing"
+    },
+    {
+      "name": "FTC, How To Recognize and Avoid Phishing Scams",
+      "url": "https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams"
+    },
+    {
+      "name": "CISA, Don't take the bait",
+      "url": "https://www.cisa.gov/secure-our-world/recognize-and-report-phishing"
+    },
+    {
+      "name": "FCC, Caller ID Spoofing",
+      "url": "https://www.fcc.gov/consumers/guides/spoofing"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3
+}

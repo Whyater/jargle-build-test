@@ -1,0 +1,72 @@
+{
+  "id": "bank-router",
+  "kind": "term",
+  "topic": "how-the-internet-works",
+  "term": "router",
+  "meaning": "A small box that shares your home's internet with your phones, TVs, and computers. It sends data to the right device.",
+  "clues": [
+    "It is the box in your home that makes the wireless network and sends each message to the right device.",
+    "It is usually a small box with a few antennas and blinking lights.",
+    "Your phone joins the network it makes, and that network has a name and a password.",
+    "It plugs into the modem with a cable.",
+    "It has six letters and starts with R."
+  ],
+  "assumes": [
+    "A modem connects your home to your internet company",
+    "A network switch links wired devices",
+    "A range extender boosts a wireless signal"
+  ],
+  "decoys": [
+    {
+      "term": "modem",
+      "meaning": "A box that connects your home to your internet company's line.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/modem"
+      ]
+    },
+    {
+      "term": "network switch",
+      "meaning": "A box that links many wired devices together, such as in an office.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Network_switch"
+      ]
+    },
+    {
+      "term": "range extender",
+      "meaning": "A gadget that boosts a wireless signal so it reaches farther.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Wireless_repeater"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, one phone line meant one person online at a time. Now this little box juggles the whole family!"
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: when the internet acts up, unplug the router for ten seconds and plug it back in."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Cloudflare, What is a router?",
+      "url": "https://www.cloudflare.com/learning/network-layer/what-is-a-router/"
+    },
+    {
+      "name": "Wikipedia, Router (computing)",
+      "url": "https://en.wikipedia.org/wiki/Router_(computing)"
+    },
+    {
+      "name": "Britannica, router",
+      "url": "https://www.britannica.com/technology/router-computer-science"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

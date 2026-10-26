@@ -1,0 +1,87 @@
+{
+  "id": "smishing",
+  "kind": "term",
+  "topic": "scams-and-fakes",
+  "term": "smishing",
+  "meaning": "Fake text messages that try to make you click a link or share personal information.",
+  "clues": [
+    "It is an odd message that may ask for money or private facts.",
+    "It arrives as a text message, not as a phone call or a letter in the mail.",
+    "A link may lead to a fake site that asks for a login or card number.",
+    "Ignore it. Report it. Contact the real company another way.",
+    "It has eight letters and starts with S."
+  ],
+  "assumes": [],
+  "decoys": [
+    {
+      "term": "Vishing",
+      "meaning": "A phone call or voicemail that tries to get your information or money.",
+      "source_urls": [
+        "https://www.uspis.gov/news/scam-article/vishing"
+      ]
+    },
+    {
+      "term": "Robocall",
+      "meaning": "A call that plays a recorded message instead of a live person. Many are scams.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/robocalls"
+      ]
+    },
+    {
+      "term": "Caller ID spoofing",
+      "meaning": "Faking the name or number on caller ID so a call looks like it is from someone else.",
+      "source_urls": [
+        "https://www.fcc.gov/spoofing"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "If a text says your account has a problem, do not use its link. Open the company website yourself or call a number you already trust."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "An unexpected letter made us pause before replying. An unexpected text deserves that same pause."
+    },
+    {
+      "speaker": "bud",
+      "text": "You can report unwanted texts to your phone company and the FTC."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Federal Trade Commission, How to recognize and report spam text messages",
+      "url": "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+    },
+    {
+      "name": "Federal Trade Commission, Phone scams",
+      "url": "https://consumer.ftc.gov/articles/phone-scams"
+    },
+    {
+      "name": "Federal Trade Commission, Robocalls",
+      "url": "https://consumer.ftc.gov/articles/robocalls"
+    },
+    {
+      "name": "FCC, Stop unwanted robocalls and texts",
+      "url": "https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts"
+    },
+    {
+      "name": "United States Postal Inspection Service, Vishing",
+      "url": "https://www.uspis.gov/news/scam-article/vishing"
+    },
+    {
+      "name": "FCC, Spoofing",
+      "url": "https://www.fcc.gov/spoofing"
+    },
+    {
+      "name": "Federal Trade Commission, Glossary of scams and legal terms",
+      "url": "https://www.ftc.gov/news-events/topics/glossary-scams-legal-terms"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2
+}

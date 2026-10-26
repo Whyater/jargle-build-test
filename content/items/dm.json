@@ -1,0 +1,79 @@
+{
+  "id": "dm",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "DM",
+  "meaning": "A private message that only the person you send it to can see, sent on a social media site.",
+  "clues": [
+    "It is a way to send a message through a social media app.",
+    "Only the person you send it to can see it.",
+    "It is separate from words shown to everyone who follows you.",
+    "People use it to share details they would not post for everyone to see.",
+    "Its short name uses two letters."
+  ],
+  "assumes": [
+    "A post is a message shared on a social platform",
+    "A comment is a reply attached to a post or video",
+    "A tag marks or names an account in a post or photo"
+  ],
+  "decoys": [
+    {
+      "term": "post",
+      "meaning": "A message, photo, or video that you share on a social platform for others to see.",
+      "source_urls": [
+        "https://dictionary.cambridge.org/dictionary/english/post"
+      ]
+    },
+    {
+      "term": "comment",
+      "meaning": "A reply written below a post, photo, or video on a social platform.",
+      "source_urls": [
+        "https://www.computerhope.com/issues/ch001972.htm"
+      ]
+    },
+    {
+      "term": "tag",
+      "meaning": "A link to someone's profile that you add to a photo or comment.",
+      "source_urls": [
+        "https://dictionary.cambridge.org/dictionary/english/tag"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try sending a private note to someone you know on a social app. Check the name before you tap send."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "A private note still deserves care. We checked the address before sealing a letter."
+    },
+    {
+      "speaker": "bud",
+      "text": "If a message asks for a code or money, pause and check with the person another way."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Cambridge Dictionary, direct message",
+      "url": "https://dictionary.cambridge.org/dictionary/english/direct-message"
+    },
+    {
+      "name": "Cambridge Dictionary, post",
+      "url": "https://dictionary.cambridge.org/dictionary/english/post"
+    },
+    {
+      "name": "Cambridge Dictionary, tag",
+      "url": "https://dictionary.cambridge.org/dictionary/english/tag"
+    },
+    {
+      "name": "Computer Hope, Facebook posts and comments",
+      "url": "https://www.computerhope.com/issues/ch001972.htm"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2
+}

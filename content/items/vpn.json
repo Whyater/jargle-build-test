@@ -1,0 +1,79 @@
+{
+  "id": "vpn",
+  "kind": "term",
+  "topic": "locks-and-keys",
+  "term": "VPN",
+  "meaning": "Sends your online traffic through a private link. A good one scrambles it, so people on the same Wi-Fi cannot read it.",
+  "clues": [
+    "It is a tool that helps protect your online activity.",
+    "It can help protect you when you use public Wi-Fi.",
+    "It usually sends your connection through a private, scrambled path.",
+    "It cannot hide you fully or stop every bad website.",
+    "Its short name has three letters."
+  ],
+  "assumes": [
+    "A firewall filters some network traffic",
+    "Antivirus software checks for harmful programs",
+    "Private browsing mode does not hide activity from the network"
+  ],
+  "decoys": [
+    {
+      "term": "firewall",
+      "meaning": "A security tool that blocks or allows some network links.",
+      "source_urls": [
+        "https://niccs.cisa.gov/about-niccs/glossary"
+      ]
+    },
+    {
+      "term": "antivirus software",
+      "meaning": "Software that looks for harmful programs and helps remove or block them.",
+      "source_urls": [
+        "https://niccs.cisa.gov/about-niccs/glossary"
+      ]
+    },
+    {
+      "term": "private browsing mode",
+      "meaning": "A browser mode that limits saved history on the device you are using.",
+      "source_urls": [
+        "https://support.google.com/chrome/answer/95464"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "A trusted VPN can protect the connection by sending it through a private path. Still use safe websites and strong account security."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "A locked route helps, but you still choose where to go. We locked the door before leaving home."
+    },
+    {
+      "speaker": "bud",
+      "text": "A VPN cannot stop a fake website from tricking you or make every action private."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "NIST, virtual private network",
+      "url": "https://csrc.nist.gov/glossary/term/virtual_private_network"
+    },
+    {
+      "name": "CISA NICCS glossary",
+      "url": "https://niccs.cisa.gov/about-niccs/glossary"
+    },
+    {
+      "name": "FTC, In the market for a VPN app?",
+      "url": "https://www.ftc.gov/business-guidance/blog/2018/02/market-vpn-app"
+    },
+    {
+      "name": "FTC, Are Public Wi-Fi Networks Safe?",
+      "url": "https://consumer.ftc.gov/are-public-wi-fi-networks-safe-what-you-need-know"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3
+}

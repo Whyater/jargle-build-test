@@ -1,0 +1,16 @@
+{
+  "either": [
+    { "text": "Good guess. Another clue can narrow it down.", "needs_clue": true },
+    { "text": "That one's tricky." },
+    { "text": "Take your time. No clock here." },
+    { "text": "Every miss teaches you a word." },
+    { "text": "New words take a few tries. That's normal." },
+    { "text": "Cross that one off and keep going." }
+  ],
+  "floyd": [
+    { "text": "I always say: read the label first." },
+    { "text": "I've seen plenty of words come and go. You'll get this one." },
+    { "text": "No rush. Patience is an old habit worth keeping." },
+    { "text": "In my experience, a clue is worth reading.", "needs_clue": true }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "the-cloud",
+  "kind": "term",
+  "topic": "how-the-internet-works",
+  "term": "the cloud",
+  "meaning": "A place to keep files on a company's computers. You reach them over the internet, so they are not only on your device.",
+  "clues": [
+    "It's a place to keep your photos and files.",
+    "You can get to what's kept there from more than one device.",
+    "Your files are kept on computers that you reach through the internet.",
+    "A company usually runs it. It keeps your files on many computers.",
+    "Its name starts with T, and its second word is something you see in the sky."
+  ],
+  "assumes": [
+    "A USB flash drive can be plugged into different computers",
+    "A memory card can move between a camera, a phone and a computer",
+    "A hard drive stores files in one computer and works without the internet"
+  ],
+  "decoys": [
+    {
+      "term": "hard drive",
+      "meaning": "A device that stores a computer's files on one or more hard disks.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/hard%20drive"
+      ]
+    },
+    {
+      "term": "USB flash drive",
+      "meaning": "A small stick that plugs into a computer. You save files on it and carry them to another computer.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/flash%20drive"
+      ]
+    },
+    {
+      "term": "memory card",
+      "meaning": "A small, flat card you put into a camera or phone to store data.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/memory%20card"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Your files can be saved there, so if you lose your phone you still have them."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "We kept spare copies of important papers in a second place. A spare copy kept somewhere else still holds."
+    },
+    {
+      "speaker": "bud",
+      "text": "Keep the account safe with a strong password and two-factor login. And if a message says you're out of storage, don't click its link. Contact the company using a number or website you know is real."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, cloud computing",
+      "url": "https://www.merriam-webster.com/dictionary/cloud%20computing"
+    },
+    {
+      "name": "NIST glossary, cloud computing",
+      "url": "https://csrc.nist.gov/glossary/term/cloud_computing"
+    },
+    {
+      "name": "FTC, how to protect your phone from hackers",
+      "url": "https://consumer.ftc.gov/articles/how-protect-your-phone-hackers"
+    },
+    {
+      "name": "FTC, are you really out of storage",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2025/07/are-you-really-out-cloud-storage-or-message-scam"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3
+}

@@ -1,0 +1,68 @@
+{
+  "id": "bank-clickbait",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "clickbait",
+  "meaning": "A teasing headline or picture made to make you click. The story behind it is often disappointing.",
+  "clues": [
+    "It is made to catch your eye.",
+    "It teases you and leaves out the key facts on purpose.",
+    "You have to click to find out more, and the story often turns out to be a letdown.",
+    "Titles like \"You won't believe what happened next!\" are classic examples.",
+    "It is one word with nine letters and starts with C."
+  ],
+  "assumes": [
+    "A poster is a large printed sheet hung on a wall",
+    "A banner ad is an ad strip on a web page",
+    "A spoiler gives away the ending of a story"
+  ],
+  "decoys": [
+    {
+      "term": "poster",
+      "meaning": "A large printed sheet hung on a wall to show an event, a movie, or a message.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Poster"
+      ]
+    },
+    {
+      "term": "banner ad",
+      "meaning": "A long, thin ad that sits across the top or side of a web page.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Web_banner"
+      ]
+    },
+    {
+      "term": "spoiler",
+      "meaning": "A hint or fact that gives away how a movie, book, or show ends.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Spoiler_(media)"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, the papers at the grocery checkout did the same trick. \"Alien Baby Found!\" Every week!"
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: if a headline sounds too wild, see whether a news site you trust reports the same story."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, clickbait",
+      "url": "https://www.merriam-webster.com/dictionary/clickbait"
+    },
+    {
+      "name": "Wikipedia, Clickbait",
+      "url": "https://en.wikipedia.org/wiki/Clickbait"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true
+}

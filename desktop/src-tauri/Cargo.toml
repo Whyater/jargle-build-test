@@ -1,0 +1,24 @@
+[package]
+name = "jargle"
+version = "0.1.0"
+edition = "2021"
+description = "A daily tech word game."
+license = "MIT"
+
+[lib]
+name = "jargle_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = "2"
+
+[dependencies]
+tauri = "2"
+tauri-plugin-opener = "2"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = "s"
+strip = true
+panic = "abort"

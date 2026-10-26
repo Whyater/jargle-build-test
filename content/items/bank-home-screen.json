@@ -1,0 +1,68 @@
+{
+  "id": "bank-home-screen",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "home screen",
+  "meaning": "The main screen on a phone, where your app icons sit. You can arrange them in rows and put them in folders.",
+  "clues": [
+    "It is a place where your apps wait for you.",
+    "It shows small pictures called icons, and you tap one to open an app.",
+    "You can drag the icons around, make folders, and add more pages by swiping sideways.",
+    "Pressing the home button or swiping up from the bottom of the phone takes you back to it.",
+    "It has two words. The first is where you live, and the second is what you look at."
+  ],
+  "assumes": [
+    "A lock screen shows before you unlock the phone",
+    "A home page is the first page a web browser opens",
+    "A taskbar is a strip of buttons at the bottom of a computer screen"
+  ],
+  "decoys": [
+    {
+      "term": "lock screen",
+      "meaning": "The screen that shows when you wake your phone. It stays shut until you unlock it.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Lock_screen"
+      ]
+    },
+    {
+      "term": "home page",
+      "meaning": "The first web page that opens when you start a web browser.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Home_page"
+      ]
+    },
+    {
+      "term": "taskbar",
+      "meaning": "A strip of buttons at the bottom of a computer screen that shows the programs you have open.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Taskbar"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "My desktop was a pile of paper files and sticky notes. Tidy was never my strength."
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: touch and hold an icon to move it. Put the apps you use most on the first page."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Home screen",
+      "url": "https://en.wikipedia.org/wiki/Home_screen"
+    },
+    {
+      "name": "Apple Support, Organize the Home Screen and App Library on your iPhone",
+      "url": "https://support.apple.com/en-us/108324"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

@@ -1,0 +1,68 @@
+{
+  "id": "know-your-phone-lost-or-stolen-steps",
+  "topic": "your-phone",
+  "number": 2,
+  "title": "If your phone is lost or stolen",
+  "cards": [
+    {
+      "text": "The FCC says to try your phone's find-my-phone feature. Even if it may only be lost, lock it from afar to be safe. Some apps can also wipe the data or sound an alarm.",
+      "mascot": "floyd",
+      "line": "First, see if you can find it."
+    },
+    {
+      "text": "The FCC says to tell your phone company right away. It may be able to turn off service and block the device.",
+      "mascot": "bud",
+      "line": "A quick call can stop more use."
+    },
+    {
+      "text": "If the device was stolen, the FCC says to report the theft to the police. Some phone companies ask for proof. Change important passwords if you cannot lock the device.",
+      "mascot": "floyd",
+      "line": "Protect the accounts that matter most."
+    }
+  ],
+  "checks": [
+    {
+      "prompt": "What should you try first?",
+      "options": [
+        "Use the phone's find-my-phone feature",
+        "Call the store where you bought it",
+        "Wait and see if it turns up"
+      ],
+      "answer": "Use the phone's find-my-phone feature",
+      "why": "The FCC says to try to locate the device and lock it when possible."
+    },
+    {
+      "prompt": "Who should you tell about the missing phone?",
+      "options": [
+        "Your phone company",
+        "Your bank",
+        "A company that sells phone cases"
+      ],
+      "answer": "Your phone company",
+      "why": "The FCC says to report the loss to your phone company right away."
+    },
+    {
+      "prompt": "What should you change if you cannot lock the phone?",
+      "options": [
+        "Important account passwords",
+        "Your wallpaper",
+        "The color of your phone case"
+      ],
+      "answer": "Important account passwords",
+      "why": "The FCC says to change passwords for email, money, and social accounts used on the device."
+    }
+  ],
+  "takeaway": "Find the phone, tell your phone company, and protect important accounts.",
+  "sources": [
+    {
+      "name": "FCC, Protect your mobile device",
+      "url": "https://www.fcc.gov/consumers/guides/protect-your-mobile-device"
+    },
+    {
+      "name": "FCC, What To Do If Your Wireless Device Is Stolen",
+      "url": "https://docs.fcc.gov/public/attachments/DOC-313511A1.pdf"
+    }
+  ],
+  "checked_on": null,
+  "release_day": 2
+}

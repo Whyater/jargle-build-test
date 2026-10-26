@@ -1,0 +1,71 @@
+{
+  "id": "bank-firewall",
+  "kind": "term",
+  "topic": "locks-and-keys",
+  "term": "firewall",
+  "meaning": "A barrier that checks the data going into and out of a computer or network. It blocks anything that breaks its safety rules.",
+  "clues": [
+    "It is a tool that helps keep a device or network safe.",
+    "It does its job quietly in the background, without you doing anything.",
+    "It checks data coming in and going out, and blocks what breaks its rules.",
+    "Its name comes from a wall built to stop a real fire from spreading.",
+    "It has eight letters and starts with F. Think of a wall that stops a fire."
+  ],
+  "assumes": [
+    "Antivirus software scans for harmful programs",
+    "A backup is a spare copy of your files"
+  ],
+  "decoys": [
+    {
+      "term": "antivirus",
+      "meaning": "Software that scans a device for harmful programs and removes them.",
+      "source_urls": [
+        "https://www.cisa.gov/news-events/news/understanding-anti-virus-software"
+      ]
+    },
+    {
+      "term": "face unlock",
+      "meaning": "A way to open a phone by looking at it. The phone checks that your face matches the one it saved.",
+      "source_urls": [
+        "https://support.apple.com/en-us/102381"
+      ]
+    },
+    {
+      "term": "backup",
+      "meaning": "A spare copy of your files, kept in a second place in case the first copy is lost.",
+      "source_urls": [
+        "https://support.apple.com/en-us/118426"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, our only firewall was the lock on the computer room door."
+    },
+    {
+      "speaker": "bud",
+      "text": "Windows and Mac computers both come with one built in. Take a peek in your settings to check that yours is turned on."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "CISA, Understanding Firewalls for Home and Small Office Use",
+      "url": "https://www.cisa.gov/news-events/news/understanding-firewalls-home-and-small-office-use"
+    },
+    {
+      "name": "Wikipedia, Firewall (computing)",
+      "url": "https://en.wikipedia.org/wiki/Firewall_(computing)"
+    },
+    {
+      "name": "Microsoft Support, Stay protected with the Windows Security app",
+      "url": "https://support.microsoft.com/en-us/windows/security/windows-security/stay-protected-with-the-windows-security-app"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true
+}

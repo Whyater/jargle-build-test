@@ -1,0 +1,89 @@
+{
+  "id": "dewey-decimal-system",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "Dewey Decimal System",
+  "meaning": "A way libraries sort books by subject using numbers. Books on the same topic sit together on the shelf.",
+  "clues": [
+    "It is a plan libraries use to decide where each book sits on the shelf.",
+    "It splits all subjects into ten big groups, numbered 000 to 900.",
+    "A library pioneer first published it in 1876.",
+    "Books about science sit in the 500s, and books about history sit in the 900s.",
+    "It has three words and eighteen letters, and the first word starts with D."
+  ],
+  "assumes": [
+    "Library of Congress Classification call numbers start with a letter",
+    "A Cutter number only orders books within one subject",
+    "A card catalog lists books but does not set the shelf order"
+  ],
+  "decoys": [
+    {
+      "term": "Library of Congress Classification",
+      "meaning": "Another way libraries order books. It uses letters and numbers, so a book on education starts with L.",
+      "source_urls": [
+        "https://www.loc.gov/aba/dewey/faq.html",
+        "https://www.loc.gov/catdir/cpso/lcco/"
+      ]
+    },
+    {
+      "term": "card catalog",
+      "meaning": "Drawers of small cards that described a library's books. People searched them to see what a library owned.",
+      "source_urls": [
+        "https://guides.loc.gov/card-catalog/card-catalog-history"
+      ]
+    },
+    {
+      "term": "Cutter number",
+      "meaning": "A short number added to a book's label. It puts books on the same subject in order, usually by the author's name.",
+      "source_urls": [
+        "https://libguides.ala.org/catalogingtools/classification"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "Same subject, same shelf. You could wander along it and find neighbors you didn't know to ask for. Browsing still works."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: the same system. Libraries around the world still use it to put books on the shelf."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Still, walk the shelves when you can. And a librarian will help you find your way."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "OCLC, Introduction to the Dewey Decimal Classification",
+      "url": "https://www.oclc.org/content/dam/oclc/dewey/versions/ddc22print/intro.pdf"
+    },
+    {
+      "name": "OCLC, Dewey Decimal Classification",
+      "url": "https://www.oclc.org/en/dewey.html"
+    },
+    {
+      "name": "Library of Congress, Dewey Program FAQ",
+      "url": "https://www.loc.gov/aba/dewey/faq.html"
+    },
+    {
+      "name": "American Library Association, Classification",
+      "url": "https://libguides.ala.org/catalogingtools/classification"
+    },
+    {
+      "name": "Library of Congress, The Library of Congress Card Catalog",
+      "url": "https://guides.loc.gov/card-catalog/card-catalog-history"
+    },
+    {
+      "name": "Library of Congress, Classification Outline",
+      "url": "https://www.loc.gov/catdir/cpso/lcco/"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2
+}

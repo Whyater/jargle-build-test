@@ -1,0 +1,71 @@
+{
+  "id": "bank-telegram",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "telegram",
+  "meaning": "A short message sent over wires and written out at the other end. A messenger then brought it to the door.",
+  "clues": [
+    "It was a short message sent by wire, then delivered by hand.",
+    "You paid by the word, so people kept them very short.",
+    "The word STOP was used where a period would go.",
+    "It started out as Morse code tapped out on a telegraph.",
+    "It has eight letters and starts with T. Western Union stopped sending them in 2006."
+  ],
+  "assumes": [
+    "A fax machine sends a copy of a whole page",
+    "A postcard travels by mail on paper"
+  ],
+  "decoys": [
+    {
+      "term": "fax machine",
+      "meaning": "A machine that scans a paper page and sends a copy over a phone line. Another machine prints the copy.",
+      "source_urls": [
+        "https://www.smithsonianeducation.org/scitech/carbons/fax.html"
+      ]
+    },
+    {
+      "term": "postcard",
+      "meaning": "A card you write on and mail without an envelope.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Postcard"
+      ]
+    },
+    {
+      "term": "typewriter",
+      "meaning": "A machine with a keyboard that presses letters onto paper, one key at a time.",
+      "source_urls": [
+        "https://smithsonianeducation.org/scitech/carbons/typewriters.html"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, we paid by the word, so we wrote like this: ARRIVING TUESDAY STOP. Short and sweet."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: a text message. Same idea, short and fast, but you can use as many words as you like."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "NPR, Western Union Sends Its Last Telegram",
+      "url": "https://www.npr.org/2006/02/02/5186113/western-union-sends-its-last-telegram"
+    },
+    {
+      "name": "The Guardian, Telegram service ended stop Regrets stop",
+      "url": "https://www.theguardian.com/media/2006/feb/03/newmedia.usnews"
+    },
+    {
+      "name": "Wikipedia, Telegraphy",
+      "url": "https://en.wikipedia.org/wiki/Telegraphy"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

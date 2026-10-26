@@ -1,0 +1,63 @@
+{
+  "id": "keep-your-phone-updated",
+  "topic": "your-phone",
+  "number": 1,
+  "title": "Keep your phone up to date",
+  "cards": [
+    {
+      "text": "CISA says many updates fix security risks. Install updates for your phone and its apps as soon as you can.",
+      "mascot": "floyd",
+      "line": "A quick update can close a weak spot."
+    },
+    {
+      "text": "Turn on automatic updates in device or app settings. CISA says this lets updates install on their own.",
+      "mascot": "bud",
+      "line": "Let your phone handle the routine work."
+    },
+    {
+      "text": "Updates cover the phone system, programs, and apps. CISA says web browsers and safety tools need updates too.",
+      "mascot": "floyd",
+      "line": "Keep every part of the phone current."
+    }
+  ],
+  "checks": [
+    {
+      "prompt": "Why does CISA say updates matter?",
+      "options": [
+        "They add new games",
+        "They fix security risks",
+        "They make the phone ring louder"
+      ],
+      "answer": "They fix security risks",
+      "why": "CISA says many updates fix risks."
+    },
+    {
+      "prompt": "What setting can make updates easier?",
+      "options": [
+        "Check for updates by hand each time",
+        "Automatic updates",
+        "A larger font on every screen"
+      ],
+      "answer": "Automatic updates",
+      "why": "CISA says let updates run by themselves."
+    },
+    {
+      "prompt": "Which items should you update?",
+      "options": [
+        "Only the apps you use most",
+        "Only the home screen",
+        "The phone system, browser, and apps"
+      ],
+      "answer": "The phone system, browser, and apps",
+      "why": "CISA says to update phone systems, browsers, and apps."
+    }
+  ],
+  "takeaway": "Update your phone and apps. Let updates run on their own.",
+  "sources": [
+    {
+      "name": "CISA, update software",
+      "url": "https://www.cisa.gov/secure-our-world/update-software"
+    }
+  ],
+  "checked_on": null
+}

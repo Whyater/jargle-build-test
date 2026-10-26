@@ -1,0 +1,71 @@
+{
+  "id": "bank-carbon-paper",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "carbon paper",
+  "meaning": "A thin sheet with dark ink or dye on one side. Placed between two pages, it made a copy of what you wrote or typed.",
+  "clues": [
+    "It is a thin sheet of paper, not a machine.",
+    "One side is coated with dark ink or dye that rubs off.",
+    "You slid it between two sheets, with the coated side facing down.",
+    "When you wrote or typed on the top sheet, a copy appeared on the one below.",
+    "It has two words. The first has six letters and starts with C. The second is what you write on."
+  ],
+  "assumes": [
+    "A typewriter prints letters one key at a time",
+    "A mimeograph copies a page using a stencil"
+  ],
+  "decoys": [
+    {
+      "term": "typewriter",
+      "meaning": "A machine with a keyboard that presses letters onto paper, one key at a time.",
+      "source_urls": [
+        "https://smithsonianeducation.org/scitech/carbons/typewriters.html"
+      ]
+    },
+    {
+      "term": "fax machine",
+      "meaning": "A machine that scans a paper page and sends a copy over a phone line. Another machine prints the copy.",
+      "source_urls": [
+        "https://www.smithsonianeducation.org/scitech/carbons/fax.html"
+      ]
+    },
+    {
+      "term": "mimeograph",
+      "meaning": "An old copier. Ink is pushed through a typed stencil, so one page can be copied again and again.",
+      "source_urls": [
+        "https://smithsonianeducation.org/scitech/carbons/copiers.html"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, a typist slid a sheet of this between pages and got a copy for free. Smudgy fingers came with it."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: copy and paste, or the \"cc\" line in an email. The \"cc\" still stands for carbon copy!"
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Smithsonian, Carbons to Computers: Copiers",
+      "url": "https://smithsonianeducation.org/scitech/carbons/copiers.html"
+    },
+    {
+      "name": "Wikipedia, Carbon paper",
+      "url": "https://en.wikipedia.org/wiki/Carbon_paper"
+    },
+    {
+      "name": "Wikipedia, Carbon copy",
+      "url": "https://en.wikipedia.org/wiki/Carbon_copy"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}
