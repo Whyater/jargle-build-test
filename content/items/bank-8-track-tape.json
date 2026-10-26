@@ -1,0 +1,64 @@
+{
+  "id": "bank-8-track-tape",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "8-track tape",
+  "meaning": "A music tape cartridge that was popular in cars. The tape ran in one endless loop, so it could not be rewound.",
+  "clues": [
+    "It stored music on magnetic tape inside a plastic case.",
+    "It was bigger and chunkier than a cassette.",
+    "The tape ran in one endless loop, so there was no rewinding.",
+    "Many people played them in their cars in the 1970s.",
+    "It has two words. The first has a number and the word \"track.\""
+  ],
+  "assumes": [
+    "A cassette is a small tape case you flip over",
+    "A vinyl record is a grooved disc",
+    "A compact disc is a shiny disc read by a laser"
+  ],
+  "decoys": [
+    {
+      "term": "cassette tape",
+      "meaning": "A small plastic case with two reels of tape. You flip it over to play the other side.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Compact_Cassette"
+      ]
+    },
+    {
+      "term": "vinyl record",
+      "meaning": "A large flat disc with a long groove, played by a needle on a spinning turntable.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Phonograph_record"
+      ]
+    },
+    {
+      "term": "compact disc",
+      "meaning": "A shiny disc that stores music. A laser reads it.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Compact_disc"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "My favorite part was the loud \"ka-chunk\" in the middle of a song when it switched tracks."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: a playlist on your phone, played through the car speakers or a cable."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Wikipedia, 8-track tape",
+      "url": "https://en.wikipedia.org/wiki/8-track_tape"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

@@ -1,0 +1,72 @@
+{
+  "id": "bank-voicemail",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "voicemail",
+  "meaning": "A recorded message left by a caller who could not reach you. You listen to it later.",
+  "clues": [
+    "It is a message you hear, not read, after you miss a call.",
+    "The caller talks, and the phone records their voice.",
+    "On many phones you see a list of them and tap one to play it.",
+    "Callers hear your greeting first, then leave their message.",
+    "It is one word with nine letters. It starts with V."
+  ],
+  "assumes": [
+    "A text message is a short written message",
+    "Caller ID shows who is calling",
+    "Call waiting beeps when a second caller rings"
+  ],
+  "decoys": [
+    {
+      "term": "text message",
+      "meaning": "A short written message sent from one phone to another.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Short_Message_Service"
+      ]
+    },
+    {
+      "term": "caller ID",
+      "meaning": "A feature that shows who is calling before you answer.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Caller_ID"
+      ]
+    },
+    {
+      "term": "call waiting",
+      "meaning": "A beep during a call that tells you someone else is trying to reach you.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Call_waiting"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "My cousin kept messages on a tiny tape. Press play, hear the beep, hear Aunt Sue."
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: record a short greeting with your name. Then callers know they reached the right person."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, voicemail",
+      "url": "https://www.merriam-webster.com/dictionary/voicemail"
+    },
+    {
+      "name": "Wikipedia, Voicemail",
+      "url": "https://en.wikipedia.org/wiki/Voicemail"
+    },
+    {
+      "name": "Apple Support, Set up Voicemail on iPhone",
+      "url": "https://support.apple.com/guide/iphone/set-up-voicemail-iph3c99490e/ios"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

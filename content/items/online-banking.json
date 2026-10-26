@@ -1,0 +1,93 @@
+{
+  "id": "online-banking",
+  "kind": "term",
+  "topic": "money-on-your-phone",
+  "term": "online banking",
+  "puzzle": "BANKING",
+  "meaning": "Using a bank's website or app to check accounts, move money, or pay bills over the internet.",
+  "clues": [
+    "It is a way to do money tasks without going to a bank building.",
+    "You use a bank's website and sign in to see account information.",
+    "You may check a balance, move money, or pay a bill there.",
+    "The FDIC says to check the web address and never give your sign-in details to someone who contacts you.",
+    "Its name has two words and starts with O."
+  ],
+  "assumes": [
+    "An ATM is a machine that lets you do some bank tasks in person.",
+    "A check deposit sends a paper check to a bank.",
+    "A bank branch visit means doing a task with staff at a bank building."
+  ],
+  "decoys": [
+    {
+      "term": "ATM",
+      "meaning": "An automated teller machine, a bank machine where you can do some banking. Using another bank's machine may cost a fee.",
+      "source_urls": [
+        "https://www.consumerfinance.gov/ask-cfpb/how-do-i-avoid-atm-fees-en-981/",
+        "https://www.fdic.gov/consumer-resource-center/2020-11/banking-apps"
+      ]
+    },
+    {
+      "term": "check deposit",
+      "meaning": "Giving a paper check to a bank so its value can be added to your account.",
+      "source_urls": [
+        "https://www.consumerfinance.gov/ask-cfpb/how-long-can-a-bank-or-credit-union-hold-funds-i-deposited-en-1023/"
+      ]
+    },
+    {
+      "term": "bank branch visit",
+      "meaning": "Going to a bank building to do a money task with its staff.",
+      "source_urls": [
+        "https://www.fdic.gov/consumer-resource-center/2020-11/banking-apps"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. Find your bank's help page, then check the web address before you sign in."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "We used to walk into a branch to ask for a balance. Checking it from home can save a trip."
+    },
+    {
+      "speaker": "bud",
+      "text": "Never share your sign-in details with someone who contacts you. Call the bank using a number you already trust."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "CFPB, online and mobile banking tips for beginners",
+      "url": "https://www.consumerfinance.gov/archive/blog/online-mobile-banking-tips-beginners/"
+    },
+    {
+      "name": "FDIC, protect your finances and identity online",
+      "url": "https://www.fdic.gov/consumer-resource-center/2025-10/protect-your-finances-and-identity-online"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "blank": {
+    "sentence": "I checked my balance and paid a bill from my couch using ___ on the bank's website.",
+    "wrong": [
+      "ATM",
+      "check deposit"
+    ]
+  },
+  "why": "It saves a trip, but always check the web address before you sign in.",
+  "short": "Banking through a website or app",
+  "situations": [
+    {
+      "text": "You check the web address of your bank's site before you sign in.",
+      "options": [
+        "Safe",
+        "Risky"
+      ],
+      "answer": "Safe",
+      "why": "Checking the web address before you sign in helps you avoid a fake site."
+    }
+  ]
+}

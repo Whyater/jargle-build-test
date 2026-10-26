@@ -1,0 +1,81 @@
+{
+  "id": "bank-ip-address",
+  "kind": "term",
+  "topic": "how-the-internet-works",
+  "term": "IP address",
+  "meaning": "A string of numbers that identifies a device on a network, so data knows where to go.",
+  "clues": [
+    "It is a kind of address.",
+    "It is made of numbers and dots, and computers use it more than people do.",
+    "Your router hands one to each device that joins, so data knows where to go.",
+    "Your internet company gives your home one, and the sites you visit can see it.",
+    "It has two words. The first starts with I, and the second is where you live."
+  ],
+  "assumes": [
+    "A MAC address is a code built into network hardware",
+    "An email address is where people send you mail",
+    "A phone number is the digits you dial to reach a phone"
+  ],
+  "decoys": [
+    {
+      "term": "MAC address",
+      "meaning": "A code built into a device's network hardware that is meant to be one of a kind.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/MAC_address"
+      ]
+    },
+    {
+      "term": "email address",
+      "meaning": "The name people use to send mail to your inbox, like name@example.com.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Email_address"
+      ]
+    },
+    {
+      "term": "phone number",
+      "meaning": "The digits you dial to reach a phone.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Telephone_number"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Every floppy in my box had a label written by hand. Your devices get labels too, just made of numbers."
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: you never need to memorize one. But never read it out to someone who calls you unexpectedly."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Cloudflare, What is my IP address?",
+      "url": "https://www.cloudflare.com/learning/dns/glossary/what-is-my-ip-address/"
+    },
+    {
+      "name": "MDN Web Docs, IP Address",
+      "url": "https://developer.mozilla.org/en-US/docs/Glossary/IP_Address"
+    },
+    {
+      "name": "Wikipedia, IP address",
+      "url": "https://en.wikipedia.org/wiki/IP_address"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true,
+  "blank": {
+    "sentence": "Data finds my laptop on the network because of its ___, a string of numbers.",
+    "wrong": [
+      "domain name",
+      "username"
+    ]
+  },
+  "why": "It tells data where to go on a network.",
+  "short": "Numbers that identify a device"
+}

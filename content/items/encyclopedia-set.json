@@ -1,0 +1,80 @@
+{
+  "id": "encyclopedia-set",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "encyclopedia set",
+  "meaning": "A set of books with facts and summaries on many subjects.",
+  "clues": [
+    "It is a matching set of many books that gives write-ups on a wide range of subjects.",
+    "The books cover many subjects, from history to science.",
+    "Topics are in A to Z order. Pick the book for your topic and read its entry.",
+    "Large sets once filled a shelf or more in many homes and libraries.",
+    "It has two words. The first has twelve letters and starts with E."
+  ],
+  "assumes": [],
+  "decoys": [
+    {
+      "term": "dictionary",
+      "meaning": "A book that lists words and gives their meanings, spelling, and often how to say them.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Dictionary"
+      ]
+    },
+    {
+      "term": "atlas",
+      "meaning": "A book of maps, often with facts about places, borders, and landforms.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Atlas"
+      ]
+    },
+    {
+      "term": "almanac",
+      "meaning": "A yearly book of facts, dates, and tables.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Almanac"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "A shelf of books put many subjects close at hand. A trusted reference still helps when you want to check a fact."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: a reference site helps you look up a topic."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "You could open a volume and browse nearby topics. A little wandering often led to a useful surprise."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Wikipedia, Encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Encyclopedia"
+    },
+    {
+      "name": "Britannica, Change: It's Okay. Really.",
+      "url": "https://web.archive.org/web/20120710160022/http:/www.britannica.com/blogs/2012/03/change/"
+    },
+    {
+      "name": "Wikipedia, Dictionary",
+      "url": "https://en.wikipedia.org/wiki/Dictionary"
+    },
+    {
+      "name": "Wikipedia, Atlas",
+      "url": "https://en.wikipedia.org/wiki/Atlas"
+    },
+    {
+      "name": "Wikipedia, Almanac",
+      "url": "https://en.wikipedia.org/wiki/Almanac"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1
+}

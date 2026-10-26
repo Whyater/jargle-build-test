@@ -1,0 +1,11 @@
+[Unit]
+Description=Run the Jargle downloads mirror
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=1h
+RandomizedDelaySec=5min
+Persistent=false
+
+[Install]
+WantedBy=timers.target

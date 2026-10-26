@@ -1,0 +1,80 @@
+{
+  "id": "answering-machine",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "answering machine",
+  "meaning": "A device that answers a phone call and records a caller's message when you cannot pick up.",
+  "clues": [
+    "It takes a phone message when you are away or cannot answer.",
+    "A recorded greeting asks the caller to leave a message.",
+    "You press play to hear the saved messages, and you can erase them.",
+    "Old models used wire or tape to record sound.",
+    "It has two words. The first has nine letters and starts with A."
+  ],
+  "assumes": [],
+  "decoys": [
+    {
+      "term": "tape recorder",
+      "meaning": "A machine that records and plays back sound on magnetic tape.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Tape_recorder"
+      ]
+    },
+    {
+      "term": "reel-to-reel tape recorder",
+      "meaning": "A machine that records sound on a long magnetic tape wound between two open reels.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Reel-to-reel_audio_tape_recording"
+      ]
+    },
+    {
+      "term": "party line",
+      "meaning": "One phone line shared by several homes, so neighbors could pick up and hear each other's calls.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Party_line_(telephony)"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "A caller could leave the details, and you could hear them later. A saved message still helps you remember what matters."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: a phone service can take a message when you do not answer, then show you the recording."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "The little machine gave you breathing room. You did not have to reach the phone every time it rang."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Milwaukee Public Museum, Telephone Answering Machine",
+      "url": "https://www.mpm.edu/index.php/null/virtualexhibit/322"
+    },
+    {
+      "name": "Panasonic Support, Using the telephone answering machine",
+      "url": "https://help.na.panasonic.com/answers/how-to-use-the-telephone-answering-machine/"
+    },
+    {
+      "name": "Wikipedia, Tape recorder",
+      "url": "https://en.wikipedia.org/wiki/Tape_recorder"
+    },
+    {
+      "name": "Wikipedia, Reel-to-reel audio tape recording",
+      "url": "https://en.wikipedia.org/wiki/Reel-to-reel_audio_tape_recording"
+    },
+    {
+      "name": "Wikipedia, Party line",
+      "url": "https://en.wikipedia.org/wiki/Party_line_(telephony)"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1
+}

@@ -1,0 +1,96 @@
+{
+  "id": "search-engine",
+  "kind": "term",
+  "topic": "how-the-internet-works",
+  "term": "search engine",
+  "puzzle": "SEARCH",
+  "meaning": "A service that finds web pages when you type words or questions into it.",
+  "clues": [
+    "It keeps a giant list of pages from many different websites, so it can point you to them.",
+    "You type words into it, and it lists pages that may answer your question.",
+    "It ranks the results so pages that seem more useful appear first.",
+    "You often use it through a browser, but it is a different service.",
+    "Its name has two words and starts with S."
+  ],
+  "assumes": [
+    "A browser opens a page you ask for, but does not keep a list of other sites' pages",
+    "A website holds pages from one place",
+    "An online encyclopedia holds its own articles, not pages from other websites"
+  ],
+  "decoys": [
+    {
+      "term": "browser",
+      "meaning": "Software that retrieves and displays web pages.",
+      "source_urls": [
+        "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
+      ]
+    },
+    {
+      "term": "website",
+      "meaning": "A group of connected web pages that people can visit online.",
+      "source_urls": [
+        "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
+      ]
+    },
+    {
+      "term": "online encyclopedia",
+      "meaning": "An online book with many articles.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/encyclopedia"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. Open a browser, type a question into a search engine, and compare two results before you rely on one."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "We checked an index in a library before walking to the shelf. A list is useful, but you still read the source."
+    },
+    {
+      "speaker": "bud",
+      "text": "Good habit. Look at who wrote the page and when it was updated."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "MDN, Search engine",
+      "url": "https://developer.mozilla.org/en-US/docs/Glossary/Search_engine"
+    },
+    {
+      "name": "MDN, Browsing the web",
+      "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
+    },
+    {
+      "name": "Merriam-Webster, Encyclopedia",
+      "url": "https://www.merriam-webster.com/dictionary/encyclopedia"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "blank": {
+    "sentence": "I typed my question into the ___, which keeps a giant list of pages and ranks the best ones first.",
+    "wrong": [
+      "browser",
+      "online encyclopedia"
+    ]
+  },
+  "why": "Check who wrote a page and when it was updated before you trust it.",
+  "short": "Finds web pages from your words",
+  "situations": [
+    {
+      "text": "A page comes up first in your search results. Does that prove the page is right?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "No",
+      "why": "Look at who wrote the page and when it was updated."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+.env
+.env.*
+*.keystore
+*.jks
+# Tauri / Rust
+desktop/src-tauri/target/
+desktop/src-tauri/gen/
+# Android build outputs
+mobile/android/app/build/
+mobile/android/.gradle/
+mobile/android/build/
+mobile/android/local.properties
+# Generated content bundle
+web/public/content/
+# Private material: never in the public repo
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+.claude/
+.cursor/
+.codex/
+.obsidian/
+notes/
+graphify-out/

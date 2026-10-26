@@ -1,0 +1,77 @@
+{
+  "id": "bank-large-language-model",
+  "kind": "term",
+  "topic": "talking-computers",
+  "term": "large language model",
+  "meaning": "A computer program trained on huge amounts of writing. It learns patterns in language, so it can write and answer in sentences.",
+  "clues": [
+    "It is a kind of computer program.",
+    "It mostly works with words, not rows of numbers.",
+    "It learned by reading a gigantic pile of writing from books and websites.",
+    "It makes sentences by guessing which word is likely to come next, again and again.",
+    "It has three words, and its short form is LLM. The first word starts with L and means very big."
+  ],
+  "assumes": [
+    "A spreadsheet is a grid for numbers",
+    "An operating system runs a computer",
+    "A database stores organized information"
+  ],
+  "decoys": [
+    {
+      "term": "spreadsheet",
+      "meaning": "A program with a grid of rows and columns for numbers and math.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Spreadsheet"
+      ]
+    },
+    {
+      "term": "operating system",
+      "meaning": "The main program that runs a phone or computer and lets other apps work.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Operating_system"
+      ]
+    },
+    {
+      "term": "database",
+      "meaning": "A big collection of facts kept on a computer in an organized way.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Database"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "I could hold one short report. This thing learned from more writing than a person could read in many lifetimes!"
+    },
+    {
+      "speaker": "bud",
+      "text": "Impressive, but it can sound sure and still be wrong. Tip: double-check any fact that matters."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Britannica, Large language model",
+      "url": "https://www.britannica.com/topic/large-language-model"
+    },
+    {
+      "name": "Wikipedia, Large language model",
+      "url": "https://en.wikipedia.org/wiki/Large_language_model"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true,
+  "blank": {
+    "sentence": "A program trained on huge amounts of writing can write answers in sentences. That kind of program is called a ___.",
+    "wrong": [
+      "image generator",
+      "speech to text"
+    ]
+  },
+  "why": "It can write answers in sentences, but you should still check them.",
+  "short": "Program that writes in sentences"
+}

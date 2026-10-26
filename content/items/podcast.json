@@ -1,0 +1,92 @@
+{
+  "id": "podcast",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "podcast",
+  "puzzle": "PODCAST",
+  "meaning": "An online audio show made in episodes for a phone or computer.",
+  "clues": [
+    "It is a way to get programs through the internet.",
+    "It is usually made of spoken episodes that you can hear when you choose.",
+    "A show may add a new episode on a set schedule, like a radio series you can save.",
+    "It can be an interview with guests, a story told by a host, or a talk about one topic.",
+    "Its name starts with P and has seven letters."
+  ],
+  "assumes": [
+    "An audiobook is a book read aloud.",
+    "An internet radio station sends a continuing radio program.",
+    "A live video is a moving picture sent while an event happens."
+  ],
+  "decoys": [
+    {
+      "term": "audiobook",
+      "meaning": "A recorded reading of a book that you listen to on a device.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/audiobook"
+      ]
+    },
+    {
+      "term": "internet radio station",
+      "meaning": "A radio service that sends audio shows through the internet.",
+      "source_urls": [
+        "https://www.britannica.com/technology/Internet-radio"
+      ]
+    },
+    {
+      "term": "live video",
+      "meaning": "A video that is sent over the internet while it is happening.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/livestream"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. Ask them to help you find one show on a topic you like, then play one short episode."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "It sounds like a radio show you can choose when to hear. I like that kind of control."
+    },
+    {
+      "speaker": "bud",
+      "text": "If you enjoy it, look for the show's next episode. You can stop whenever you want."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Digital.gov, An introduction to podcasts",
+      "url": "https://digital.gov/resources/an-introduction-to-podcasts"
+    },
+    {
+      "name": "Merriam-Webster, podcast",
+      "url": "https://www.merriam-webster.com/dictionary/podcast"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "blank": {
+    "sentence": "My favorite ___ adds a new spoken episode on a set schedule, and I play it when I choose.",
+    "wrong": [
+      "audiobook",
+      "live video"
+    ]
+  },
+  "why": "You choose when to listen, and you can stop whenever you want.",
+  "short": "Audio show made in episodes",
+  "situations": [
+    {
+      "text": "A podcast episode only plays live, so you have to listen when it airs.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "why": "Episodes are made to be heard whenever you choose, and you can stop when you want."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "bank-pin",
+  "kind": "term",
+  "topic": "money-on-your-phone",
+  "term": "PIN",
+  "meaning": "A secret number, often four digits, that you type to prove it is you. Phones, bank cards, and apps use it.",
+  "clues": [
+    "It helps prove who you are.",
+    "It is made of numbers only.",
+    "You choose it yourself, and you type it in to open a phone or use a bank card.",
+    "It is short, and you should never share it or let anyone watch you type it.",
+    "It has three letters. The first, P, stands for personal."
+  ],
+  "assumes": [
+    "A security question is answered in words",
+    "A one-time code is sent to you and works once"
+  ],
+  "decoys": [
+    {
+      "term": "security question",
+      "meaning": "A personal question you pick when you set up an account, like your first pet's name. You answer it later to prove who you are.",
+      "source_urls": [
+        "https://security.googleblog.com/2015/05/new-research-some-tough-questions-for.html"
+      ]
+    },
+    {
+      "term": "one-time code",
+      "meaning": "A short code sent to you for one sign-in only. It stops working after a few minutes.",
+      "source_urls": [
+        "https://www.login.gov/help/create-account/authentication-methods/text-sms-or-phone-call/"
+      ]
+    },
+    {
+      "term": "face unlock",
+      "meaning": "A way to open a phone by looking at it. The phone checks that your face matches the one it saved.",
+      "source_urls": [
+        "https://support.apple.com/en-us/102381"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, the only number I knew by heart was my locker combination."
+    },
+    {
+      "speaker": "bud",
+      "text": "A PIN works the same way. Skip 1234 and birthdays, and never tell it to a caller, even one who says they are from your bank."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Wikipedia, Personal identification number",
+      "url": "https://en.wikipedia.org/wiki/Personal_identification_number"
+    },
+    {
+      "name": "FDIC, Banking at the Speed of Technology",
+      "url": "https://www.fdic.gov/consumers/consumer/news/october2019.html"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true,
+  "blank": {
+    "sentence": "I typed my secret four-digit number, my ___, to prove it was me.",
+    "wrong": [
+      "username",
+      "autopay"
+    ]
+  },
+  "why": "Keep it secret, and shield it when you type it.",
+  "short": "Secret number that proves it's you"
+}

@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "jargle-desktop",
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "icons": "bash make-icons.sh"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.12.4"
+  }
+}

@@ -1,0 +1,670 @@
+/* Tablet and desktop layout. Phones (under 600 px) never match anything in this file.
+   600 to 899 px: the phone layout, a bit wider, still with the bottom tab bar.
+   900 px and up: side nav on the left, the screen in the middle, a rail of today's progress on the right.
+   900 px and up: Play is a grid of cards. 1100 px and up: the big card moves left with two cards beside it.
+   1280 px and up: the side nav shows its labels beside the icons and the whole thing is centered.
+   Game screens (body.focus-mode, any route without a tab) get no nav and no rail, just a wider centered column.
+   Breakpoints are in em so they follow the browser's default font size, not the in-app text size.
+   Column widths are in px on purpose: the in-app text size makes the words bigger, not the columns. */
+
+/* Only wide screens show the Lessons tile on Play. */
+.lessons-card {
+  display: none;
+}
+
+/* ---- Tablet: 600 to 899 px ---- */
+@media (min-width: 37.5em) {
+  .sheet {
+    max-width: 40rem;
+  }
+  .tabbar ul {
+    max-width: 40rem;
+  }
+  .bottom-bar.pinned {
+    max-width: 40rem;
+  }
+  /* The small game cards sit four across instead of two. */
+  .home .mini-grid > .card {
+    flex: 1 1 7.5rem;
+    width: auto;
+  }
+  html.ts-largest .home .mini-grid > .card {
+    flex: none;
+    width: calc(100% - 0.75rem);
+  }
+}
+
+/* ---- Desktop: 900 px and up ---- */
+@media (min-width: 56.25em) {
+  .shell-wide {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr) 296px;
+    column-gap: 24px;
+    align-items: start;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-right: 24px;
+  }
+  .shell-wide .sheet {
+    max-width: 680px;
+    min-height: 0;
+    padding: 1.5rem 0 3rem;
+  }
+  .has-tabs .shell-wide .sheet {
+    padding-bottom: 3rem;
+  }
+  /* No tab bar, so toasts sit near the bottom edge. */
+  .has-tabs .toasts {
+    bottom: 1.5rem;
+  }
+  /* The first-run intro is one calm column with nothing else to tap. */
+  .in-intro .shell-wide {
+    display: block;
+    padding-right: 0;
+  }
+  .in-intro .sidenav,
+  .in-intro .rail {
+    display: none;
+  }
+  /* At the biggest text the rail needs the extra room of a very wide screen. */
+  html.ts-largest .shell-wide {
+    grid-template-columns: 88px minmax(0, 1fr);
+  }
+  html.ts-largest .rail {
+    display: none;
+  }
+
+  /* Game screens: centered, wider, a little more air on top. */
+  .focus-mode .sheet {
+    max-width: 42rem;
+    padding-top: max(1.5rem, 5vh);
+  }
+  .focus-mode .bottom-bar.pinned {
+    max-width: 42rem;
+  }
+
+  /* Me: the four stat tiles fit on one row. */
+  .shell-wide .stat {
+    width: calc(25% - 0.75rem);
+  }
+}
+
+/* Games grow with the screen. Everything is sized in rem, so a bigger root font scales the whole
+   game evenly, and the player's text size still applies on top (Large is 125 percent of this). */
+@media (min-width: 56.25em) and (min-height: 40em) {
+  html.focus-mode {
+    font-size: 112.5%;
+  }
+  html.focus-mode.ts-large {
+    font-size: 140%;
+  }
+  html.focus-mode.ts-largest {
+    font-size: 168%;
+  }
+}
+@media (min-width: 80em) and (min-height: 50em) {
+  html.focus-mode {
+    font-size: 125%;
+  }
+  html.focus-mode.ts-large {
+    font-size: 156%;
+  }
+  /* Largest stays at the smaller step: anything bigger crowds even a big screen. */
+}
+
+/* ---- Side nav ---- */
+.sidenav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 1.25rem 0.5rem 1.25rem;
+  border-right: 2px solid var(--line-color);
+  overflow-y: auto;
+}
+.sidenav-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: var(--grape);
+  text-decoration: none;
+  border-radius: var(--radius);
+}
+/* The J tile: a small grape candy block, the same press ledge as the buttons. */
+.sidenav-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius);
+  background: var(--grape);
+  color: var(--on-grape);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  line-height: 1;
+  box-shadow: 0 4px 0 var(--grape-deep);
+}
+.sidenav-word {
+  display: none;
+  margin-left: 0.625rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-xl);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+.sidenav-links {
+  width: 100%;
+  list-style: none;
+}
+.sidenav-links li + li {
+  margin-top: 0.375rem;
+}
+.sidenav-link,
+.sidenav-help {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.75rem;
+  padding: 0.375rem 0.25rem;
+  border-radius: var(--radius);
+  color: var(--ink-soft);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  line-height: 1.1;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color var(--t-fast) ease, color var(--t-fast) ease;
+}
+.sidenav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 2.25rem;
+  margin-bottom: 0.125rem;
+  border-radius: var(--radius-pill);
+  transition: background-color var(--t-med) var(--ease-out), transform var(--t-med) var(--ease-bounce);
+}
+.sidenav-link.on {
+  color: var(--grape-deep);
+}
+.sidenav-link.on .sidenav-icon {
+  background: var(--grape-soft);
+  box-shadow: 0 3px 0 #d0c2ff;
+}
+.sidenav-link:active .sidenav-icon {
+  transform: scale(0.92);
+}
+@media (hover: hover) and (pointer: fine) {
+  .sidenav-link:hover,
+  .sidenav-help:hover {
+    color: var(--ink);
+  }
+  .sidenav-link:not(.on):hover .sidenav-icon {
+    background: var(--surface-2);
+  }
+}
+/* Nav chrome stays the size it is at Large, like the tab bar. */
+html.ts-largest .sidenav-link,
+html.ts-largest .sidenav-help {
+  font-size: 0.75rem;
+}
+.sidenav-help {
+  width: 100%;
+  margin-top: auto;
+  min-height: 3.25rem;
+}
+.sidenav-help .gicon {
+  margin-bottom: 0.25rem;
+}
+.sidenav-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.625rem 0.25rem;
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: var(--shadow-card);
+}
+.sidenav-stat + .sidenav-stat {
+  margin-top: 0.5rem;
+}
+
+/* ---- Right rail ---- */
+.rail {
+  padding: 1.5rem 0 3rem;
+}
+.rail > * + * {
+  margin-top: 1rem;
+}
+.rail-card {
+  padding: 1rem 1.125rem;
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+/* The tip is the mascot standing on the page, not boxed in. */
+.rail-tip {
+  padding: 0 0 0.25rem;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+.rail-tip .bubble {
+  font-size: var(--text-sm);
+}
+.rail-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.625rem;
+}
+.rail-title {
+  font-size: var(--text-md);
+}
+.rail-count,
+.rail-streak {
+  display: inline-flex;
+  align-items: center;
+  color: var(--ink-soft);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+}
+.rail-streak .gicon {
+  margin-right: 0.25rem;
+  fill: none;
+  stroke: #8f84a3;
+  stroke-width: 2.2;
+}
+.rail-streak.on {
+  color: #a54a0c;
+}
+.rail-streak.on .gicon {
+  fill: var(--flame);
+  stroke: none;
+}
+.rail-note {
+  margin-top: 0.375rem;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  line-height: 1.3;
+}
+
+/* Today's goals */
+.rail-goals {
+  margin-top: 0.75rem;
+  list-style: none;
+}
+.rail-goal {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+  margin: 0 -0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .rail-goal:hover {
+    background: var(--surface-2);
+  }
+}
+.rail-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: 0.75rem;
+  border: 2px solid #d9cbb6;
+  border-radius: 50%;
+  background: var(--surface);
+}
+.rail-goal.done .rail-check {
+  border-color: var(--correct-deep);
+  background: var(--correct);
+  color: var(--ink);
+}
+.rail-check .icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  stroke-width: 3;
+}
+.rail-goal.done .rail-goal-label {
+  color: var(--ink-soft);
+}
+
+/* Level */
+.rail-level {
+  display: flex;
+  align-items: center;
+}
+.rail-level .xp-badge {
+  flex: none;
+  margin-right: 0.875rem;
+}
+.rail-level-words {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.rail-level .rail-title {
+  margin-bottom: 0.5rem;
+}
+
+/* The last 7 days */
+.rail-week {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.rail-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rail-day-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--line-color);
+  border-radius: 50%;
+  background: var(--surface-2);
+  color: var(--ink);
+}
+.rail-day.played .rail-day-dot {
+  border-color: var(--sunny-deep);
+  background: var(--sunny);
+}
+.rail-day.today .rail-day-dot {
+  box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--grape);
+}
+.rail-day-letter {
+  margin-top: 0.375rem;
+  color: var(--ink-soft);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-xs);
+  line-height: 1;
+}
+.rail-day.today .rail-day-letter {
+  color: var(--grape-deep);
+}
+
+/* Next up */
+.rail-next .rail-title {
+  margin-bottom: 0.5rem;
+}
+.rail-next-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-base);
+  line-height: 1.25;
+}
+.rail-next .btn {
+  margin-top: 0.875rem;
+}
+
+/* ---- Lessons tile on Play (wide screens only) ---- */
+.lessons-card {
+  padding: 1rem 1.125rem;
+  border: 2px solid #b4e9dc;
+  border-radius: var(--radius-lg);
+  background: var(--mint-soft);
+  box-shadow: 0 4px 0 #a6e3d3, 0 14px 24px -18px rgba(29, 154, 129, 0.5);
+  margin-bottom: 4px;
+}
+.lessons-head {
+  display: flex;
+  align-items: center;
+}
+.lessons-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-right: 0.875rem;
+  border-radius: var(--radius);
+  background: var(--mint);
+  color: var(--ink);
+  box-shadow: 0 3px 0 var(--mint-deep);
+}
+.lessons-words {
+  min-width: 0;
+}
+.lessons-title {
+  font-size: var(--text-lg);
+}
+.lessons-text {
+  font-size: var(--text-sm);
+  color: #1c5a4d;
+}
+.lessons-foot {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.875rem;
+}
+
+/* ---- Play as a bento grid (wide screens) ---- */
+@media (min-width: 56.25em) {
+  .shell-wide .lessons-card {
+    display: flex;
+    flex-direction: column;
+  }
+  /* The rail and side nav already show the brand, streak, level and a mascot. */
+  .shell-wide .home-brand,
+  .shell-wide .home-progress,
+  .shell-wide .home .stage {
+    display: none;
+  }
+  .shell-wide .home-progress-wrap {
+    display: contents;
+  }
+  .shell-wide .home {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-auto-flow: row dense;
+    gap: 1.25rem;
+    padding-top: 0;
+  }
+  .shell-wide .home > * {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+  /* Endless and Lessons sit side by side under the big card, buttons on the bottom line. */
+  .shell-wide .home > .endless-card {
+    grid-column: 1;
+  }
+  .shell-wide .home > .lessons-card {
+    grid-column: 2;
+  }
+  .shell-wide .endless-foot .btn,
+  .shell-wide .lessons-foot .btn {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    white-space: nowrap;
+  }
+  .shell-wide .endless-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .shell-wide .endless-foot,
+  .shell-wide .lessons-foot {
+    margin-top: auto;
+    padding-top: 0.875rem;
+  }
+  .shell-wide .endless-card.featured .endless-foot {
+    display: flex;
+  }
+  .shell-wide .endless-card.featured .btn {
+    width: auto;
+  }
+  /* The big card puts its title on top and its action on the bottom line. */
+  .shell-wide .wotd {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1.5rem 1.25rem;
+  }
+  .shell-wide .wotd-top {
+    flex: 1 0 auto;
+  }
+}
+
+/* From 1100 px the middle column is about 640 px: Word of the Day takes the left part,
+   Endless and Lessons stack on the right, and the small cards run four across underneath.
+   From 900 to 1099 px Word of the Day is one full row with Endless and Lessons side by side under it. */
+@media (min-width: 68.75em) {
+  .shell-wide .home {
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  }
+  .shell-wide .home > .wotd {
+    grid-column: 1;
+    grid-row: span 2;
+    min-height: 19rem;
+  }
+  .shell-wide .home > .endless-card,
+  .shell-wide .home > .lessons-card {
+    grid-column: 2;
+  }
+  .shell-wide .wotd-title {
+    font-size: 2.75rem;
+  }
+  .shell-wide .wotd::before {
+    width: 16rem;
+    height: 16rem;
+    right: -5rem;
+    top: -6rem;
+  }
+}
+
+/* ---- Wider side nav with labels beside the icons: 1280 px and up ---- */
+@media (min-width: 80em) {
+  .shell-wide {
+    grid-template-columns: 216px minmax(0, 1fr) 320px;
+    column-gap: 32px;
+  }
+  .sidenav {
+    align-items: stretch;
+    padding: 1.5rem 1rem 1.25rem;
+  }
+  .sidenav-logo {
+    align-self: flex-start;
+    padding-right: 0.5rem;
+  }
+  .sidenav-word {
+    display: block;
+  }
+  .sidenav-link,
+  .sidenav-help {
+    flex-direction: row;
+    justify-content: flex-start;
+    min-height: 3.25rem;
+    padding: 0.375rem 0.75rem 0.375rem 0.375rem;
+    font-size: var(--text-md);
+    text-align: left;
+  }
+  html.ts-largest .sidenav-link,
+  html.ts-largest .sidenav-help {
+    font-size: 0.9375rem;
+  }
+  .sidenav-icon {
+    width: 3rem;
+    height: 2.5rem;
+    margin: 0 0.625rem 0 0;
+  }
+  .sidenav-link.on {
+    background: var(--grape-soft);
+  }
+  .sidenav-link.on .sidenav-icon {
+    background: none;
+    box-shadow: none;
+  }
+  .sidenav-help {
+    font-size: var(--text-base);
+  }
+  .sidenav-help .gicon {
+    margin: 0 0.75rem 0 0.75rem;
+  }
+  .sidenav-stats {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .sidenav-stat + .sidenav-stat {
+    margin-top: 0;
+  }
+}
+
+/* At the biggest text the rail comes back once there is room for it. */
+@media (min-width: 80em) {
+  html.ts-largest .shell-wide {
+    grid-template-columns: 216px minmax(0, 1fr) 320px;
+  }
+  html.ts-largest .rail {
+    display: block;
+  }
+}
+
+/* On the big Play card, Bud peeks in from the right so the open middle of the card is not empty.
+   A background image keeps it out of the card's markup, and the phone layout never loads it. */
+@media (min-width: 68.75em) {
+  .shell-wide .home > .wotd {
+    background-image: url('/mascots/bud-think@1x.webp');
+    background-repeat: no-repeat;
+    background-size: 7.5rem auto;
+    background-position: right 1.25rem top 42%;
+  }
+}
+
+/* ---- Biggest text size on wide screens ---- */
+/* The logo is chrome, so it keeps one size at every text size. */
+html.ts-largest .sidenav-mark {
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+}
+html.ts-largest .sidenav-word {
+  font-size: 30px;
+}
+/* Seven day dots must fit the 320 px rail even when the text is big. */
+html.ts-largest .rail-day-dot {
+  width: 32px;
+  height: 32px;
+}
+/* Big words do not fit a bento, so Play goes back to one card per row. */
+@media (min-width: 56.25em) {
+  html.ts-largest .shell-wide .home {
+    display: block;
+  }
+  html.ts-largest .shell-wide .home > * + * {
+    margin-top: 1.125rem;
+  }
+  html.ts-largest .shell-wide .home > .wotd {
+    min-height: 0;
+    background-image: none;
+  }
+}

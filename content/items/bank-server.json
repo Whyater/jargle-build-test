@@ -1,0 +1,81 @@
+{
+  "id": "bank-server",
+  "kind": "term",
+  "topic": "how-the-internet-works",
+  "term": "server",
+  "meaning": "A powerful computer that stores websites and files. It sends them to your device when you ask.",
+  "clues": [
+    "It holds information for other people to use.",
+    "It is a whole computer, not just a part inside one.",
+    "It answers requests from your phone or laptop, like sending a page when you open a site.",
+    "Companies keep rows of them in big buildings called data centers.",
+    "It has six letters and starts with S. A waiter has almost the same job title."
+  ],
+  "assumes": [
+    "A hard drive is the part inside a computer that stores files",
+    "A web browser is a program for visiting websites",
+    "A desktop computer is a personal computer that sits on a desk"
+  ],
+  "decoys": [
+    {
+      "term": "hard drive",
+      "meaning": "The part inside a computer that stores files.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Hard_disk_drive"
+      ]
+    },
+    {
+      "term": "web browser",
+      "meaning": "A program you use to visit websites, such as Chrome or Safari.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Web_browser"
+      ]
+    },
+    {
+      "term": "desktop computer",
+      "meaning": "A personal computer made to sit on a desk.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Desktop_computer"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Like a librarian: you ask, they fetch. Only the server never says shush."
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: when a site is down, it is often the server's trouble and not your phone. Wait a few minutes and try again."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "MDN Web Docs, Server",
+      "url": "https://developer.mozilla.org/en-US/docs/Glossary/Server"
+    },
+    {
+      "name": "MDN Web Docs, What is a web server?",
+      "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server"
+    },
+    {
+      "name": "Merriam-Webster, server",
+      "url": "https://www.merriam-webster.com/dictionary/server"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "bank": true,
+  "blank": {
+    "sentence": "The files for my favorite site are stored on a powerful ___ that sends them when I ask.",
+    "wrong": [
+      "router",
+      "modem"
+    ]
+  },
+  "why": "It keeps websites and files and sends them to you when you ask.",
+  "short": "Computer that stores and sends websites"
+}

@@ -1,0 +1,98 @@
+{
+  "id": "never-pay-with-a-gift-card",
+  "topic": "scams-and-fakes",
+  "number": 1,
+  "title": "Gift cards are for gifts",
+  "cards": [
+    {
+      "text": "The FTC says no real business or government agency will tell you to buy a gift card to pay. A gift card is for a gift, not a bill.",
+      "mascot": "floyd",
+      "line": "Keep gift cards for people you know."
+    },
+    {
+      "text": "Never give a card number or PIN to someone who asks for payment. The FTC says the numbers let that person take the money, even if you still hold the card.",
+      "mascot": "bud",
+      "line": "The numbers are money. Keep them private."
+    },
+    {
+      "text": "If someone demands gift card payment, stop. Keep the card and receipt, then report it to the card company and the FTC.",
+      "mascot": "floyd",
+      "line": "Slow down and report the demand."
+    }
+  ],
+  "checks": [
+    {
+      "prompt": "Someone says you must pay a bill with a gift card. What should you do?",
+      "options": [
+        "Buy the card now",
+        "Do not pay by gift card",
+        "Send the card number first"
+      ],
+      "answer": "Do not pay by gift card",
+      "why": "The FTC says a real business or agency will not tell you to pay with a gift card."
+    },
+    {
+      "prompt": "What should you do with the card number and PIN?",
+      "options": [
+        "Keep them private",
+        "Read them to the caller",
+        "Text them to a friend to hold"
+      ],
+      "answer": "Keep them private",
+      "why": "The FTC says the card number and PIN let a person running a scam get the money loaded onto the card."
+    },
+    {
+      "prompt": "You already gave a card number to a person who demanded payment. What is a useful next step?",
+      "options": [
+        "Throw away the receipt",
+        "Buy another card",
+        "Keep the receipt and tell the card company"
+      ],
+      "answer": "Keep the receipt and tell the card company",
+      "why": "The FTC says to keep the receipt and report it to the card company and the FTC."
+    }
+  ],
+  "takeaway": "Gift cards are for gifts, never for a demanded payment.",
+  "sources": [
+    {
+      "name": "FTC, paying with gift cards",
+      "url": "https://consumer.ftc.gov/articles/gift-card-scams"
+    }
+  ],
+  "checked_on": null,
+  "words": [
+    "bank-prize-scam",
+    "bank-romance-scam",
+    "bank-tech-support-scam",
+    "bank-catfishing"
+  ],
+  "situations": [
+    {
+      "text": "A caller says you owe a bill and must pay it by buying a gift card.",
+      "options": [
+        "Scam",
+        "Safe"
+      ],
+      "answer": "Scam",
+      "why": "The FTC says no real business or agency will tell you to pay with a gift card."
+    },
+    {
+      "text": "You buy a gift card to give your friend for her birthday.",
+      "options": [
+        "Scam",
+        "Safe"
+      ],
+      "answer": "Safe",
+      "why": "A gift card is for a gift, for people you know."
+    },
+    {
+      "text": "You gave a card number to someone who demanded payment. Should you keep the receipt and tell the card company?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "Yes",
+      "why": "The FTC says to keep the receipt and report it to the card company and the FTC."
+    }
+  ]
+}

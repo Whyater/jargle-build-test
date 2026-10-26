@@ -1,0 +1,106 @@
+{
+  "id": "emoji",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "emoji",
+  "puzzle": "EMOJI",
+  "meaning": "A tiny picture, like a face or an animal, that you put in a message to show a feeling.",
+  "clues": [
+    "People use it in messages to show how they feel.",
+    "It's a tiny picture that sits right in a line of words, like a letter. It isn't built from keyboard marks or sent as its own image.",
+    "Its name comes from two Japanese words that mean picture and character.",
+    "Faces, animals, food, and weather are common kinds.",
+    "It has five letters and starts with E."
+  ],
+  "assumes": [
+    "An emoticon is built from keyboard marks",
+    "A GIF is sent as its own image or clip",
+    "A meme is a widely shared online joke or idea"
+  ],
+  "decoys": [
+    {
+      "term": "emoticon",
+      "meaning": "A face made from keyboard marks, like a colon and a parenthesis, to show a feeling in a message.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/emoticon",
+        "https://www.unicode.org/faq/emoji_dingbats.html"
+      ]
+    },
+    {
+      "term": "GIF",
+      "meaning": "An image or video saved in a certain kind of file. People can add one to a message.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/GIF",
+        "https://support.google.com/gboard/answer/2842292/use-your-keyboard-android"
+      ]
+    },
+    {
+      "term": "meme",
+      "meaning": "A funny picture or video that people pass around online.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/meme"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "We typed a colon and a parenthesis to make a little face. People have long wanted to add feeling to typed words."
+    },
+    {
+      "speaker": "bud",
+      "text": "Try it in a text to someone you trust. Tap the emoji button or the globe on your keyboard, pick one, and send it.",
+      "link_urls": [
+        "https://support.apple.com/en-us/102507",
+        "https://support.google.com/gboard/answer/2842292/use-your-keyboard-android"
+      ]
+    },
+    {
+      "speaker": "bud",
+      "text": "If you don't see that button, ask someone you trust to add the emoji keyboard in your keyboard settings."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, emoji",
+      "url": "https://www.merriam-webster.com/dictionary/emoji"
+    },
+    {
+      "name": "Unicode, Emoji and Pictographs FAQ",
+      "url": "https://www.unicode.org/faq/emoji_dingbats.html"
+    },
+    {
+      "name": "Apple Support, Use emoji on your iPhone, iPad, and iPod touch",
+      "url": "https://support.apple.com/en-us/102507"
+    },
+    {
+      "name": "Gboard Help, Use your keyboard",
+      "url": "https://support.google.com/gboard/answer/2842292/use-your-keyboard-android"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "blank": {
+    "sentence": "She tapped the face button on her keyboard, and a tiny smiling ___ went into her message.",
+    "wrong": [
+      "meme",
+      "GIF"
+    ]
+  },
+  "why": "A tiny picture can show a feeling that plain typed words may miss.",
+  "short": "Tiny picture that shows a feeling",
+  "situations": [
+    {
+      "text": "You want to add a tiny face to your text. Can you tap the emoji button or the globe on your keyboard?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "Yes",
+      "why": "Tap that button, pick one, and send it."
+    }
+  ]
+}

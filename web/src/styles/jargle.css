@@ -1,0 +1,614 @@
+/* Daily Jargle: clue bubble, letter grid, keyboard and the result card.
+   Tiles are candy pieces like the buttons: right letters sit up on a ledge, letters that are
+   not in the word sink flat, so the result reads by shape as well as by color. */
+
+.jg {
+  /* Tile colors. Ink text on every fill keeps the letters at 6:1 or better. */
+  --jg-gap: 0.375rem;
+  --jg-empty-edge: #e6d8c4;
+  --jg-typed-edge: #a99bd0;
+  --jg-absent: #ddd6e6;
+  --jg-absent-ink: #4f4766;
+  position: relative;
+}
+.jg > * + * {
+  margin-top: 0.875rem;
+}
+
+/* ---- Clue ---- */
+.jg-clue-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.25rem;
+}
+.jg-clue-count {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+.jg-dots {
+  display: inline-flex;
+  margin-left: 0.25rem;
+}
+.jg-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: 0.3rem;
+  border-radius: var(--radius-pill);
+  background: var(--line-color);
+  transition: background var(--t-med) var(--ease-out);
+}
+.jg-dot.on {
+  background: var(--grape);
+}
+.jg-clue .bubble {
+  font-size: var(--text-base);
+}
+.jg-earlier-btn {
+  min-height: 2.75rem;
+  padding: 0 0.25rem;
+  border: 0;
+  background: none;
+  color: var(--grape);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+.jg-earlier-btn:focus {
+  outline: none;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--focus-ring);
+}
+.jg-earlier {
+  margin: 0.25rem 0 0;
+  padding: 0.75rem 1rem 0.75rem 2rem;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  color: var(--ink);
+  font-size: var(--text-sm);
+  line-height: var(--leading);
+}
+.jg-earlier li + li {
+  margin-top: 0.25rem;
+}
+
+/* ---- Grid ---- */
+.jg-board {
+  position: relative;
+}
+.jg-grid {
+  /* About 3.75rem a tile, never wider than the screen. */
+  max-width: calc(var(--len) * 3.75rem + (var(--len) - 1) * var(--jg-gap));
+  margin: 0 auto;
+}
+.jg-row {
+  display: flex;
+}
+.jg-row + .jg-row {
+  margin-top: var(--jg-gap);
+}
+.jg-tile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+  min-width: 0;
+  margin-bottom: 3px;
+  border: 2px solid var(--jg-empty-edge);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 3px 0 var(--jg-empty-edge);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.jg-tile + .jg-tile {
+  margin-left: var(--jg-gap);
+}
+/* Keeps every tile square: the padding is a share of the width. */
+.jg-tile::before {
+  content: '';
+  display: block;
+  width: 0;
+  padding-top: 100%;
+}
+.jg-tile.typed {
+  border-color: var(--jg-typed-edge);
+  box-shadow: 0 3px 0 var(--jg-typed-edge);
+  animation: jg-pop var(--t-fast) var(--ease-out);
+}
+.jg-tile.correct {
+  border-color: var(--correct-deep);
+  background: var(--correct);
+  box-shadow: 0 3px 0 var(--correct-deep);
+}
+.jg-tile.present {
+  border-color: var(--sunny-deep);
+  background: var(--sunny);
+  box-shadow: 0 3px 0 var(--sunny-deep);
+}
+.jg-tile.absent {
+  border-color: var(--jg-absent);
+  background: var(--jg-absent);
+  color: var(--jg-absent-ink);
+  box-shadow: 0 0 0 var(--jg-absent);
+  transform: translateY(3px);
+}
+
+/* The flip: the first half still shows the typed tile, the color lands when it is edge-on. */
+.jg-tile.flip {
+  animation: jg-flip 500ms ease-in-out both;
+}
+@keyframes jg-flip {
+  0% {
+    transform: rotateX(0deg);
+    border-color: var(--jg-typed-edge);
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: 0 3px 0 var(--jg-typed-edge);
+  }
+  49% {
+    transform: rotateX(90deg);
+    border-color: var(--jg-typed-edge);
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: 0 3px 0 var(--jg-typed-edge);
+  }
+  51% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+/* Absent tiles end sunk, so their flip lands 3px lower. */
+.jg-tile.absent.flip {
+  animation-name: jg-flip-sink;
+}
+@keyframes jg-flip-sink {
+  0% {
+    transform: rotateX(0deg);
+    border-color: var(--jg-typed-edge);
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: 0 3px 0 var(--jg-typed-edge);
+  }
+  49% {
+    transform: rotateX(90deg);
+    border-color: var(--jg-typed-edge);
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: 0 3px 0 var(--jg-typed-edge);
+  }
+  51% {
+    transform: translateY(3px) rotateX(90deg);
+  }
+  100% {
+    transform: translateY(3px) rotateX(0deg);
+  }
+}
+.jg-tile.win {
+  animation: jg-hop 520ms var(--ease-out) both;
+}
+@keyframes jg-pop {
+  0% {
+    transform: scale(0.86);
+  }
+  60% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes jg-hop {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-36%);
+  }
+  70% {
+    transform: translateY(5%);
+  }
+}
+.jg-row.shake0,
+.jg-row.shake1 {
+  animation: jg-shake0 380ms var(--ease-out);
+}
+/* Two copies of the same shake, so a second bad guess restarts it. */
+.jg-row.shake1 {
+  animation-name: jg-shake1;
+}
+@keyframes jg-shake0 {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-7px);
+  }
+  40%,
+  80% {
+    transform: translateX(7px);
+  }
+}
+@keyframes jg-shake1 {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-7px);
+  }
+  40%,
+  80% {
+    transform: translateX(7px);
+  }
+}
+
+/* "Not in the word list" floats over the top of the grid, so nothing below moves. */
+.jg-note {
+  position: absolute;
+  z-index: 2;
+  top: -0.5rem;
+  left: 50%;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  white-space: nowrap;
+  box-shadow: var(--shadow-float);
+  opacity: 0;
+  transform: translate(-50%, -60%);
+  transition: opacity var(--t-med) var(--ease-out), transform var(--t-med) var(--ease-out);
+  pointer-events: none;
+}
+.jg-note.show {
+  opacity: 1;
+  transform: translate(-50%, -100%);
+}
+
+/* ---- Keyboard ---- */
+.jg-keys {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.jg-keyrow {
+  display: flex;
+  justify-content: center;
+}
+.jg-keyrow + .jg-keyrow {
+  margin-top: 0.5rem;
+}
+.jg-key {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 2.75rem;
+  height: 3.25rem;
+  margin: 0 0.15rem 3px;
+  padding: 0;
+  border: 2px solid var(--line-color);
+  border-radius: 0.625rem;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 3px 0 var(--line-color);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: background var(--t-med) var(--ease-out), border-color var(--t-med) var(--ease-out);
+}
+.jg-key:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 var(--line-color);
+}
+.jg-key:focus {
+  outline: none;
+  box-shadow: 0 3px 0 var(--line-color), var(--focus-ring);
+}
+.jg-key.wide {
+  flex-grow: 1.6;
+  max-width: 4.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xs);
+}
+.jg-key.correct {
+  border-color: var(--correct-deep);
+  background: var(--correct);
+  box-shadow: 0 3px 0 var(--correct-deep);
+}
+.jg-key.present {
+  border-color: var(--sunny-deep);
+  background: var(--sunny);
+  box-shadow: 0 3px 0 var(--sunny-deep);
+}
+.jg-key.absent {
+  border-color: var(--jg-absent);
+  background: var(--jg-absent);
+  color: var(--jg-absent-ink);
+  box-shadow: 0 3px 0 #c8bfd4;
+}
+
+/* ---- Result ---- */
+.jg-result {
+  padding: 1.25rem 1.125rem 1rem;
+  border: 2px solid var(--line-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  scroll-margin-top: 1rem;
+  animation: jg-rise var(--t-slow) var(--ease-out) both;
+}
+.jg-result > * + * {
+  margin-top: 1rem;
+}
+@keyframes jg-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.jg-result-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.jg-result-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  line-height: var(--leading-tight);
+}
+.jg-result-title:focus {
+  outline: none;
+}
+.jg-xp {
+  flex: none;
+  margin-left: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  background: var(--sunny);
+  color: #4a3000;
+  box-shadow: 0 2px 0 var(--sunny-deep);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  white-space: nowrap;
+}
+.jg-word {
+  padding: 1rem;
+  border-radius: var(--radius);
+  background: var(--grape-soft);
+}
+.jg-term {
+  margin: 0;
+  color: var(--grape-deep);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-2xl);
+  line-height: var(--leading-tight);
+  overflow-wrap: break-word;
+}
+.jg-answer-note {
+  margin: 0.25rem 0 0;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+}
+.jg-meaning {
+  margin: 0.5rem 0 0;
+  font-size: var(--text-base);
+  line-height: var(--leading);
+}
+.jg-why {
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius);
+  background: var(--mint-soft);
+}
+.jg-why-title {
+  margin: 0 0 0.25rem;
+  color: #0f5e4f;
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+}
+.jg-why p {
+  margin: 0;
+  line-height: var(--leading);
+}
+.jg-actions > * + * {
+  margin-top: 0.75rem;
+}
+.jg-actions-row {
+  display: flex;
+}
+.jg-actions-row > * {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.jg-actions-row > * + * {
+  margin-left: 0.75rem;
+}
+.jg-actions .btn-ghost + .btn-ghost {
+  margin-top: 0.25rem;
+}
+.jg-share-note {
+  margin: 0;
+  color: var(--ok-ink);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ---- Sizes ---- */
+/* Long words get smaller letters so they still fit a narrow phone. */
+.jg.len-6 .jg-tile,
+.jg.len-7 .jg-tile {
+  font-size: 1.5rem;
+}
+@media (max-width: 360px) {
+  .jg {
+    --jg-gap: 0.3rem;
+  }
+  .jg-tile {
+    font-size: 1.5rem;
+  }
+  .jg.len-6 .jg-tile,
+  .jg.len-7 .jg-tile {
+    font-size: 1.25rem;
+  }
+  .jg-key {
+    height: 3rem;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    font-size: 1rem;
+  }
+  .jg-actions-row {
+    display: block;
+  }
+  .jg-actions-row > * + * {
+    margin-left: 0;
+    margin-top: 0.75rem;
+  }
+}
+/* Short screens: smaller tiles, so the keyboard stays on screen without scrolling. */
+@media (max-height: 760px) {
+  .jg-grid {
+    max-width: calc(var(--len) * 2.75rem + (var(--len) - 1) * var(--jg-gap));
+  }
+  .jg-tile,
+  .jg.len-6 .jg-tile,
+  .jg.len-7 .jg-tile {
+    font-size: 1.375rem;
+  }
+  .jg > * + * {
+    margin-top: 0.5rem;
+  }
+  .jg-key {
+    height: 3rem;
+  }
+  .jg-keyrow + .jg-keyrow {
+    margin-top: 0.375rem;
+  }
+}
+@media (max-height: 660px) {
+  .jg-grid {
+    max-width: calc(var(--len) * 2.25rem + (var(--len) - 1) * var(--jg-gap));
+  }
+  .jg-tile,
+  .jg.len-6 .jg-tile,
+  .jg.len-7 .jg-tile {
+    font-size: 1.125rem;
+  }
+  .jg-clue .says-mascot {
+    display: none;
+  }
+  .jg-clue .bubble {
+    font-size: var(--text-sm);
+  }
+  .jg-key {
+    height: 2.75rem;
+  }
+}
+@media (max-height: 600px) {
+  .jg-grid {
+    max-width: calc(var(--len) * 1.875rem + (var(--len) - 1) * var(--jg-gap));
+  }
+  .jg-tile,
+  .jg.len-6 .jg-tile,
+  .jg.len-7 .jg-tile {
+    font-size: 1rem;
+  }
+  .jg-key {
+    height: 2.5rem;
+  }
+  .jg-clue-foot .jg-earlier-btn {
+    min-height: 2.25rem;
+  }
+}
+/* Big screens: bigger tiles and keys. */
+/* A laptop window about 760px tall: a little bigger than a phone, still no scrolling. */
+@media (min-width: 900px) and (min-height: 700px) {
+  .jg-grid {
+    max-width: calc(var(--len) * 3.25rem + (var(--len) - 1) * var(--jg-gap));
+  }
+  .jg-tile {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 900px) and (min-height: 900px) {
+  .jg-grid {
+    max-width: calc(var(--len) * 4.5rem + (var(--len) - 1) * var(--jg-gap));
+  }
+  .jg-tile {
+    font-size: 2.125rem;
+  }
+  .jg-key {
+    max-width: 3.25rem;
+    height: 3.75rem;
+    font-size: 1.25rem;
+  }
+  .jg-key.wide {
+    max-width: 5.25rem;
+    font-size: var(--text-sm);
+  }
+}
+
+/* ---- Word of the Day card: the finished grid, colors only ---- */
+.jg-mini {
+  display: flex;
+  align-items: center;
+}
+.jg-mini-grid {
+  flex: none;
+  display: inline-flex;
+  flex-direction: column;
+  margin-right: 0.875rem;
+}
+.jg-mini-row {
+  display: flex;
+}
+.jg-mini-row + .jg-mini-row {
+  margin-top: 3px;
+}
+.jg-mini-tile {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 3px;
+  background: #ddd6e6;
+}
+.jg-mini-tile + .jg-mini-tile {
+  margin-left: 3px;
+}
+.jg-mini-tile.correct {
+  background: var(--correct);
+}
+.jg-mini-tile.present {
+  background: var(--sunny);
+}

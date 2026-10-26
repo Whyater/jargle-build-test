@@ -1,0 +1,100 @@
+{
+  "id": "hashtag",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "hashtag",
+  "puzzle": "HASHTAG",
+  "meaning": "A word or phrase with a # in front. Posts use it so people can find others on the same topic.",
+  "clues": [
+    "You see it in social media posts.",
+    "It's a word or phrase marked with the # sign, to sort a post by topic.",
+    "Tap one and you can usually see other posts that share it.",
+    "Holidays, events, and causes often have their own.",
+    "It has seven letters and starts with H."
+  ],
+  "assumes": [
+    "A caption is plain words with no special sign",
+    "A username is a name for one person, not a topic"
+  ],
+  "decoys": [
+    {
+      "term": "caption",
+      "meaning": "Words that go with a picture or post to explain it.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/caption"
+      ]
+    },
+    {
+      "term": "meme",
+      "meaning": "A funny picture or video that people pass around online.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/meme"
+      ]
+    },
+    {
+      "term": "username",
+      "meaning": "A name that shows who you are on a website or social media.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/username"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "The library card catalog had subject cards, so you could find books on one topic. This sounds like the same idea."
+    },
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. In a social media app, type a # and a word like a holiday into the search box, then look at what comes up. Just look, no need to post."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "A label that gathers everything on one subject. Now that I understand."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, hashtag",
+      "url": "https://www.merriam-webster.com/dictionary/hashtag"
+    },
+    {
+      "name": "New York Times via WRAL, Following Along on Instagram",
+      "url": "https://www.wral.com/archive/17304680/"
+    },
+    {
+      "name": "YouTube Help, Find playlists & videos using hashtags",
+      "url": "https://support.google.com/youtube/answer/6390658"
+    },
+    {
+      "name": "Library of Congress, How to Use the Card Catalog",
+      "url": "https://guides.loc.gov/card-catalog/using-the-card-catalog"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "blank": {
+    "sentence": "Tap the ___ on a post to see other posts about the same holiday.",
+    "wrong": [
+      "caption",
+      "username"
+    ]
+  },
+  "why": "It helps you find posts on one topic, like a holiday or an event.",
+  "short": "Word with # that sorts posts",
+  "situations": [
+    {
+      "text": "Typing a # and a holiday word into a social media search box shows posts on that topic.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "why": "Tap one and you can usually see other posts that share it."
+    }
+  ]
+}

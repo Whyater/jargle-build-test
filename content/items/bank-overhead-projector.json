@@ -1,0 +1,64 @@
+{
+  "id": "bank-overhead-projector",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "overhead projector",
+  "meaning": "A machine with a bright lamp that shines a see-through sheet onto a wall or screen, so the writing looks big.",
+  "clues": [
+    "It uses light to make something big enough for a whole room to see.",
+    "The sheet it shows is clear plastic, and a teacher could write on it with a marker while everyone watched.",
+    "It sat on a table. The light came up from a flat glass top and bounced off a mirror above.",
+    "The clear sheets were called transparencies.",
+    "It has two words. The first starts with O and means above your head."
+  ],
+  "assumes": [
+    "A slide projector shows photo slides",
+    "A chalkboard is written on with chalk",
+    "A whiteboard is written on with markers"
+  ],
+  "decoys": [
+    {
+      "term": "slide projector",
+      "meaning": "A machine that shines light through small photo slides to show them on a screen.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Slide_projector"
+      ]
+    },
+    {
+      "term": "chalkboard",
+      "meaning": "A dark board that you write on with chalk.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Blackboard"
+      ]
+    },
+    {
+      "term": "whiteboard",
+      "meaning": "A smooth white board that you write on with special markers.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Whiteboard"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "I loved those! A teacher could slide on a sheet and write on it while the class watched. We called them transparencies."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: slides on a laptop, shown on a big screen or TV. Tip: save your slides in two places before a talk."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Wikipedia, Overhead projector",
+      "url": "https://en.wikipedia.org/wiki/Overhead_projector"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

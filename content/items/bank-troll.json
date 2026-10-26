@@ -1,0 +1,77 @@
+{
+  "id": "bank-troll",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "troll",
+  "meaning": "A person who posts rude or upsetting things online on purpose, just to get a reaction and start an argument.",
+  "clues": [
+    "A person who posts just to make other people upset.",
+    "They say rude or silly things in comments, then enjoy the angry replies.",
+    "The same word names a creature from old Scandinavian stories that lives in caves or hills.",
+    "The best answer is usually no answer, because attention is what they want.",
+    "It has five letters and starts with T."
+  ],
+  "assumes": [
+    "A lurker reads a group but rarely posts",
+    "A moderator keeps an online group tidy",
+    "A bot is a program that runs on its own"
+  ],
+  "decoys": [
+    {
+      "term": "lurker",
+      "meaning": "Someone who reads an online group but almost never posts or replies.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Lurker"
+      ]
+    },
+    {
+      "term": "moderator",
+      "meaning": "A person who watches over an online group and removes posts that break the rules.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Internet_forum"
+      ]
+    },
+    {
+      "term": "bot",
+      "meaning": "A program that runs on its own to do simple jobs, such as answering questions in a chat.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Internet_bot"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, a rude person at the club got a stern look. Online, nobody can give a stern look!"
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: don't reply. Use the Block or Mute button, and you will not see their posts again."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, troll",
+      "url": "https://www.merriam-webster.com/dictionary/troll"
+    },
+    {
+      "name": "Wikipedia, Internet troll",
+      "url": "https://en.wikipedia.org/wiki/Internet_troll"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true,
+  "blank": {
+    "sentence": "A person kept posting rude comments on purpose just to start an argument. People call that person a ___.",
+    "wrong": [
+      "influencer",
+      "selfie"
+    ]
+  },
+  "why": "They post rude or upsetting things just to get a reaction.",
+  "short": "Poster who tries to upset people"
+}

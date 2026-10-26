@@ -1,0 +1,92 @@
+{
+  "id": "encryption",
+  "kind": "term",
+  "topic": "locks-and-keys",
+  "term": "encryption",
+  "puzzle": "ENCRYPT",
+  "meaning": "A way to scramble data so only approved people can read it.",
+  "clues": [
+    "It is a way to protect information.",
+    "It helps keep information safe from people who should not see it.",
+    "It scrambles readable information so a person needs the right key to read it.",
+    "The scrambled version makes no sense to anyone without the key.",
+    "Its name starts with E and has ten letters."
+  ],
+  "assumes": [
+    "A password is a secret word or set of characters used to prove who you are",
+    "A firewall helps control access to a network",
+    "A screen PIN is a short code that opens a device"
+  ],
+  "decoys": [
+    {
+      "term": "password",
+      "meaning": "A secret word or set of characters used to prove who you are.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/password"
+      ]
+    },
+    {
+      "term": "firewall",
+      "meaning": "A system that helps block unwanted access to a computer or network.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/firewall"
+      ]
+    },
+    {
+      "term": "screen PIN",
+      "meaning": "A short number code used to open a phone or other device.",
+      "source_urls": [
+        "https://support.google.com/android/answer/9079129"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. Ask what keeps your private messages and bank pages from being read by others."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "We used locked boxes for private papers. A digital lock follows the same basic idea."
+    },
+    {
+      "speaker": "bud",
+      "text": "Strong protection cannot help if you share your password or codes with a stranger. Keep them to yourself."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "NIST, Encryption",
+      "url": "https://csrc.nist.gov/glossary/term/encryption"
+    },
+    {
+      "name": "Merriam-Webster, encryption",
+      "url": "https://www.merriam-webster.com/dictionary/encryption"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 3,
+  "decisive_clue": 3,
+  "blank": {
+    "sentence": "My bank page scrambles my data so strangers cannot read it. That protection is called ___.",
+    "wrong": [
+      "firewall",
+      "screen PIN"
+    ]
+  },
+  "why": "It keeps private messages and bank pages from people who should not read them.",
+  "short": "Scrambles data for approved readers only",
+  "situations": [
+    {
+      "text": "Encryption scrambles data so only approved people can read it.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "why": "Only people with the right key can read the scrambled version."
+    }
+  ]
+}

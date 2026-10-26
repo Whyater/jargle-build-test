@@ -1,0 +1,84 @@
+{
+  "id": "floppy-disk",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "floppy disk",
+  "meaning": "A thin, bendable disk in a plastic case that stored computer files. You carried it from one computer to another.",
+  "clues": [
+    "Its tiny picture still stands for saving a file on many computers.",
+    "You could carry your files on it to another computer.",
+    "IBM began selling the first ones in 1971.",
+    "Installing one big program could take thirteen of them, fed in one at a time.",
+    "It has two words and ten letters in all, and the first word starts with F."
+  ],
+  "assumes": [],
+  "decoys": [
+    {
+      "term": "punched card",
+      "meaning": "A stiff paper card with holes in set places. A machine read the holes as data.",
+      "source_urls": [
+        "https://www.ibm.com/history/punched-card"
+      ]
+    },
+    {
+      "term": "Zip disk",
+      "meaning": "A disk cartridge from 1994 that held 100 megabytes. That was far more than older small disks.",
+      "source_urls": [
+        "https://www.computerhistory.org/storageengine/minicomputers-stimulate-floppy-disk-sales/"
+      ]
+    },
+    {
+      "term": "magnetic data tape",
+      "meaning": "Reels of magnetic tape that stored computer data. They began replacing big stacks of punched cards in the early 1950s.",
+      "source_urls": [
+        "https://www.ibm.com/history/magnetic-tape"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "I carried people's files between computers, and I kept spare copies safe. A second copy kept elsewhere is still smart."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: a USB stick. It's a small drive you plug in to carry files. Only plug in one you know, since a stray one can carry harmful software."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "And look, my picture is still the Save button. Not bad for an old fellow."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "IBM, Floppy disk storage",
+      "url": "https://www.ibm.com/history/floppy-disk"
+    },
+    {
+      "name": "Computer History Museum, 1971: Floppy disk loads mainframe computer data",
+      "url": "https://www.computerhistory.org/storageengine/floppy-disk-loads-mainframe-computer-data/"
+    },
+    {
+      "name": "Computer History Museum, 1976: Minicomputers stimulate floppy disk sales",
+      "url": "https://www.computerhistory.org/storageengine/minicomputers-stimulate-floppy-disk-sales/"
+    },
+    {
+      "name": "IBM, The IBM punched card",
+      "url": "https://www.ibm.com/history/punched-card"
+    },
+    {
+      "name": "IBM, Magnetic tape",
+      "url": "https://www.ibm.com/history/magnetic-tape"
+    },
+    {
+      "name": "CISA, Using Caution with USB Drives",
+      "url": "https://www.cisa.gov/news-events/news/using-caution-usb-drives"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1
+}

@@ -1,0 +1,102 @@
+{
+  "id": "turn-on-two-factor-login",
+  "topic": "locks-and-keys",
+  "number": 2,
+  "title": "Turn on two-factor login",
+  "cards": [
+    {
+      "text": "Two-factor login adds a second step when you log in. It can be a code texted to your phone. CISA says that even if a password is stolen, a person without the second step can't get in.",
+      "mascot": "floyd",
+      "line": "Your password is the first step. This adds a second one."
+    },
+    {
+      "text": "Never read a code to someone who contacts you first. The FTC says some people try to trick you into giving them the code.",
+      "mascot": "bud",
+      "line": "Keep the code to yourself."
+    },
+    {
+      "text": "Two-factor login is not usually on by default. To turn it on, open the account's settings and look for two-factor or two-step. Some sites call it multi-factor.",
+      "mascot": "floyd",
+      "line": "Start with your most sensitive accounts, like your email and your bank."
+    }
+  ],
+  "checks": [
+    {
+      "prompt": "Which account should get two-factor login first?",
+      "options": [
+        "Your email or bank account",
+        "A shopping site you used once",
+        "Your least-used account"
+      ],
+      "answer": "Your email or bank account",
+      "why": "The FTC says to start with your most sensitive accounts. Your email and bank are a good start."
+    },
+    {
+      "prompt": "A caller asks for the code that was just texted to you. Which is the safer step?",
+      "options": [
+        "Read it to them if they sound real",
+        "Keep it to yourself",
+        "Text it to them right away"
+      ],
+      "answer": "Keep it to yourself",
+      "why": "The FTC says not to share it if you didn't contact them first."
+    },
+    {
+      "prompt": "You want to turn on two-factor login for your email. Where do you start?",
+      "options": [
+        "Change your password",
+        "Open the account's settings",
+        "Wait for the site to turn it on"
+      ],
+      "answer": "Open the account's settings",
+      "why": "It's not usually on by default. The FTC says to go to your account settings and look for two-factor or two-step."
+    }
+  ],
+  "takeaway": "Start with your email and your bank.",
+  "sources": [
+    {
+      "name": "FTC, two-factor authentication",
+      "url": "https://consumer.ftc.gov/articles/use-two-factor-authentication-protect-your-accounts"
+    },
+    {
+      "name": "CISA, Protect Our World with MFA",
+      "url": "https://www.cisa.gov/secure-our-world/turn-mfa"
+    }
+  ],
+  "checked_on": null,
+  "words": [
+    "bank-one-time-code",
+    "bank-face-unlock",
+    "bank-firewall",
+    "bank-backup"
+  ],
+  "situations": [
+    {
+      "text": "A caller asks for the code that was just texted to you. Should you read it to them?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "No",
+      "why": "The FTC says some people try to trick you into giving them the code."
+    },
+    {
+      "text": "Two-factor login is usually turned on for you from the start.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "why": "It is not usually on by default. Look in your account settings."
+    },
+    {
+      "text": "You turn on two-factor login for your email first, since email is a sensitive account.",
+      "options": [
+        "Safe",
+        "Risky"
+      ],
+      "answer": "Safe",
+      "why": "The FTC says to start with your most sensitive accounts, like email and your bank."
+    }
+  ]
+}

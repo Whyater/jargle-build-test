@@ -1,0 +1,68 @@
+{
+  "id": "bank-rabbit-ears",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "rabbit ears",
+  "meaning": "Two thin metal rods on top of a TV that caught TV signals from the air. You moved them to clear up the picture.",
+  "clues": [
+    "It helped a TV pick up shows from the air.",
+    "It was two thin metal rods that stuck up from a base.",
+    "Shows came through the air from a tower, so you had to point it the right way.",
+    "Turning it a bit could clear up a fuzzy picture.",
+    "It has two words. The first is an animal with long ears."
+  ],
+  "assumes": [
+    "A cable box connects a TV to wires from a cable company",
+    "A satellite dish gets TV from space",
+    "A TV remote changes channels"
+  ],
+  "decoys": [
+    {
+      "term": "cable box",
+      "meaning": "A box that connects a TV to the wires of a cable company.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Set-top_box"
+      ]
+    },
+    {
+      "term": "satellite dish",
+      "meaning": "A bowl-shaped dish that gets TV signals from a satellite in space.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Satellite_dish"
+      ]
+    },
+    {
+      "term": "remote control",
+      "meaning": "A handheld device that changes the channel from across the room.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Remote_control"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Someone always had to stand holding the antenna just right. \"There! Stop! Don't move!\""
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: apps that play shows over the internet. A flat indoor antenna can also still pick up free local channels."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Wikipedia, Television antenna",
+      "url": "https://en.wikipedia.org/wiki/Television_antenna"
+    },
+    {
+      "name": "FCC, Antennas and Digital Television",
+      "url": "https://www.fcc.gov/consumers/guides/antennas-and-digital-television"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

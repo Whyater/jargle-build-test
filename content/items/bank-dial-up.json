@@ -1,0 +1,72 @@
+{
+  "id": "bank-dial-up",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "dial-up",
+  "meaning": "An old way of getting online with a modem and a regular phone line. While you were online, the line was usually busy.",
+  "clues": [
+    "It was a way to get on the internet.",
+    "It used the same wire as your home telephone.",
+    "Your computer made screechy beeps and whooshes while it connected.",
+    "If someone picked up the phone for a call, the connection could drop.",
+    "It has two parts joined by a hyphen. The first starts with D, and the second is \"up\"."
+  ],
+  "assumes": [
+    "A fax machine sends a page over a phone line",
+    "An answering machine records messages"
+  ],
+  "decoys": [
+    {
+      "term": "rotary phone",
+      "meaning": "A phone with a round dial. You put a finger in a hole and spun the dial to enter each number.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Rotary_dial"
+      ]
+    },
+    {
+      "term": "fax machine",
+      "meaning": "A machine that scans a paper page and sends a copy over a phone line. Another machine prints the copy.",
+      "source_urls": [
+        "https://www.smithsonianeducation.org/scitech/carbons/fax.html"
+      ]
+    },
+    {
+      "term": "answering machine",
+      "meaning": "A machine that answers the phone when you are away and records a message from the caller.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Answering_machine"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, getting online meant a modem screeching like a robot choir. Then you waited. And waited."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: home internet service or your phone's data. It is always on, and the phone line stays free for calls."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "And if Mom picked up the phone, poof! You were offline."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Wikipedia, Dial-up Internet access",
+      "url": "https://en.wikipedia.org/wiki/Dial-up_Internet_access"
+    },
+    {
+      "name": "Popular Mechanics, What Was That Dial-Up Internet Sound?",
+      "url": "https://www.popularmechanics.com/science/a29611456/internet-dialup-modem-sounds/"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

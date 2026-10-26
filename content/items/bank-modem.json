@@ -1,0 +1,72 @@
+{
+  "id": "bank-modem",
+  "kind": "term",
+  "topic": "how-the-internet-works",
+  "term": "modem",
+  "meaning": "A box that connects your home to your internet company. It changes the signal on the line into data your devices can use.",
+  "clues": [
+    "It is a small box near the spot where your internet comes into your home.",
+    "It talks to your internet company's line, not to your phone or laptop.",
+    "The cable from the wall or the line from the company plugs into it.",
+    "Its name is short for two long words, \"modulator\" and \"demodulator\".",
+    "It has five letters and starts with M."
+  ],
+  "assumes": [
+    "A router shares your internet with devices in your home",
+    "Fiber-optic cable carries data as flashes of light",
+    "A TV antenna picks up TV signals from the air"
+  ],
+  "decoys": [
+    {
+      "term": "router",
+      "meaning": "A box that shares your home's internet with your phones, TVs, and computers.",
+      "source_urls": [
+        "https://www.cloudflare.com/learning/network-layer/what-is-a-router/"
+      ]
+    },
+    {
+      "term": "fiber-optic cable",
+      "meaning": "A thin strand of glass that carries data as flashes of light.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Optical_fiber"
+      ]
+    },
+    {
+      "term": "TV antenna",
+      "meaning": "Metal rods or a flat panel that pick up TV signals from the air.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Television_antenna"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "I remember when modems screeched like robots every time they dialed. Beeeee-krrrr-shhhh!"
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: modern ones are quiet. If the internet is out, check the modem's lights first, then call your internet company."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, modem",
+      "url": "https://www.merriam-webster.com/dictionary/modem"
+    },
+    {
+      "name": "Britannica, modem",
+      "url": "https://www.britannica.com/technology/modem"
+    },
+    {
+      "name": "Wikipedia, Modem",
+      "url": "https://en.wikipedia.org/wiki/Modem"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

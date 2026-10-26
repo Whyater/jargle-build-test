@@ -1,0 +1,72 @@
+{
+  "id": "bank-flip-phone",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "flip phone",
+  "meaning": "A mobile phone that folds shut on a hinge. You flip it open to see the screen and the number buttons.",
+  "clues": [
+    "It is a mobile phone that folds.",
+    "It has a hinge in the middle.",
+    "Closing it protects the screen and the buttons.",
+    "The number buttons sit on the bottom half, and the small screen is on the top half.",
+    "It has two words. The first is a word for turning something over."
+  ],
+  "assumes": [
+    "A cordless phone is a home phone with no cord to the wall",
+    "A walkie-talkie is a handheld radio you press to talk",
+    "A satellite phone connects to satellites"
+  ],
+  "decoys": [
+    {
+      "term": "cordless phone",
+      "meaning": "A home phone with no cord to the wall. It talks by radio to a base.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Cordless_telephone"
+      ]
+    },
+    {
+      "term": "walkie-talkie",
+      "meaning": "A handheld radio you press to talk and release to listen.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Walkie-talkie"
+      ]
+    },
+    {
+      "term": "satellite phone",
+      "meaning": "A phone that connects to satellites instead of cell towers.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Satellite_phone"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Snapping the phone shut to end a call felt great. You cannot slam a touch screen."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: a smartphone with a touch screen. Some newer smartphones fold too, so the old idea is back."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Merriam-Webster, flip phone",
+      "url": "https://www.merriam-webster.com/dictionary/flip%20phone"
+    },
+    {
+      "name": "Wikipedia, Clamshell design",
+      "url": "https://en.wikipedia.org/wiki/Clamshell_design"
+    },
+    {
+      "name": "Britannica, cell phone",
+      "url": "https://www.britannica.com/technology/cell-phone"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true
+}

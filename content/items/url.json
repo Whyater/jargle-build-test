@@ -1,0 +1,94 @@
+{
+  "id": "url",
+  "kind": "term",
+  "topic": "how-the-internet-works",
+  "term": "URL",
+  "puzzle": "ADDRESS",
+  "meaning": "The address of a web page.",
+  "clues": [
+    "It points online.",
+    "It names one web page, not a person or a device.",
+    "You can type it in the bar at the top of a browser.",
+    "It may include a site name and a path to one page.",
+    "Its name has three letters and starts with U."
+  ],
+  "assumes": [
+    "An email address sends messages to a mailbox",
+    "A username identifies a person or account",
+    "An IP address is a number used to identify a device or network"
+  ],
+  "decoys": [
+    {
+      "term": "email address",
+      "meaning": "A name that identifies a mailbox where you can send and receive email.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/email%20address"
+      ]
+    },
+    {
+      "term": "username",
+      "meaning": "A name for a person on a computer service.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/username",
+        "https://csrc.nist.gov/glossary/term/user_id"
+      ]
+    },
+    {
+      "term": "IP address",
+      "meaning": "A number that names a device online.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/IP%20address",
+        "https://www.law.cornell.edu/wex/ip_address"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "bud",
+      "text": "Try it with someone you trust. Open a browser and type a known web address yourself. Check each letter before you go."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Paper maps and address books helped us find places. A careful look still helps you get to the right page."
+    },
+    {
+      "speaker": "bud",
+      "text": "If a message sends you a link, pause. You can type the known address instead."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "NIST, Uniform Resource Locator",
+      "url": "https://csrc.nist.gov/glossary/term/Uniform_Resource_Locator"
+    },
+    {
+      "name": "Merriam-Webster, URL",
+      "url": "https://www.merriam-webster.com/dictionary/URL"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "blank": {
+    "sentence": "I typed the ___ into the bar at the top of my browser to open one web page.",
+    "wrong": [
+      "email address",
+      "username"
+    ]
+  },
+  "why": "Reading it letter by letter can help you spot a fake page.",
+  "short": "The address of a web page",
+  "situations": [
+    {
+      "text": "A message sends you a link. You pause and type the web address you already know instead.",
+      "options": [
+        "Safe",
+        "Risky"
+      ],
+      "answer": "Safe",
+      "why": "You can type the known address instead of using the link."
+    }
+  ]
+}

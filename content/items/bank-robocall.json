@@ -1,0 +1,80 @@
+{
+  "id": "bank-robocall",
+  "kind": "term",
+  "topic": "scams-and-fakes",
+  "term": "robocall",
+  "meaning": "A phone call that plays a recorded message instead of a live person. Many are unwanted, and some are scams.",
+  "clues": [
+    "You answer the phone and a recording starts talking.",
+    "A computer dials thousands of numbers, and you are just one of them.",
+    "Many are selling something or trying to scam you.",
+    "A recorded sales pitch is against the rules unless you said yes in writing first.",
+    "It has eight letters and starts with R. Think of a robot making a call."
+  ],
+  "assumes": [
+    "Spoofing makes a call look like it came from another number",
+    "Catfishing is pretending to be someone else online"
+  ],
+  "decoys": [
+    {
+      "term": "spoofing",
+      "meaning": "Making a call or text look like it came from a different number or name than the real one.",
+      "source_urls": [
+        "https://www.fcc.gov/consumers/guides/spoofing"
+      ]
+    },
+    {
+      "term": "catfishing",
+      "meaning": "Pretending to be someone else online, with a fake name and fake photos, to fool a person.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Catfishing"
+      ]
+    },
+    {
+      "term": "identity theft",
+      "meaning": "Someone uses your name or account numbers without your permission, such as to buy things in your name.",
+      "source_urls": [
+        "https://consumer.ftc.gov/articles/what-know-about-identity-theft"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, when the phone rang, a real person was on the line. Usually Aunt Marge."
+    },
+    {
+      "speaker": "bud",
+      "text": "If it is a recording you did not ask for, hang up. Do not press any buttons, not even one that says \"opt out\"."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "FTC, Robocalls",
+      "url": "https://consumer.ftc.gov/articles/robocalls"
+    },
+    {
+      "name": "FCC, Stop Unwanted Robocalls and Texts",
+      "url": "https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts"
+    },
+    {
+      "name": "Wikipedia, Robocall",
+      "url": "https://en.wikipedia.org/wiki/Robocall"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true,
+  "blank": {
+    "sentence": "I answered the phone and heard only a recorded message, not a live person. It was a ___.",
+    "wrong": [
+      "spoofing",
+      "catfishing"
+    ]
+  },
+  "why": "Many are unwanted, and some are scams.",
+  "short": "Call with a recorded message"
+}

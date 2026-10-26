@@ -1,0 +1,64 @@
+{
+  "id": "bank-party-line",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "party line",
+  "meaning": "A phone line shared by several homes. When a neighbor was talking, you had to wait.",
+  "clues": [
+    "It was something neighbors had to share.",
+    "Each house had its own phone, but all the phones were on the same line.",
+    "If a neighbor was already talking, you had to wait your turn.",
+    "Each home had its own ring pattern, like one long and one short, so you knew which calls were yours.",
+    "It has two words. The first is a word for a celebration."
+  ],
+  "assumes": [
+    "A payphone is a public phone you pay to use",
+    "A switchboard operator connected calls by hand",
+    "Caller ID shows who is calling"
+  ],
+  "decoys": [
+    {
+      "term": "payphone",
+      "meaning": "A public phone that you pay to use, found on streets and in stores.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Payphone"
+      ]
+    },
+    {
+      "term": "switchboard operator",
+      "meaning": "A worker who connected phone calls by hand, plugging cords into a board.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Switchboard_operator"
+      ]
+    },
+    {
+      "term": "caller ID",
+      "meaning": "A phone feature that shows who is calling before you pick up.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Caller_ID"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Everyone knew your business! A neighbor could pick up and listen in. News traveled fast."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: your own private phone number. And a group chat when everyone should hear the news."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Wikipedia, Party line (telephony)",
+      "url": "https://en.wikipedia.org/wiki/Party_line_(telephony)"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true
+}

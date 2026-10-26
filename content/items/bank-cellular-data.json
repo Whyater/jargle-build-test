@@ -1,0 +1,78 @@
+{
+  "id": "bank-cellular-data",
+  "kind": "term",
+  "topic": "your-phone",
+  "term": "cellular data",
+  "meaning": "The internet connection your phone gets from your phone company's towers. It works away from home but counts against your plan.",
+  "clues": [
+    "It helps your phone get online when you are away from home.",
+    "It comes from your own phone company's towers.",
+    "It is counted in amounts, like gigabytes, and your plan may have a limit.",
+    "You can switch it off in Settings to save your plan.",
+    "It has two words. The first starts with C, and the second is another word for information."
+  ],
+  "assumes": [
+    "Data roaming is using another company's network away from home",
+    "Phone storage is the space for photos, apps, and files",
+    "A text message is a short written message"
+  ],
+  "decoys": [
+    {
+      "term": "data roaming",
+      "meaning": "Using another company's network for your phone data when you are away from home.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Roaming",
+        "https://support.apple.com/en-us/109323"
+      ]
+    },
+    {
+      "term": "phone storage",
+      "meaning": "The space on a phone for photos, apps, and files.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Computer_data_storage"
+      ]
+    },
+    {
+      "term": "text message",
+      "meaning": "A short written message sent from one phone to another.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Short_Message_Service"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "I carried my data in a pocket. Yours flies through the air from towers. Show-off."
+    },
+    {
+      "speaker": "bud",
+      "text": "Tip: check how much data you use in Settings. If it runs low, save big downloads for home internet."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Apple Support, Use cellular data on your iPhone or iPad",
+      "url": "https://support.apple.com/en-us/109323"
+    },
+    {
+      "name": "Wikipedia, Cellular network",
+      "url": "https://en.wikipedia.org/wiki/Cellular_network"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 2,
+  "decisive_clue": 2,
+  "bank": true,
+  "blank": {
+    "sentence": "Away from home, my phone used ___ from my phone company's towers, and it counts against my plan.",
+    "wrong": [
+      "dark mode",
+      "voicemail"
+    ]
+  },
+  "why": "It works away from home, but it counts against your plan.",
+  "short": "Internet from your phone company's towers"
+}

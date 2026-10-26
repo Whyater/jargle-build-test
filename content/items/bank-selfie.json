@@ -1,0 +1,77 @@
+{
+  "id": "bank-selfie",
+  "kind": "term",
+  "topic": "internet-talk",
+  "term": "selfie",
+  "meaning": "A photo you take of yourself, usually with a phone held out at arm's length.",
+  "clues": [
+    "You hold the camera out and point it at yourself.",
+    "The front camera on a phone makes it easy.",
+    "Some people use a long stick to hold the phone farther away.",
+    "A famous dictionary company picked this as its word of the year in 2013.",
+    "It has six letters and starts with S."
+  ],
+  "assumes": [
+    "An avatar is a cartoon or picture that stands in for you",
+    "Photobombing is jumping into a photo",
+    "A panorama is a wide photo"
+  ],
+  "decoys": [
+    {
+      "term": "avatar",
+      "meaning": "A cartoon or picture that stands in for you online, such as in a game.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Avatar_(computing)"
+      ]
+    },
+    {
+      "term": "photobomb",
+      "meaning": "Jumping into the back of someone else's photo, often as a joke.",
+      "source_urls": [
+        "https://www.merriam-webster.com/dictionary/photobomb"
+      ]
+    },
+    {
+      "term": "panorama",
+      "meaning": "A wide photo made by slowly sweeping the camera across a scene.",
+      "source_urls": [
+        "https://en.wikipedia.org/wiki/Panoramic_photography"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "Back in my day, you asked a friend to take your picture, or set a timer and ran. Half of us were blurry."
+    },
+    {
+      "speaker": "bud",
+      "text": "Now the phone does it. Tip: switch to the front camera and hold the phone a little above eye level."
+    }
+  ],
+  "old_tech": false,
+  "sources": [
+    {
+      "name": "Merriam-Webster, selfie",
+      "url": "https://www.merriam-webster.com/dictionary/selfie"
+    },
+    {
+      "name": "Wikipedia, Selfie",
+      "url": "https://en.wikipedia.org/wiki/Selfie"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1,
+  "bank": true,
+  "blank": {
+    "sentence": "I held my phone at arm's length and took a ___ of me and my dog.",
+    "wrong": [
+      "meme",
+      "troll"
+    ]
+  },
+  "why": "It is a photo of yourself, so think before you post it.",
+  "short": "Photo you take of yourself"
+}

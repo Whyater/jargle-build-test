@@ -1,0 +1,87 @@
+{
+  "id": "rotary-phone",
+  "kind": "term",
+  "topic": "old-tech",
+  "term": "rotary phone",
+  "meaning": "An old phone with a round dial. You put a finger in a hole and turn the dial to enter each number.",
+  "clues": [
+    "You put a finger in a hole and turn a wheel to enter each number.",
+    "When you let go, the wheel turns back to the start and sends the number down the line.",
+    "Before you start, you listen for a steady hum.",
+    "Phones with push buttons first came out in 1963. Over the years, they took the dial's place.",
+    "It has two words. The first has six letters and starts with R."
+  ],
+  "assumes": [],
+  "decoys": [
+    {
+      "term": "telegraph",
+      "meaning": "A machine that sends messages over a wire as short and long taps of a key, called Morse code.",
+      "source_urls": [
+        "https://americanhistory.si.edu/collections/object/nmah_706715",
+        "https://www.loc.gov/collections/samuel-morse-papers/articles-and-essays/invention-of-the-telegraph/"
+      ]
+    },
+    {
+      "term": "pager",
+      "meaning": "A small device you carry that alerts you when someone wants you. It shows the number to call back.",
+      "source_urls": [
+        "https://americanhistory.si.edu/collections/nmah_1344387",
+        "https://www.fcc.gov/wireless/bureau-divisions/mobility-division/paging"
+      ]
+    },
+    {
+      "term": "switchboard",
+      "meaning": "A panel where an operator plugged cords into sockets. That connected each caller to the person they wanted.",
+      "source_urls": [
+        "https://www.sciencemuseum.org.uk/objects-and-stories/goodbye-hello-girls-automating-telephone-exchange",
+        "https://blog.sciencemuseum.org.uk/the-exchange/"
+      ]
+    }
+  ],
+  "exchange": [
+    {
+      "speaker": "floyd",
+      "tone": "right",
+      "text": "The dial let you place a call yourself, with no operator in between. Your phone still works that way: you enter a number and it connects."
+    },
+    {
+      "speaker": "bud",
+      "text": "Today's version: your phone's keypad, or a tap on a name in your contacts. Either one places the call for you."
+    },
+    {
+      "speaker": "floyd",
+      "tone": "friendly",
+      "text": "We had patience built in. You waited for the dial to spin back before the next number."
+    }
+  ],
+  "old_tech": true,
+  "sources": [
+    {
+      "name": "Science Museum, Goodbye to the hello girls",
+      "url": "https://www.sciencemuseum.org.uk/objects-and-stories/goodbye-hello-girls-automating-telephone-exchange"
+    },
+    {
+      "name": "US House of Representatives History, Out with the Old",
+      "url": "https://history.house.gov/Blog/2022/July/7-11-oldtech/"
+    },
+    {
+      "name": "Open Culture, How to Use the Rotary Dial Phone",
+      "url": "https://www.openculture.com/2018/04/how-to-use-the-rotary-dial-phone-a-primer-from-1927.html"
+    },
+    {
+      "name": "Smithsonian National Museum of American History, Telegraph Key",
+      "url": "https://americanhistory.si.edu/collections/object/nmah_706715"
+    },
+    {
+      "name": "Smithsonian National Museum of American History, Motorola BPR2000 Pager",
+      "url": "https://americanhistory.si.edu/collections/nmah_1344387"
+    },
+    {
+      "name": "Apple Support, Make a call on iPhone",
+      "url": "https://support.apple.com/guide/iphone/make-a-call-iph3c993cbc/26/ios/26"
+    }
+  ],
+  "checked_on": null,
+  "difficulty": 1,
+  "decisive_clue": 1
+}
